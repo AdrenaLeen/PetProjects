@@ -13,6 +13,7 @@ namespace BasicDataTypes
             LocalVarDeclarations();
             NewingDataTypes();
             ObjectFunctionality();
+            DataTypeFunctionality();
             Console.ReadLine();
         }
 
@@ -64,6 +65,19 @@ namespace BasicDataTypes
             Console.WriteLine("12.Equals(23) = {0}", 12.Equals(23));
             Console.WriteLine("12.ToString() = {0}", 12.ToString());
             Console.WriteLine("12.GetType() = {0}", 12.GetType());
+            Console.WriteLine();
+        }
+
+        private static void DataTypeFunctionality()
+        {
+            Console.WriteLine("=> Функциональность числовых типов данных:");
+            Console.WriteLine("Максимум int: {0}", int.MaxValue);
+            Console.WriteLine("Минимум int: {0}", int.MinValue);
+            Console.WriteLine("Максимум double: {0}", double.MaxValue);
+            Console.WriteLine("Минимум double: {0}", double.MinValue);
+            Console.WriteLine("double.Epsilon: {0}", double.Epsilon);
+            Console.WriteLine("double.PositiveInfitity: {0}", double.PositiveInfinity);
+            Console.WriteLine("double.NegativeInfitity: {0}", double.NegativeInfinity);
             Console.WriteLine();
         }
     }
