@@ -13,6 +13,8 @@ namespace IterationsAndDecisions
             ForLoopExample();
             ForEachLoopExample();
             LinqQueryOverInts();
+            WhileLoopExample();
+            DoWhileLoopExample();
             Console.ReadLine();
         }
 
@@ -44,6 +46,33 @@ namespace IterationsAndDecisions
             var subset = from i in numbers where i < 10 select i;
             Console.Write("Значения в subset: ");
             foreach (var i in subset) Console.Write($"{i} ");
+
+            Console.WriteLine();
+        }
+
+        static void WhileLoopExample()
+        {
+            string userIsDone = "";
+            // Проверить копию строки в нижнем регистре.
+            while (userIsDone.ToLower() != "да")
+            {
+                Console.WriteLine("В цикле while");
+                Console.Write("Вы закончили? [да] [нет]: ");
+                userIsDone = Console.ReadLine();
+            }
+
+            Console.WriteLine();
+        }
+
+        static void DoWhileLoopExample()
+        {
+            string userIsDone = "";
+            do
+            {
+                Console.WriteLine("В цикле do/while");
+                Console.Write("Вы закончили? [да] [нет]: ");
+                userIsDone = Console.ReadLine();
+            } while (userIsDone.ToLower() != "да"); // Обратите внимание на точку с запятой!
 
             Console.WriteLine();
         }
