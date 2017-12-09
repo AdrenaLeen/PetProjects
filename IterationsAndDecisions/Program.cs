@@ -15,6 +15,7 @@ namespace IterationsAndDecisions
             LinqQueryOverInts();
             WhileLoopExample();
             DoWhileLoopExample();
+            IfElseExample();
             Console.ReadLine();
         }
 
@@ -73,6 +74,16 @@ namespace IterationsAndDecisions
                 Console.Write("Вы закончили? [да] [нет]: ");
                 userIsDone = Console.ReadLine();
             } while (userIsDone.ToLower() != "да"); // Обратите внимание на точку с запятой!
+
+            Console.WriteLine();
+        }
+
+        static void IfElseExample()
+        {
+            // Недопустимо, т.к. свойство Length возвращает int, а не bool.
+            string stringData = "Мои текстовые данные";
+            // Допустимо, т.к. условие возвращает true или false.
+            if (stringData.Length > 0) Console.WriteLine("В строке больше, чем 0 символов.");
 
             Console.WriteLine();
         }
