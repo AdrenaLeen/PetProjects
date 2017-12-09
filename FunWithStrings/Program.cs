@@ -27,6 +27,7 @@ namespace FunWithStrings
             Console.WriteLine();
 
             StringsAreImmutable();
+            FunWithStringBuilder();
 
             Console.ReadLine();
         }
@@ -98,6 +99,23 @@ namespace FunWithStrings
         {
             string s2 = "Другая моя строка";
             s2 = "Новое строковое значение";
+        }
+
+        static void FunWithStringBuilder()
+        {
+            Console.WriteLine("=> Использование StringBuilder:");
+            // Создать экземпляр StringBuilder с исходным размером в 256 символов
+            StringBuilder sb = new StringBuilder("**** Фантастические игры ****", 256);
+            sb.Append("\n");
+            sb.AppendLine("Half Life");
+            sb.AppendLine("Beyond Good and Evil");
+            sb.AppendLine("Deus Ex 2");
+            sb.AppendLine("System Shock");
+            Console.WriteLine(sb.ToString());
+            sb.Replace("2", "Invisible War");
+            Console.WriteLine(sb.ToString());
+            Console.WriteLine("sb содержит {0} символов.", sb.Length);
+            Console.WriteLine();
         }
     }
 }
