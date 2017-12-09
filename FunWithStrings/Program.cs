@@ -11,6 +11,7 @@ namespace FunWithStrings
         static void Main()
         {
             BasicStringFunctionality();
+            StringConcatenation();
             Console.ReadLine();
         }
 
@@ -36,6 +37,16 @@ namespace FunWithStrings
 
             // firstName после замены.
             Console.WriteLine("Новое имя: {0}", firstName.Replace("ди", ""));
+            Console.WriteLine();
+        }
+
+        static void StringConcatenation()
+        {
+            Console.WriteLine("=> Конкатенация строк:");
+            string s1 = "Programming the ";
+            string s2 = "PsychoDrill (PTP)";
+            string s3 = String.Concat(s1, s2);
+            Console.WriteLine(s3);
             Console.WriteLine();
         }
     }
