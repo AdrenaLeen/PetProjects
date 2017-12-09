@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("PetProjects")]
+[assembly: AssemblyTitle("SimpleCSharpApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PetProjects")]
+[assembly: AssemblyProduct("SimpleCSharpApp")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("f9492020-0c55-4d3d-90ce-d523bc0dc577")]
+[assembly: Guid("c20f5c7b-f9bf-46c8-8213-78d952b33652")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

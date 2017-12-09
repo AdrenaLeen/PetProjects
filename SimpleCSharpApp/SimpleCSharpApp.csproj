@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9492020-0C55-4D3D-90CE-D523BC0DC577}</ProjectGuid>
+    <ProjectGuid>{C20F5C7B-F9BF-46C8-8213-78D952B33652}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PetProjects</RootNamespace>
-    <AssemblyName>PetProjects</AssemblyName>
+    <RootNamespace>SimpleCSharpApp</RootNamespace>
+    <AssemblyName>SimpleCSharpApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
