@@ -24,6 +24,9 @@ namespace FunWithStrings
                            длинная строка";
             Console.WriteLine(myLongString);
             Console.WriteLine(@"Церебус сказал ""Даррр! Пре-лестные за-каты""");
+            Console.WriteLine();
+
+            StringsAreImmutable();
 
             Console.ReadLine();
         }
@@ -75,6 +78,26 @@ namespace FunWithStrings
             // Добавить 4 пустых строки и снова выдать звуковой сигнал.
             Console.WriteLine("Всё закончено.\n\n\n\a ");
             Console.WriteLine();
+        }
+
+        static void StringsAreImmutable()
+        {
+            // Установить начальное значение для строки.
+            string s1 = "Это моя строка.";
+            Console.WriteLine("s1 = {0}", s1);
+
+            // Преобразована ли строка s1 в верхний регистр?
+            string upperString = s1.ToUpper();
+            Console.WriteLine("upperString = {0}", upperString);
+
+            // Нет! Строка s1 осталась в том же виде!
+            Console.WriteLine("s1 = {0}", s1);
+        }
+
+        static void StringsAreImmutable2()
+        {
+            string s2 = "Другая моя строка";
+            s2 = "Новое строковое значение";
         }
     }
 }
