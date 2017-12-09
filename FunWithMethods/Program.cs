@@ -48,6 +48,9 @@ namespace FunWithMethods
             // Среднее из 0 равно 0!
             Console.WriteLine("Среднее равно: {0}", CalculateAverage());
 
+            EnterLogData("О нет! Сетка не может найти данные");
+            EnterLogData("О нет! Я не могу найти данные о заработной плате", "CFO");
+
             Console.ReadLine();
         }
 
@@ -91,6 +94,13 @@ namespace FunWithMethods
             if (values.Length == 0) return sum;
             for (int i = 0; i < values.Length; i++) sum += values[i];
             return sum / values.Length;
+        }
+
+        static void EnterLogData(string message, string owner = "Программист")
+        {
+            Console.Beep();
+            Console.WriteLine($"Ошибка: {message}");
+            Console.WriteLine($"Владелец ошибки: {owner}");
         }
     }
 }
