@@ -28,6 +28,7 @@ namespace FunWithStrings
 
             StringsAreImmutable();
             FunWithStringBuilder();
+            StringInterpolation();
 
             Console.ReadLine();
         }
@@ -116,6 +117,21 @@ namespace FunWithStrings
             Console.WriteLine(sb.ToString());
             Console.WriteLine("sb содержит {0} символов.", sb.Length);
             Console.WriteLine();
+        }
+
+        static void StringInterpolation()
+        {
+            // Некоторые локальные переменные будут включены в крупную строку.
+            int age = 4;
+            string name = "Сорен";
+
+            // Использование синтаксиса с фигурными скобками
+            string greeting = string.Format("\tЗдравствуйте, {0}, вам {1} года.", name.ToUpper(), age);
+            Console.WriteLine(greeting);
+
+            // Использование интерполяции строк
+            string greeting2 = $"\tЗдравствуйте, {name.ToUpper()}, вам {age} года.";
+            Console.WriteLine(greeting2);
         }
     }
 }
