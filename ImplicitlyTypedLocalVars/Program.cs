@@ -18,6 +18,8 @@ namespace ImplicitlyTypedLocalVars
             string myString = "Вставай!";
             var myData = myString;
 
+            LinqQueryOverInts();
+
             Console.ReadLine();
         }
 
@@ -49,6 +51,20 @@ namespace ImplicitlyTypedLocalVars
 
             // Можно обращаться к любому члену лежащего в основе типа.
             string upper = s.ToUpper();
+        }
+
+        static void LinqQueryOverInts()
+        {
+            int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+            var subset = from i in numbers where i < 10 select i;
+
+            Console.Write("Значения в subset: ");
+            foreach (var i in subset) Console.Write($"{i} ");
+            Console.WriteLine();
+
+            // И к какому же типу относится subset?
+            Console.WriteLine("subset является: {0}", subset.GetType().Name);
+            Console.WriteLine("subset определён в: {0}", subset.GetType().Namespace);
         }
     }
 }
