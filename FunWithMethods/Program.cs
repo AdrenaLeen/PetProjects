@@ -51,6 +51,16 @@ namespace FunWithMethods
             EnterLogData("О нет! Сетка не может найти данные");
             EnterLogData("О нет! Я не могу найти данные о заработной плате", "CFO");
 
+            DisplayFancyMessage(message: "Вау! Очень фантастично!", textColor: ConsoleColor.DarkRed, backgroundColor: ConsoleColor.White);
+            DisplayFancyMessage(backgroundColor: ConsoleColor.Green, message: "Тестирование...", textColor: ConsoleColor.DarkBlue);
+
+            // Здесь всё в порядке, т.к. позиционные аргументы находятся перед именованными.
+            DisplayFancyMessage(ConsoleColor.Blue, message: "Тестирование...", backgroundColor: ConsoleColor.White);
+
+            DisplayFancyMessage(message: "Привет!");
+
+            DisplayFancyMessage(backgroundColor: ConsoleColor.Green);
+
             Console.ReadLine();
         }
 
@@ -101,6 +111,22 @@ namespace FunWithMethods
             Console.Beep();
             Console.WriteLine($"Ошибка: {message}");
             Console.WriteLine($"Владелец ошибки: {owner}");
+        }
+
+        static void DisplayFancyMessage(ConsoleColor textColor = ConsoleColor.Blue, ConsoleColor backgroundColor = ConsoleColor.White, string message = "Тестовое сообщение")
+        {
+            // Сохранить старые цвета для их восстановления после вывода сообщения.
+            ConsoleColor oldTextColor = Console.ForegroundColor;
+            ConsoleColor oldBackgroundColor = Console.BackgroundColor;
+
+            // Установить новые цвета и вывести сообщение.
+            Console.ForegroundColor = textColor;
+            Console.BackgroundColor = backgroundColor;
+            Console.WriteLine(message);
+
+            // Восстановить предыдущие цвета.
+            Console.ForegroundColor = oldTextColor;
+            Console.BackgroundColor = oldBackgroundColor;
         }
     }
 }
