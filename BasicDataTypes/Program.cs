@@ -17,6 +17,9 @@ namespace BasicDataTypes
 
             Console.WriteLine("bool.FalseString: {0}", bool.FalseString);
             Console.WriteLine("bool.TrueString: {0}", bool.TrueString);
+            Console.WriteLine();
+
+            CharFunctionality();
 
             Console.ReadLine();
         }
@@ -82,6 +85,18 @@ namespace BasicDataTypes
             Console.WriteLine("double.Epsilon: {0}", double.Epsilon);
             Console.WriteLine("double.PositiveInfitity: {0}", double.PositiveInfinity);
             Console.WriteLine("double.NegativeInfitity: {0}", double.NegativeInfinity);
+            Console.WriteLine();
+        }
+
+        private static void CharFunctionality()
+        {
+            Console.WriteLine("=> Функциональность типа char:");
+            char myChar = 'а';
+            Console.WriteLine("char.IsDigit('а'): {0}", char.IsDigit(myChar));
+            Console.WriteLine("char.IsLetter('а'): {0}", char.IsLetter(myChar));
+            Console.WriteLine("char.IsWhiteSpace('Hello There', 5): {0}", char.IsWhiteSpace("Hello There", 5));
+            Console.WriteLine("char.IsWhiteSpace('Hello There', 6): {0}", char.IsWhiteSpace("Hello There", 6));
+            Console.WriteLine("char.IsPunctuation('?'): {0}", char.IsPunctuation('?'));
             Console.WriteLine();
         }
     }
