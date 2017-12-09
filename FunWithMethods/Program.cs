@@ -18,6 +18,19 @@ namespace FunWithMethods
             Console.WriteLine("Ответ: {0}", Add(x, y));
             Console.WriteLine($"После вызова: X: {x}, Y: {y}");
 
+            // Присваивать начальные значения локальным переменным, используемым как выходные параметры, не обязательно при условии, что в таком качестве они применяются впервые.
+            int ans;
+            Add(90, 90, out ans);
+            Console.WriteLine($"90 + 90 = {ans}");
+
+            int i;
+            string str;
+            bool b;
+            FillTheseValues(out i, out str, out b);
+            Console.WriteLine($"Int: {i}");
+            Console.WriteLine($"String: {str}");
+            Console.WriteLine($"Boolean: {b}");
+
             Console.ReadLine();
         }
 
@@ -29,6 +42,20 @@ namespace FunWithMethods
             x = 10000;
             y = 88888;
             return ans;
+        }
+
+        // Значения выходных параметров должны быть установлены внутри вызываемого метода.
+        static void Add(int x, int y, out int ans)
+        {
+            ans = x + y;
+        }
+
+        // Возвращение множества выходных параметров
+        static void FillTheseValues(out int a, out string b, out bool c)
+        {
+            a = 9;
+            b = "Наслаждайтесь своей строкой.";
+            c = true;
         }
     }
 }
