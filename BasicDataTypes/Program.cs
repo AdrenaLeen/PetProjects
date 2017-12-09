@@ -14,6 +14,10 @@ namespace BasicDataTypes
             NewingDataTypes();
             ObjectFunctionality();
             DataTypeFunctionality();
+
+            Console.WriteLine("bool.FalseString: {0}", bool.FalseString);
+            Console.WriteLine("bool.TrueString: {0}", bool.TrueString);
+
             Console.ReadLine();
         }
 
