@@ -20,6 +20,7 @@ namespace BasicDataTypes
             Console.WriteLine();
 
             CharFunctionality();
+            ParseFromStrings();
 
             Console.ReadLine();
         }
@@ -97,6 +98,20 @@ namespace BasicDataTypes
             Console.WriteLine("char.IsWhiteSpace('Hello There', 5): {0}", char.IsWhiteSpace("Hello There", 5));
             Console.WriteLine("char.IsWhiteSpace('Hello There', 6): {0}", char.IsWhiteSpace("Hello There", 6));
             Console.WriteLine("char.IsPunctuation('?'): {0}", char.IsPunctuation('?'));
+            Console.WriteLine();
+        }
+
+        private static void ParseFromStrings()
+        {
+            Console.WriteLine("=> Разбор значений из строковых данных:");
+            bool b = bool.Parse("True");
+            Console.WriteLine("Значение b: {0}", b);
+            double d = double.Parse("99,884");
+            Console.WriteLine("Значение d: {0}", d);
+            int i = int.Parse("8");
+            Console.WriteLine("Значение i: {0}", i);
+            char c = Char.Parse("w");
+            Console.WriteLine("Значение c: {0}", c);
             Console.WriteLine();
         }
     }
