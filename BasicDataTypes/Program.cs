@@ -11,6 +11,7 @@ namespace BasicDataTypes
         static void Main()
         {
             LocalVarDeclarations();
+            NewingDataTypes();
             Console.ReadLine();
         }
 
@@ -32,6 +33,25 @@ namespace BasicDataTypes
             System.Boolean b4 = false;
 
             Console.WriteLine("Ваши данные: {0}, {1}, {2}, {3}, {4}, {5}", myInt, myString, b1, b2, b3, b4);
+            Console.WriteLine();
+        }
+
+        private static void NewingDataTypes()
+        {
+            Console.WriteLine("=> Использование new для создания переменных:");
+            // Устанавливается в false.
+            bool b = new bool();
+
+            // Устанавливается в 0.
+            int i = new int();
+
+            // Устанавливается в 0.
+            double d = new double();
+
+            // Устанавливается в 1/1/0001 12:00:00 AM.
+            DateTime dt = new DateTime();
+
+            Console.WriteLine("{0}, {1}, {2}, {3}", b, i, d, dt);
             Console.WriteLine();
         }
     }
