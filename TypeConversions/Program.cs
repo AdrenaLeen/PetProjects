@@ -21,6 +21,7 @@ namespace TypeConversions
             Console.WriteLine($"{numb1} + {numb2} = {answer}");
 
             NarrowingAttempt();
+            ProcessBytes();
             
             Console.ReadLine();
         }
@@ -38,6 +39,26 @@ namespace TypeConversions
             // Явно привести int к byte (без потери данных).
             myByte = (byte)myInt;
             Console.WriteLine($"Значение myByte: {myByte}");
+        }
+
+        static void ProcessBytes()
+        {
+            byte b1 = 100;
+            byte b2 = 250;
+
+            // На этот раз сообщить компилятору о необходимости добавления кода CIL, необходимого для генерации исключения, если возникает переполнение или потеря значимости.
+            try
+            {
+                checked
+                {
+                    byte sum = (byte)Add(b1, b2);
+                    Console.WriteLine($"sum = {sum}");
+                }
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
