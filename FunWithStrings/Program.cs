@@ -13,6 +13,18 @@ namespace FunWithStrings
             BasicStringFunctionality();
             StringConcatenation();
             EscapeChars();
+
+            // Следующая строка воспроизводится дословно, так что все управляющие последовательности отображаются.
+            Console.WriteLine(@"C:\MyApp\bin\Debug");
+
+            // При использовании дословных строк пробельные символы предохраняются.
+            string myLongString = @"Это очень
+                 очень
+                      очень
+                           длинная строка";
+            Console.WriteLine(myLongString);
+            Console.WriteLine(@"Церебус сказал ""Даррр! Пре-лестные за-каты""");
+
             Console.ReadLine();
         }
 
