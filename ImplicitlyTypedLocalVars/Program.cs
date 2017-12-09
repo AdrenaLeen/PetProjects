@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ImplicitlyTypedLocalVars
+{
+    class Program
+    {
+        static void Main()
+        {
+            DeclareImplicitVars();
+            Console.ReadLine();
+        }
+
+        static void DeclareImplicitVars()
+        {
+            // Неявно типизированные локальные переменные объявляются следующим образом:
+            // var имяПеременной = начальноеЗначение;
+            var myInt = 0;
+            var myBool = true;
+            var myString = "Time, marches on...";
+
+            // Вывести имена лежащих в основе типов.
+            Console.WriteLine("myInt является: {0}", myInt.GetType().Name);
+            Console.WriteLine("myBool является: {0}", myBool.GetType().Name);
+            Console.WriteLine("myString является: {0}", myString.GetType().Name);
+        }
+    }
+}

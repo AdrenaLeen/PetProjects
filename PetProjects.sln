@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStrings", "FunWithSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConversions", "TypeConversions\TypeConversions.csproj", "{FD32776C-B743-4EF4-BD34-92CFE3D3013D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplicitlyTypedLocalVars", "ImplicitlyTypedLocalVars\ImplicitlyTypedLocalVars.csproj", "{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
