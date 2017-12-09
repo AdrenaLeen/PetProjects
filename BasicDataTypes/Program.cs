@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace BasicDataTypes
 {
@@ -22,6 +23,7 @@ namespace BasicDataTypes
             CharFunctionality();
             ParseFromStrings();
             UseDatesAndTimes();
+            UseBigInteger();
 
             Console.ReadLine();
         }
@@ -136,6 +138,25 @@ namespace BasicDataTypes
             // Вычесть 15 минут из текущего значения TimeSpan и вывести результат.
             Console.WriteLine(ts.Subtract(new TimeSpan(0, 15, 0)));
             Console.WriteLine();
+        }
+
+        private static void UseBigInteger()
+        {
+            Console.WriteLine("=> Использование BigInteger:");
+            BigInteger biggy = BigInteger.Parse("9999999999999999999999999999999999999999999999");
+
+            // Значение biggy
+            Console.WriteLine("Значение biggy равно {0}", biggy);
+
+            // biggy - чётное?
+            Console.WriteLine("biggy - чётное число?: {0}", biggy.IsEven);
+
+            // biggy - степень 2?
+            Console.WriteLine("biggy - степень двойки?: {0}", biggy.IsPowerOfTwo);
+            BigInteger reallyBig = BigInteger.Multiply(biggy, BigInteger.Parse("8888888888888888888888888888888888888888888"));
+
+            // Значение reallyBig
+            Console.WriteLine("Значение reallyBig равно {0}", reallyBig);
         }
     }
 }
