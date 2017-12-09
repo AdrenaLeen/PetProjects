@@ -40,5 +40,15 @@ namespace ImplicitlyTypedLocalVars
             var retVal = 9;
             return retVal;
         }
+
+        static void ImplicitTypingIsStrongTyping()
+        {
+            // Компилятор знает, что s имеет тип System.String.
+            var s = "Эта переменная может содержать только строковые данные!";
+            s = "Это нормально...";
+
+            // Можно обращаться к любому члену лежащего в основе типа.
+            string upper = s.ToUpper();
+        }
     }
 }
