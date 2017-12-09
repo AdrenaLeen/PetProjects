@@ -8,7 +8,8 @@ namespace SimpleCSharpApp
 {
     class Program
     {
-        static void Main()
+        // Обратите внимание, что теперь возвращается int, а не void.
+        static int Main()
         {
             // Вывести пользователю простое сообщение
             Console.WriteLine("***** Моё первое C#-приложение *****");
@@ -16,6 +17,8 @@ namespace SimpleCSharpApp
             Console.WriteLine();
             // Ожидать нажатия клавиши <Enter>, прежде чем завершить работу.
             Console.ReadLine();
+            // Возвратить произвольный код ошибки
+            return -1;
         }
     }
 }
