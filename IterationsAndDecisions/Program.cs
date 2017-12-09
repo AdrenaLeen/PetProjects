@@ -16,6 +16,9 @@ namespace IterationsAndDecisions
             WhileLoopExample();
             DoWhileLoopExample();
             IfElseExample();
+            SwitchExample();
+            SwitchOnStringExample();
+            SwitchOnEnumExample();
             Console.ReadLine();
         }
 
@@ -84,6 +87,98 @@ namespace IterationsAndDecisions
             string stringData = "Мои текстовые данные";
             // Допустимо, т.к. условие возвращает true или false.
             if (stringData.Length > 0) Console.WriteLine("В строке больше, чем 0 символов.");
+
+            Console.WriteLine();
+        }
+
+        // Переход на основе числового значения
+        static void SwitchExample()
+        {
+            Console.WriteLine("1 [C#], 2 [VB]");
+            // Выберите предпочитаемый язык
+            Console.Write("Пожалуйста, выберите предпочитаемый язык: ");
+
+            string langChoice = Console.ReadLine();
+            int n = int.Parse(langChoice);
+
+            switch (n)
+            {
+                case 1:
+                    Console.WriteLine("Хороший выбор. C# - замечательный язык.");
+                    break;
+                case 2:
+                    Console.WriteLine("VB: ООП, многопоточность и многое другое!");
+                    break;
+                default:
+                    Console.WriteLine("Хорошо, удачи с этим!");
+                    break;
+            }
+
+            Console.WriteLine();
+        }
+
+        static void SwitchOnStringExample()
+        {
+            Console.WriteLine("C# или VB");
+            Console.Write("Пожалуйста, выберите предпочитаемый язык: ");
+
+            string langChoice = Console.ReadLine();
+            switch (langChoice)
+            {
+                case "C#":
+                    Console.WriteLine("Хороший выбор. C# - замечательный язык.");
+                    break;
+                case "VB":
+                    Console.WriteLine("VB: ООП, многопоточность и многое другое!");
+                    break;
+                default:
+                    Console.WriteLine("Хорошо, удачи с этим!");
+                    break;
+            }
+
+            Console.WriteLine();
+        }
+
+        static void SwitchOnEnumExample()
+        {
+            // Введите любимый день недели
+            Console.Write("Введите свой любимый день недели: ");
+            DayOfWeek favDay;
+
+            try
+            {
+                favDay = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Недопустимое входное значение!");
+                return;
+            }
+
+            switch (favDay)
+            {
+                case DayOfWeek.Friday:
+                    Console.WriteLine("Да, пятница рулит!");
+                    break;
+                case DayOfWeek.Monday:
+                    Console.WriteLine("Ещё один день, ещё один доллар.");
+                    break;
+                case DayOfWeek.Saturday:
+                    Console.WriteLine("Действительно великолепный день.");
+                    break;
+                case DayOfWeek.Sunday:
+                    Console.WriteLine("Футбол!");
+                    break;
+                case DayOfWeek.Thursday:
+                    Console.WriteLine("Почти пятница...");
+                    break;
+                case DayOfWeek.Tuesday:
+                    Console.WriteLine("Во всяком случае, не понедельник.");
+                    break;
+                case DayOfWeek.Wednesday:
+                    Console.WriteLine("Хороший денёк.");
+                    break;
+            }
 
             Console.WriteLine();
         }
