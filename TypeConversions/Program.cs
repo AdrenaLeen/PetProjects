@@ -17,7 +17,7 @@ namespace TypeConversions
             short numb1 = 30000, numb2 = 30000;
 
             // Явно привести int к short (и разрешить потерю данных).
-            short answer = (short)Add(numb1, numb2);
+            short answer = unchecked((short)Add(numb1, numb2));
             Console.WriteLine($"{numb1} + {numb2} = {answer}");
 
             NarrowingAttempt();
@@ -58,6 +58,13 @@ namespace TypeConversions
             catch (OverflowException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+
+            // Предполагая, что флаг /checked активизирован, этот блок не будет генерировать исключение времени выполнения.
+            unchecked
+            {
+                byte sum = (byte)(b1 + b2);
+                Console.WriteLine($"sum = {sum}");
             }
         }
     }
