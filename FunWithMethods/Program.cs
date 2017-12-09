@@ -31,6 +31,12 @@ namespace FunWithMethods
             Console.WriteLine($"String: {str}");
             Console.WriteLine($"Boolean: {b}");
 
+            string s1 = "Флип";
+            string s2 = "Флоп";
+            Console.WriteLine($"До: {s1}, {s2}");
+            SwapStrings(ref s1, ref s2);
+            Console.WriteLine($"После: {s1}, {s2}");
+
             Console.ReadLine();
         }
 
@@ -50,12 +56,20 @@ namespace FunWithMethods
             ans = x + y;
         }
 
-        // Возвращение множества выходных параметров
+        // Возвращение множества выходных параметров.
         static void FillTheseValues(out int a, out string b, out bool c)
         {
             a = 9;
             b = "Наслаждайтесь своей строкой.";
             c = true;
+        }
+
+        // Ссылочные параметры.
+        public static void SwapStrings(ref string s1, ref string s2)
+        {
+            string tempStr = s1;
+            s1 = s2;
+            s2 = tempStr;
         }
     }
 }
