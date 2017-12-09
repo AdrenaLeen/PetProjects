@@ -21,6 +21,7 @@ namespace BasicDataTypes
 
             CharFunctionality();
             ParseFromStrings();
+            UseDatesAndTimes();
 
             Console.ReadLine();
         }
@@ -112,6 +113,28 @@ namespace BasicDataTypes
             Console.WriteLine("Значение i: {0}", i);
             char c = Char.Parse("w");
             Console.WriteLine("Значение c: {0}", c);
+            Console.WriteLine();
+        }
+
+        private static void UseDatesAndTimes()
+        {
+            Console.WriteLine("=> Дата и время:");
+            // Этот конструктор принимает год, месяц и день.
+            DateTime dt = new DateTime(2015, 10, 17);
+
+            // Какой это день месяца?
+            Console.WriteLine("День {0} - это {1}", dt.Date, dt.DayOfWeek);
+
+            // Сейчас месяц декабрь.
+            dt = dt.AddMonths(2);
+            Console.WriteLine("Летнее время: {0}", dt.IsDaylightSavingTime());
+
+            // Этот конструктор принимает часы, минуты и секунды.
+            TimeSpan ts = new TimeSpan(4, 30, 0);
+            Console.WriteLine(ts);
+
+            // Вычесть 15 минут из текущего значения TimeSpan и вывести результат.
+            Console.WriteLine(ts.Subtract(new TimeSpan(0, 15, 0)));
             Console.WriteLine();
         }
     }
