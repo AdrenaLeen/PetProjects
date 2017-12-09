@@ -37,6 +37,17 @@ namespace FunWithMethods
             SwapStrings(ref s1, ref s2);
             Console.WriteLine($"После: {s1}, {s2}");
 
+            // Передать список значений double, разделённых запятыми...
+            double average;
+            average = CalculateAverage(4.0, 3.2, 5.7, 64.22, 87.2);
+            Console.WriteLine($"Среднее равно: {average}");
+            // ...или передать массив значений double.
+            double[] data = { 4.0, 3.2, 5.7 };
+            average = CalculateAverage(data);
+            Console.WriteLine($"Среднее равно: {average}");
+            // Среднее из 0 равно 0!
+            Console.WriteLine("Среднее равно: {0}", CalculateAverage());
+
             Console.ReadLine();
         }
 
@@ -70,6 +81,16 @@ namespace FunWithMethods
             string tempStr = s1;
             s1 = s2;
             s2 = tempStr;
+        }
+
+        // Возвращение среднего из некоторого количества значений double.
+        static double CalculateAverage(params double[] values)
+        {
+            Console.WriteLine("Вы прислали мне {0} параметров double.", values.Length);
+            double sum = 0;
+            if (values.Length == 0) return sum;
+            for (int i = 0; i < values.Length; i++) sum += values[i];
+            return sum / values.Length;
         }
     }
 }
