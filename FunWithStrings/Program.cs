@@ -12,6 +12,7 @@ namespace FunWithStrings
         {
             BasicStringFunctionality();
             StringConcatenation();
+            EscapeChars();
             Console.ReadLine();
         }
 
@@ -47,6 +48,20 @@ namespace FunWithStrings
             string s2 = "PsychoDrill (PTP)";
             string s3 = String.Concat(s1, s2);
             Console.WriteLine(s3);
+            Console.WriteLine();
+        }
+
+        static void EscapeChars()
+        {
+            Console.WriteLine("=> Управляющие последовательности:\a");
+            string strWithTabs = "Модель\tЦвет\tСкорость\tНаименование\a ";
+            Console.WriteLine(strWithTabs);
+
+            Console.WriteLine("Все любят \"Hello World\"\a ");
+            Console.WriteLine("C:\\MyApp\\bin\\Debug\a ");
+
+            // Добавить 4 пустых строки и снова выдать звуковой сигнал.
+            Console.WriteLine("Всё закончено.\n\n\n\a ");
             Console.WriteLine();
         }
     }
