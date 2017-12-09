@@ -12,6 +12,13 @@ namespace BasicConsoleIO
         {
             Console.WriteLine("***** Базовый ввод-вывод с помощью класса Console *****");
             GetUserData();
+
+            // Джон говорит...
+            Console.WriteLine("{0}, Number {0}, Number {0}", 9);
+
+            // Выводит: 20, 10, 30
+            Console.WriteLine("{1}, {0}, {2}", 10, 20, 30);
+
             Console.ReadLine();
         }
 
