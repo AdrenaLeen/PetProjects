@@ -27,10 +27,30 @@ namespace SimpleCSharpApp
             string[] theArgs = Environment.GetCommandLineArgs();
             foreach (string arg in theArgs) Console.WriteLine("Arg: {0}", arg);
 
+            // Вспомогательный метод внутри класса Program.
+            ShowEnvironmentDetails();
+
             // Ожидать нажатия клавиши <Enter>, прежде чем завершить работу.
             Console.ReadLine();
             // Возвратить произвольный код ошибки.
             return -1;
+        }
+
+        static void ShowEnvironmentDetails()
+        {
+            // Вывести информацию о дисковых устройствах данной машины и другие интересные детали.
+
+            // Логические устройства
+            foreach (string drive in Environment.GetLogicalDrives()) Console.WriteLine("Диск: {0}", drive);
+
+            // Версия операционной системы
+            Console.WriteLine("ОС: {0}", Environment.OSVersion);
+
+            // Количество процессоров
+            Console.WriteLine("Количество процессоров: {0}", Environment.ProcessorCount);
+
+            // Версия платформы .NET
+            Console.WriteLine("Версия .NET: {0}", Environment.Version);
         }
     }
 }
