@@ -11,6 +11,13 @@ namespace ImplicitlyTypedLocalVars
         static void Main()
         {
             DeclareImplicitVars();
+
+            // Также допустимо!
+            var myInt = 0;
+            var anotherInt = myInt;
+            string myString = "Вставай!";
+            var myData = myString;
+
             Console.ReadLine();
         }
 
@@ -26,6 +33,12 @@ namespace ImplicitlyTypedLocalVars
             Console.WriteLine("myInt является: {0}", myInt.GetType().Name);
             Console.WriteLine("myBool является: {0}", myBool.GetType().Name);
             Console.WriteLine("myString является: {0}", myString.GetType().Name);
+        }
+
+        static int GetAnInt()
+        {
+            var retVal = 9;
+            return retVal;
         }
     }
 }
