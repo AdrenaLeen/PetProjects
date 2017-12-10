@@ -15,6 +15,8 @@ namespace FunWithArrays
             ArrayInitialization();
             DeclareImplicitArrays();
             ArrayOfObjects();
+            RectMultidimensionalArray();
+            JaggedMultidimensionalArray();
             Console.ReadLine();
         }
 
@@ -85,6 +87,49 @@ namespace FunWithArrays
 
             // Вывести тип и значение каждого элемента в массиве.
             foreach (object obj in myObjects) Console.WriteLine($"Тип: {obj.GetType()}, значение: {obj}");
+            Console.WriteLine();
+        }
+
+        static void RectMultidimensionalArray()
+        {
+            Console.WriteLine("=> Прямоугольный многомерный массив.");
+
+            // Прямоугольный многомерный массив.
+            int[,] myMatrix;
+            myMatrix = new int[3, 4];
+
+            // Заполнить массив (3 * 4).
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++) myMatrix[i, j] = i * j;
+            }
+                
+            // Вывести содержимое массива (3 * 4).
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++) Console.Write($"{myMatrix[i, j]}\t");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+
+        static void JaggedMultidimensionalArray()
+        {
+            Console.WriteLine("=> Зубчатый многомерный массив.");
+
+            // Зубчатый многомерный массив (т.е. массив массивов).
+            // Здесь у нас есть массив из 5 разных массивов.
+            int[][] myJagArray = new int[5][];
+
+            // Создать зубчатый массив.
+            for (int i = 0; i < myJagArray.Length; i++) myJagArray[i] = new int[i + 7];
+
+            // Вывести все строчки (помните, что каждый элемент имеет стандартное значение 0).
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < myJagArray[i].Length; j++) Console.Write($"{myJagArray[i][j]} ");
+                Console.WriteLine();
+            }
             Console.WriteLine();
         }
     }
