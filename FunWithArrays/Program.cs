@@ -12,6 +12,7 @@ namespace FunWithArrays
         {
             Console.WriteLine("***** Массивы *****");
             SimpleArrays();
+            ArrayInitialization();
             Console.ReadLine();
         }
 
@@ -30,6 +31,24 @@ namespace FunWithArrays
 
             // Вывести все значения.
             foreach (int i in myInts) Console.WriteLine(i);
+            Console.WriteLine();
+        }
+
+        static void ArrayInitialization()
+        {
+            Console.WriteLine("=> Инициализация массивов.");
+
+            // Синтаксис инициализации массива с использованием ключевого слова new.
+            string[] stringArray = new string[] { "один", "два", "три" };
+            Console.WriteLine($"stringArray содержит {stringArray.Length} элемента");
+
+            // Синтаксис инициализации массива без использования ключевого слова new.
+            bool[] boolArray = { false, false, true };
+            Console.WriteLine($"boolArray содержит {boolArray.Length} элемента");
+
+            // Инициализация массива с применением ключевого слова new и указанием размера.
+            int[] intArray = new int[4] { 20, 22, 23, 0 };
+            Console.WriteLine($"intArray содержит {intArray.Length} элемента");
             Console.WriteLine();
         }
     }
