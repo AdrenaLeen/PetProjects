@@ -34,6 +34,20 @@ namespace FunWithEnums
             // На этот раз для получения информации о типе используется операция typeof.
             Console.WriteLine($"EmpType использует {Enum.GetUnderlyingType(typeof(EmpType))} для хранения");
 
+            // Выводит строку "emp является Contractor".
+            Console.WriteLine($"emp является {emp.ToString()}");
+
+            // Выводит строку "Contractor = 100".
+            Console.WriteLine($"{emp.ToString()} = {(byte)emp}");
+
+            EmpType e2 = EmpType.Contractor;
+            // Эти типы являются перечислениями из пространства имён System.
+            DayOfWeek day = DayOfWeek.Monday;
+            ConsoleColor cc = ConsoleColor.Gray;
+            EvaluateEnum(e2);
+            EvaluateEnum(day);
+            EvaluateEnum(cc);
+
             Console.ReadLine();
         }
 
@@ -55,6 +69,21 @@ namespace FunWithEnums
                     Console.WriteLine("Очень хорошо, сэр!");
                     break;
             }
+        }
+
+        // Этот метод выводит детали любого перечисления.
+        static void EvaluateEnum(Enum e)
+        {
+            Console.WriteLine($"=> Информация о {e.GetType().Name}");
+            Console.WriteLine($"Базовый тип хранения: {Enum.GetUnderlyingType(e.GetType())}");
+
+            // Получить все пары "имя-значение" для входного параметра.
+            Array enumData = Enum.GetValues(e.GetType());
+            Console.WriteLine($"У этого перечисления {enumData.Length} членов.");
+
+            // Вывести строковое имя и ассоциированное значение, используя флаг формата D.
+            for (int i = 0; i < enumData.Length; i++) Console.WriteLine("Имя: {0}, значение: {0:D}", enumData.GetValue(i));
+            Console.WriteLine();
         }
     }
 }
