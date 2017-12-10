@@ -18,6 +18,7 @@ namespace FunWithArrays
             RectMultidimensionalArray();
             JaggedMultidimensionalArray();
             PassAndReceiveArrays();
+            SystemArrayFunctionality();
             Console.ReadLine();
         }
 
@@ -157,6 +158,35 @@ namespace FunWithArrays
             string[] strs = GetStringArray();
             foreach (string s in strs) Console.WriteLine(s);
 
+            Console.WriteLine();
+        }
+
+        static void SystemArrayFunctionality()
+        {
+            Console.WriteLine("=> Работа с System.Array.");
+            
+            // Инициализировать элементы при запуске.
+            string[] gothicBands = { "Tones on Tail", "Bauhaus", "Sisters of Mercy" };
+
+            // Вывести имена в порядке их объявления.
+            Console.WriteLine("-> Вот массив:");
+            // Вывести имя.
+            for (int i = 0; i < gothicBands.Length; i++) Console.Write($"{gothicBands[i]}, ");
+            Console.WriteLine("\n");
+
+            // Обратить порядок следования элементов...
+            Array.Reverse(gothicBands);
+            Console.WriteLine("-> Массив в обратном порядке:");
+            // ...и вывести их.
+            // Вывести имя.
+            for (int i = 0; i < gothicBands.Length; i++) Console.Write($"{gothicBands[i]}, ");
+            Console.WriteLine("\n");
+
+            // Удалить все элементы кроме первого.
+            Console.WriteLine("-> Удалили все элементы кроме первого...");
+            Array.Clear(gothicBands, 1, 2);
+            // Вывести имя.
+            for (int i = 0; i < gothicBands.Length; i++) Console.Write($"{gothicBands[i]}, ");
             Console.WriteLine();
         }
     }
