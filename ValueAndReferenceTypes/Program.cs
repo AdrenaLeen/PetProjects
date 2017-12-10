@@ -12,6 +12,7 @@ namespace ValueAndReferenceTypes
         {
             ValueTypeAssignment();
             ReferenceTypeAssignment();
+            ValueTypeContainingRefType();
 
             Console.ReadLine();
         }
@@ -19,7 +20,7 @@ namespace ValueAndReferenceTypes
         // Присваивание двух внутренних типов значений даёт в результате две независимые переменные в стеке.
         static void ValueTypeAssignment()
         {
-            Console.WriteLine("Присвание типов значений");
+            Console.WriteLine("Присваивание типов значений");
             Point p1 = new Point(10, 10);
             Point p2 = p1;
 
@@ -49,6 +50,26 @@ namespace ValueAndReferenceTypes
             Console.WriteLine("=> Изменили p1.X");
             p1.Display();
             p2.Display();
+        }
+
+        static void ValueTypeContainingRefType()
+        {
+            // Создать первую переменную Rectangle.
+            Console.WriteLine("-> Создание r1");
+            Rectangle r1 = new Rectangle("Первый прямоугольник", 10, 10, 50, 50);
+
+            // Присвоить новой переменной Rectangle переменную r1.
+            Console.WriteLine("-> Присвоить r2 переменную r1");
+            Rectangle r2 = r1;
+
+            // Изменить некоторые значения в r2.
+            Console.WriteLine("-> Изменение значений r2");
+            r2.rectInfo.infoString = "Это новая информация!";
+            r2.rectBottom = 4444;
+
+            // Вывести значения из обеих переменных Rectangle.
+            r1.Display();
+            r2.Display();
         }
     }
 }
