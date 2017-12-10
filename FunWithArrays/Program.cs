@@ -13,6 +13,7 @@ namespace FunWithArrays
             Console.WriteLine("***** Массивы *****");
             SimpleArrays();
             ArrayInitialization();
+            DeclareImplicitArrays();
             Console.ReadLine();
         }
 
@@ -49,6 +50,24 @@ namespace FunWithArrays
             // Инициализация массива с применением ключевого слова new и указанием размера.
             int[] intArray = new int[4] { 20, 22, 23, 0 };
             Console.WriteLine($"intArray содержит {intArray.Length} элемента");
+            Console.WriteLine();
+        }
+
+        static void DeclareImplicitArrays()
+        {
+            Console.WriteLine("=> Неявная инициализация массивов.");
+
+            // Переменная a на самом деле имеет тип int[].
+            var a = new[] { 1, 10, 100, 1000 };
+            Console.WriteLine("a является: {0}", a.ToString());
+
+            // Переменная b на самом деле имеет тип double[].
+            var b = new[] { 1, 1.5, 2, 2.5 };
+            Console.WriteLine("b является: {0}", b.ToString());
+
+            // Переменная c на самом деле имеет тип string[].
+            var c = new[] { "hello", null, "world" };
+            Console.WriteLine("c является: {0}", c.ToString());
             Console.WriteLine();
         }
     }
