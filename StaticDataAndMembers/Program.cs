@@ -13,7 +13,13 @@ namespace StaticDataAndMembers
             Console.WriteLine("***** Статические данные *****");
             SavingsAccount s1 = new SavingsAccount(50);
             SavingsAccount s2 = new SavingsAccount(100);
+
+            // Вывести текущую процентную ставку.
+            Console.WriteLine($"Процентная ставка: {SavingsAccount.GetInterestRate()}");
+
+            // Создать новый объект; это не 'сбросит' процентную ставку.
             SavingsAccount s3 = new SavingsAccount(10000.75);
+            Console.WriteLine($"Процентная ставка: {SavingsAccount.GetInterestRate()}");
 
             Console.ReadLine();
         }
