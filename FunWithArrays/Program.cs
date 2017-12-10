@@ -17,6 +17,7 @@ namespace FunWithArrays
             ArrayOfObjects();
             RectMultidimensionalArray();
             JaggedMultidimensionalArray();
+            PassAndReceiveArrays();
             Console.ReadLine();
         }
 
@@ -130,6 +131,32 @@ namespace FunWithArrays
                 for (int j = 0; j < myJagArray[i].Length; j++) Console.Write($"{myJagArray[i][j]} ");
                 Console.WriteLine();
             }
+            Console.WriteLine();
+        }
+
+        static void PrintArray(int[] myInts)
+        {
+            for (int i = 0; i < myInts.Length; i++) Console.WriteLine($"Элемент {i} равен {myInts[i]}");
+        }
+
+        static string[] GetStringArray()
+        {
+            string[] theStrings = { "Привет", "из", "GetStringArray" };
+            return theStrings;
+        }
+
+        static void PassAndReceiveArrays()
+        {
+            Console.WriteLine("=> Массивы в качестве параметров и возвращаемых значений.");
+            
+            // Передать массив в качестве параметров.
+            int[] ages = { 20, 22, 23, 0 };
+            PrintArray(ages);
+
+            // Получить массив как возвращаемое значение.
+            string[] strs = GetStringArray();
+            foreach (string s in strs) Console.WriteLine(s);
+
             Console.WriteLine();
         }
     }
