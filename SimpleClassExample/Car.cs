@@ -19,6 +19,19 @@ namespace SimpleClassExample
             currSpeed = 10;
         }
 
+        // Здесь currSpeed получает стандартное значение для типа int (0).
+        public Car(string pn)
+        {
+            petName = pn;
+        }
+
+        // Позволяет вызывающему коду установить полное состояние объекта Car.
+        public Car(string pn, int cs)
+        {
+            petName = pn;
+            currSpeed = cs;
+        }
+
         // Функциональность Car.
         public void PrintState()
         {

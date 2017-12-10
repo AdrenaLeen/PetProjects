@@ -36,6 +36,14 @@ namespace SimpleClassExample
             // Выводит строку "Чак едет со скоростью 10 км/ч."
             chuck.PrintState();
 
+            // Создать объект Car по имени Мэри со скоростью 0 км/ч.
+            Car mary = new Car("Мэри");
+            mary.PrintState();
+
+            // Создать объект Car по имени Дейзи со скоростью 75 км/ч.
+            Car daisy = new Car("Дейзи", 75);
+            daisy.PrintState();
+
             Console.ReadLine();
         }
     }
