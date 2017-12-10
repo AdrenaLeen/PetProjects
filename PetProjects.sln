@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoProps", "AutoProps\Auto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectsInitializers", "ObjectsInitializers\ObjectsInitializers.csproj", "{99981F34-A52C-4B81-911E-8F738288DABA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstData", "ConstData\ConstData.csproj", "{7840A6E5-E865-4541-8ACD-1F66BB35715A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{99981F34-A52C-4B81-911E-8F738288DABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99981F34-A52C-4B81-911E-8F738288DABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99981F34-A52C-4B81-911E-8F738288DABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
