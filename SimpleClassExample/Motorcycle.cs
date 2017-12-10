@@ -13,25 +13,8 @@ namespace SimpleClassExample
         // Новые члены для представления имени водителя.
         public string driverName;
 
-        // Вернуть стандартный конструктор, который будет устанавливать все члены данных в стандартные значения.
-        // Конструкторы
-        // Связывание конструкторов в цепочку
-        public Motorcycle()
-        {
-            Console.WriteLine("Внутри стандартного конструктора");
-        }
-        // Специальный конструктор
-        // Избыточная логика конструктора!
-        public Motorcycle(int intensity) : this(intensity, "")
-        {
-            Console.WriteLine("Внутри конструктора, принимающего int.");
-        }
-        public Motorcycle(string name) : this(0, name)
-        {
-            Console.WriteLine("Внутри конструктора, принимающего string.");
-        }
-        // Это главный конструктор, который выполняет всю реальную работу.
-        public Motorcycle(int intensity, string name)
+        // Единственный конструктор, который использует необязательные аргументы.
+        public Motorcycle(int intensity = 0, string name = "")
         {
             Console.WriteLine("Внутри главного конструктора.");
             if (intensity > 10) intensity = 10;

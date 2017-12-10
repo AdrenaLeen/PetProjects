@@ -55,7 +55,24 @@ namespace SimpleClassExample
             // Вывод имени гонщика.
             Console.WriteLine($"Мотоциклиста зовут {c.driverName}");
 
+            MakeSomeBikes();
+
             Console.ReadLine();
+        }
+
+        static void MakeSomeBikes()
+        {
+            // driverName = "", driverIntensity = 0  
+            Motorcycle m1 = new Motorcycle();
+            Console.WriteLine($"Название = {m1.driverName}, Мощность = {m1.driverIntensity}");
+
+            // driverName = "Тини", driverIntensity = 0 
+            Motorcycle m2 = new Motorcycle(name: "Тини");
+            Console.WriteLine($"Название = {m2.driverName}, Мощность = {m2.driverIntensity}");
+
+            // driverName = "", driverIntensity = 7  
+            Motorcycle m3 = new Motorcycle(7);
+            Console.WriteLine($"Название = {m3.driverName}, Мощность = {m3.driverIntensity}");
         }
     }
 }
