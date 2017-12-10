@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
+using static System.DateTime;
 
 namespace SimpleUtilityClass
 {
@@ -11,12 +13,12 @@ namespace SimpleUtilityClass
     {
         public static void PrintTime()
         {
-            Console.WriteLine(DateTime.Now.ToShortTimeString());
+            WriteLine(Now.ToShortTimeString());
         }
 
         public static void PrintDate()
         {
-            Console.WriteLine(DateTime.Today.ToShortDateString());
+            WriteLine(Today.ToShortDateString());
         }
     }
 }
