@@ -14,12 +14,20 @@ namespace SimpleClassExample
         public string driverName;
 
         // Вернуть стандартный конструктор, который будет устанавливать все члены данных в стандартные значения.
+        // Конструкторы
+        // Связывание конструкторов в цепочку
         public Motorcycle() { }
 
         // Специальный конструктор
-        public Motorcycle(int intensity)
+        // Избыточная логика конструктора!
+        public Motorcycle(int intensity) : this(intensity, "") { }
+        public Motorcycle(string name) : this(0, name) { }
+        // Это главный конструктор, который выполняет всю реальную работу.
+        public Motorcycle(int intensity, string name)
         {
+            if (intensity > 10) intensity = 10;
             driverIntensity = intensity;
+            driverName = name;
         }
 
         public void PopAWheely()
@@ -35,6 +43,12 @@ namespace SimpleClassExample
             // Эти два оператора функционально эквивалентны.
             driverName = name;
             this.driverName = name;
+        }
+
+        public void SetIntensity(int intensity)
+        {
+            if (intensity > 10) intensity = 10;
+            driverIntensity = intensity;
         }
     }
 }
