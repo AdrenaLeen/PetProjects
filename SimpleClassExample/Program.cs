@@ -44,6 +44,9 @@ namespace SimpleClassExample
             Car daisy = new Car("Дейзи", 75);
             daisy.PrintState();
 
+            Motorcycle mc = new Motorcycle();
+            mc.PopAWheely();
+
             Console.ReadLine();
         }
     }
