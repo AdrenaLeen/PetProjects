@@ -20,6 +20,7 @@ namespace EmployeeApp
         public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
         public Employee(string name, int age, int id, float pay)
         {
+            // Уже лучше! Используйте свойства для установки данных класса. Это сократит количество дублированных проверок на предмет ошибок.
             Name = name;
             Age = age;
             ID = id;
@@ -29,20 +30,20 @@ namespace EmployeeApp
         // Методы.
         public void GiveBonus(float amount)
         {
-            currPay += amount;
+            Pay += amount;
         }
 
         // Обновлённый метод DisplayStats() теперь учитывает возраст.
         public void DisplayStats()
         {
             // Имя сотрудника
-            Console.WriteLine($"Имя: {empName}");
+            Console.WriteLine($"Имя: {Name}");
             // Идентификационный номер сотрудника
-            Console.WriteLine($"ID: {empID}");
+            Console.WriteLine($"ID: {ID}");
             // Возраст
-            Console.WriteLine($"Возраст: {empAge}");
+            Console.WriteLine($"Возраст: {Age}");
             // Текущая выплата
-            Console.WriteLine($"Выплата: {currPay}");
+            Console.WriteLine($"Выплата: {Pay}");
         }
 
         // Метод доступа (метод get).
