@@ -22,7 +22,33 @@ namespace FunWithEnums
     {
         static void Main()
         {
+            Console.WriteLine("**** Тип enum *****");
 
+            // Создать переменную типа EmpType.
+            EmpType emp = EmpType.Contractor;
+            AskForBonus(emp);
+            
+            Console.ReadLine();
+        }
+
+        // Перечисления как параметры
+        static void AskForBonus(EmpType e)
+        {
+            switch (e)
+            {
+                case EmpType.Manager:
+                    Console.WriteLine("Не желаете ли взамен фондовые опционы?");
+                    break;
+                case EmpType.Grunt:
+                    Console.WriteLine("Вы, должно быть, шутите...");
+                    break;
+                case EmpType.Contractor:
+                    Console.WriteLine("Вы уже получаете вполне достаточно...");
+                    break;
+                case EmpType.VicePresident:
+                    Console.WriteLine("Очень хорошо, сэр!");
+                    break;
+            }
         }
     }
 }
