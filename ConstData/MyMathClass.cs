@@ -8,6 +8,12 @@ namespace ConstData
 {
     class MyMathClass
     {
-        public static readonly double PI = 3.14;
+        // Поля только для чтения могут присваиваться в конструкторах, но больше нигде.
+        public readonly double PI;
+
+        public MyMathClass()
+        {
+            PI = 3.14;
+        }
     }
 }
