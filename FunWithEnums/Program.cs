@@ -27,7 +27,13 @@ namespace FunWithEnums
             // Создать переменную типа EmpType.
             EmpType emp = EmpType.Contractor;
             AskForBonus(emp);
-            
+
+            // Вывести тип хранилища для значений перечисления.
+            Console.WriteLine($"EmpType использует {Enum.GetUnderlyingType(emp.GetType())} для хранения");
+
+            // На этот раз для получения информации о типе используется операция typeof.
+            Console.WriteLine($"EmpType использует {Enum.GetUnderlyingType(typeof(EmpType))} для хранения");
+
             Console.ReadLine();
         }
 
