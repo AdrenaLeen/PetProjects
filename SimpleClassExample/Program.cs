@@ -23,6 +23,14 @@ namespace SimpleClassExample
                 myCar.SpeedUp(5);
                 myCar.PrintState();
             }
+
+            Car myCar2 = new Car();
+            myCar.petName = "Фред";
+
+            Car myCar3;
+            myCar3 = new Car();
+            myCar3.petName = "Фред";
+
             Console.ReadLine();
         }
     }
