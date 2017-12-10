@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleUtilityClass", "Simpl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeApp", "EmployeeApp\EmployeeApp.csproj", "{016D2D4B-403C-4E72-AC6E-3CA261087540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoProps", "AutoProps\AutoProps.csproj", "{C7DC4686-CF66-4E7E-AB98-D5BDF84D9144}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{016D2D4B-403C-4E72-AC6E-3CA261087540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{016D2D4B-403C-4E72-AC6E-3CA261087540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{016D2D4B-403C-4E72-AC6E-3CA261087540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DC4686-CF66-4E7E-AB98-D5BDF84D9144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DC4686-CF66-4E7E-AB98-D5BDF84D9144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DC4686-CF66-4E7E-AB98-D5BDF84D9144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DC4686-CF66-4E7E-AB98-D5BDF84D9144}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
