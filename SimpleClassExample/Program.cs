@@ -31,6 +31,11 @@ namespace SimpleClassExample
             myCar3 = new Car();
             myCar3.petName = "Фред";
 
+            // Вызов стандартного конструктора
+            Car chuck = new Car();
+            // Выводит строку "Чак едет со скоростью 10 км/ч."
+            chuck.PrintState();
+
             Console.ReadLine();
         }
     }
