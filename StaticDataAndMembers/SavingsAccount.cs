@@ -12,8 +12,16 @@ namespace StaticDataAndMembers
         // Данные уровня экземпляра
         public double currBalance;
         // Статический элемент данных.
-        public static double currInterestRate = 0.04;
+        public static double currInterestRate;
 
+        // Статический конструктор!
+        static SavingsAccount()
+        {
+            Console.WriteLine("В статическом конструкторе!");
+            currInterestRate = 0.04;
+        }
+
+        // Обратите внимание, что наш конструктор устанавливает значение статического поля currInterestRate.
         public SavingsAccount(double balance)
         {
             currBalance = balance;
