@@ -14,6 +14,7 @@ namespace FunWithArrays
             SimpleArrays();
             ArrayInitialization();
             DeclareImplicitArrays();
+            ArrayOfObjects();
             Console.ReadLine();
         }
 
@@ -68,6 +69,22 @@ namespace FunWithArrays
             // Переменная c на самом деле имеет тип string[].
             var c = new[] { "hello", null, "world" };
             Console.WriteLine("c является: {0}", c.ToString());
+            Console.WriteLine();
+        }
+
+        static void ArrayOfObjects()
+        {
+            Console.WriteLine("=> Массив элементов типа оbject.");
+
+            // Массив объектов может содержать всё что угодно.
+            object[] myObjects = new object[4];
+            myObjects[0] = 10;
+            myObjects[1] = false;
+            myObjects[2] = new DateTime(1969, 3, 24);
+            myObjects[3] = "Форма & Пустота";
+
+            // Вывести тип и значение каждого элемента в массиве.
+            foreach (object obj in myObjects) Console.WriteLine($"Тип: {obj.GetType()}, значение: {obj}");
             Console.WriteLine();
         }
     }
