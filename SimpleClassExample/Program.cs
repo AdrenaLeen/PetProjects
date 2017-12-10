@@ -47,6 +47,13 @@ namespace SimpleClassExample
             Motorcycle mc = new Motorcycle();
             mc.PopAWheely();
 
+            // Создать объект Motorcycle с мотоциклистом по имени Тини?
+            Motorcycle c = new Motorcycle(5);
+            c.SetDriverName("Тини");
+            c.PopAWheely();
+            // Выводит пустое значение name!
+            Console.WriteLine($"Мотоциклиста зовут {c.driverName}");
+
             Console.ReadLine();
         }
     }

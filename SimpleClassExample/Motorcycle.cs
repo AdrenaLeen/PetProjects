@@ -10,6 +10,9 @@ namespace SimpleClassExample
     {
         public int driverIntensity;
 
+        // Новые члены для представления имени водителя.
+        public string driverName;
+
         // Вернуть стандартный конструктор, который будет устанавливать все члены данных в стандартные значения.
         public Motorcycle() { }
 
@@ -25,6 +28,13 @@ namespace SimpleClassExample
             {
                 Console.WriteLine("Иииииии хаааааааааа!");
             }
+        }
+
+        public void SetDriverName(string name)
+        {
+            // Эти два оператора функционально эквивалентны.
+            driverName = name;
+            this.driverName = name;
         }
     }
 }
