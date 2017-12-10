@@ -39,6 +39,8 @@ namespace NullableTypes
             if (!moreData.HasValue) moreData = 100;
             Console.WriteLine($"Значение moreData: {moreData}");
 
+            TesterMethod(null);
+
             Console.ReadLine();
         }
 
@@ -60,6 +62,12 @@ namespace NullableTypes
             Nullable<bool> nullableBool = null;
             Nullable<char> nullableChar = 'a';
             Nullable<int>[] arrayOfNullableInts = new Nullable<int>[10];
+        }
+
+        static void TesterMethod(string[] args)
+        {
+            // Перед доступом к данным массива мы должны проверить его на равенство null!
+            Console.WriteLine($"Вы отправили мне {args?.Length ?? 0} аргументов.");
         }
     }
 }
