@@ -12,6 +12,13 @@ namespace FunWithStructures
         public int X;
         public int Y;
 
+        // Специальный конструктор.
+        public Point(int XPos, int YPos)
+        {
+            X = XPos;
+            Y = YPos;
+        }
+
         // Добавить 1 к позиции (X, Y).
         public void Increment()
         {
