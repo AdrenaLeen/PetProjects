@@ -30,6 +30,15 @@ namespace NullableTypes
             // Значение переменной b не определено.
             else Console.WriteLine("Значение 'b' не определено.");
 
+            // Если значение, возвращаемое из GetIntFromDataBase(), равно null, то присвоить локальной переменной значение 100.
+            int myData = dr.GetIntFromDatabase() ?? 100;
+            Console.WriteLine($"Значение myData: {myData}");
+
+            // Более длинный код, в котором не используется синтаксис операции ??.
+            int? moreData = dr.GetIntFromDatabase();
+            if (!moreData.HasValue) moreData = 100;
+            Console.WriteLine($"Значение moreData: {moreData}");
+
             Console.ReadLine();
         }
 
