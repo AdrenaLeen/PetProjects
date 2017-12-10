@@ -12,6 +12,25 @@ namespace NullableTypes
         {
             // Всё в порядке! Строки являются ссылочными типами.
             string myString = null;
+
+            Console.WriteLine("***** Типы, допускающие null *****");
+            DatabaseReader dr = new DatabaseReader();
+
+            // Получить значение int из "базы данных".
+            int? i = dr.GetIntFromDatabase();
+            // Вывод значения переменной i.
+            if (i.HasValue) Console.WriteLine($"Значение 'i' равно: {i.Value}");
+            // Значение переменной i не определено.
+            else Console.WriteLine("Значение 'i' не определено.");
+
+            // Получить значение bool из "базы данных".
+            bool? b = dr.GetBoolFromDatabase();
+            // Вывод значения переменной b.
+            if (b != null) Console.WriteLine($"Значение переменной 'b' равно: {b.Value}");
+            // Значение переменной b не определено.
+            else Console.WriteLine("Значение 'b' не определено.");
+
+            Console.ReadLine();
         }
 
         static void LocalNullableVariables()
