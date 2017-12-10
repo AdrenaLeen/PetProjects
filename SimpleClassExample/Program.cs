@@ -52,6 +52,7 @@ namespace SimpleClassExample
             c.SetDriverName("Тини");
             c.PopAWheely();
             // Выводит пустое значение name!
+            // Вывод имени гонщика.
             Console.WriteLine($"Мотоциклиста зовут {c.driverName}");
 
             Console.ReadLine();
