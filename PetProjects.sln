@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectsInitializers", "Obje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstData", "ConstData\ConstData.csproj", "{7840A6E5-E865-4541-8ACD-1F66BB35715A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicInheritance", "BasicInheritance\BasicInheritance.csproj", "{13E0EAC9-C099-49DE-B07D-FDA4513845FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7840A6E5-E865-4541-8ACD-1F66BB35715A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
