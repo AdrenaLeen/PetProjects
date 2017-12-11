@@ -8,7 +8,8 @@ namespace BasicInheritance
 {
     // MiniVan "является" Car.
     // Класс MiniVan является производным от Car.
-    class MiniVan : Car
+    // Класс MiniVan не может быть расширен!
+    sealed class MiniVan : Car
     {
         public void TestMethod()
         {
