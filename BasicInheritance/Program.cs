@@ -18,6 +18,11 @@ namespace BasicInheritance
             myCar.Speed = 50;
             Console.WriteLine($"Моя машина едет со скоростью {myCar.Speed} км/ч");
 
+            // Создать объект MiniVan.
+            MiniVan myVan = new MiniVan();
+            myVan.Speed = 10;
+            Console.WriteLine($"Мой вэн едет со скоростью {myVan.Speed} км/ч");
+
             Console.ReadLine();
         }
     }
