@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Employees
 {
     // Продавцам нужно знать количество продаж.
+    // Класс SalesPerson запечатал метод GiveBonus()!
     class SalesPerson : Employee
     {
         public int SalesNumber { get; set; }
