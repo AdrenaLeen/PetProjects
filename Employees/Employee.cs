@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Employees
 {
     // В класс Employee вложен класс BenefitPackage.
-    partial class Employee
+    // Превращение класса Employee в абстрактный тип для предотвращения прямого создания его экземпляров.
+    abstract partial class Employee
     {
         // В класс BenefitPackage вложено перечисление BenefitPackageLevel.
         public class BenefitPackage
