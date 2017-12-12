@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
+    // Защищённые данные состояния.
     partial class Employee
     {
-        // Поля данных.
-        private string empName;
-        private int empID;
-        private float currPay;
-        // Новое поле и свойство.
-        private int empAge;
-        private string empSSN = "";
+        // Производные классы теперь могут иметь прямой доступ к этой информации.
+        protected string empName;
+        protected int empID;
+        protected float currPay;
+        protected int empAge;
+        protected string empSSN = "";
 
         // Обновлённые конструкторы.
         public Employee() { }
