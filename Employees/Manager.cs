@@ -18,5 +18,18 @@ namespace Employees
             // Это свойство определено в классе Manager.
             StockOptions = numbOfOpts;
         }
+
+        public override void GiveBonus(float amount)
+        {
+            base.GiveBonus(amount);
+            Random r = new Random();
+            StockOptions += r.Next(500);
+        }
+
+        public override void DisplayStats()
+        {
+            base.DisplayStats();
+            Console.WriteLine($"Число опционов: {StockOptions}");
+        }
     }
 }

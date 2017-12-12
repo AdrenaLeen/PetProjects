@@ -25,13 +25,14 @@ namespace Employees
         }
 
         // Методы.
-        public void GiveBonus(float amount)
+        // Теперь этот метод может быть переопределён в производном классе.
+        public virtual void GiveBonus(float amount)
         {
             Pay += amount;
         }
 
         // Обновлённый метод DisplayStats() теперь учитывает возраст.
-        public void DisplayStats()
+        public virtual void DisplayStats()
         {
             // Имя сотрудника
             Console.WriteLine($"Имя: {Name}");
@@ -41,6 +42,7 @@ namespace Employees
             Console.WriteLine($"Возраст: {Age}");
             // Текущая выплата
             Console.WriteLine($"Выплата: {Pay}");
+            Console.WriteLine($"SSN: {SocialSecurityNumber}");
         }
 
         // Метод доступа (метод get).
