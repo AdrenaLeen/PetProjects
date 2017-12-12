@@ -17,6 +17,8 @@ namespace Employees
             fred.Name = "Фрэд";
             fred.SalesNumber = 50;
 
+            Manager chucky = new Manager("Чаки", 50, 92, 100000, "333-23-2322", 9000);
+
             Console.ReadLine();
         }
     }

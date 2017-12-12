@@ -19,14 +19,17 @@ namespace Employees
         // Обновлённые конструкторы.
         public Employee() { }
         public Employee(string name, int id, float pay) : this(name, 0, id, pay, "") { }
-        public Employee(string name, int age, int id, float pay, string ssn)
+        public Employee(string name, int age, int id, float pay)
         {
             // Уже лучше! Используйте свойства для установки данных класса. Это сократит количество дублированных проверок на предмет ошибок.
             Name = name;
             Age = age;
             ID = id;
             Pay = pay;
-            // Проверить должным образом входной параметр ssn и затем установить значение.
+        }
+
+        public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay)
+        {
             empSSN = ssn;
         }
 
