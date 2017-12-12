@@ -23,6 +23,13 @@ namespace Shapes
             // Пройти в цикле по всем элементам и взаимодействовать с полиморфным интерфейсом.
             foreach (Shape s in myShapes) s.Draw();
 
+            // Здесь вызывается метод Draw(), определённый в классе ThreeDCircle.
+            ThreeDCircle o = new ThreeDCircle();
+            o.Draw();
+
+            // Здесь вызывается метод Draw(), определённый в родительском классе!
+            ((Circle)o).Draw();
+
             Console.ReadLine();
         }
     }
