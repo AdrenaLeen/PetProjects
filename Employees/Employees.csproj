@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BenefitPackage.cs" />
     <Compile Include="Employee.Core.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Manager.cs" />

@@ -20,6 +20,9 @@ namespace Employees
             Manager chucky = new Manager("Чаки", 50, 92, 100000, "333-23-2322", 9000);
             double cost = chucky.GetBenefitCost();
 
+            // Определить уровень льгот
+            Employee.BenefitPackage.BenefitPackageLevel myBenefitLevel = Employee.BenefitPackage.BenefitPackageLevel.Platinum;
+
             Console.ReadLine();
         }
     }

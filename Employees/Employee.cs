@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
+    // В класс Employee вложен класс BenefitPackage.
     partial class Employee
     {
+        // В класс BenefitPackage вложено перечисление BenefitPackageLevel.
+        public class BenefitPackage
+        {
+            public enum BenefitPackageLevel
+            {
+                Standard, Gold, Platinum
+            }
+
+            // Предположим, что есть другие члены, представляющие медицинские/стоматологические программы и т.д.
+            public double ComputePayDeduction()
+            {
+                return 125.0;
+            }
+        }
+
         // Методы.
         public void GiveBonus(float amount)
         {
