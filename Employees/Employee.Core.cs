@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Employees
 {
     // Защищённые данные состояния.
+    // Теперь сотрудники имеют льготы.
     partial class Employee
     {
         // Производные классы теперь могут иметь прямой доступ к этой информации.
@@ -15,6 +16,8 @@ namespace Employees
         protected float currPay;
         protected int empAge;
         protected string empSSN = "";
+        // Содержит объект BenefitPackage.
+        protected BenefitPackage empBenefits = new BenefitPackage();
 
         // Обновлённые конструкторы.
         public Employee() { }
@@ -65,6 +68,12 @@ namespace Employees
         public string SocialSecurityNumber
         {
             get { return empSSN; }
+        }
+        // Открывает доступ к объекту через специальное свойство.
+        public BenefitPackage Benefits
+        {
+            get { return empBenefits; }
+            set { empBenefits = value; }
         }
     }
 }

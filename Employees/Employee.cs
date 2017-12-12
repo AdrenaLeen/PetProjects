@@ -40,5 +40,11 @@ namespace Employees
             if (name.Length > 15) Console.WriteLine("Ошибка! Длина имени превышает 15 символов!");
             else empName = name;
         }
+
+        // Открывает доступ к некоторому поведению, связанному со льготами.
+        public double GetBenefitCost()
+        {
+            return empBenefits.ComputePayDeduction();
+        }
     }
 }
