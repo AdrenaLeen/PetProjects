@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstData", "ConstData\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicInheritance", "BasicInheritance\BasicInheritance.csproj", "{13E0EAC9-C099-49DE-B07D-FDA4513845FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees", "Employees\Employees.csproj", "{C6765B47-FB42-4D3A-819C-0B3C704584A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E0EAC9-C099-49DE-B07D-FDA4513845FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6765B47-FB42-4D3A-819C-0B3C704584A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6765B47-FB42-4D3A-819C-0B3C704584A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6765B47-FB42-4D3A-819C-0B3C704584A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6765B47-FB42-4D3A-819C-0B3C704584A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
