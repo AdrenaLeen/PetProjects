@@ -47,7 +47,18 @@ namespace ObjectOverrides
             Console.WriteLine($"p3 = p4?: {p3.Equals(p4)}");
             Console.WriteLine($"Одинаковые хеш-коды?: {p3.GetHashCode() == p4.GetHashCode()}");
 
+            StaticMembersOfObject();
+
             Console.ReadLine();
+        }
+
+        static void StaticMembersOfObject()
+        {
+            // Статические члены System.Object.
+            Person p3 = new Person("Салли", "Джонс", 4);
+            Person p4 = new Person("Салли", "Джонс", 4);
+            Console.WriteLine($"У P3 и P4 одинаковое состояние: {Equals(p3, p4)}");
+            Console.WriteLine($"P3 и P4 указывают на один и тот же объект: {ReferenceEquals(p3, p4)}");
         }
     }
 }
