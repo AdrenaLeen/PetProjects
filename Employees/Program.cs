@@ -68,6 +68,17 @@ namespace Employees
             // Повысить зарплату...
             // Предоставить место на парковке компании...
             Console.WriteLine($"{emp.Name} был продвинут по служебной лестнице!");
+
+            if (emp is SalesPerson)
+            {
+                Console.WriteLine($"{emp.Name} сделал {((SalesPerson)emp).SalesNumber} продаж!");
+                Console.WriteLine();
+            }
+            if (emp is Manager)
+            {
+                Console.WriteLine($"У {emp.Name} {((Manager)emp).StockOptions} опционов...");
+                Console.WriteLine();
+            }
         }
 
         static void CastingExamples()
