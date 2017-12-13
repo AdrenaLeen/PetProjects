@@ -35,5 +35,27 @@ namespace Employees
 
             Console.ReadLine();
         }
+
+        static void GivePromotion(Employee emp)
+        {
+            // Повысить зарплату...
+            // Предоставить место на парковке компании...
+            Console.WriteLine($"{emp.Name} был продвинут по служебной лестнице!");
+        }
+
+        static void CastingExamples()
+        {
+            // Manager "является" System.Object, поэтому в переменной типа object можно сохранить ссылку на Manager.
+            object frank = new Manager("Фрэнк Цаппа", 9, 3000, 40000, "111-11-1111", 5);
+            GivePromotion((Manager)frank);
+
+            // Manager также "является" Employee.
+            Employee moonUnit = new Manager("МунЮнит Цаппа", 2, 3001, 20000, "101-11-1321", 1);
+            GivePromotion(moonUnit);
+
+            // PTSalesPerson "является" SalesPerson.
+            SalesPerson jill = new PTSalesPerson("Jill", 834, 3002, 100000, "111-12-1119", 90);
+            GivePromotion(jill);
+        }
     }
 }
