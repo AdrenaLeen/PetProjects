@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees", "Employees\Empl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectOverrides", "ObjectOverrides\ObjectOverrides.csproj", "{929E4963-1227-4858-8F87-7AC0470329EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929E4963-1227-4858-8F87-7AC0470329EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929E4963-1227-4858-8F87-7AC0470329EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929E4963-1227-4858-8F87-7AC0470329EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929E4963-1227-4858-8F87-7AC0470329EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
