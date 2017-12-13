@@ -33,6 +33,33 @@ namespace Employees
             fran.DisplayStats();
             Console.WriteLine();
 
+            // Привести объект frank к типу Hexagon невозможно, но этот код нормально скомпилируется!
+            // Перехват возможной ошибки приведения.
+            object frank = new Manager();
+            Hexagon hex;
+            try
+            {
+                hex = (Hexagon)frank;
+            }
+            catch (InvalidCastException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            // Использование ключевого слова as для проверки совместимости.
+            object[] things = new object[4];
+            things[0] = new Hexagon();
+            things[1] = false;
+            things[2] = new Manager();
+            things[3] = "Последняя вещь";
+
+            foreach (object item in things)
+            {
+                Hexagon h = item as Hexagon;
+                if (h == null) Console.WriteLine("Этот элемент не является шестиугольником");
+                else h.Draw();
+            }
+
             Console.ReadLine();
         }
 
