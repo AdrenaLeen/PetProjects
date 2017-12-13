@@ -25,5 +25,11 @@ namespace ObjectOverrides
         {
             return $"[Имя: {FirstName}; Фамилия: {LastName}; Возраст: {Age}]";
         }
+
+        public override bool Equals(object obj)
+        {
+            // Больше нет необходимости приводить obj с типу Person, т.к. у всех типов имеется метод ToString().
+            return obj.ToString() == ToString();
+        }
     }
 }
