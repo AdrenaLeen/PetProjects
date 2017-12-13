@@ -20,5 +20,10 @@ namespace ObjectOverrides
             Age = personAge;
         }
         public Person() { }
+
+        public override string ToString()
+        {
+            return $"[Имя: {FirstName}; Фамилия: {LastName}; Возраст: {Age}]";
+        }
     }
 }
