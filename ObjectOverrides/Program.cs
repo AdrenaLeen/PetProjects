@@ -25,6 +25,28 @@ namespace ObjectOverrides
                 Console.WriteLine("Одинаковые сущности!");
             }
 
+            // ПРИМЕЧАНИЕ: эти объекты идентичны и предназначены для тестирования методов Equals() и GetHashCode().
+            Person p3 = new Person("Гомер", "Симпсон", 50);
+            Person p4 = new Person("Гомер", "Симпсон", 50);
+
+            // Получить строковые версии объектов.
+            Console.WriteLine($"p3.ToString() = {p3.ToString()}");
+            Console.WriteLine($"p4.ToString() = {p4.ToString()}");
+
+            // Протестировать переопределённый метод Equals().
+            Console.WriteLine($"p3 = p4?: {p3.Equals(p4)}");
+
+            // Проверить хеш-коды.
+            Console.WriteLine($"Одинаковые хеш-коды?: {p3.GetHashCode() == p4.GetHashCode()}");
+            Console.WriteLine();
+
+            // Изменить возраст p4 и протестировать снова.
+            p4.Age = 45;
+            Console.WriteLine($"p3.ToString() = {p3.ToString()}");
+            Console.WriteLine($"p4.ToString() = {p4.ToString()}");
+            Console.WriteLine($"p3 = p4?: {p3.Equals(p4)}");
+            Console.WriteLine($"Одинаковые хеш-коды?: {p3.GetHashCode() == p4.GetHashCode()}");
+
             Console.ReadLine();
         }
     }
