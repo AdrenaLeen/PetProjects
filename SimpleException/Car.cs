@@ -50,6 +50,9 @@ namespace SimpleException
                     // Мы хотим обращаться к свойству HelpLink, поэтому необходимо создать локальную переменную перед генерацией объекта Exception.
                     Exception ex = new Exception($"{PetName} перегрет!");
                     ex.HelpLink = "http://www.CarsRUs.com";
+                    // Предоставить специальные данные, касающиеся ошибки.
+                    ex.Data.Add("TimeStamp", $"Машина вышла из строя {DateTime.Now}");
+                    ex.Data.Add("Cause", "Забыли убрать ногу с газа.");
                     throw ex;
                 }
                 // Вывод текущей скорости.

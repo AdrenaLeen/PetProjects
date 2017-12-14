@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace SimpleException
 {
@@ -28,6 +29,8 @@ namespace SimpleException
                 Console.WriteLine($"Источник: {e.Source}");
                 Console.WriteLine($"Стек: {e.StackTrace}");
                 Console.WriteLine($"HelpLink: {e.HelpLink}");
+                Console.WriteLine("-> Произвольные данные:");
+                foreach (DictionaryEntry de in e.Data) Console.WriteLine($"-> {de.Key}: {de.Value}");
             }
             // Ошибка была обработана, продолжается выполнение следующего оператора.
             Console.WriteLine("***** Вне логики исключения *****");
