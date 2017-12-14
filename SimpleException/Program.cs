@@ -27,6 +27,7 @@ namespace SimpleException
                 Console.WriteLine($"Сообщение: {e.Message}");
                 Console.WriteLine($"Источник: {e.Source}");
                 Console.WriteLine($"Стек: {e.StackTrace}");
+                Console.WriteLine($"HelpLink: {e.HelpLink}");
             }
             // Ошибка была обработана, продолжается выполнение следующего оператора.
             Console.WriteLine("***** Вне логики исключения *****");

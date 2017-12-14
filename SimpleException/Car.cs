@@ -47,8 +47,12 @@ namespace SimpleException
                     carIsDead = true;
                     CurrentSpeed = 0;
                     // Использовать ключевое слово throw для генерации исключения.
-                    throw new Exception($"{PetName} перегрет!");
+                    // Мы хотим обращаться к свойству HelpLink, поэтому необходимо создать локальную переменную перед генерацией объекта Exception.
+                    Exception ex = new Exception($"{PetName} перегрет!");
+                    ex.HelpLink = "http://www.CarsRUs.com";
+                    throw ex;
                 }
+                // Вывод текущей скорости.
                 else Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
             }
         }
