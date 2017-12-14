@@ -26,6 +26,7 @@ namespace SimpleException
                 Console.WriteLine($"Тип члена: {e.TargetSite.MemberType}");
                 Console.WriteLine($"Сообщение: {e.Message}");
                 Console.WriteLine($"Источник: {e.Source}");
+                Console.WriteLine($"Стек: {e.StackTrace}");
             }
             // Ошибка была обработана, продолжается выполнение следующего оператора.
             Console.WriteLine("***** Вне логики исключения *****");
