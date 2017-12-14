@@ -21,7 +21,9 @@ namespace SimpleException
             catch (Exception e)
             {
                 Console.WriteLine("*** Ошибка! ***");
-                Console.WriteLine($"Метод: {e.TargetSite}");
+                Console.WriteLine($"Имя члена: {e.TargetSite}");
+                Console.WriteLine($"Класс, определяющий член: {e.TargetSite.DeclaringType}");
+                Console.WriteLine($"Тип члена: {e.TargetSite.MemberType}");
                 Console.WriteLine($"Сообщение: {e.Message}");
                 Console.WriteLine($"Источник: {e.Source}");
             }
