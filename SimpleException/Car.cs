@@ -44,9 +44,10 @@ namespace SimpleException
                 CurrentSpeed += delta;
                 if (CurrentSpeed > MaxSpeed)
                 {
-                    Console.WriteLine($"{PetName} перегрет!");
-                    CurrentSpeed = 0;
                     carIsDead = true;
+                    CurrentSpeed = 0;
+                    // Использовать ключевое слово throw для генерации исключения.
+                    throw new Exception($"{PetName} перегрет!");
                 }
                 else Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
             }
