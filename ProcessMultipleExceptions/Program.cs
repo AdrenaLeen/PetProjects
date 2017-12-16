@@ -14,6 +14,7 @@ namespace ProcessMultipleExceptions
         {
             Console.WriteLine("***** Обработка множества исключений *****");
             Car myCar = new Car("Расти", 90);
+            myCar.CrankTunes(true);
 
             try
             {
@@ -45,6 +46,11 @@ namespace ProcessMultipleExceptions
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                // Этот код будет выполняться всегда независимо от того, возникало исключение или нет.
+                myCar.CrankTunes(false);
             }
 
             Console.ReadLine();
