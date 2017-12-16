@@ -18,18 +18,9 @@ namespace ProcessMultipleExceptions
                 // Arg вызовет исключение выхода за пределы диапазона.
                 myCar.Accelerate(-10);
             }
-            catch (CarIsDeadException e)
+            catch
             {
-                Console.WriteLine(e.Message);
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            // Этот блок будет перехватывать любые исключения помимо CarIsDeadException и ArgumentOutOfRangeException.
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Произошло что-то плохое...");
             }
 
             Console.ReadLine();
