@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ProcessMultipleExceptions
 {
@@ -21,6 +22,17 @@ namespace ProcessMultipleExceptions
             }
             catch (CarIsDeadException e)
             {
+                try
+                {
+                    // Попытка открытия файла carErrors.txt, расположенного на диске C:.
+                    FileStream fs = File.Open(@"C:\carErrors.txt", FileMode.Open);
+                }
+                catch (Exception e2)
+                {
+                    // Сгенерировать исключение, которое записывает новое исключение, а также сообщение из первого исключения.
+                    throw new CarIsDeadException(e.Message, e2);
+                }
+
                 // Выполнить частичную обработку этой ошибки и передать ответственность.
                 Console.WriteLine(e.Message);
                 throw;
