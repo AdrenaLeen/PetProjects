@@ -21,7 +21,7 @@ namespace ProcessMultipleExceptions
                 // Arg вызовет исключение выхода за пределы диапазона.
                 myCar.Accelerate(-10);
             }
-            catch (CarIsDeadException e)
+            catch (CarIsDeadException e) when (e.ErrorTimeStamp.DayOfWeek != DayOfWeek.Friday)
             {
                 try
                 {
@@ -35,6 +35,8 @@ namespace ProcessMultipleExceptions
                 }
 
                 // Выполнить частичную обработку этой ошибки и передать ответственность.
+                // Выводится, только если выражение в конструкции when вычисляется как true.
+                Console.WriteLine("Обработка мёртвой машины!");
                 Console.WriteLine(e.Message);
                 throw;
             }
