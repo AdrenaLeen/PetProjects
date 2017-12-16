@@ -8,6 +8,7 @@ namespace ProcessMultipleExceptions
 {
     class Program
     {
+        // Передача ответственности.
         static void Main()
         {
             Console.WriteLine("***** Обработка множества исключений *****");
@@ -18,9 +19,20 @@ namespace ProcessMultipleExceptions
                 // Arg вызовет исключение выхода за пределы диапазона.
                 myCar.Accelerate(-10);
             }
-            catch
+            catch (CarIsDeadException e)
             {
-                Console.WriteLine("Произошло что-то плохое...");
+                // Выполнить частичную обработку этой ошибки и передать ответственность.
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            // Этот блок будет перехватывать любые исключения помимо CarIsDeadException и ArgumentOutOfRangeException.
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
 
             Console.ReadLine();
