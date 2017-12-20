@@ -57,6 +57,10 @@ namespace CustomInterface
             IPointy firstPointyItem = FindFirstPointyShape(myShapes);
             Console.WriteLine($"У элемента {firstPointyItem.Points} вершин");
 
+            // Этот массив может содержать только типы, которые реализуют интерфейс IPointy.
+            IPointy[] myPointyObjects = { new Hexagon(), new Knife(), new Triangle(), new Fork(), new PitchFork() };
+            foreach (IPointy i in myPointyObjects) Console.WriteLine($"У объекта {i.Points} вершин.");
+
             Console.ReadLine();
         }
 

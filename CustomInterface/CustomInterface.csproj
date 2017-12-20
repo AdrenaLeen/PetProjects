@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="Fork.cs" />
     <Compile Include="Hexagon.cs" />
     <Compile Include="IDraw3D.cs" />
     <Compile Include="IPointy.cs" />
+    <Compile Include="Knife.cs" />
+    <Compile Include="PitchFork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shape.cs" />
