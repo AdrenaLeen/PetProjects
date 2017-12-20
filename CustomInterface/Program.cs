@@ -52,6 +52,11 @@ namespace CustomInterface
                 if (myShapes[i] is IDraw3D) DrawIn3D((IDraw3D)myShapes[i]);
             }
 
+            // Получить первый элемент, имеющий вершины.
+            // В целях безопасности не помешает проверить firstPointyItem на равенство null.
+            IPointy firstPointyItem = FindFirstPointyShape(myShapes);
+            Console.WriteLine($"У элемента {firstPointyItem.Points} вершин");
+
             Console.ReadLine();
         }
 
@@ -60,6 +65,16 @@ namespace CustomInterface
         {
             Console.WriteLine("-> Отрисовка совместимых с IDraw3D типов");
             itf3d.Draw3D();
+        }
+
+        // Этот метод возвращает первый объект в массиве, который реализует интерфейс IPointy.
+        static IPointy FindFirstPointyShape(Shape[] shapes)
+        {
+            foreach (Shape s in shapes)
+            {
+                if (s is IPointy) return s as IPointy;
+            }
+            return null;
         }
     }
 }
