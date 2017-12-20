@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Circle.cs" />
     <Compile Include="Hexagon.cs" />
+    <Compile Include="IDraw3D.cs" />
     <Compile Include="IPointy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

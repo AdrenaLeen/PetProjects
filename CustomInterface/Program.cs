@@ -47,9 +47,19 @@ namespace CustomInterface
                 if (myShapes[i] is IPointy) Console.WriteLine($"-> Количество вершин: {((IPointy)myShapes[i]).Points}");
                 else Console.WriteLine($"-> У {myShapes[i].PetName} нет вершин!");
                 Console.WriteLine();
+
+                // Можно ли нарисовать эту фигуру в трёхмерном виде?
+                if (myShapes[i] is IDraw3D) DrawIn3D((IDraw3D)myShapes[i]);
             }
 
             Console.ReadLine();
+        }
+
+        // Будет рисовать любую фигуру, поддерживающую IDraw3D.
+        static void DrawIn3D(IDraw3D itf3d)
+        {
+            Console.WriteLine("-> Отрисовка совместимых с IDraw3D типов");
+            itf3d.Draw3D();
         }
     }
 }
