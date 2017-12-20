@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 namespace CustomInterface
 {
     // Класс Hexagon переопределяет метод Draw().
-    class Hexagon : Shape
+    class Hexagon : Shape, IPointy
     {
         public Hexagon() { }
         public Hexagon(string name) : base(name) { }
         public override void Draw()
         {
             Console.WriteLine($"Отрисовка {PetName} класса Hexagon");
+        }
+
+        // Реализация IPointy.
+        public byte Points
+        {
+            get { return 6; }
         }
     }
 }
