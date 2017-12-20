@@ -35,6 +35,20 @@ namespace CustomInterface
             if (itfPt2 != null) Console.WriteLine($"Количество вершин: {itfPt2.Points}");
             else Console.WriteLine("Упс! Нет вершин...");
 
+            // Создать массив элементов Shape.
+            Shape[] myShapes = { new Hexagon(), new Circle(), new Triangle("Джои"), new Circle("ЙоЙо")};
+
+            for (int i = 0; i < myShapes.Length; i++)
+            {
+                // Вспомните, что базовый класс Shape определяет абстрактный член Draw(), поэтому все фигуры знают, как себя рисовать.
+                myShapes[i].Draw();
+
+                // У каких фигур есть вершины?
+                if (myShapes[i] is IPointy) Console.WriteLine($"-> Количество вершин: {((IPointy)myShapes[i]).Points}");
+                else Console.WriteLine($"-> У {myShapes[i].PetName} нет вершин!");
+                Console.WriteLine();
+            }
+
             Console.ReadLine();
         }
     }
