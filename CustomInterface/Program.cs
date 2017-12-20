@@ -29,6 +29,12 @@ namespace CustomInterface
                 Console.WriteLine(e.Message);
             }
 
+            // Можно ли hex2 трактовать как IPointy?
+            Hexagon hex2 = new Hexagon("Питэр");
+            IPointy itfPt2 = hex2 as IPointy;
+            if (itfPt2 != null) Console.WriteLine($"Количество вершин: {itfPt2.Points}");
+            else Console.WriteLine("Упс! Нет вершин...");
+
             Console.ReadLine();
         }
     }
