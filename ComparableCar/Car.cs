@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ComparableCar
 {
     // Итерация по объектам Car может быть упорядочена на основе CarID.
+    // Теперь мы поддерживаем специальное свойство для возвращения корректного экземпляра, реализующего интерфейс IComparer.
     class Car : IComparable
     {
         // Константа для представления максимальной скорости.
@@ -16,6 +18,9 @@ namespace ComparableCar
         public int CurrentSpeed { get; set; } = 0;
         public string PetName { get; set; } = "";
         public int CarID { get; set; }
+
+        // Свойство, возвращающее PetNameComparer.
+        public static IComparer SortByPetName { get { return new PetNameComparer(); } }
 
         // Не вышел ли автомобиль из строя?
         private bool carIsDead;

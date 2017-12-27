@@ -42,6 +42,13 @@ namespace ComparableCar
             Console.WriteLine("Упорядочение по дружественному имени:");
             foreach (Car c in myAutos) Console.WriteLine($"{c.CarID} {c.PetName}");
 
+            // Сортировка по дружественному имени становится немного яснее.
+            Array.Sort(myAutos, Car.SortByPetName);
+            Console.WriteLine();
+
+            Console.WriteLine("Упорядочение по дружественному имени:");
+            foreach (Car c in myAutos) Console.WriteLine($"{c.CarID} {c.PetName}");
+
             Console.ReadLine();
         }
     }
