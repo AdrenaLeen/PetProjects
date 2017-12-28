@@ -46,5 +46,28 @@ namespace IssuesWithNongenericCollections
             // Теперь значение вновь упаковывается, т.к. метод WriteLine() требует типа object!
             Console.WriteLine($"Значение int: {i}");
         }
+
+        static void ArrayListOfRandomObjects()
+        {
+            // ArrayList может хранить вообще всё что угодно.
+            ArrayList allMyObjects = new ArrayList();
+            allMyObjects.Add(true);
+            allMyObjects.Add(new OperatingSystem(PlatformID.MacOSX, new Version(10, 0)));
+            allMyObjects.Add(66);
+            allMyObjects.Add(3.14);
+        }
+
+        static void UsePersonCollection()
+        {
+            Console.WriteLine("***** Коллекция людей *****");
+            PersonCollection myPeople = new PersonCollection();
+            myPeople.AddPerson(new Person("Гомер", "Симпсон", 40));
+            myPeople.AddPerson(new Person("Мардж", "Симпсон", 38));
+            myPeople.AddPerson(new Person("Лиза", "Симпсон", 9));
+            myPeople.AddPerson(new Person("Барт", "Симпсон", 7));
+            myPeople.AddPerson(new Person("Мэгги", "Симпсон", 2));
+
+            foreach (Person p in myPeople) Console.WriteLine(p);
+        }
     }
 }
