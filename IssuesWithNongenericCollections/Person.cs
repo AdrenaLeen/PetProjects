@@ -22,7 +22,7 @@ namespace IssuesWithNongenericCollections
 
         public override string ToString()
         {
-            return string.Format($"Имя: {FirstName} {LastName}, Возраст: {LastName}");
+            return string.Format($"Имя: {FirstName} {LastName}, Возраст: {Age}");
         }
     }
 }

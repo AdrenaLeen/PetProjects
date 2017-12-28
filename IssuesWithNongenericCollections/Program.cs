@@ -9,8 +9,14 @@ namespace IssuesWithNongenericCollections
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            SimpleBoxUnboxOperation();
+            WorkWithArrayList();
+            ArrayListOfRandomObjects();
+            UsePersonCollection();
+            UseGenericList();
+            Console.ReadLine();
         }
 
         private static void SimpleBoxUnboxOperation()
@@ -68,6 +74,21 @@ namespace IssuesWithNongenericCollections
             myPeople.AddPerson(new Person("Мэгги", "Симпсон", 2));
 
             foreach (Person p in myPeople) Console.WriteLine(p);
+        }
+
+        static void UseGenericList()
+        {
+            Console.WriteLine("***** Обобщённые коллекции *****");
+            // Этот объект List<> может хранить только объекты Person.
+            List<Person> morePeople = new List<Person>();
+            morePeople.Add(new Person("Фрэнк", "Блэк", 50));
+            Console.WriteLine(morePeople[0]);
+
+            // Этот объект List<> может хранить только целые числа.
+            List<int> moreInts = new List<int>();
+            moreInts.Add(10);
+            moreInts.Add(2);
+            int sum = moreInts[0] + moreInts[1];
         }
     }
 }
