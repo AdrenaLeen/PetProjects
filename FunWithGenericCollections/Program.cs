@@ -16,6 +16,9 @@ namespace FunWithGenericCollections
             UseGenericStack();
             Console.WriteLine();
 
+            UseGenericQueue();
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 
@@ -71,6 +74,38 @@ namespace FunWithGenericCollections
             catch (InvalidOperationException ex)
             {
                 Console.WriteLine($"Ошибка! {ex.Message}");
+            }
+        }
+
+        static void GetCoffee(Person p)
+        {
+            Console.WriteLine($"{p.FirstName} получил кофе!");
+        }
+
+        static void UseGenericQueue()
+        {
+            // Создать очередь из трёх человек.
+            Queue<Person> peopleQ = new Queue<Person>();
+            peopleQ.Enqueue(new Person { FirstName = "Гомер", LastName = "Симпсон", Age = 47 });
+            peopleQ.Enqueue(new Person { FirstName = "Мардж", LastName = "Симпсон", Age = 45 });
+            peopleQ.Enqueue(new Person { FirstName = "Лиза", LastName = "Симпсон", Age = 9 });
+
+            // Заглянуть, кто первый в очереди.
+            Console.WriteLine($"{peopleQ.Peek().FirstName} первый в очереди!");
+
+            // Удалить всех из очереди.
+            GetCoffee(peopleQ.Dequeue());
+            GetCoffee(peopleQ.Dequeue());
+            GetCoffee(peopleQ.Dequeue());
+
+            // Попробовать извлечь кого-то из очереди снова.
+            try
+            {
+                GetCoffee(peopleQ.Dequeue());
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine($"Ошибка! {e.Message}");
             }
         }
     }
