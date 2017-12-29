@@ -13,6 +13,9 @@ namespace FunWithGenericCollections
             UseGenericList();
             Console.WriteLine();
 
+            UseGenericStack();
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 
@@ -41,6 +44,34 @@ namespace FunWithGenericCollections
             // Скопировать данные в новый массив.
             Person[] arrayOfPeople = people.ToArray();
             for (int i = 0; i < arrayOfPeople.Length; i++) Console.WriteLine($"Имя: {arrayOfPeople[i].FirstName}");
+        }
+
+        static void UseGenericStack()
+        {
+            Stack<Person> stackOfPeople = new Stack<Person>();
+            stackOfPeople.Push(new Person { FirstName = "Гомер", LastName = "Симпсон", Age = 47 });
+            stackOfPeople.Push(new Person { FirstName = "Мардж", LastName = "Симпсон", Age = 45 });
+            stackOfPeople.Push(new Person { FirstName = "Лиза", LastName = "Симпсон", Age = 9 });
+
+            // Просмотреть верхний элемент, вытолкнуть его и просмотреть снова.
+            Console.WriteLine($"Первый объект Person: {stackOfPeople.Peek()}");
+            Console.WriteLine($"Вытолкнут {stackOfPeople.Pop()}");
+
+            Console.WriteLine($"Первый объект Person: {stackOfPeople.Peek()}");
+            Console.WriteLine($"Вытолкнут {stackOfPeople.Pop()}");
+
+            Console.WriteLine($"Первый объект Person: {stackOfPeople.Peek()}");
+            Console.WriteLine($"Вытолкнут {stackOfPeople.Pop()}");
+
+            try
+            {
+                Console.WriteLine($"Первый объект Person: {stackOfPeople.Peek()}");
+                Console.WriteLine($"Вытолкнут {stackOfPeople.Pop()}");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine($"Ошибка! {ex.Message}");
+            }
         }
     }
 }
