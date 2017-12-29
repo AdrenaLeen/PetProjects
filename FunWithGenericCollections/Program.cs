@@ -19,6 +19,12 @@ namespace FunWithGenericCollections
             UseGenericQueue();
             Console.WriteLine();
 
+            UseSortedSet();
+            Console.WriteLine();
+
+            UseDictionary();
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 
@@ -107,6 +113,65 @@ namespace FunWithGenericCollections
             {
                 Console.WriteLine($"Ошибка! {e.Message}");
             }
+        }
+
+        private static void UseSortedSet()
+        {
+            // Создать несколько объектов Person с разными значениями возраста.
+            SortedSet<Person> setOfPeople = new SortedSet<Person>(new SortPeopleByAge())
+            {
+                new Person {FirstName="Гомер", LastName="Симпсон", Age=47},
+                new Person {FirstName="Мардж", LastName="Симпсон", Age=45},
+                new Person {FirstName="Лиза", LastName="Симпсон", Age=9},
+                new Person {FirstName="Барт", LastName="Симпсон", Age=8}
+            };
+
+            // Обратите внимание, что элементы отсортированы по возрасту!
+            foreach (Person p in setOfPeople) Console.WriteLine(p);
+            Console.WriteLine();
+
+            // Добавить ещё несколько объектов Person с разными значениями возраста.
+            setOfPeople.Add(new Person { FirstName = "Саку", LastName = "Джонс", Age = 1 });
+            setOfPeople.Add(new Person { FirstName = "Мико", LastName = "Джонс", Age = 32 });
+
+            foreach (Person p in setOfPeople) Console.WriteLine(p);
+        }
+
+        private static void UseDictionary()
+        {
+            // Наполнить с помощью метода Add().
+            Dictionary<string, Person> peopleA = new Dictionary<string, Person>();
+            peopleA.Add("Homer", new Person { FirstName = "Гомер", LastName = "Симпсон", Age = 47 });
+            peopleA.Add("Marge", new Person { FirstName = "Мардж", LastName = "Симпсон", Age = 45 });
+            peopleA.Add("Lisa", new Person { FirstName = "Лиза", LastName = "Симпсон", Age = 9 });
+
+            // Получить элемент с ключом Homer.
+            Person homer = peopleA["Homer"];
+            Console.WriteLine(homer);
+
+            // Наполнить с помощью синтаксиса инициализации.
+            Dictionary<string, Person> peopleB = new Dictionary<string, Person>()
+            {
+                { "Homer", new Person { FirstName = "Гомер", LastName = "Симпсон", Age = 47 } },
+                { "Marge", new Person { FirstName = "Мардж", LastName = "Симпсон", Age = 45 } },
+                { "Lisa", new Person { FirstName = "Лиза", LastName = "Симпсон", Age = 9 } }
+            };
+
+            // Получить элемент с ключом Lisa.
+            Person lisa = peopleB["Lisa"];
+            Console.WriteLine(lisa);
+
+            // Наполнить с помощью синтаксиса инициализации словаря.
+            Dictionary<string, Person> peopleC = new Dictionary<string, Person>()
+            {
+                ["Homer"] = new Person { FirstName = "Гомер", LastName = "Симпсон", Age = 47 },
+                ["Marge"] = new Person { FirstName = "Мардж", LastName = "Симпсон", Age = 45 },
+                ["Lisa"] = new Person { FirstName = "Лиза", LastName = "Симпсон", Age = 9 }
+            };
+
+            // Получить элемент с ключом Marge.
+            Person marge = peopleC["Marge"];
+            Console.WriteLine(marge);
         }
     }
 }
