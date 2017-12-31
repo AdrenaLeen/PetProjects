@@ -32,9 +32,11 @@ namespace CarDelegate
         private CarEngineHandler listOfHandlers;
 
         // 3. Добавить регистрационную функцию для взывающего кода.
+        // Добавление поддержки группового вызова. Обратите внимание на использование операции +=, а не обычной операции присваивания (=).
         public void RegisterWithCarEngine(CarEngineHandler methodToCall)
         {
-            listOfHandlers = methodToCall;
+            if (listOfHandlers == null) listOfHandlers = methodToCall;
+            else Delegate.Combine(listOfHandlers, methodToCall);
         }
 
         // 4. Реализовать метод Accelerate() для обращения к списку вызовов делегата в подходящих обстоятельствах.
