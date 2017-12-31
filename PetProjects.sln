@@ -93,6 +93,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericPoint", "GenericPoin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDelegate", "SimpleDelegate\SimpleDelegate.csproj", "{5435AEE2-A98C-4AFD-BC36-331F76A22430}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDelegate", "CarDelegate\CarDelegate.csproj", "{3AE7B82B-8D8B-407D-BA63-981CD9F5E0CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +281,10 @@ Global
 		{5435AEE2-A98C-4AFD-BC36-331F76A22430}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5435AEE2-A98C-4AFD-BC36-331F76A22430}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5435AEE2-A98C-4AFD-BC36-331F76A22430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE7B82B-8D8B-407D-BA63-981CD9F5E0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE7B82B-8D8B-407D-BA63-981CD9F5E0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE7B82B-8D8B-407D-BA63-981CD9F5E0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE7B82B-8D8B-407D-BA63-981CD9F5E0CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
