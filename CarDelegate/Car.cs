@@ -39,6 +39,11 @@ namespace CarDelegate
             else Delegate.Combine(listOfHandlers, methodToCall);
         }
 
+        public void UnRegisterWithCarEngine(CarEngineHandler methodToCall)
+        {
+            listOfHandlers -= methodToCall;
+        }
+
         // 4. Реализовать метод Accelerate() для обращения к списку вызовов делегата в подходящих обстоятельствах.
         public void Accelerate(int delta)
         {
