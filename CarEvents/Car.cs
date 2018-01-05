@@ -31,16 +31,13 @@ namespace CarEvents
         public void Accelerate(int delta)
         {
             // Если автомобиль сломан, инициировать событие Exploded.
-            if (carIsDead)
-            {
-                if (Exploded != null) Exploded("Простите, эта машина умерла...");
-            }
+            if (carIsDead) Exploded?.Invoke("Простите, эта машина умерла...");
             else
             {
                 CurrentSpeed += delta;
 
                 // Почти сломан?
-                if (10 == MaxSpeed - CurrentSpeed && AboutToBlow != null) AboutToBlow("Осторожнее, приятель! Скоро взорвётся!");
+                if (10 == MaxSpeed - CurrentSpeed) AboutToBlow?.Invoke("Осторожнее, приятель! Скоро взорвётся!");
 
                 // Всё ещё в порядке!
                 if (CurrentSpeed >= MaxSpeed) carIsDead = true;
