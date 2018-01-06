@@ -61,8 +61,13 @@ namespace SimpleLambdaExpressions
             List<int> list = new List<int>();
             list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
 
-            // Теперь использовать лямбда-выражение C#.
-            List<int> evenNumbers = list.FindAll(i => (i % 2) == 0);
+            // Обработать каждый аргумент внутри группы операторов кода.
+            List<int> evenNumbers = list.FindAll(i =>
+            {
+                Console.WriteLine($"Значение i сейчас: {i}");
+                bool isEven = ((i % 2) == 0);
+                return isEven;
+            });
 
             Console.WriteLine("Вот ваши чётные числа:");
             foreach (int evenNumber in evenNumbers) Console.Write($"{evenNumber}\t");
