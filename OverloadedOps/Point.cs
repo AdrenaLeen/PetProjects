@@ -21,38 +21,29 @@ namespace OverloadedOps
 
         public override string ToString() => $"[{X}, {Y}]";
 
+        public override bool Equals(object o) => o.ToString() == ToString();
+
+        public override int GetHashCode() => ToString().GetHashCode();
+
         // Перегруженная операция +
-        public static Point operator +(Point p1, Point p2)
-        {
-            return new Point(p1.X + p2.X, p1.Y + p2.Y);
-        }
+        public static Point operator +(Point p1, Point p2) => new Point(p1.X + p2.X, p1.Y + p2.Y);
 
         // Перегруженная операция -
-        public static Point operator -(Point p1, Point p2)
-        {
-            return new Point(p1.X - p2.X, p1.Y - p2.Y);
-        }
+        public static Point operator -(Point p1, Point p2) => new Point(p1.X - p2.X, p1.Y - p2.Y);
 
-        public static Point operator +(Point p1, int change)
-        {
-            return new Point(p1.X + change, p1.Y + change);
-        }
+        public static Point operator +(Point p1, int change) => new Point(p1.X + change, p1.Y + change);
 
-        public static Point operator +(int change, Point p1)
-        {
-            return new Point(p1.X + change, p1.Y + change);
-        }
+        public static Point operator +(int change, Point p1) => new Point(p1.X + change, p1.Y + change);
 
         // Добавить 1 к значениям X/Y входного объекта Point.
-        public static Point operator ++(Point p1)
-        {
-            return new Point(p1.X + 1, p1.Y + 1);
-        }
+        public static Point operator ++(Point p1) => new Point(p1.X + 1, p1.Y + 1);
 
         // Вычесть 1 из значений X/Y входного объекта Point.
-        public static Point operator --(Point p1)
-        {
-            return new Point(p1.X - 1, p1.Y - 1);
-        }
+        public static Point operator --(Point p1) => new Point(p1.X - 1, p1.Y - 1);
+
+        // Теперь перегрузить операции == и !=.
+        public static bool operator ==(Point p1, Point p2) => p1.Equals(p2);
+
+        public static bool operator !=(Point p1, Point p2) => !p1.Equals(p2);
     }
 }

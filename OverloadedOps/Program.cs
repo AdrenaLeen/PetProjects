@@ -60,6 +60,10 @@ namespace OverloadedOps
             Console.WriteLine($"ptSix-- = {ptSix--}");
             Console.WriteLine();
 
+            Console.WriteLine($"ptOne == ptTwo: {ptOne == ptTwo}");
+            Console.WriteLine($"ptOne != ptTwo: {ptOne != ptTwo}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
