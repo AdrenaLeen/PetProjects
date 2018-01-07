@@ -29,6 +29,15 @@ namespace CustomCoversions
             DrawSquare((Square)rect);
             Console.WriteLine();
 
+            // Преобразование int в Square.
+            Square sq2 = (Square)90;
+            Console.WriteLine($"sq2 = {sq2}");
+
+            // Преобразование Square в int.
+            int side = (int)sq2;
+            Console.WriteLine($"Длина стороны sq2 = {side}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 

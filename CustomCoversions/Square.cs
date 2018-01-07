@@ -30,5 +30,14 @@ namespace CustomCoversions
             s.Length = r.Height;
             return s;
         }
+
+        public static explicit operator Square(int sideLength)
+        {
+            Square newSq = new Square();
+            newSq.Length = sideLength;
+            return newSq;
+        }
+
+        public static explicit operator int(Square s) => s.Length;
     }
 }
