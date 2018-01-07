@@ -38,6 +38,18 @@ namespace CustomCoversions
             Console.WriteLine($"Длина стороны sq2 = {side}");
             Console.WriteLine();
 
+            Square s3 = new Square();
+            s3.Length = 7;
+
+            // Попытка сделать неявное приведение?
+            Rectangle rect2 = s3;
+
+            // Синтактсис явного преобразования также работает!
+            Square s4 = new Square();
+            s4.Length = 3;
+            Rectangle rect3 = (Rectangle)s4;
+            Console.WriteLine($"rect3 = {rect3}");
+
             Console.ReadLine();
         }
 

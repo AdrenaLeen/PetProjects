@@ -27,5 +27,15 @@ namespace CustomCoversions
         }
 
         public override string ToString() => $"[Ширина = {Width}; Высота = {Height}]";
+
+        public static implicit operator Rectangle(Square s)
+        {
+            Rectangle r = new Rectangle();
+            r.Height = s.Length;
+
+            // Предположим, что ширина нового квадрата будет равна (Length x 2).
+            r.Width = s.Length * 2;
+            return r;
+        }
     }
 }
