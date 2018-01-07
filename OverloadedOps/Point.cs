@@ -45,5 +45,20 @@ namespace OverloadedOps
         public static bool operator ==(Point p1, Point p2) => p1.Equals(p2);
 
         public static bool operator !=(Point p1, Point p2) => !p1.Equals(p2);
+
+        public int CompareTo(Point other)
+        {
+            if (X > other.X && Y > other.Y) return 1;
+            if (X < other.X && Y < other.Y) return -1;
+            else return 0;
+        }
+
+        public static bool operator <(Point p1, Point p2) => (p1.CompareTo(p2) < 0);
+
+        public static bool operator >(Point p1, Point p2) => (p1.CompareTo(p2) > 0);
+
+        public static bool operator <=(Point p1, Point p2) => (p1.CompareTo(p2) <= 0);
+
+        public static bool operator >=(Point p1, Point p2) => (p1.CompareTo(p2) >= 0);
     }
 }

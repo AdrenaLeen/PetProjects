@@ -64,6 +64,9 @@ namespace OverloadedOps
             Console.WriteLine($"ptOne != ptTwo: {ptOne != ptTwo}");
             Console.WriteLine();
 
+            Console.WriteLine($"ptOne < ptTwo: {ptOne < ptTwo}");
+            Console.WriteLine($"ptOne > ptTwo: {ptOne > ptTwo}");
+
             Console.ReadLine();
         }
     }
