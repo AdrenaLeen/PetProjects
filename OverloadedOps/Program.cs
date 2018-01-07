@@ -9,6 +9,7 @@ namespace OverloadedOps
     class Program
     {
         // Сложение и вычитание двух точек?
+        // Перегрузка бинарных операций автоматически обеспечивает перегрузку сокращённых операций.
         static void Main()
         {
             Console.WriteLine("***** Перегрузка операторов *****");
@@ -31,6 +32,17 @@ namespace OverloadedOps
 
             // Выводит [120, 120]
             Console.WriteLine($"10 + biggerPoint = {10 + biggerPoint}");
+            Console.WriteLine();
+
+            // Операция += перегружена автоматически.
+            Point ptThree = new Point(90, 5);
+            Console.WriteLine($"ptThree = {ptThree}");
+            Console.WriteLine($"ptThree += ptTwo: {ptThree += ptTwo}");
+
+            // Операция -= перегружена автоматически.
+            Point ptFour = new Point(0, 500);
+            Console.WriteLine($"ptFour = {ptFour}");
+            Console.WriteLine($"ptFour -= ptThree: {ptFour -= ptThree}");
             Console.WriteLine();
 
             Console.ReadLine();
