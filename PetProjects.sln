@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringInde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloadedOps", "OverloadedOps\OverloadedOps.csproj", "{F049C89B-9981-4CE2-82AC-654CA4F1BCCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCoversions", "CustomCoversions\CustomCoversions.csproj", "{20D2287A-B90A-4F59-A9B8-E593E63D5C73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,10 @@ Global
 		{F049C89B-9981-4CE2-82AC-654CA4F1BCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F049C89B-9981-4CE2-82AC-654CA4F1BCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F049C89B-9981-4CE2-82AC-654CA4F1BCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D2287A-B90A-4F59-A9B8-E593E63D5C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D2287A-B90A-4F59-A9B8-E593E63D5C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D2287A-B90A-4F59-A9B8-E593E63D5C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D2287A-B90A-4F59-A9B8-E593E63D5C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
