@@ -11,6 +11,7 @@ namespace StringIndexer
         static void Main()
         {
             Console.WriteLine("***** Индексаторы *****");
+
             PersonCollection myPeople = new PersonCollection();
             myPeople["Homer"] = new Person("Гомер", "Симпсон", 40);
             myPeople["Marge"] = new Person("Мардж", "Симпсон", 38);
