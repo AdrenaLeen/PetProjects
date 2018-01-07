@@ -42,5 +42,17 @@ namespace OverloadedOps
         {
             return new Point(p1.X + change, p1.Y + change);
         }
+
+        // Добавить 1 к значениям X/Y входного объекта Point.
+        public static Point operator ++(Point p1)
+        {
+            return new Point(p1.X + 1, p1.Y + 1);
+        }
+
+        // Вычесть 1 из значений X/Y входного объекта Point.
+        public static Point operator --(Point p1)
+        {
+            return new Point(p1.X - 1, p1.Y - 1);
+        }
     }
 }

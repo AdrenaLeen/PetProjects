@@ -45,6 +45,21 @@ namespace OverloadedOps
             Console.WriteLine($"ptFour -= ptThree: {ptFour -= ptThree}");
             Console.WriteLine();
 
+            // Применение унарных операций ++ и -- к объекту Point.
+            Point ptFive = new Point(1, 1);
+            // [2, 2]
+            Console.WriteLine($"++ptFive = {++ptFive}");
+            // [1, 1]
+            Console.WriteLine($"--ptFive = {--ptFive}");
+
+            // Применение тех же операций в виде постфиксного инкремента/декремента.
+            Point ptSix = new Point(20, 20);
+            // [20, 20]
+            Console.WriteLine($"ptSix++ = {ptSix++}");
+            // [21, 21]
+            Console.WriteLine($"ptSix-- = {ptSix--}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
