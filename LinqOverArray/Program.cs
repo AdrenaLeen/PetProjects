@@ -13,6 +13,7 @@ namespace LinqOverArray
             Console.WriteLine("***** LINQ to Objects *****");
             QueryOverStrings();
             QueryOverStringsLongHand();
+            QueryOverInts();
 
             Console.ReadLine();
         }
@@ -61,6 +62,19 @@ namespace LinqOverArray
             Console.WriteLine("***** Информация о вашем запросе *****");
             Console.WriteLine($"Тип результирующего набора: {resultSet.GetType().Name}");
             Console.WriteLine($"Местоположение результирующего набора: {resultSet.GetType().Assembly.GetName().Name}");
+        }
+
+        static void QueryOverInts()
+        {
+            int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+
+            // Вывести только элементы меньше 10.
+            // Здесь используется неявная типизация...
+            var subset = from i in numbers where i < 10 select i;
+
+            // ...и здесь тоже.
+            foreach (var i in subset) Console.WriteLine($"Элемент: {i}");
+            ReflectOverQueryResults(subset);
         }
     }
 }
