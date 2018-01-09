@@ -27,6 +27,7 @@ namespace LinqOverArray
                                          where g.Contains(" ")
                                          orderby g
                                          select g;
+            ReflectOverQueryResults(subset);
 
             // Вывести результаты.
             foreach (string s in subset) Console.WriteLine($"Элемент: {s}");
@@ -53,6 +54,13 @@ namespace LinqOverArray
                 if (s != null) Console.WriteLine($"Элемент: {s}");
             }
             Console.WriteLine();
+        }
+
+        static void ReflectOverQueryResults(object resultSet)
+        {
+            Console.WriteLine("***** Информация о вашем запросе *****");
+            Console.WriteLine($"Тип результирующего набора: {resultSet.GetType().Name}");
+            Console.WriteLine($"Местоположение результирующего набора: {resultSet.GetType().Assembly.GetName().Name}");
         }
     }
 }
