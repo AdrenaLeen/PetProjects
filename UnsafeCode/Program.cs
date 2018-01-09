@@ -8,8 +8,19 @@ namespace UnsafeCode
 {
     class Program
     {
-        static void Main()
+        unsafe static void Main()
         {
+            int myInt2 = 5;
+            SquareIntPointer(&myInt2);
+            Console.WriteLine($"myInt: {myInt2}");
+
+            Console.ReadLine();
+        }
+
+        unsafe static void SquareIntPointer(int* myIntPointer)
+        {
+            // Возвести значение в квадрат просто для тестирования.
+            *myIntPointer *= *myIntPointer;
         }
     }
 }
