@@ -34,6 +34,7 @@ namespace UnsafeCode
             Console.WriteLine($"Значения после небезопасного обмена: i = {i}, j = {j}");
 
             UsePointerToPoint();
+            UnsafeStackAlloc();
 
             Console.ReadLine();
         }
@@ -88,6 +89,12 @@ namespace UnsafeCode
             (*p2).x = 100;
             (*p2).y = 200;
             Console.WriteLine((*p2).ToString());
+        }
+
+        unsafe static void UnsafeStackAlloc()
+        {
+            char* p = stackalloc char[256];
+            for (int k = 0; k < 256; k++) p[k] = (char)k;
         }
     }
 }
