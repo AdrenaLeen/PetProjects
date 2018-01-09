@@ -129,6 +129,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Extensi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceExtensions", "InterfaceExtensions\InterfaceExtensions.csproj", "{B4F3D7FA-266E-4C62-838F-427A15F33A28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonimousTypes", "AnonimousTypes\AnonimousTypes.csproj", "{AC59F551-3751-427B-ADBB-68FF16F0D530}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -387,6 +389,10 @@ Global
 		{B4F3D7FA-266E-4C62-838F-427A15F33A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F3D7FA-266E-4C62-838F-427A15F33A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F3D7FA-266E-4C62-838F-427A15F33A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC59F551-3751-427B-ADBB-68FF16F0D530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC59F551-3751-427B-ADBB-68FF16F0D530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC59F551-3751-427B-ADBB-68FF16F0D530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC59F551-3751-427B-ADBB-68FF16F0D530}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
