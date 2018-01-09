@@ -33,6 +33,8 @@ namespace UnsafeCode
             UnsafeSwap(&i, &j);
             Console.WriteLine($"Значения после небезопасного обмена: i = {i}, j = {j}");
 
+            UsePointerToPoint();
+
             Console.ReadLine();
         }
 
@@ -69,6 +71,23 @@ namespace UnsafeCode
             int temp = i;
             i = j;
             j = temp;
+        }
+
+        unsafe static void UsePointerToPoint()
+        {
+            // Доступ к членам через указатель.
+            Point point;
+            Point* p = &point;
+            p->x = 100;
+            p->y = 200;
+            Console.WriteLine(p->ToString());
+
+            // Доступ к членам через разыменованный указатель.
+            Point point2;
+            Point* p2 = &point2;
+            (*p2).x = 100;
+            (*p2).y = 200;
+            Console.WriteLine((*p2).ToString());
         }
     }
 }
