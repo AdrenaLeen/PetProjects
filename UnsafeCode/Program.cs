@@ -36,6 +36,7 @@ namespace UnsafeCode
             UsePointerToPoint();
             UnsafeStackAlloc();
             UseAndPinPoint();
+            UseSizeOfOperator();
 
             Console.ReadLine();
         }
@@ -112,6 +113,14 @@ namespace UnsafeCode
 
             // Указатель pt теперь не закреплён и готов к сборке мусора после завершения метода.
             Console.WriteLine($"Point: {pt}");
+        }
+
+        unsafe static void UseSizeOfOperator()
+        {
+            Console.WriteLine($"Размер short равен {sizeof(short)}.");
+            Console.WriteLine($"Размер int равен {sizeof(int)}.");
+            Console.WriteLine($"Размер long равен {sizeof(long)}.");
+            Console.WriteLine($"Размер Point равен {sizeof(Point)}.");
         }
     }
 }
