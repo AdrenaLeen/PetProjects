@@ -24,6 +24,8 @@ namespace AnonimousTypes
             // А теперь вызвать вспомогательный метод для построения анонимного типа с указанием аргументов
             BuildAnonType("BMW", "Чёрный", 90);
 
+            EqualityTest();
+
             Console.ReadLine();
         }
 
@@ -37,6 +39,7 @@ namespace AnonimousTypes
 
             // Анонимные типы имеют специальные реализации каждого виртуального метода System.Object. Например:
             Console.WriteLine($"ToString() == {car.ToString()}");
+            Console.WriteLine();
         }
 
         static void ReflectOverAnonymousType(object obj)
@@ -46,6 +49,30 @@ namespace AnonimousTypes
             Console.WriteLine($"obj.ToString() == {obj.ToString()}");
             Console.WriteLine($"obj.GetHashCode() == {obj.GetHashCode()}");
             Console.WriteLine();
+        }
+
+        static void EqualityTest()
+        {
+            // Создать два анонимных класс с идентичными наборами пар "имя-значение".
+            var firstCar = new { Color = "Ярко-розовый", Make = "Saab", CurrentSpeed = 55 };
+            var secondCar = new { Color = "Ярко-розовый", Make = "Saab", CurrentSpeed = 55 };
+
+            // Считаются ли они эквивалентными, когда используется Equals()?
+            if (firstCar.Equals(secondCar)) Console.WriteLine("Одинаковые анонимные объекты!");
+            else Console.WriteLine("Разные анонимные объекты!");
+
+            // Можно ли проверить их эквивалетность с помощью операции ==?
+            if (firstCar == secondCar) Console.WriteLine("Одинаковые анонимные объекты!");
+            else Console.WriteLine("Разные анонимные объекты!");
+
+            // Имеют ли эти объекты в основе один и тот же тип?
+            if (firstCar.GetType().Name == secondCar.GetType().Name) Console.WriteLine("Мы оба одного типа!");
+            else Console.WriteLine("У нас разные типы!");
+
+            // Отобразить все детали.
+            Console.WriteLine();
+            ReflectOverAnonymousType(firstCar);
+            ReflectOverAnonymousType(secondCar);
         }
     }
 }
