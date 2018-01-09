@@ -26,6 +26,15 @@ namespace AnonimousTypes
 
             EqualityTest();
 
+            // Создать анонимный тип, который состоит из ещё одного анонимного типа.
+            var purchaseItem = new
+            {
+                TimeBought = DateTime.Now,
+                ItemBought = new { Color = "Красный", Make = "Saab", CurrentSpeed = 55 },
+                Price = 34.000
+            };
+            ReflectOverAnonymousType(purchaseItem);
+
             Console.ReadLine();
         }
 
