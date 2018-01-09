@@ -12,6 +12,7 @@ namespace LinqOverArray
         {
             Console.WriteLine("***** LINQ to Objects *****");
             QueryOverStrings();
+            QueryOverStringsLongHand();
 
             Console.ReadLine();
         }
@@ -29,6 +30,29 @@ namespace LinqOverArray
 
             // Вывести результаты.
             foreach (string s in subset) Console.WriteLine($"Элемент: {s}");
+            Console.WriteLine();
+        }
+
+        static void QueryOverStringsLongHand()
+        {
+            // Предположим, что есть массив строк.
+            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
+
+            string[] gamesWithSpaces = new string[5];
+            for (int i = 0; i < currentVideoGames.Length; i++)
+            {
+                if (currentVideoGames[i].Contains(" ")) gamesWithSpaces[i] = currentVideoGames[i];
+            }
+
+            // Отсортировать набор.
+            Array.Sort(gamesWithSpaces);
+
+            // Вывести результаты.
+            foreach (string s in gamesWithSpaces)
+            {
+                if (s != null) Console.WriteLine($"Элемент: {s}");
+            }
+            Console.WriteLine();
         }
     }
 }
