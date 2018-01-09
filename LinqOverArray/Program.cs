@@ -73,7 +73,17 @@ namespace LinqOverArray
             var subset = from i in numbers where i < 10 select i;
 
             // ...и здесь тоже.
-            foreach (var i in subset) Console.WriteLine($"Элемент: {i}");
+            // Оператор LINQ здесь оценивается!
+            foreach (var i in subset) Console.WriteLine($"{i} < 10");
+
+            Console.WriteLine();
+            // Изменить некоторые данные в массиве.
+            numbers[0] = 4;
+
+            // Снова производится оценка!
+            foreach (var i in subset) Console.WriteLine($"{i} < 10");
+
+            Console.WriteLine();
             ReflectOverQueryResults(subset);
         }
     }
