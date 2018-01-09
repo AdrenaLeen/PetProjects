@@ -46,6 +46,7 @@
     <Compile Include="Node.cs" />
     <Compile Include="Node2.cs" />
     <Compile Include="Point.cs" />
+    <Compile Include="PointRef.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -35,6 +35,7 @@ namespace UnsafeCode
 
             UsePointerToPoint();
             UnsafeStackAlloc();
+            UseAndPinPoint();
 
             Console.ReadLine();
         }
@@ -95,6 +96,22 @@ namespace UnsafeCode
         {
             char* p = stackalloc char[256];
             for (int k = 0; k < 256; k++) p[k] = (char)k;
+        }
+
+        unsafe public static void UseAndPinPoint()
+        {
+            PointRef pt = new PointRef();
+            pt.x = 5;
+            pt.y = 6;
+
+            // Закрепить указатель pt на месте, чтобы он не мог быть перемещён или уничтожен сборщиком мусора.
+            fixed (int* p = &pt.x)
+            {
+                // Использовать здесь переменную int*!
+            }
+
+            // Указатель pt теперь не закреплён и готов к сборке мусора после завершения метода.
+            Console.WriteLine($"Point: {pt}");
         }
     }
 }
