@@ -16,6 +16,23 @@ namespace UnsafeCode
 
             PrintValueAndAddress();
 
+            Console.WriteLine("***** Вызов методов с небезопасным кодом *****");
+
+            // Значения, которые подлежат обмену.
+            int i = 10, j = 20;
+
+            // "Безопасный" обмен значений.
+            Console.WriteLine("***** Безопасный обмен *****");
+            Console.WriteLine($"Значения до безопасного обмена: i = {i}, j = {j}");
+            SafeSwap(ref i, ref j);
+            Console.WriteLine($"Значения после безопасного обмена: i = {i}, j = {j}");
+
+            // "Небезопасный" обмен значений
+            Console.WriteLine("***** Небезопасный обмен *****");
+            Console.WriteLine($"Значения до небезопасного обмена: i = {i}, j = {j}");
+            UnsafeSwap(&i, &j);
+            Console.WriteLine($"Значения после небезопасного обмена: i = {i}, j = {j}");
+
             Console.ReadLine();
         }
 
@@ -38,6 +55,20 @@ namespace UnsafeCode
             // Вывести некоторые значения.
             Console.WriteLine($"Значение myInt: {myInt}");
             Console.WriteLine($"Адрес myInt: {(int)&ptrToMyInt:X}");
+        }
+
+        unsafe public static void UnsafeSwap(int* i, int* j)
+        {
+            int temp = *i;
+            *i = *j;
+            *j = temp;
+        }
+
+        public static void SafeSwap(ref int i, ref int j)
+        {
+            int temp = i;
+            i = j;
+            j = temp;
         }
     }
 }
