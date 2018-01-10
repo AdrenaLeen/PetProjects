@@ -21,7 +21,28 @@ namespace ListOverCollections
                 new Car{ PetName = "Мэлвин", Color = "Белый", Speed = 43, Make = "Ford"}
             };
 
+            GetFastCars(myCars);
+            GetFastBMWs(myCars);
+
             Console.ReadLine();
+        }
+
+        static void GetFastCars(List<Car> myCars)
+        {
+            // Найти в List<> все объекты Car, у которых значение Speed больше 55.
+            IEnumerable<Car> fastCars = from c in myCars where c.Speed > 55 select c;
+
+            foreach (Car car in fastCars) Console.WriteLine($"{car.PetName} едет слишком быстро!");
+            Console.WriteLine();
+        }
+
+        static void GetFastBMWs(List<Car> myCars)
+        {
+            // Найти быстрые автомобили BMW!
+            IEnumerable<Car> fastCars = from c in myCars where c.Speed > 90 && c.Make == "BMW" select c;
+
+            foreach (Car car in fastCars) Console.WriteLine($"{car.PetName} едет слишком быстро!");
+            Console.WriteLine();
         }
     }
 }
