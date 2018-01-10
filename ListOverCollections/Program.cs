@@ -25,6 +25,7 @@ namespace ListOverCollections
             GetFastCars(myCars);
             GetFastBMWs(myCars);
             LINQOverArrayList();
+            OfTypeAsFilter();
 
             Console.ReadLine();
         }
@@ -67,6 +68,18 @@ namespace ListOverCollections
             IEnumerable<Car> fastCars = from c in myCarsEnum where c.Speed > 55 select c;
 
             foreach (Car car in fastCars) Console.WriteLine($"{car.PetName} едет слишком быстро!");
+            Console.WriteLine();
+        }
+
+        static void OfTypeAsFilter()
+        {
+            // Извлечь из ArrayList целочисленные значения.
+            ArrayList myStuff = new ArrayList();
+            myStuff.AddRange(new object[] { 10, 400, 8, false, new Car(), "строковые данные" });
+            IEnumerable<int> myInts = myStuff.OfType<int>();
+
+            // Выводит 10, 400 и 8.
+            foreach (int i in myInts) Console.WriteLine($"Целочисленное значение: {i}");
             Console.WriteLine();
         }
     }
