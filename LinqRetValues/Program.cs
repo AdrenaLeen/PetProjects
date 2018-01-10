@@ -13,6 +13,8 @@ namespace LinqRetValues
             Console.WriteLine("***** Возвращение результатов запроса LINQ *****");
             IEnumerable<string> subset = GetStringSubset();
             foreach (string item in subset) Console.WriteLine(item);
+            Console.WriteLine();
+            foreach (string item in GetStringSubsetAsArray()) Console.WriteLine(item);
 
             Console.ReadLine();
         }
@@ -27,6 +29,17 @@ namespace LinqRetValues
                                                select c;
 
             return theRedColors;
+        }
+
+        static string[] GetStringSubsetAsArray()
+        {
+            string[] colors = {"Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple"};
+            var theRedColors = from c in colors
+                               where c.Contains("Red")
+                               select c;
+
+            // Отобразить результаты в массив.
+            return theRedColors.ToArray();
         }
     }
 }
