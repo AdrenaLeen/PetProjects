@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ListOverCollections
 {
@@ -23,6 +24,7 @@ namespace ListOverCollections
 
             GetFastCars(myCars);
             GetFastBMWs(myCars);
+            LINQOverArrayList();
 
             Console.ReadLine();
         }
@@ -40,6 +42,29 @@ namespace ListOverCollections
         {
             // Найти быстрые автомобили BMW!
             IEnumerable<Car> fastCars = from c in myCars where c.Speed > 90 && c.Make == "BMW" select c;
+
+            foreach (Car car in fastCars) Console.WriteLine($"{car.PetName} едет слишком быстро!");
+            Console.WriteLine();
+        }
+
+        static void LINQOverArrayList()
+        {
+            Console.WriteLine("***** LINQ над ArrayList *****");
+
+            // Необобщённая коллекция объектов Car.
+            ArrayList myCars = new ArrayList() {
+                new Car{ PetName = "Генри", Color = "Серебряный", Speed = 100, Make = "BMW"},
+                new Car{ PetName = "Дейзи", Color = "Жёлто-коричневый", Speed = 90, Make = "BMW"},
+                new Car{ PetName = "Мэри", Color = "Чёрный", Speed = 55, Make = "VW"},
+                new Car{ PetName = "Драндулет", Color = "Ржавый", Speed = 5, Make = "Yugo"},
+                new Car{ PetName = "Мэлвин", Color = "Белый", Speed = 43, Make = "Ford"}
+              };
+
+            // Трансформировать ArrayList в тип, совместимый с IEnumerable<T>.
+            IEnumerable<Car> myCarsEnum = myCars.OfType<Car>();
+
+            // Создать выражение запроса, нацеленное на совместимый с IEnumerable<T> тип.
+            IEnumerable<Car> fastCars = from c in myCarsEnum where c.Speed > 55 select c;
 
             foreach (Car car in fastCars) Console.WriteLine($"{car.PetName} едет слишком быстро!");
             Console.WriteLine();
