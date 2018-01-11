@@ -26,6 +26,7 @@ namespace FunWithLinqExpressions
             SelectEverything(itemsInStock);
             ListProductNames(itemsInStock);
             GetOverstock(itemsInStock);
+            GetNamesAndDescriptions(itemsInStock);
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -57,6 +58,17 @@ namespace FunWithLinqExpressions
             IEnumerable<ProductInfo> overstock = from p in products where p.NumberInStock > 25 select p;
 
             foreach (ProductInfo c in overstock) Console.WriteLine(c);
+            Console.WriteLine();
+        }
+
+        static void GetNamesAndDescriptions(ProductInfo[] products)
+        {
+            Console.WriteLine("Имя и описание:");
+            var nameDesc = from p in products select new { p.Name, p.Description };
+
+            // Можно было бы также использовать свойства Name и Description напрямую.
+            foreach (var item in nameDesc) Console.WriteLine(item);
+
             Console.WriteLine();
         }
     }
