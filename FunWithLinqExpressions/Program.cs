@@ -27,6 +27,7 @@ namespace FunWithLinqExpressions
             ListProductNames(itemsInStock);
             GetOverstock(itemsInStock);
             GetNamesAndDescriptions(itemsInStock);
+            GetCountFromQuery();
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -68,6 +69,19 @@ namespace FunWithLinqExpressions
 
             // Можно было бы также использовать свойства Name и Description напрямую.
             foreach (var item in nameDesc) Console.WriteLine(item);
+
+            Console.WriteLine();
+        }
+
+        static void GetCountFromQuery()
+        {
+            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
+
+            // Получить количество элементов из запроса.
+            int numb = (from g in currentVideoGames where g.Length > 6 select g).Count();
+
+            // Вывести количество элементов.
+            Console.WriteLine($"{numb} элемента подпадают под запрос LINQ.");
 
             Console.WriteLine();
         }
