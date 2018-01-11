@@ -29,6 +29,7 @@ namespace FunWithLinqExpressions
             GetNamesAndDescriptions(itemsInStock);
             GetCountFromQuery();
             ReverseEverything(itemsInStock);
+            AlphabetizeProductNames(itemsInStock);
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -92,6 +93,16 @@ namespace FunWithLinqExpressions
             Console.WriteLine("Продукты в обратном порядке:");
             IEnumerable<ProductInfo> allProducts = from p in products select p;
             foreach (ProductInfo prod in allProducts.Reverse()) Console.WriteLine(prod);
+            Console.WriteLine();
+        }
+
+        static void AlphabetizeProductNames(ProductInfo[] products)
+        {
+            // Получить наименования товаров в алфавитном порядке.
+            IEnumerable<ProductInfo> subset = from p in products orderby p.Name select p;
+
+            Console.WriteLine("Отсортировано по имени:");
+            foreach (ProductInfo p in subset) Console.WriteLine(p);
             Console.WriteLine();
         }
     }
