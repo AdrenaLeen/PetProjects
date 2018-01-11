@@ -28,6 +28,7 @@ namespace FunWithLinqExpressions
             GetOverstock(itemsInStock);
             GetNamesAndDescriptions(itemsInStock);
             GetCountFromQuery();
+            ReverseEverything(itemsInStock);
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -83,6 +84,14 @@ namespace FunWithLinqExpressions
             // Вывести количество элементов.
             Console.WriteLine($"{numb} элемента подпадают под запрос LINQ.");
 
+            Console.WriteLine();
+        }
+
+        static void ReverseEverything(ProductInfo[] products)
+        {
+            Console.WriteLine("Продукты в обратном порядке:");
+            IEnumerable<ProductInfo> allProducts = from p in products select p;
+            foreach (ProductInfo prod in allProducts.Reverse()) Console.WriteLine(prod);
             Console.WriteLine();
         }
     }
