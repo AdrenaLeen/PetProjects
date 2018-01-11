@@ -12,6 +12,6 @@ namespace FunWithLinqExpressions
         public string Description { get; set; } = "";
         public int NumberInStock { get; set; }
 
-        public override string ToString() => $"Название={Name}, Описание={Description}, Номер в магазине={NumberInStock}";
+        public override string ToString() => $"Название={Name}, Описание={Description}, Количество в магазине={NumberInStock}";
     }
 }

@@ -25,6 +25,7 @@ namespace FunWithLinqExpressions
 
             SelectEverything(itemsInStock);
             ListProductNames(itemsInStock);
+            GetOverstock(itemsInStock);
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -45,6 +46,17 @@ namespace FunWithLinqExpressions
             Console.WriteLine("Только наименования продуктов:");
             IEnumerable<string> names = from p in products select p.Name;
             foreach (string n in names) Console.WriteLine($"Наименование: {n}");
+            Console.WriteLine();
+        }
+
+        static void GetOverstock(ProductInfo[] products)
+        {
+            Console.WriteLine("Излишки продуктов!");
+
+            // Получить только товары со складским запасом более 25 единиц.
+            IEnumerable<ProductInfo> overstock = from p in products where p.NumberInStock > 25 select p;
+
+            foreach (ProductInfo c in overstock) Console.WriteLine(c);
             Console.WriteLine();
         }
     }
