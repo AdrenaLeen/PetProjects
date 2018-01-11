@@ -23,8 +23,29 @@ namespace FunWithLinqExpressions
                 new ProductInfo{ Name = "Classic Valpo Pizza", Description = "Everyone loves pizza!", NumberInStock = 73}
             };
 
+            SelectEverything(itemsInStock);
+            ListProductNames(itemsInStock);
+
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
+        }
+
+        static void SelectEverything(ProductInfo[] products)
+        {
+            // Получить всё!
+            Console.WriteLine("Все детали продукта:");
+            IEnumerable<ProductInfo> allProducts = from p in products select p;
+            foreach (ProductInfo prod in allProducts) Console.WriteLine(prod);
+            Console.WriteLine();
+        }
+
+        static void ListProductNames(ProductInfo[] products)
+        {
+            // Теперь получить только наименования товаров.
+            Console.WriteLine("Только наименования продуктов:");
+            IEnumerable<string> names = from p in products select p.Name;
+            foreach (string n in names) Console.WriteLine($"Наименование: {n}");
+            Console.WriteLine();
         }
     }
 }
