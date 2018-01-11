@@ -30,6 +30,10 @@ namespace FunWithLinqExpressions
             GetCountFromQuery();
             ReverseEverything(itemsInStock);
             AlphabetizeProductNames(itemsInStock);
+            DisplayDiff();
+            DisplayIntersection();
+            DisplayUnion();
+            DisplayConcat();
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -103,6 +107,64 @@ namespace FunWithLinqExpressions
 
             Console.WriteLine("Отсортировано по имени:");
             foreach (ProductInfo p in subset) Console.WriteLine(p);
+            Console.WriteLine();
+        }
+
+        static void DisplayDiff()
+        {
+            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            IEnumerable<string> carDiff = (from c in myCars select c).Except(from c2 in yourCars select c2);
+
+            Console.WriteLine("Здесь то, чего у вас нет, но есть у меня:");
+
+            // Выводит Yugo.
+            foreach (string s in carDiff) Console.WriteLine(s);
+
+            Console.WriteLine();
+        }
+
+        static void DisplayIntersection()
+        {
+            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+
+            // Получить общие члены.
+            IEnumerable<string> carIntersect = (from c in myCars select c).Intersect(from c2 in yourCars select c2);
+
+            Console.WriteLine("Здесь то, что есть у нас обоих:");
+
+            // Выводит Aztec и BMW.
+            foreach (string s in carIntersect) Console.WriteLine(s);
+
+            Console.WriteLine();
+        }
+
+        static void DisplayUnion()
+        {
+            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+
+            // Получить объединение двух контейнеров.
+            IEnumerable<string> carUnion = (from c in myCars select c).Union(from c2 in yourCars select c2);
+
+            Console.WriteLine("Здесь всё:");
+
+            // Выводит все общие члены.
+            foreach (string s in carUnion) Console.WriteLine(s);
+
+            Console.WriteLine();
+        }
+
+        static void DisplayConcat()
+        {
+            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            IEnumerable<string> carConcat = (from c in myCars select c).Concat(from c2 in yourCars select c2);
+
+            // Выводит: Yugo Aztec BMW BMW Saab Aztec.
+            foreach (string s in carConcat) Console.WriteLine(s);
+
             Console.WriteLine();
         }
     }
