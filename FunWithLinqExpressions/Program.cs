@@ -34,6 +34,7 @@ namespace FunWithLinqExpressions
             DisplayIntersection();
             DisplayUnion();
             DisplayConcat();
+            DisplayConcatNoDups();
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -164,6 +165,19 @@ namespace FunWithLinqExpressions
 
             // Выводит: Yugo Aztec BMW BMW Saab Aztec.
             foreach (string s in carConcat) Console.WriteLine(s);
+
+            Console.WriteLine();
+        }
+
+        static void DisplayConcatNoDups()
+        {
+            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+
+            IEnumerable<string> carConcat = (from c in myCars select c).Concat(from c2 in yourCars select c2);
+
+            // Выводит: Yugo Aztec BMW Saab Aztec.
+            foreach (string s in carConcat.Distinct()) Console.WriteLine(s);
 
             Console.WriteLine();
         }
