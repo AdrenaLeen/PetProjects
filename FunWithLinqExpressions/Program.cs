@@ -35,6 +35,7 @@ namespace FunWithLinqExpressions
             DisplayUnion();
             DisplayConcat();
             DisplayConcatNoDups();
+            AggregateOps();
 
             // Здесь мы будем вызывать разнообразные методы!
             Console.ReadLine();
@@ -180,6 +181,17 @@ namespace FunWithLinqExpressions
             foreach (string s in carConcat.Distinct()) Console.WriteLine(s);
 
             Console.WriteLine();
+        }
+
+        static void AggregateOps()
+        {
+            double[] winterTemps = { 2.0, -21.3, 8, -4, 0, 8.2 };
+
+            // Разнообразные примеры агрегации.
+            Console.WriteLine($"Максимальная температура: {(from t in winterTemps select t).Max()}");
+            Console.WriteLine($"Минимальная температура: {(from t in winterTemps select t).Min()}");
+            Console.WriteLine($"Средняя температура: {(from t in winterTemps select t).Average()}");
+            Console.WriteLine($"Сумма всех температур: {(from t in winterTemps select t).Sum()}");
         }
     }
 }
