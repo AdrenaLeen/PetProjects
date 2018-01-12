@@ -14,6 +14,7 @@ namespace LinqUsingEnumerable
             QueryStringsWithEnumerableAndLambdas();
             QueryStringsWithEnumerableAndLambdas2();
             QueryStringsWithAnonymousMethods();
+            VeryComplexQueryExpression.QueryStringsWithRawDelegates();
 
             Console.ReadLine();
         }
