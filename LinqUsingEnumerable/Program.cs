@@ -13,6 +13,7 @@ namespace LinqUsingEnumerable
             QueryStringWithOperators();
             QueryStringsWithEnumerableAndLambdas();
             QueryStringsWithEnumerableAndLambdas2();
+            QueryStringsWithAnonymousMethods();
 
             Console.ReadLine();
         }
@@ -57,6 +58,25 @@ namespace LinqUsingEnumerable
             IEnumerable<string> subset = orderedGames.Select(game => game);
 
             foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
+            Console.WriteLine();
+        }
+
+        static void QueryStringsWithAnonymousMethods()
+        {
+            Console.WriteLine("***** Использование анонимных методов *****");
+
+            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
+
+            // Построить необходимые делегаты Func<> с использованием анонимных методов.
+            Func<string, bool> searchFilter = delegate (string game) { return game.Contains(" "); };
+            Func<string, string> itemToProcess = delegate (string s) { return s; };
+
+            // Передать делегаты в методы класса Enumerable.
+            IEnumerable<string> subset = currentVideoGames.Where(searchFilter).OrderBy(itemToProcess).Select(itemToProcess);
+
+            // Вывести результаты.
+            foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
+
             Console.WriteLine();
         }
     }
