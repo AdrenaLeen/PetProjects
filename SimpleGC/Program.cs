@@ -27,6 +27,8 @@ namespace SimpleGC
         {
             // Если myCar - единственная ссылка на объект Car, то после завершения этого метода объект Car *может* быть уничтожен.
             Car myCar = new Car();
+
+            myCar = null;
         }
     }
 }
