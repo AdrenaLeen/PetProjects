@@ -30,6 +30,27 @@ namespace SimpleGC
             // Вывести поколение объекта refToMyCar.
             Console.WriteLine($"Поколение refToMyCar: {GC.GetGeneration(refToMyCar)}");
 
+            // Создать большое количество объектов в целях тестирования.
+            object[] tonsOfObjects = new object[50000];
+            for (int i = 0; i < 50000; i++) tonsOfObjects[i] = new object();
+
+            // Принудительно запустить сборку мусора и ожидать финализации каждого объекта.
+            // Исследовать только объекты поколения 0.
+            GC.Collect(0, GCCollectionMode.Forced);
+            GC.WaitForPendingFinalizers();
+
+            // Вывести поколение refToMyCar.
+            Console.WriteLine($"Поколение refToMyCar: {GC.GetGeneration(refToMyCar)}");
+
+            // Посмотреть, существует ли ещё tonsOfObjects[9000].
+            if (tonsOfObjects[9000] != null) Console.WriteLine($"Поколение tonsOfObjects[9000]: {GC.GetGeneration(tonsOfObjects[9000])}");
+            else Console.WriteLine("tonsOfObjects[9000] больше нет в живых.");
+
+            // Вывести количество проведённых сборок мусора для разных поколений.
+            Console.WriteLine($"Поколение 0 было собрано {GC.CollectionCount(0)} раз");
+            Console.WriteLine($"Поколение 1 было собрано {GC.CollectionCount(1)} раз");
+            Console.WriteLine($"Поколение 2 было собрано {GC.CollectionCount(2)} раз");
+
             Console.ReadLine();
         }
 
