@@ -18,7 +18,15 @@ namespace SimpleGC
             // Операция точки (.) используется для обращения к членам объекта с применением ссылочной переменной.
             Console.WriteLine(refToMyCar.ToString());
 
+            MakeACar();
+
             Console.ReadLine();
+        }
+
+        static void MakeACar()
+        {
+            // Если myCar - единственная ссылка на объект Car, то после завершения этого метода объект Car *может* быть уничтожен.
+            Car myCar = new Car();
         }
     }
 }
