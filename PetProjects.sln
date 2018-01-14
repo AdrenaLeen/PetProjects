@@ -145,6 +145,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "Linq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGC", "SimpleGC\SimpleGC.csproj", "{3EAF747A-B331-4776-BCB8-789CF164D2E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFinalize", "SimpleFinalize\SimpleFinalize.csproj", "{53688403-556E-4395-AC0C-DBFF7BFD2F25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,6 +437,10 @@ Global
 		{3EAF747A-B331-4776-BCB8-789CF164D2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EAF747A-B331-4776-BCB8-789CF164D2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EAF747A-B331-4776-BCB8-789CF164D2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
