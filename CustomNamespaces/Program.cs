@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyShapes;
+using My3DShapes;
 
 namespace CustomNamespaces
 {
@@ -11,9 +12,9 @@ namespace CustomNamespaces
     {
         static void Main()
         {
-            Hexagon h = new Hexagon();
-            Circle c = new Circle();
-            Square s = new Square();
+            My3DShapes.Hexagon h = new My3DShapes.Hexagon();
+            My3DShapes.Circle c = new My3DShapes.Circle();
+            MyShapes.Square s = new MyShapes.Square();
 
             Console.ReadLine();
         }

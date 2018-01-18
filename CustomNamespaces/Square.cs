@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomNamespaces
+namespace MyShapes
 {
     class Square
     {
