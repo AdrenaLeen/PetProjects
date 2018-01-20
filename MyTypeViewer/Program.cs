@@ -39,5 +39,14 @@ namespace MyTypeViewer
             foreach (string name in propNames) Console.WriteLine($"->{name}");
             Console.WriteLine();
         }
+
+        // Отобразить имена интерфейсов, которые реализует тип.
+        static void ListInterfaces(Type t)
+        {
+            Console.WriteLine("***** Интерфейсы *****");
+            IEnumerable<Type> ifaces = from i in t.GetInterfaces() select i;
+            foreach (Type i in ifaces) Console.WriteLine($"->{i.Name}");
+            Console.WriteLine();
+        }
     }
 }
