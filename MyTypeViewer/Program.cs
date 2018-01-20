@@ -46,8 +46,8 @@ namespace MyTypeViewer
         static void ListMethods(Type t)
         {
             Console.WriteLine("***** Методы *****");
-            IEnumerable<string> methodNames = from n in t.GetMethods() select n.Name;
-            foreach (string name in methodNames) Console.WriteLine($"->{name}");
+            IEnumerable<MethodInfo> methodNames = from n in t.GetMethods() select n;
+            foreach (MethodInfo name in methodNames) Console.WriteLine($"->{name}");
             Console.WriteLine();
         }
 
