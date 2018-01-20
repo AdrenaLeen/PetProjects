@@ -48,5 +48,17 @@ namespace MyTypeViewer
             foreach (Type i in ifaces) Console.WriteLine($"->{i.Name}");
             Console.WriteLine();
         }
+
+        // Просто ради полноты картины.
+        static void ListVariousStats(Type t)
+        {
+            Console.WriteLine("***** Различная статистика *****");
+            Console.WriteLine($"Базовый класс: {t.BaseType}");
+            Console.WriteLine($"Абстрактный? {t.IsAbstract}");
+            Console.WriteLine($"Запечатанный? {t.IsSealed}");
+            Console.WriteLine($"Обобщённый? {t.IsGenericTypeDefinition}");
+            Console.WriteLine($"Класс? {t.IsClass}");
+            Console.WriteLine();
+        }
     }
 }
