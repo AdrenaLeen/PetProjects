@@ -40,6 +40,12 @@ namespace LateBindingApp
                 // Создать экземпляр Minivan на лету.
                 object obj = Activator.CreateInstance(miniVan);
                 Console.WriteLine($"Создан {obj}, используя позднее связывание!");
+
+                // Получить информацию о TurboBoost.
+                MethodInfo mi = miniVan.GetMethod("TurboBoost");
+
+                // Вызвать метод (null означает отсутствие параметров).
+                mi.Invoke(obj, null);
             }
             catch (Exception ex)
             {
