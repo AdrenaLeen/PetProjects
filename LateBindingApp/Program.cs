@@ -25,7 +25,11 @@ namespace LateBindingApp
                 Console.WriteLine(ex.Message);
                 return;
             }
-            if (a != null) CreateUsingLateBinding(a);
+            if (a != null)
+            {
+                CreateUsingLateBinding(a);
+                InvokeMethodWithArgsUsingLateBinding(a);
+            }
 
             Console.ReadLine();
         }
@@ -46,6 +50,26 @@ namespace LateBindingApp
 
                 // Вызвать метод (null означает отсутствие параметров).
                 mi.Invoke(obj, null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        static void InvokeMethodWithArgsUsingLateBinding(Assembly asm)
+        {
+            try
+            {
+                // Получить описание метаданных для типа SportsCar.
+                Type sport = asm.GetType("CarLibrary.SportsCar");
+
+                // Создать объект типа SportsCar.
+                object obj = Activator.CreateInstance(sport);
+
+                // Вызвать метод TurnOnRadio() с аргументами.
+                MethodInfo mi = sport.GetMethod("TurnOnRadio");
+                mi.Invoke(obj, new object[] { true, 2 });
             }
             catch (Exception ex)
             {
