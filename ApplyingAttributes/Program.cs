@@ -10,6 +10,7 @@ namespace ApplyingAttributes
     {
         static void Main()
         {
+            HorseAndBuggy mule = new HorseAndBuggy();
         }
     }
 }
