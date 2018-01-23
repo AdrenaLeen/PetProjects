@@ -175,6 +175,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingApp", "LateBindi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyingAttributes", "ApplyingAttributes\ApplyingAttributes.csproj", "{5630E736-9571-46D9-B180-0CF661CBF0E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributedCarLibrary", "AttributedCarLibrary\AttributedCarLibrary.csproj", "{C44014D1-8E48-41B2-8C50-6BB48E06A46D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -525,6 +527,10 @@ Global
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44014D1-8E48-41B2-8C50-6BB48E06A46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44014D1-8E48-41B2-8C50-6BB48E06A46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44014D1-8E48-41B2-8C50-6BB48E06A46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44014D1-8E48-41B2-8C50-6BB48E06A46D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
