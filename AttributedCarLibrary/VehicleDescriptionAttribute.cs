@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Обеспечить совместимость с CLS для всех открытых типов в этой сборке.
+[assembly: CLSCompliant(true)]
 namespace AttributedCarLibrary
 {
     // Специальный атрибут.
