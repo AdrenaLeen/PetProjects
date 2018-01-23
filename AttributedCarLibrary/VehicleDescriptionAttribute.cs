@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace AttributedCarLibrary
 {
     // Специальный атрибут.
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
     public class VehicleDescriptionAttribute : Attribute
     {
         public string Description { get; set; }
