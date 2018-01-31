@@ -12,6 +12,7 @@ namespace DynamicKeyword
         {
             PrintThreeStrings();
             ChangeDynamicDataType();
+            InvokeMembersOnDynamicData();
             Console.ReadLine();
         }
 
@@ -53,6 +54,19 @@ namespace DynamicKeyword
 
             t = new List<int>();
             Console.WriteLine($"Тип t: {t.GetType()}");
+
+            Console.WriteLine();
+        }
+
+        static void InvokeMembersOnDynamicData()
+        {
+            dynamic textData1 = "Привет";
+            Console.WriteLine(textData1.ToUpper());
+
+            // Здесь можно было бы ожидать ошибки на этапе компиляции! Но всё компилируется нормально.
+            Console.WriteLine(textData1.toupper());
+            Console.WriteLine(textData1.Foo(10, "ee", DateTime.Now));
+
             Console.WriteLine();
         }
     }
