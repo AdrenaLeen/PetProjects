@@ -187,6 +187,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpSnapIn", "CSharpSnapI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyExtendableApp", "MyExtendableApp\MyExtendableApp.csproj", "{C1D9EC53-EA07-4BE6-B986-818CE0CA4181}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicKeyword", "DynamicKeyword\DynamicKeyword.csproj", "{4764240A-BD6A-41EC-930D-87F7133D99F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -561,6 +563,10 @@ Global
 		{C1D9EC53-EA07-4BE6-B986-818CE0CA4181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1D9EC53-EA07-4BE6-B986-818CE0CA4181}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1D9EC53-EA07-4BE6-B986-818CE0CA4181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
