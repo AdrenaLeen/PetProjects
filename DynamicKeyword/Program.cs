@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace DynamicKeyword
 {
@@ -61,11 +62,17 @@ namespace DynamicKeyword
         static void InvokeMembersOnDynamicData()
         {
             dynamic textData1 = "Привет";
-            Console.WriteLine(textData1.ToUpper());
 
-            // Здесь можно было бы ожидать ошибки на этапе компиляции! Но всё компилируется нормально.
-            Console.WriteLine(textData1.toupper());
-            Console.WriteLine(textData1.Foo(10, "ee", DateTime.Now));
+            try
+            {
+                Console.WriteLine(textData1.ToUpper());
+                Console.WriteLine(textData1.toupper());
+                Console.WriteLine(textData1.Foo(10, "ee", DateTime.Now));
+            }
+            catch (RuntimeBinderException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.WriteLine();
         }
