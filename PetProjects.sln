@@ -189,6 +189,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyExtendableApp", "MyExtend
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicKeyword", "DynamicKeyword\DynamicKeyword.csproj", "{4764240A-BD6A-41EC-930D-87F7133D99F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingWithDynamic", "LateBindingWithDynamic\LateBindingWithDynamic.csproj", "{4F2DD5B7-B7C9-49F4-B1A8-38E2FC637435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{9E2853D0-6A07-44C8-B23E-554E0623ABEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -567,6 +571,14 @@ Global
 		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4764240A-BD6A-41EC-930D-87F7133D99F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2DD5B7-B7C9-49F4-B1A8-38E2FC637435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2DD5B7-B7C9-49F4-B1A8-38E2FC637435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2DD5B7-B7C9-49F4-B1A8-38E2FC637435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2DD5B7-B7C9-49F4-B1A8-38E2FC637435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2853D0-6A07-44C8-B23E-554E0623ABEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2853D0-6A07-44C8-B23E-554E0623ABEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2853D0-6A07-44C8-B23E-554E0623ABEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2853D0-6A07-44C8-B23E-554E0623ABEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
