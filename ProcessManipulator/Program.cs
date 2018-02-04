@@ -107,10 +107,12 @@ namespace ProcessManipulator
         {
             Process ieProc = null;
 
-            // Запустить Internet Explorer и перейти на сайт facebook.com.
+            // Запустить Internet Explorer и перейти на сайт facebook.com с развёрнутым на весь экран окном.
             try
             {
-                ieProc = Process.Start("IExplore.exe", "www.facebook.com");
+                ProcessStartInfo startInfo = new ProcessStartInfo("IExplore.exe", "www.facebook.com");
+                startInfo.WindowStyle = ProcessWindowStyle.Maximized;
+                ieProc = Process.Start(startInfo);
             }
             catch (InvalidOperationException ex)
             {
