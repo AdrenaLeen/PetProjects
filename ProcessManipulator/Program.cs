@@ -22,6 +22,7 @@ namespace ProcessManipulator
             int theProcID = int.Parse(pID);
             EnumThreadsForPid(theProcID);
             EnumModsForPid(theProcID);
+            StartAndKillProcess();
 
             Console.ReadLine();
         }
@@ -100,6 +101,34 @@ namespace ProcessManipulator
                 Console.WriteLine(info);
             }
             Console.WriteLine("************************************");
+        }
+
+        static void StartAndKillProcess()
+        {
+            Process ieProc = null;
+
+            // Запустить Internet Explorer и перейти на сайт facebook.com.
+            try
+            {
+                ieProc = Process.Start("IExplore.exe", "www.facebook.com");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.Write($"--> Нажмите Enter, чтобы остановить {ieProc.ProcessName}...");
+            Console.ReadLine();
+
+            // Уничтожить процесс iexplore.exe.
+            try
+            {
+                ieProc.Kill();
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
