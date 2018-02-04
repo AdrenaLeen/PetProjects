@@ -13,6 +13,7 @@ namespace ProcessManipulator
         {
             Console.WriteLine("***** Процессы *****");
             ListAllRunningProcesses();
+            GetSpecificProcess();
             Console.ReadLine();
         }
 
@@ -28,6 +29,20 @@ namespace ProcessManipulator
                 Console.WriteLine(info);
             }
             Console.WriteLine("************************************");
+        }
+
+        // Если процесс с PID, равным 987, не существует, сгенерировать исключение во время выполнения.
+        static void GetSpecificProcess()
+        {
+            Process theProc = null;
+            try
+            {
+                theProc = Process.GetProcessById(987);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
