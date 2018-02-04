@@ -21,6 +21,7 @@ namespace ProcessManipulator
             string pID = Console.ReadLine();
             int theProcID = int.Parse(pID);
             EnumThreadsForPid(theProcID);
+            EnumModsForPid(theProcID);
 
             Console.ReadLine();
         }
@@ -75,7 +76,30 @@ namespace ProcessManipulator
                 string info = $"-> ID процесса: {pt.Id}\tВремя начала: {pt.StartTime.ToShortTimeString()}\tПриоритет: {pt.PriorityLevel}";
                 Console.WriteLine(info);
             }
-            Console.WriteLine("************************************\n");
+            Console.WriteLine("************************************");
+        }
+
+        static void EnumModsForPid(int pID)
+        {
+            Process theProc = null;
+            try
+            {
+                theProc = Process.GetProcessById(pID);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return;
+            }
+
+            Console.WriteLine($"Здесь загруженные модули для: {theProc.ProcessName}");
+            ProcessModuleCollection theMods = theProc.Modules;
+            foreach (ProcessModule pm in theMods)
+            {
+                string info = $"-> Имя модуля: {pm.ModuleName}";
+                Console.WriteLine(info);
+            }
+            Console.WriteLine("************************************");
         }
     }
 }
