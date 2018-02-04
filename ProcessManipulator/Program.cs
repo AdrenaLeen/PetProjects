@@ -14,6 +14,14 @@ namespace ProcessManipulator
             Console.WriteLine("***** Процессы *****");
             ListAllRunningProcesses();
             GetSpecificProcess();
+
+            // Запросить у пользователя PID и вывести набор активных потоков.
+            Console.WriteLine("***** Введите PID процесса для исследования *****");
+            Console.Write("PID: ");
+            string pID = Console.ReadLine();
+            int theProcID = int.Parse(pID);
+            EnumThreadsForPid(theProcID);
+
             Console.ReadLine();
         }
 
@@ -43,6 +51,31 @@ namespace ProcessManipulator
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        static void EnumThreadsForPid(int pID)
+        {
+            Process theProc = null;
+            try
+            {
+                theProc = Process.GetProcessById(pID);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return;
+            }
+
+            // Вывести статистические сведения по каждому потоку в указанном процессе.
+            Console.WriteLine($"Здесь используемые потоки: {theProc.ProcessName}");
+            ProcessThreadCollection theThreads = theProc.Threads;
+
+            foreach (ProcessThread pt in theThreads)
+            {
+                string info = $"-> ID процесса: {pt.Id}\tВремя начала: {pt.StartTime.ToShortTimeString()}\tПриоритет: {pt.PriorityLevel}";
+                Console.WriteLine(info);
+            }
+            Console.WriteLine("************************************\n");
         }
     }
 }
