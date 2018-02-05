@@ -16,7 +16,7 @@ namespace CustomAppDomains
 
             // Вывести все сборки, загруженные в стандартный домен приложения.
             AppDomain defaultAD = AppDomain.CurrentDomain;
-
+            defaultAD.ProcessExit += (o, s) => Console.WriteLine("Стандартный домен приложения выгружен!");
             ListAllAssembliesInAppDomain(defaultAD);
 
             // Создать новый домен приложения.
@@ -30,6 +30,8 @@ namespace CustomAppDomains
             // Создать новый домен приложения в текущем процессе.
             AppDomain newAD = AppDomain.CreateDomain("SecondAppDomain");
 
+            newAD.DomainUnload += (o, s) => Console.WriteLine("Второй домен приложения был загружен!");
+
             try
             {
                 // Загрузить CarLibrary.dll в этот новый домен.
@@ -42,6 +44,9 @@ namespace CustomAppDomains
 
             // Вывести список всех сборок.
             ListAllAssembliesInAppDomain(newAD);
+
+            // Уничтожить этот домен приложения.
+            AppDomain.Unload(newAD);
         }
 
         static void ListAllAssembliesInAppDomain(AppDomain ad)
