@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
+using System.IO;
 
 namespace CustomAppDomains
 {
@@ -26,9 +27,20 @@ namespace CustomAppDomains
 
         static void MakeNewAppDomain()
         {
-            // Создать новый домен приложения в текущем процессе и вывести список загруженных сборок.
+            // Создать новый домен приложения в текущем процессе.
             AppDomain newAD = AppDomain.CreateDomain("SecondAppDomain");
 
+            try
+            {
+                // Загрузить CarLibrary.dll в этот новый домен.
+                newAD.Load("CarLibrary");
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            // Вывести список всех сборок.
             ListAllAssembliesInAppDomain(newAD);
         }
 
