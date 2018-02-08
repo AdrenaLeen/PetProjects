@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Emit;
 using System.Reflection;
+using System.Threading;
 
 namespace MyAsmBuilder
 {
@@ -12,6 +13,38 @@ namespace MyAsmBuilder
     {
         static void Main()
         {
+            Console.WriteLine("***** Динамически сгенерированная сборка *****");
+            // Получить домен приложения для текущего потока.
+            AppDomain curAppDomain = Thread.GetDomain();
+
+            // Создать динамическую сборку с помощью нашего вспомогательного метода.
+            CreateMyAsm(curAppDomain);
+            Console.WriteLine("-> Завершено создание MyAssembly.dll.");
+
+            // Загрузить новую сборку из файла.
+            Console.WriteLine("-> Загружена MyAssembly.dll из файла.");
+            Assembly a = Assembly.Load("MyAssembly");
+
+            // Получить тип HelloWorld.
+            Type hello = a.GetType("MyAssembly.HelloWorld");
+
+            // Создать объект HelloWorld и вызвать корректный конструктор.
+            Console.Write("-> Введите ссобщение для передачи классу HelloWorld: ");
+            string msg = Console.ReadLine();
+            object[] ctorArgs = new object[1];
+            ctorArgs[0] = msg;
+            object obj = Activator.CreateInstance(hello, ctorArgs);
+
+            // Вызвать SayHello и отобразить возвращённую строку.
+            Console.WriteLine("-> Вызван SayHello() через позднее связывание.");
+            MethodInfo mi = hello.GetMethod("SayHello");
+            mi.Invoke(obj, null);
+
+            // Вызвать метод.
+            mi = hello.GetMethod("GetMsg");
+            Console.WriteLine(mi.Invoke(obj, null));
+
+            Console.ReadLine();
         }
 
         // Объект AppDomain отправляется вызывающим кодом.
