@@ -13,7 +13,7 @@ namespace SyncDelegateReview
     {
         static void Main()
         {
-            Console.WriteLine("***** Обзор вызова делегата в синхронной манере *****");
+            Console.WriteLine("***** Асинхронный вызов делегата *****");
 
             // Вывести идентификатор выполняющегося потока.
             Console.WriteLine($"Main() вызывается в потоке {Thread.CurrentThread.ManagedThreadId}.");
