@@ -207,6 +207,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsmBuilder", "MyAsmBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncDelegateReview\SyncDelegateReview.csproj", "{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{F80E770B-5C93-43DE-9646-35ABA90CC043}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -621,6 +623,10 @@ Global
 		{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
