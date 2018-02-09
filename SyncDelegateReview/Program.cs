@@ -18,14 +18,15 @@ namespace SyncDelegateReview
             // Вывести идентификатор выполняющегося потока.
             Console.WriteLine($"Main() вызывается в потоке {Thread.CurrentThread.ManagedThreadId}.");
 
-            // Вызвать Add() в синхронной манере.
+            // Вызвать Add() во вторичном потоке.
             BinaryOp b = new BinaryOp(Add);
+            IAsyncResult iftAR = b.BeginInvoke(10, 10, null, null);
 
-            // Можно было бы также написать b.Invoke(10, 10);
-            int answer = b(10, 10);
-
-            // Эти строки кода не завершатся до тех пор, пока не завершится метод Add().
+            // Выполнить другую работу в первичном потоке...
             Console.WriteLine("Делаем больше работы Main()!");
+
+            // По готовности получить результат выполнения метода Add().
+            int answer = b.EndInvoke(iftAR);
             Console.WriteLine($"10 + 10 равно {answer}.");
             Console.ReadLine();
         }
