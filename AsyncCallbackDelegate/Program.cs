@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Runtime.Remoting.Messaging;
 
 namespace AsyncCallbackDelegate
 {
@@ -41,6 +42,12 @@ namespace AsyncCallbackDelegate
         {
             Console.WriteLine($"AddComplete() вызывается в потоке {Thread.CurrentThread.ManagedThreadId}.");
             Console.WriteLine("Ваше суммирование завершено.");
+
+            // Теперь получить результат.
+            AsyncResult ar = (AsyncResult)itfAR;
+            BinaryOp b = (BinaryOp)ar.AsyncDelegate;
+            Console.WriteLine($"10 + 10 равно {b.EndInvoke(itfAR)}.");
+
             isDone = true;
         }
     }
