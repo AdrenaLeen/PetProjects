@@ -22,8 +22,8 @@ namespace SyncDelegateReview
             BinaryOp b = new BinaryOp(Add);
             IAsyncResult iftAR = b.BeginInvoke(10, 10, null, null);
 
-            // Выполнить другую работу в первичном потоке...
-            Console.WriteLine("Делаем больше работы Main()!");
+            // Это сообщение продолжит выводиться до тех пор, пока не будет завершён метод Add().
+            while (!iftAR.AsyncWaitHandle.WaitOne(1000, true)) Console.WriteLine("Делаем больше работы Main()!");
 
             // По готовности получить результат выполнения метода Add().
             int answer = b.EndInvoke(iftAR);
