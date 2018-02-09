@@ -19,7 +19,7 @@ namespace AsyncCallbackDelegate
             Console.WriteLine("***** Пример делегата AsyncCallback *****");
             Console.WriteLine($"Main() вызывается в потоке {Thread.CurrentThread.ManagedThreadId}.");
             BinaryOp b = new BinaryOp(Add);
-            IAsyncResult iftAR = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), null);
+            IAsyncResult iftAR = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), "Main() благодарит вас за сложение этих чисел.");
 
             // Предположим, что здесь делается какая-то другая работа...
             while (!isDone)
@@ -47,6 +47,10 @@ namespace AsyncCallbackDelegate
             AsyncResult ar = (AsyncResult)itfAR;
             BinaryOp b = (BinaryOp)ar.AsyncDelegate;
             Console.WriteLine($"10 + 10 равно {b.EndInvoke(itfAR)}.");
+
+            // Получить информационный объект и привести его к типу string.
+            string msg = (string)itfAR.AsyncState;
+            Console.WriteLine(msg);
 
             isDone = true;
         }
