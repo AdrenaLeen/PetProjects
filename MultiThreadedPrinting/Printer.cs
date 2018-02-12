@@ -9,15 +9,27 @@ namespace MultiThreadedPrinting
 {
     class Printer
     {
+        // Маркер блокировки.
+        private object threadLock = new object();
+
         public void PrintNumbers()
         {
-            for (int i = 0; i < 10; i++)
+            // Использовать маркер блокировки.
+            lock (threadLock)
             {
-                Random r = new Random();
-                Thread.Sleep(100 * r.Next(5));
-                Console.Write($"{i}, ");
+                // Вывести информацию о потоке.
+                Console.WriteLine($"-> {Thread.CurrentThread.Name} выполняет PrintNumbers()");
+
+                // Вывести числа.
+                Console.Write("Ваши числа: ");
+                for (int i = 0; i < 10; i++)
+                {
+                    Random r = new Random();
+                    Thread.Sleep(100 * r.Next(5));
+                    Console.Write($"{i}, ");
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine();
         }
     }
 }
