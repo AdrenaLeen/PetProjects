@@ -9,6 +9,8 @@ namespace AddWithThreads
 {
     class Program
     {
+        private static AutoResetEvent waitHandle = new AutoResetEvent(false);
+
         static void Main()
         {
             Console.WriteLine("***** Сложение с помощью объектов Thread *****");
@@ -19,9 +21,10 @@ namespace AddWithThreads
             Thread t = new Thread(new ParameterizedThreadStart(Add));
             t.Start(ap);
 
-            // Подождать, пока другой поток завершится.
-            Thread.Sleep(5);
+            // Ожидать, пока не поступит уведомление!
+            waitHandle.WaitOne();
 
+            Console.WriteLine("Другой поток завершён!");
             Console.ReadLine();
         }
 
@@ -32,6 +35,9 @@ namespace AddWithThreads
                 Console.WriteLine($"Идентификатор потока в Add(): {Thread.CurrentThread.ManagedThreadId}");
                 AddParams ap = (AddParams)data;
                 Console.WriteLine($"{ap.a} + {ap.b} равно {ap.a + ap.b}");
+
+                // Сообщить другому потоку о том, что работа завершена.
+                waitHandle.Set();
             }
         }
     }
