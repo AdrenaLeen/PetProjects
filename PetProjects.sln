@@ -219,6 +219,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedPrinting", "Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerApp.csproj", "{6702A9DA-405D-43B5-B76A-F186132DB9D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolApp", "ThreadPoolApp\ThreadPoolApp.csproj", "{CDD72700-410C-4C8D-B933-CF0497E6D8DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -657,6 +659,10 @@ Global
 		{6702A9DA-405D-43B5-B76A-F186132DB9D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6702A9DA-405D-43B5-B76A-F186132DB9D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6702A9DA-405D-43B5-B76A-F186132DB9D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
