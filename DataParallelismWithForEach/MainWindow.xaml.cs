@@ -30,7 +30,11 @@ namespace DataParallelismWithForEach
 
         private void btnProcessImages_Click(object sender, RoutedEventArgs e)
         {
-            ProcessFiles();
+            // Запустить новую "задачу" для обработки файлов.
+            Task.Factory.StartNew(() =>
+            {
+                ProcessFiles();
+            });
         }
 
         private void ProcessFiles()
