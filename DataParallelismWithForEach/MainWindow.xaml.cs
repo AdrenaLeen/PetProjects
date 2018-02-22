@@ -48,6 +48,12 @@ namespace DataParallelismWithForEach
                 {
                     bitmap.RotateFlip(RotateFlipType.Rotate180FlipNone);
                     bitmap.Save(System.IO.Path.Combine(newDir, filename));
+
+                    // Вызвать Invoke на объекте MainWindow, чтобы позволить вторичным потокам получать доступ к элементам управления в безопасной к потокам манере.
+                    this.Dispatcher.Invoke((Action)delegate
+                    {
+                        this.Title = $"Обработка {filename} в потоке {Thread.CurrentThread.ManagedThreadId}";
+                    });
                 }
             });
         }
