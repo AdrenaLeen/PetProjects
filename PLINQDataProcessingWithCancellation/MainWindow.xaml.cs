@@ -43,8 +43,27 @@ namespace PLINQDataProcessingWithCancellation
             int[] source = Enumerable.Range(1, 10000000).ToArray();
 
             // Найти числа, для которых истинно условие num % 3 == 0, и возвратить их в убывающем порядке.
-            int[] modThreeIsZero = (from num in source.AsParallel() where num % 3 == 0 orderby num descending select num).ToArray();
-            MessageBox.Show($"Найдено {modThreeIsZero.Count()} чисел, которые соответствуют запросу!");
+            int[] modThreeIsZero = null;
+            try
+            {
+                modThreeIsZero = (from num in source.AsParallel().WithCancellation(cancelToken.Token)
+                                  where num % 3 == 0
+                                  orderby num descending
+                                  select num).ToArray();
+                MessageBox.Show($"Найдено {modThreeIsZero.Count()} чисел, которые соответствуют запросу!");
+            }
+            catch (OperationCanceledException ex)
+            {
+                this.Dispatcher.Invoke((Action)delegate
+                {
+                    this.Title = ex.Message;
+                });
+            }
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            cancelToken.Cancel();
         }
     }
 }
