@@ -28,12 +28,12 @@ namespace FunWithCSharpAsync
 
         private async void btnCallMethod_Click(object sender, RoutedEventArgs e)
         {
-            this.Title = await DoWork();
+            this.Title = await DoWorkAsync();
         }
 
-        private Task<string> DoWork()
+        private async Task<string> DoWorkAsync()
         {
-            return Task.Run(() =>
+            return await Task.Run(() =>
             {
                 Thread.Sleep(10000);
                 return "Готово!";
