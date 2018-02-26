@@ -39,5 +39,20 @@ namespace FunWithCSharpAsync
                 return "Готово!";
             });
         }
+
+        private async Task MethodReturningVoidAsync()
+        {
+            await Task.Run(() =>
+            {
+                // Выполнение какой-то работы...
+                Thread.Sleep(4000);
+            });
+        }
+
+        private async void btnVoidMethodCall_Click(object sender, RoutedEventArgs e)
+        {
+            await MethodReturningVoidAsync();
+            MessageBox.Show("Готово!");
+        }
     }
 }
