@@ -9,7 +9,7 @@
     <Grid>
         <Button Name="btnCallMethod" Content="Вызвать метод" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="Auto" Padding="5,3" Click="btnCallMethod_Click"/>
         <Button Name="btnVoidMethodCall" Content="Вызов пустого метода" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="Auto" Padding="5,3" Click="btnVoidMethodCall_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="btnMutliAwaits" Content="Множество await" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="Auto" Padding="5,3" Click="btnMutliAwaits_Click"/>
         <Label Content="Печатайте здесь!" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtInput" HorizontalAlignment="Left" Height="250" Margin="250,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" AcceptsReturn="True" />
     </Grid>

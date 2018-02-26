@@ -54,5 +54,17 @@ namespace FunWithCSharpAsync
             await MethodReturningVoidAsync();
             MessageBox.Show("Готово!");
         }
+
+        private async void btnMutliAwaits_Click(object sender, RoutedEventArgs e)
+        {
+            await Task.Run(() => { Thread.Sleep(2000); });
+            MessageBox.Show("Завершена первая задача!");
+
+            await Task.Run(() => { Thread.Sleep(2000); });
+            MessageBox.Show("Завершена вторая задача!");
+
+            await Task.Run(() => { Thread.Sleep(2000); });
+            MessageBox.Show("Завершена третья задача!");
+        }
     }
 }
