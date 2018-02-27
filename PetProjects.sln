@@ -229,6 +229,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLINQDataProcessingWithCanc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithCSharpAsync", "FunWithCSharpAsync\FunWithCSharpAsync.csproj", "{4943A0F3-2553-4B01-953F-90F557214D0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddWithThreadsAsync\AddWithThreadsAsync.csproj", "{B49F6451-1080-431D-B1DF-0904D1AF044F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -687,6 +689,10 @@ Global
 		{4943A0F3-2553-4B01-953F-90F557214D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4943A0F3-2553-4B01-953F-90F557214D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4943A0F3-2553-4B01-953F-90F557214D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
