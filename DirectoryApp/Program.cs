@@ -14,6 +14,7 @@ namespace DirectoryApp
             Console.WriteLine("***** Directory(Info) *****\n");
             ShowWindowsDirectoryInfo();
             DisplayImageFiles();
+            ModifyAppDirectory();
             Console.ReadLine();
         }
 
@@ -51,6 +52,20 @@ namespace DirectoryApp
                 Console.WriteLine($"Атрибуты: {f.Attributes}");
                 Console.WriteLine();
             }
+        }
+
+        static void ModifyAppDirectory()
+        {
+            DirectoryInfo dir = new DirectoryInfo(".");
+
+            // Создать \MyFolder в каталоге приложения.
+            dir.CreateSubdirectory("MyFolder");
+
+            // Получить возвращённый объект DirectoryInfo.
+            DirectoryInfo myDataFolder = dir.CreateSubdirectory(@"MyFolder2\Data");
+
+            // Выводит путь к ..\MyFolder2\Data.
+            Console.WriteLine($"Новая папка: {myDataFolder}");
         }
     }
 }
