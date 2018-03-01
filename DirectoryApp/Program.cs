@@ -13,6 +13,7 @@ namespace DirectoryApp
         {
             Console.WriteLine("***** Directory(Info) *****\n");
             ShowWindowsDirectoryInfo();
+            DisplayImageFiles();
             Console.ReadLine();
         }
 
@@ -28,6 +29,28 @@ namespace DirectoryApp
             Console.WriteLine($"Атрибуты: {dir.Attributes}");
             Console.WriteLine($"Корневой каталог: {dir.Root}");
             Console.WriteLine();
+        }
+
+        static void DisplayImageFiles()
+        {
+            DirectoryInfo dir = new DirectoryInfo(@"C:\Windows\Web\Wallpaper");
+
+            // Получить все файлы с расширением *.jpg.
+            FileInfo[] imageFiles = dir.GetFiles("*.jpg", SearchOption.AllDirectories);
+
+            // Сколько файлов найдено?
+            Console.WriteLine($"Найдено {imageFiles.Length} *.jpg файлов");
+            Console.WriteLine();
+
+            // Вывести информацию о каждом файле.
+            foreach (FileInfo f in imageFiles)
+            {
+                Console.WriteLine($"Имя файла: {f.Name}");
+                Console.WriteLine($"Размер: {f.Length}");
+                Console.WriteLine($"Время создания: {f.CreationTime}");
+                Console.WriteLine($"Атрибуты: {f.Attributes}");
+                Console.WriteLine();
+            }
         }
     }
 }
