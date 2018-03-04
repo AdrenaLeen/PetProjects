@@ -26,6 +26,14 @@ namespace StreamWriterReaderApp
             }
             Console.WriteLine("Создать файл и записать некоторые мысли...");
 
+            // Прочитать данные из файла.
+            Console.WriteLine("Вот ваши мысли:");
+            using (StreamReader sr = File.OpenText("reminders.txt"))
+            {
+                string input = null;
+                while ((input = sr.ReadLine()) != null) Console.WriteLine(input);
+            }
+
             Console.ReadLine();
         }
     }
