@@ -241,6 +241,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStreamApp", "FileStream
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamWriterReaderApp", "StreamWriterReaderApp\StreamWriterReaderApp.csproj", "{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringReaderWriterApp", "StringReaderWriterApp\StringReaderWriterApp.csproj", "{3E66C360-6285-45C0-8F7A-D4B4687F4904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -723,6 +725,10 @@ Global
 		{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E66C360-6285-45C0-8F7A-D4B4687F4904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E66C360-6285-45C0-8F7A-D4B4687F4904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E66C360-6285-45C0-8F7A-D4B4687F4904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E66C360-6285-45C0-8F7A-D4B4687F4904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
