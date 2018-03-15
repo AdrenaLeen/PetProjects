@@ -23,6 +23,7 @@ namespace SimpleSerialize
 
             // Сохранить объект JamesBondCar в указанном файле в двоичном формате.
             SaveAsBinaryFormat(jbc, "CarData.dat");
+            LoadFromBinaryFile("CarData.dat");
 
             Console.ReadLine();
         }
@@ -36,6 +37,18 @@ namespace SimpleSerialize
                 binFormat.Serialize(fStream, objGraph);
             }
             Console.WriteLine("=> Машина сохранена в двоичном формате!");
+        }
+
+        static void LoadFromBinaryFile(string fileName)
+        {
+            BinaryFormatter binFormat = new BinaryFormatter();
+
+            // Прочитать объект JamesBondCar из двоичного файла.
+            using (Stream fStream = File.OpenRead(fileName))
+            {
+                JamesBondCar carFromDisk = (JamesBondCar)binFormat.Deserialize(fStream);
+                Console.WriteLine($"Может ли эта машина летать? : {carFromDisk.canFly}");
+            }
         }
     }
 }
