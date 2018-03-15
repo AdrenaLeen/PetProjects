@@ -28,6 +28,8 @@ namespace SimpleSerialize
             LoadFromBinaryFile("CarData.dat");
             SaveAsSoapFormat(jbc, "CarData.soap");
             SaveAsXmlFormat(jbc, "CarData.xml");
+            SaveListOfCars();
+            SaveListOfCarsAsBinary();
 
             Console.ReadLine();
         }
@@ -77,6 +79,36 @@ namespace SimpleSerialize
                 xmlFormat.Serialize(fStream, objGraph);
             }
             Console.WriteLine("=> Машина сохранена в формате XML!");
+        }
+
+        static void SaveListOfCars()
+        {
+            // Сохранить список List<T> объектов JamesBondCars.
+            List<JamesBondCar> myCars = new List<JamesBondCar>();
+            myCars.Add(new JamesBondCar(true, true));
+            myCars.Add(new JamesBondCar(true, false));
+            myCars.Add(new JamesBondCar(false, true));
+            myCars.Add(new JamesBondCar(false, false));
+
+            using (Stream fStream = new FileStream("CarCollection.xml", FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                XmlSerializer xmlFormat = new XmlSerializer(typeof(List<JamesBondCar>));
+                xmlFormat.Serialize(fStream, myCars);
+            }
+            Console.WriteLine("=> Список машин сохранён!");
+        }
+
+        static void SaveListOfCarsAsBinary()
+        {
+            // Сохранить объект ArrayList (myCars) в двоичном виде.
+            List<JamesBondCar> myCars = new List<JamesBondCar>();
+
+            BinaryFormatter binFormat = new BinaryFormatter();
+            using (Stream fStream = new FileStream("AllMyCars.dat", FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                binFormat.Serialize(fStream, myCars);
+            }
+            Console.WriteLine("=> Список машин сохранён в двоичном виде!");
         }
     }
 }

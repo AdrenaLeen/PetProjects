@@ -16,5 +16,14 @@ namespace SimpleSerialize
 
         [XmlAttribute]
         public bool canSubmerge;
+
+        public JamesBondCar(bool skyWorthy, bool seaWorthy)
+        {
+            canFly = skyWorthy;
+            canSubmerge = seaWorthy;
+        }
+
+        // XmlSerializer требует стандартного конструктора!
+        public JamesBondCar() { }
     }
 }
