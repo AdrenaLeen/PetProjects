@@ -247,6 +247,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryWriterReader", "Binar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDirectoryWatcher", "MyDirectoryWatcher\MyDirectoryWatcher.csproj", "{63F8D32B-BD8D-47B6-9924-F43BC2949D7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSerialize", "SimpleSerialize\SimpleSerialize.csproj", "{45698ACC-D4A7-420F-82AA-CC6BE63369F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -741,6 +743,10 @@ Global
 		{63F8D32B-BD8D-47B6-9924-F43BC2949D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63F8D32B-BD8D-47B6-9924-F43BC2949D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63F8D32B-BD8D-47B6-9924-F43BC2949D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
