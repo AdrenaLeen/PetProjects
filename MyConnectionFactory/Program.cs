@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.OleDb;
 using System.Data.Odbc;
+using System.Configuration;
 
 namespace MyConnectionFactory
 {
@@ -19,8 +20,24 @@ namespace MyConnectionFactory
         {
             Console.WriteLine("**** Очень простая фабрика подключений *****");
 
+            // Прочитать ключ provider.
+            string dataProviderString = ConfigurationManager.AppSettings["provider"];
+
+            // Преобразовать строку в перечисление.
+            DataProvider dataProvider = DataProvider.None;
+            if (Enum.IsDefined(typeof(DataProvider), dataProviderString))
+            {
+                dataProvider = (DataProvider)Enum.Parse(typeof(DataProvider), dataProviderString);
+            }
+            else
+            {
+                Console.WriteLine("Поставщики отсутствуют!");
+                Console.ReadLine();
+                return;
+            }
+
             // Получить конкретное подключение.
-            IDbConnection myConnection = GetConnection(DataProvider.SqlServer);
+            IDbConnection myConnection = GetConnection(dataProvider);
             Console.WriteLine($"Ваше подключение: {myConnection?.GetType().Name ?? "неизвестный тип"}");
             
             // Открыть, использовать и закрыть подключение...
