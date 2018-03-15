@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SimpleSerialize
 {
     [Serializable]
-    class Car
+    public class Car
     {
         public Radio theRadio = new Radio();
         public bool isHatchBack;

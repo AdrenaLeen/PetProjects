@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Soap;
+using System.Xml.Serialization;
 
 namespace SimpleSerialize
 {
@@ -25,8 +26,8 @@ namespace SimpleSerialize
             // Сохранить объект JamesBondCar в указанном файле в двоичном формате.
             SaveAsBinaryFormat(jbc, "CarData.dat");
             LoadFromBinaryFile("CarData.dat");
-
             SaveAsSoapFormat(jbc, "CarData.soap");
+            SaveAsXmlFormat(jbc, "CarData.xml");
 
             Console.ReadLine();
         }
@@ -64,6 +65,18 @@ namespace SimpleSerialize
                 soapFormat.Serialize(fStream, objGraph);
             }
             Console.WriteLine("=> Машина сохранена в формате SOAP!");
+        }
+
+        static void SaveAsXmlFormat(object objGraph, string fileName)
+        {
+            // Сохранить объект в файле CarData.xml в формате XML.
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(JamesBondCar));
+
+            using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                xmlFormat.Serialize(fStream, objGraph);
+            }
+            Console.WriteLine("=> Машина сохранена в формате XML!");
         }
     }
 }
