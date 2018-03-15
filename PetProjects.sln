@@ -249,6 +249,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDirectoryWatcher", "MyDir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSerialize", "SimpleSerialize\SimpleSerialize.csproj", "{45698ACC-D4A7-420F-82AA-CC6BE63369F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{4C476765-C7AA-41EC-8F60-A56B43FB7853}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -747,6 +749,10 @@ Global
 		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45698ACC-D4A7-420F-82AA-CC6BE63369F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
