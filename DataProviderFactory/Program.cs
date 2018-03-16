@@ -17,7 +17,7 @@ namespace DataProviderFactory
 
             // Получить строку подключения и поставщик из файла *.config.
             string dataProvider = ConfigurationManager.AppSettings["provider"];
-            string connectionString = ConfigurationManager.AppSettings["connectionString"];
+            string connectionString = ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ConnectionString;
 
             // Получить фабрику поставщиков.
             DbProviderFactory factory = DbProviderFactories.GetFactory(dataProvider);
