@@ -19,6 +19,9 @@ namespace AutoLotDataReader
                 connection.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AutoLot;Integrated Security=True;";
                 connection.Open();
 
+                // Новая вспомогательная функция.
+                ShowConnectionStatus(connection);
+
                 // Создать объект команды SQL.
                 string sql = "Select * From Inventory";
                 SqlCommand myCommand = new SqlCommand(sql, connection);
@@ -34,6 +37,17 @@ namespace AutoLotDataReader
                 }
             }
             Console.ReadLine();
+        }
+
+        static void ShowConnectionStatus(SqlConnection connection)
+        {
+            // Вывести различные сведения о текущем объекте подключения.
+            Console.WriteLine("***** Информация о вашем объекте подключения *****");
+            Console.WriteLine($"Местоположение базы данных: {connection.DataSource}");
+            Console.WriteLine($"Имя базы данных: {connection.Database}");
+            Console.WriteLine($"Таймаут: {connection.ConnectionTimeout}");
+            Console.WriteLine($"Состояние: {connection.State}");
+            Console.WriteLine();
         }
     }
 }
