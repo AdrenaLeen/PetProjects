@@ -32,7 +32,7 @@ namespace AutoLotDataReader
                 ShowConnectionStatus(connection);
 
                 // Создать объект команды SQL.
-                string sql = "Select * From Inventory";
+                string sql = "Select * From Inventory;Select * from Customers";
                 SqlCommand myCommand = new SqlCommand(sql, connection);
 
                 // Создать ещё один объект команды посредством свойств.
@@ -43,16 +43,19 @@ namespace AutoLotDataReader
                 // Подключить объект чтения данных с помощью ExecuteReader().
                 using (SqlDataReader myDataReader = myCommand.ExecuteReader())
                 {
-                    // Пройти в цикле по результатам.
-                    while (myDataReader.Read())
+                    do
                     {
-                        Console.WriteLine("***** Запись *****");
-                        for (int i = 0; i < myDataReader.FieldCount; i++)
+                        // Пройти в цикле по результатам.
+                        while (myDataReader.Read())
                         {
-                            Console.WriteLine($"{myDataReader.GetName(i)} = {myDataReader.GetValue(i)}");
+                            Console.WriteLine("***** Запись *****");
+                            for (int i = 0; i < myDataReader.FieldCount; i++)
+                            {
+                                Console.WriteLine($"{myDataReader.GetName(i)} = {myDataReader.GetValue(i)}");
+                            }
+                            Console.WriteLine();
                         }
-                        Console.WriteLine();
-                    }
+                    } while (myDataReader.NextResult());
                 }
             }
             Console.ReadLine();
