@@ -35,6 +35,11 @@ namespace AutoLotDataReader
                 string sql = "Select * From Inventory";
                 SqlCommand myCommand = new SqlCommand(sql, connection);
 
+                // Создать ещё один объект команды посредством свойств.
+                SqlCommand testCommand = new SqlCommand();
+                testCommand.Connection = connection;
+                testCommand.CommandText = sql;
+
                 // Подключить объект чтения данных с помощью ExecuteReader().
                 using (SqlDataReader myDataReader = myCommand.ExecuteReader())
                 {
