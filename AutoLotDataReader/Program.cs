@@ -13,10 +13,19 @@ namespace AutoLotDataReader
         {
             Console.WriteLine("***** Data Reader *****");
 
+            // Предположим, что значение connectionString на самом деле получено из файла *.config.
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AutoLot;Integrated Security=True;";
+
+            // Создать строку подключения с помощью объекта построителя.
+            SqlConnectionStringBuilder cnStringBuilder = new SqlConnectionStringBuilder(connectionString);
+
+            // Изменить значение таймаута.
+            cnStringBuilder.ConnectTimeout = 5;
+
             // Создать и открыть подключение.
             using (SqlConnection connection = new SqlConnection())
             {
-                connection.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AutoLot;Integrated Security=True;";
+                connection.ConnectionString = cnStringBuilder.ConnectionString;
                 connection.Open();
 
                 // Новая вспомогательная функция.
