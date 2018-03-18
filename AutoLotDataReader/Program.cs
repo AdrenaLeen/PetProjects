@@ -46,7 +46,12 @@ namespace AutoLotDataReader
                     // Пройти в цикле по результатам.
                     while (myDataReader.Read())
                     {
-                        Console.WriteLine($"-> Производитель: {myDataReader["Make"]}, Дружественное имя: {myDataReader["PetName"]}, Цвет: {myDataReader["Color"]}.");
+                        Console.WriteLine("***** Запись *****");
+                        for (int i = 0; i < myDataReader.FieldCount; i++)
+                        {
+                            Console.WriteLine($"{myDataReader.GetName(i)} = {myDataReader.GetValue(i)}");
+                        }
+                        Console.WriteLine();
                     }
                 }
             }
