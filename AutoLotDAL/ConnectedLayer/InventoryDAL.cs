@@ -144,5 +144,43 @@ namespace AutoLotDAL.ConnectedLayer
             }
             return dataTable;
         }
+
+        public string LookUpPetName(int carId)
+        {
+            string carPetName;
+
+            // Установить имя хранимой процедуры.
+            using (SqlCommand command = new SqlCommand("GetPetName", sqlConnection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                // Входной параметр.
+                SqlParameter param = new SqlParameter
+                {
+                    ParameterName = "@carId",
+                    SqlDbType = SqlDbType.Int,
+                    Value = carId,
+                    Direction = ParameterDirection.Input
+                };
+                command.Parameters.Add(param);
+
+                // Выходной параметр.
+                param = new SqlParameter
+                {
+                    ParameterName = "@petName",
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10,
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(param);
+
+                // Выполнить хранимую процедуру.
+                command.ExecuteNonQuery();
+
+                // Возвратить выходной параметр.
+                carPetName = (string)command.Parameters["@petName"].Value;
+            }
+            return carPetName;
+        }
     }
 }
