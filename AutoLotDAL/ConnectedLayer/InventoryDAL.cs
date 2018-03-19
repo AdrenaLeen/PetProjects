@@ -24,12 +24,40 @@ namespace AutoLotDAL.ConnectedLayer
 
         public void InsertAuto(string color, string make, string petName)
         {
-            // Сформировать и выполнить оператор SQL.
-            string sql = $"Insert Into Inventory (Make, Color, PetName) Values ('{make}', '{color}', '{petName}')";
+            // "Заполнители" в запросе SQL.
+            string sql = "Insert Into Inventory (Make, Color, PetName) Values (@Make, @Color, @PetName)";
 
-            // Выполнить, используя наше подключение.
+            // Эта команда будет иметь внутренние параметры.
             using (SqlCommand command = new SqlCommand(sql, sqlConnection))
             {
+                // Заполнить коллекцию параметров.
+                SqlParameter parameter = new SqlParameter
+                {
+                    ParameterName = "@Make",
+                    Value = make,
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10
+                };
+                command.Parameters.Add(parameter);
+
+                parameter = new SqlParameter
+                {
+                    ParameterName = "@Color",
+                    Value = color,
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10
+                };
+                command.Parameters.Add(parameter);
+
+                parameter = new SqlParameter
+                {
+                    ParameterName = "@PetName",
+                    Value = petName,
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10
+                };
+                command.Parameters.Add(parameter);
+
                 command.ExecuteNonQuery();
             }
         }
