@@ -65,5 +65,15 @@ namespace AutoLotDAL.ConnectedLayer
                 }
             }
         }
+
+        public void UpdateCarPetName(int id, string newPetName)
+        {
+            // Обновить PetName в записи об автомобиле с казанным CarId.
+            string sql = $"Update Inventory Set PetName = '{newPetName}' Where CarId = '{id}'";
+            using (SqlCommand command = new SqlCommand(sql, sqlConnection))
+            {
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
