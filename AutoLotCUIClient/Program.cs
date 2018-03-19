@@ -1,10 +1,9 @@
-﻿using System;
+﻿using AutoLotDAL.ConnectedLayer;
+using AutoLotDAL.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
-using AutoLotDAL.ConnectedLayer;
+using System.Data;
 
 namespace AutoLotCUIClient
 {
@@ -29,6 +28,7 @@ namespace AutoLotCUIClient
                 ShowInstructions();
                 do
                 {
+                    Console.WriteLine();
                     Console.Write("Пожалуйста, введите команду: ");
                     userCommand = Console.ReadLine();
                     Console.WriteLine();
@@ -44,7 +44,7 @@ namespace AutoLotCUIClient
                             DeleteCar(invDAL);
                             break;
                         case "L":
-                            ListInventory(invDAL);
+                            ListInventoryViaList(invDAL);
                             break;
                         case "S":
                             ShowInstructions();
@@ -76,9 +76,46 @@ namespace AutoLotCUIClient
             throw new NotImplementedException();
         }
 
+        private static void ListInventoryViaList(InventoryDAL invDAL)
+        {
+            // Получить список автомобилей на складе.
+            List<NewCar> record = invDAL.GetAllInventoryAsList();
+
+            Console.WriteLine("CarId:\tMake:\tColor:\tPetName:");
+            foreach (NewCar c in record)
+            {
+                Console.WriteLine($"{c.CarId}\t{c.Make}\t{c.Color}\t{c.PetName}");
+            }
+        }
+
         private static void ListInventory(InventoryDAL invDAL)
         {
-            throw new NotImplementedException();
+            // Получить список автомобилей на складе.
+            DataTable dt = invDAL.GetAllInventoryAsDataTable();
+
+            // Передать объект DataTable во вспомогательную функцию для отображения.
+            DisplayTable(dt);
+        }
+
+        private static void DisplayTable(DataTable dt)
+        {
+            // Вывести имена столбцов.
+            for (int curCol = 0; curCol < dt.Columns.Count; curCol++)
+            {
+                Console.Write($"{dt.Columns[curCol].ColumnName}\t");
+            }
+            Console.WriteLine();
+            Console.WriteLine("----------------------------------");
+
+            // Вывести содержимое объекта DataTable.
+            for (int curRow = 0; curRow < dt.Rows.Count; curRow++)
+            {
+                for (int curCol = 0; curCol < dt.Columns.Count; curCol++)
+                {
+                    Console.Write($"{dt.Rows[curRow][curCol]}\t");
+                }
+                Console.WriteLine();
+            }
         }
 
         private static void DeleteCar(InventoryDAL invDAL)
