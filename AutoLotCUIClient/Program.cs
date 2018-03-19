@@ -73,7 +73,10 @@ namespace AutoLotCUIClient
 
         private static void LookUpPetName(InventoryDAL invDAL)
         {
-            throw new NotImplementedException();
+            // Получить идентификатор автомобиля для поиска дружественного имени.
+            Console.Write("Введите идентификатор автомобиля для поиска: ");
+            int id = int.Parse(Console.ReadLine() ?? "0");
+            Console.WriteLine($"Дружественное имя {id} - {invDAL.LookUpPetName(id).TrimEnd()}.");
         }
 
         private static void ListInventoryViaList(InventoryDAL invDAL)
