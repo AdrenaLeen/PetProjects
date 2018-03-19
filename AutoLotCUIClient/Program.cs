@@ -120,7 +120,19 @@ namespace AutoLotCUIClient
 
         private static void DeleteCar(InventoryDAL invDAL)
         {
-            throw new NotImplementedException();
+            // Получить идентификатор автомобиля, запись о котором должна быть удалена.
+            Console.Write("Введите идентификатор автомобиля для удаления: ");
+            int id = int.Parse(Console.ReadLine() ?? "0");
+
+            // На случай нарушения ссылочной целостности.
+            try
+            {
+                invDAL.DeleteCar(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private static void UpdateCarPetName(InventoryDAL invDAL)
