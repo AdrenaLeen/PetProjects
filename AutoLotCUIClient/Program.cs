@@ -137,7 +137,14 @@ namespace AutoLotCUIClient
 
         private static void UpdateCarPetName(InventoryDAL invDAL)
         {
-            throw new NotImplementedException();
+            // Получить пользовательские данные.
+            Console.Write("Введите идентификатор автомобиля: ");
+            int carId = int.Parse(Console.ReadLine() ?? "0");
+            Console.Write("Введите новое дружественное имя: ");
+            string newCarPetName = Console.ReadLine();
+
+            // Передать информацию библиотеке доступа к данным.
+            invDAL.UpdateCarPetName(carId, newCarPetName);
         }
 
         private static void InsertNewCar(InventoryDAL invDAL)
