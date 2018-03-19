@@ -47,5 +47,23 @@ namespace AutoLotDAL.ConnectedLayer
                 command.ExecuteNonQuery();
             }
         }
+
+        public void DeleteCar(int id)
+        {
+            // Удалить запись об автомобиле с указанным CarId.
+            string sql = $"Delete from Inventory where CarId = '{id}'";
+            using (SqlCommand cmd = new SqlCommand(sql, sqlConnection))
+            {
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Exception error = new Exception("Извините! Эта машина заказана!", ex);
+                    throw error;
+                }
+            }
+        }
     }
 }
