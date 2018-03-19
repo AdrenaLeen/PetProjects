@@ -142,7 +142,22 @@ namespace AutoLotCUIClient
 
         private static void InsertNewCar(InventoryDAL invDAL)
         {
-            throw new NotImplementedException();
+            // Получить пользовательские данные.
+            Console.Write("Введите цвет автомобиля: ");
+            string newCarColor = Console.ReadLine();
+            Console.Write("Введите модель автомобиля: ");
+            string newCarMake = Console.ReadLine();
+            Console.Write("Введите дружественное имя автомобиля: ");
+            string newCarPetName = Console.ReadLine();
+
+            // Передать информацию библиотеке доступа к данным.
+            NewCar c = new NewCar
+            {
+                Color = newCarColor,
+                Make = newCarMake,
+                PetName = newCarPetName
+            };
+            invDAL.InsertAuto(c);
         }
 
         private static void ShowInstructions()
