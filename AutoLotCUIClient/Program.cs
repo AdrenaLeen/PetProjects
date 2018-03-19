@@ -98,7 +98,13 @@ namespace AutoLotCUIClient
 
         private static void ShowInstructions()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("I: Вставить новую запись об автомобиле.");
+            Console.WriteLine("U: Обновить существующую запись об автомобиле.");
+            Console.WriteLine("D: Удалить существующую запись об автомобиле.");
+            Console.WriteLine("L: Вывести текущий инвентарный список автомобилей.");
+            Console.WriteLine("S: Вывести информацию об этих командах.");
+            Console.WriteLine("P: Найти дружественное имя автомобиля.");
+            Console.WriteLine("Q: Завершить программу.");
         }
     }
 }
