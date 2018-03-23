@@ -39,7 +39,10 @@ namespace SimpleDataSet
                 Caption = "Идентификатор автомобиля",
                 ReadOnly = true,
                 AllowDBNull = false,
-                Unique = true
+                Unique = true,
+                AutoIncrement = true,
+                AutoIncrementSeed = 1,
+                AutoIncrementStep = 1
             };
 
             DataColumn carMakeColumn = new DataColumn("Make", typeof(string));
