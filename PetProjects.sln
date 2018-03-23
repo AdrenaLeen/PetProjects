@@ -263,6 +263,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotCUIClient", "AutoLot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetTransaction", "AdoNetTransaction\AdoNetTransaction.csproj", "{94B400A0-36CF-4D02-81A3-A8979F306C32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDataSet", "SimpleDataSet\SimpleDataSet.csproj", "{40D6FB08-5CCF-4595-A17F-C4502B382327}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -789,6 +791,10 @@ Global
 		{94B400A0-36CF-4D02-81A3-A8979F306C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B400A0-36CF-4D02-81A3-A8979F306C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94B400A0-36CF-4D02-81A3-A8979F306C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
