@@ -31,9 +31,20 @@ namespace SimpleDataSet
             throw new NotImplementedException();
         }
 
-        private static void FillDataSet(DataSet carsInventoryDS)
+        private static void FillDataSet(DataSet ds)
         {
-            throw new NotImplementedException();
+            // Создать столбцы данных, которые отображаются на "реальные" столбцы в таблице Inventory из базы данных AutoLot.
+            DataColumn carIDColumn = new DataColumn("CarID", typeof(int))
+            {
+                Caption = "Идентификатор автомобиля",
+                ReadOnly = true,
+                AllowDBNull = false,
+                Unique = true
+            };
+
+            DataColumn carMakeColumn = new DataColumn("Make", typeof(string));
+            DataColumn carColorColumn = new DataColumn("Color", typeof(string));
+            DataColumn carPetNameColumn = new DataColumn("PetName", typeof(string)) { Caption = "Дружественное имя" };
         }
     }
 }
