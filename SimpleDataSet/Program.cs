@@ -21,6 +21,7 @@ namespace SimpleDataSet
             carsInventoryDS.ExtendedProperties["Company"] = "Mikko’s Hot Tub Super Store";
 
             FillDataSet(carsInventoryDS);
+            ManipulateDataRowState();
             PrintDataSet(carsInventoryDS);
             
             Console.ReadLine();
@@ -66,6 +67,37 @@ namespace SimpleDataSet
             carRow[2] = "Красный";
             carRow[3] = "Морской бриз";
             inventoryTable.Rows.Add(carRow);
+        }
+
+        private static void ManipulateDataRowState()
+        {
+            // Создать объект temp типа DataTable для целей тестирования.
+            DataTable temp = new DataTable("Temp");
+            temp.Columns.Add(new DataColumn("TempColumn", typeof(int)));
+
+            // RowState = Detached. 
+            var row = temp.NewRow();
+            Console.WriteLine($"После вызова NewRow(): {row.RowState}");
+
+            // RowState = Added.
+            temp.Rows.Add(row);
+            Console.WriteLine($"После вызова Rows.Add(): {row.RowState}");
+
+            // RowState = Added.
+            row["TempColumn"] = 10;
+            Console.WriteLine($"После первого присваивания: {row.RowState}");
+
+            // RowState = Unchanged.
+            temp.AcceptChanges();
+            Console.WriteLine($"После вызова AcceptChanges: {row.RowState}");
+
+            // RowState = Modified.
+            row["TempColumn"] = 11;
+            Console.WriteLine($"После первого присваивания: {row.RowState}");
+
+            // RowState = Deleted.
+            temp.Rows[0].Delete();
+            Console.WriteLine($"После вызова Delete: {row.RowState}");
         }
     }
 }
