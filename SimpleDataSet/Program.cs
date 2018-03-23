@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Collections;
 
 namespace SimpleDataSet
 {
@@ -27,9 +28,33 @@ namespace SimpleDataSet
             Console.ReadLine();
         }
 
-        private static void PrintDataSet(DataSet carsInventoryDS)
+        private static void PrintDataSet(DataSet ds)
         {
-            throw new NotImplementedException();
+            // Вывести имя DataSet и любые расширенные свойства.
+            Console.WriteLine($"Имя DataSet: {ds.DataSetName}");
+            foreach (DictionaryEntry de in ds.ExtendedProperties) Console.WriteLine($"Ключ = {de.Key}, Значение = {de.Value}");
+            Console.WriteLine();
+
+            // Вывести содержимое каждой таблицы.
+            foreach (DataTable dt in ds.Tables)
+            {
+                Console.WriteLine($"=> Таблица {dt.TableName}:");
+
+                // Вывести имена столбцов.
+                for (int curCol = 0; curCol < dt.Columns.Count; curCol++) Console.Write($"{dt.Columns[curCol].ColumnName}\t");
+                Console.WriteLine();
+                Console.WriteLine("----------------------------------");
+
+                // Вывести содержимое DataTable.
+                for (int curRow = 0; curRow < dt.Rows.Count; curRow++)
+                {
+                    for (int curCol = 0; curCol < dt.Columns.Count; curCol++)
+                    {
+                        Console.Write($"{dt.Rows[curRow][curCol]}\t");
+                    }
+                    Console.WriteLine();
+                }
+            }
         }
 
         private static void FillDataSet(DataSet ds)
