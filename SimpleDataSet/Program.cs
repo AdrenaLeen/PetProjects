@@ -67,6 +67,9 @@ namespace SimpleDataSet
             carRow[2] = "Красный";
             carRow[3] = "Морской бриз";
             inventoryTable.Rows.Add(carRow);
+
+            // Установить первичный ключ этой таблицы.
+            inventoryTable.PrimaryKey = new[] { inventoryTable.Columns[0] };
         }
 
         private static void ManipulateDataRowState()
