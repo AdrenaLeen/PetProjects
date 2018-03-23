@@ -48,6 +48,10 @@ namespace SimpleDataSet
             DataColumn carMakeColumn = new DataColumn("Make", typeof(string));
             DataColumn carColorColumn = new DataColumn("Color", typeof(string));
             DataColumn carPetNameColumn = new DataColumn("PetName", typeof(string)) { Caption = "Дружественное имя" };
+
+            // Добавить объекты DataColumn в DataTable.
+            DataTable inventoryTable = new DataTable("Inventory");
+            inventoryTable.Columns.AddRange(new[] {carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn});
         }
     }
 }
