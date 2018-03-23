@@ -35,7 +35,7 @@ namespace SimpleDataSet
             foreach (DictionaryEntry de in ds.ExtendedProperties) Console.WriteLine($"Ключ = {de.Key}, Значение = {de.Value}");
             Console.WriteLine();
 
-            // Вывести содержимое каждой таблицы.
+            // Вывести содержимое каждой таблицы, используя объект чтения данных.
             foreach (DataTable dt in ds.Tables)
             {
                 Console.WriteLine($"=> Таблица {dt.TableName}:");
@@ -45,15 +45,8 @@ namespace SimpleDataSet
                 Console.WriteLine();
                 Console.WriteLine("----------------------------------");
 
-                // Вывести содержимое DataTable.
-                for (int curRow = 0; curRow < dt.Rows.Count; curRow++)
-                {
-                    for (int curCol = 0; curCol < dt.Columns.Count; curCol++)
-                    {
-                        Console.Write($"{dt.Rows[curRow][curCol]}\t");
-                    }
-                    Console.WriteLine();
-                }
+                // Вызвать новый вспомогательный метод.
+                PrintTable(dt);
             }
         }
 
@@ -129,6 +122,23 @@ namespace SimpleDataSet
             // RowState = Deleted.
             temp.Rows[0].Delete();
             Console.WriteLine($"После вызова Delete: {row.RowState}");
+        }
+
+        static void PrintTable(DataTable dt)
+        {
+            // Получить объект DataTableReader.
+            DataTableReader dtReader = dt.CreateDataReader();
+
+            // DataTableReader работает в точности как DataReader.
+            while (dtReader.Read())
+            {
+                for (int i = 0; i < dtReader.FieldCount; i++)
+                {
+                    Console.Write($"{dtReader.GetValue(i).ToString().Trim()}\t");
+                }
+                Console.WriteLine();
+            }
+            dtReader.Close();
         }
     }
 }
