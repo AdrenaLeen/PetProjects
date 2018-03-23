@@ -52,6 +52,20 @@ namespace SimpleDataSet
             // Добавить объекты DataColumn в DataTable.
             DataTable inventoryTable = new DataTable("Inventory");
             inventoryTable.Columns.AddRange(new[] {carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn});
+
+            // Добавить несколько строк в таблицу Inventory.
+            DataRow carRow = inventoryTable.NewRow();
+            carRow["Make"] = "BMW";
+            carRow["Color"] = "Чёрный";
+            carRow["PetName"] = "Гамлет";
+            inventoryTable.Rows.Add(carRow);
+
+            carRow = inventoryTable.NewRow();
+            // Столбец 0 - это автоинкрементное поле идентификатора, поэтому начать заполнение со столбца 1.
+            carRow[1] = "Saab";
+            carRow[2] = "Красный";
+            carRow[3] = "Морской бриз";
+            inventoryTable.Rows.Add(carRow);
         }
     }
 }
