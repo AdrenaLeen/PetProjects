@@ -70,6 +70,9 @@ namespace SimpleDataSet
 
             // Установить первичный ключ этой таблицы.
             inventoryTable.PrimaryKey = new[] { inventoryTable.Columns[0] };
+
+            // Наконец, добавить таблицу в DataSet.
+            ds.Tables.Add(inventoryTable);
         }
 
         private static void ManipulateDataRowState()
