@@ -24,7 +24,8 @@ namespace SimpleDataSet
             FillDataSet(carsInventoryDS);
             ManipulateDataRowState();
             PrintDataSet(carsInventoryDS);
-            
+            SaveAndLoadAsXml(carsInventoryDS);
+
             Console.ReadLine();
         }
 
@@ -139,6 +140,19 @@ namespace SimpleDataSet
                 Console.WriteLine();
             }
             dtReader.Close();
+        }
+
+        static void SaveAndLoadAsXml(DataSet carsInventoryDS)
+        {
+            // Сохранить этот объект DataSet в формате XML.
+            carsInventoryDS.WriteXml("carsDataSet.xml");
+            carsInventoryDS.WriteXmlSchema("carsDataSet.xsd");
+
+            // Очистить объект DataSet.
+            carsInventoryDS.Clear();
+
+            // Загрузить объект DataSet из файла XML.
+            carsInventoryDS.ReadXml("carsDataSet.xml");
         }
     }
 }
