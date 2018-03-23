@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Collections;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SimpleDataSet
 {
@@ -25,6 +27,7 @@ namespace SimpleDataSet
             ManipulateDataRowState();
             PrintDataSet(carsInventoryDS);
             SaveAndLoadAsXml(carsInventoryDS);
+            SaveAndLoadAsBinary(carsInventoryDS);
 
             Console.ReadLine();
         }
@@ -153,6 +156,25 @@ namespace SimpleDataSet
 
             // Загрузить объект DataSet из файла XML.
             carsInventoryDS.ReadXml("carsDataSet.xml");
+        }
+
+        static void SaveAndLoadAsBinary(DataSet carsInventoryDS)
+        {
+            // Установить флаг двоичной сериализации.
+            carsInventoryDS.RemotingFormat = SerializationFormat.Binary;
+
+            // Сохранить этот объект DataSet в двоичном виде.
+            FileStream fs = new FileStream("BinaryCars.bin", FileMode.Create);
+            BinaryFormatter bFormat = new BinaryFormatter();
+            bFormat.Serialize(fs, carsInventoryDS);
+            fs.Close();
+
+            // Очистить объект DataSet.
+            carsInventoryDS.Clear();
+
+            // Загрузить объект DataSet из двоичного файла.
+            fs = new FileStream("BinaryCars.bin", FileMode.Open);
+            DataSet data = (DataSet)bFormat.Deserialize(fs);
         }
     }
 }
