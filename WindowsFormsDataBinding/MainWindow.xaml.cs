@@ -69,5 +69,23 @@ namespace WindowsFormsDataBinding
             // Привязать объект DataTable к carInventoryGridView.
             carInventoryGridView.DataContext = inventoryTable;
         }
+
+        // Удалить эту строку из DataRowCollection
+        private void btnRemoveRow_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Найти корректную строку для удаления.
+                DataRow[] rowToDelete = inventoryTable.Select($"Id={int.Parse(txtRowToRemove.Text)}");
+
+                // Удалить её.
+                rowToDelete[0].Delete();
+                inventoryTable.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

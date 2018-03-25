@@ -8,6 +8,9 @@
         Title="Привязка данных Windows Forms" Height="450" Width="800">
     <Grid>
         <Label Content="Здесь то, что у нас есть на складе" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
-        <DataGrid Name="carInventoryGridView" HorizontalAlignment="Left" Height="300" Margin="15,50,0,0" VerticalAlignment="Top" Width="700" ItemsSource="{Binding}"/>
+        <DataGrid Name="carInventoryGridView" HorizontalAlignment="Left" Height="250" Margin="15,50,0,0" VerticalAlignment="Top" Width="700" ItemsSource="{Binding}"/>
+        <Label Content="Введите ID машины для удаления" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtRowToRemove" HorizontalAlignment="Left" Height="23" Margin="15,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnRemoveRow" Content="Удалить!" HorizontalAlignment="Left" Margin="150,332,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveRow_Click"/>
     </Grid>
 </Window>
