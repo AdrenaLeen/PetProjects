@@ -27,6 +27,9 @@ namespace WindowsFormsDataBinding
         // Складская информация.
         private DataTable inventoryTable = new DataTable();
 
+        // Представление DataTable.
+        private DataView yugosOnlyView;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,8 +46,13 @@ namespace WindowsFormsDataBinding
                 new Car { Id = 7, PetName = "Мэл", Make = "Firebird", Color = "Красный" },
                 new Car { Id = 8, PetName = "Сара", Make = "Colt", Color = "Чёрный" }
             };
+
+            // Создать таблицу данных.
             CreateDataTable();
             ShowCarsWithIdGreaterThanFive();
+
+            // Создать представление.
+            CreateDataView();
         }
 
         void CreateDataTable()
@@ -146,6 +154,18 @@ namespace WindowsFormsDataBinding
             {
                 makes[i]["Make"] = "Yugo";
             }
+        }
+
+        private void CreateDataView()
+        {
+            // Установить таблицу, которая используется для создания этого представления.
+            yugosOnlyView = new DataView(inventoryTable);
+
+            // Сконфигурировать представление с применением фильтра.
+            yugosOnlyView.RowFilter = "Make = 'Yugo'";
+
+            // Привязать к новому элементу DataGridView.
+            dataGridColtsView.DataContext = yugosOnlyView;
         }
     }
 }

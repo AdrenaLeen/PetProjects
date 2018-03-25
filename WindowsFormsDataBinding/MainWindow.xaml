@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsFormsDataBinding"
         mc:Ignorable="d"
-        Title="Привязка данных Windows Forms" Height="450" Width="800">
+        Title="Привязка данных Windows Forms" Height="520" Width="800">
     <Grid>
         <Label Content="Здесь то, что у нас есть на складе" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
-        <DataGrid Name="carInventoryGridView" HorizontalAlignment="Left" Height="250" Margin="15,50,0,0" VerticalAlignment="Top" Width="700" ItemsSource="{Binding}"/>
-        <Label Content="Введите ID машины для удаления" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtRowToRemove" HorizontalAlignment="Left" Height="23" Margin="15,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Name="btnRemoveRow" Content="Удалить!" HorizontalAlignment="Left" Margin="150,332,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveRow_Click"/>
-        <Label Content="Введите марку для просмотра" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtMakeToView" HorizontalAlignment="Left" Height="23" Margin="305,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Name="btnDisplayMakes" Content="Показать!" HorizontalAlignment="Left" Margin="440,332,0,0" VerticalAlignment="Top" Width="75" Click="btnDisplayMakes_Click"/>
+        <DataGrid Name="carInventoryGridView" HorizontalAlignment="Left" Height="200" Margin="15,50,0,0" VerticalAlignment="Top" Width="700" ItemsSource="{Binding}"/>
+        <Label Content="Введите ID машины для удаления" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtRowToRemove" HorizontalAlignment="Left" Height="23" Margin="15,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnRemoveRow" Content="Удалить!" HorizontalAlignment="Left" Margin="150,282,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveRow_Click"/>
+        <Label Content="Введите марку для просмотра" HorizontalAlignment="Left" Margin="300,250,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtMakeToView" HorizontalAlignment="Left" Height="23" Margin="305,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnDisplayMakes" Content="Показать!" HorizontalAlignment="Left" Margin="440,282,0,0" VerticalAlignment="Top" Width="75" Click="btnDisplayMakes_Click"/>
         <Button Name="btnChangeMakes" Content="Заменить все BMW на Yugo" HorizontalAlignment="Left" Margin="558,20,0,0" VerticalAlignment="Top" Width="Auto" Click="btnChangeMakes_Click"/>
+        <Label Content="Только Yugo" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="dataGridColtsView" HorizontalAlignment="Left" Height="130" Margin="15,340,0,0" VerticalAlignment="Top" Width="700" ItemsSource="{Binding}"/>
     </Grid>
 </Window>
