@@ -44,6 +44,7 @@ namespace WindowsFormsDataBinding
                 new Car { Id = 8, PetName = "Сара", Make = "Colt", Color = "Чёрный" }
             };
             CreateDataTable();
+            ShowCarsWithIdGreaterThanFive();
         }
 
         void CreateDataTable()
@@ -86,6 +87,46 @@ namespace WindowsFormsDataBinding
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnDisplayMakes_Click(object sender, RoutedEventArgs e)
+        {
+            // Построить фильтр на основе пользовательского ввода.
+            string filterStr = $"Make='{txtMakeToView.Text}'";
+
+            // Найти все строки, удовлетворяющие фильтру.
+            // Сортировать по PetName.
+            // Возвратить результаты в убывающем порядке.
+            DataRow[] makes = inventoryTable.Select(filterStr, "PetName DESC");
+
+            // Показать полученные результаты.
+            if (makes.Length == 0) MessageBox.Show("Простите, машин нет...", "Ошибка выборки!");
+            else
+            {
+                string strMake = null;
+                for (int i = 0; i < makes.Length; i++)
+                {
+                    strMake += $"{makes[i]["PetName"]}\n";
+                }
+
+                // Вывести все результаты в окне сообщений.
+                MessageBox.Show(strMake, $"У нас есть {txtMakeToView.Text} с именами:");
+            }
+        }
+
+        private void ShowCarsWithIdGreaterThanFive()
+        {
+            // Вывести дружественные имена всех автомобилей со значением ID больше 5.
+            DataRow[] properIDs;
+            string newFilterStr = "Id > 5";
+            properIDs = inventoryTable.Select(newFilterStr);
+            string strIDs = null;
+            for (int i = 0; i < properIDs.Length; i++)
+            {
+                DataRow temp = properIDs[i];
+                strIDs += $"{temp["PetName"]} - ID {temp["ID"]}\n";
+            }
+            MessageBox.Show(strIDs, "Дружественные имена автомобилей, где Id > 5");
         }
     }
 }

@@ -12,5 +12,8 @@
         <Label Content="Введите ID машины для удаления" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtRowToRemove" HorizontalAlignment="Left" Height="23" Margin="15,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Name="btnRemoveRow" Content="Удалить!" HorizontalAlignment="Left" Margin="150,332,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveRow_Click"/>
+        <Label Content="Введите марку для просмотра" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtMakeToView" HorizontalAlignment="Left" Height="23" Margin="305,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnDisplayMakes" Content="Показать!" HorizontalAlignment="Left" Margin="440,332,0,0" VerticalAlignment="Top" Width="75" Click="btnDisplayMakes_Click"/>
     </Grid>
 </Window>
