@@ -8,6 +8,6 @@
         Title="Привязка данных Windows Forms" Height="450" Width="800">
     <Grid>
         <Label Content="Здесь то, что у нас есть на складе" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
-        <DataGrid Name="carInventoryGridView" HorizontalAlignment="Left" Height="100" Margin="15,50,0,0" VerticalAlignment="Top" Width="100"/>
+        <DataGrid Name="carInventoryGridView" HorizontalAlignment="Left" Height="300" Margin="15,50,0,0" VerticalAlignment="Top" Width="700" ItemsSource="{Binding}"/>
     </Grid>
 </Window>
