@@ -128,5 +128,24 @@ namespace WindowsFormsDataBinding
             }
             MessageBox.Show(strIDs, "Дружественные имена автомобилей, где Id > 5");
         }
+
+        // Найти с помощью фильтра все строки, которые нужно отредактировать.
+        private void btnChangeMakes_Click(object sender, RoutedEventArgs e)
+        {
+            // Удостовериться, что пользователь не изменил выбор.
+            if (MessageBoxResult.Yes != MessageBox.Show("Вы уверены? BMW намного лучше, чем Yugo!", "Пожалуйста, подтвердите!", MessageBoxButton.YesNo)) return;
+            
+            // Построить фильтр.
+            string filterStr = "Make='BMW'";
+
+            // Найти все строки, соответствующие фильтру.
+            DataRow[] makes = inventoryTable.Select(filterStr);
+
+            // Заменить BMW на Yugo.
+            for (int i = 0; i < makes.Length; i++)
+            {
+                makes[i]["Make"] = "Yugo";
+            }
+        }
     }
 }
