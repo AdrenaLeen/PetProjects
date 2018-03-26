@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Data.Common;
 
 namespace FillDataSetUsingSqlDataAdapter
 {
@@ -24,6 +25,11 @@ namespace FillDataSetUsingSqlDataAdapter
 
             // Указать адаптеру текст команды Select и строку подключения.
             SqlDataAdapter adapter = new SqlDataAdapter("Select * From Inventory", connectionString);
+
+            // Отобразить имена слолбцов базы данных на дружественные к пользователю имена.
+            DataTableMapping tableMapping = adapter.TableMappings.Add("Inventory", "Current Inventory");
+            tableMapping.ColumnMappings.Add("CarId", "Car Id");
+            tableMapping.ColumnMappings.Add("PetName", "Name of Car");
 
             // Заполнить DataSet новой таблицей по имени Inventory.
             adapter.Fill(ds, "Inventory");
