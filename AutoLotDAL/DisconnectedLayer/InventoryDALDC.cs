@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace AutoLotDAL.DisconnectedLayer
 {
@@ -28,6 +29,13 @@ namespace AutoLotDAL.DisconnectedLayer
 
             // Динамически получить остальные объекты команд во время выполнения, используя SqlCommandBuilder.
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+        }
+
+        public DataTable GetAllInventory()
+        {
+            DataTable inv = new DataTable("Inventory");
+            adapter.Fill(inv);
+            return inv;
         }
     }
 }
