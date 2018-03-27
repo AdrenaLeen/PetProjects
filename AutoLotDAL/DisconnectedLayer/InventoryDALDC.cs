@@ -23,7 +23,11 @@ namespace AutoLotDAL.DisconnectedLayer
 
         private void ConfigureAdapter(out SqlDataAdapter adapter)
         {
-            throw new NotImplementedException();
+            // Создать адаптер и настроить SelectCommand.
+            adapter = new SqlDataAdapter("Select * From Inventory", connectionString);
+
+            // Динамически получить остальные объекты команд во время выполнения, используя SqlCommandBuilder.
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
         }
     }
 }
