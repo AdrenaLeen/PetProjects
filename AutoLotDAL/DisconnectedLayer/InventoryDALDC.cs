@@ -37,5 +37,10 @@ namespace AutoLotDAL.DisconnectedLayer
             adapter.Fill(inv);
             return inv;
         }
+
+        public void UpdateInventory(DataTable modifiedTable)
+        {
+            adapter.Update(modifiedTable);
+        }
     }
 }
