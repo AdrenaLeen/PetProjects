@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultitabledDataSetApp"
         mc:Ignorable="d"
-        Title="Средство манипулирования базой данных AutoLot" Height="500" Width="800">
+        Title="Средство манипулирования базой данных AutoLot" Height="600" Width="800">
     <Grid>
         <Label Content="Текущее содержимое таблицы Inventory" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dataGridViewInventory" HorizontalAlignment="Left" Height="100" Margin="15,40,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding}"/>
@@ -14,6 +14,9 @@
         <Label Content="Текущее содержимое таблицы Orders" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dataGridViewOrders" HorizontalAlignment="Left" Height="100" Margin="15,315,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding}"/>
         <Button Name="btnUpdateDatabase" Content="Обновить базу данных" HorizontalAlignment="Right" Margin="0,430,10,0" VerticalAlignment="Top" Width="Auto" Click="btnUpdateDatabase_Click"/>
+        <Label Content="ID заказчика:" HorizontalAlignment="Left" Margin="10,460,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtCustID" HorizontalAlignment="Left" Height="23" Margin="100,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnGetOrderInfo" Content="Получить детали заказа" HorizontalAlignment="Left" Margin="100,495,0,0" VerticalAlignment="Top" Width="Auto" Click="btnGetOrderInfo_Click"/>
 
     </Grid>
 </Window>

@@ -94,5 +94,36 @@ namespace MultitabledDataSetApp
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnGetOrderInfo_Click(object sender, RoutedEventArgs e)
+        {
+            string strOrderInfo = string.Empty;
+
+            // Получить идентификатор клиента из текстового поля.
+            int custID = int.Parse(txtCustID.Text);
+
+            // На основе custID получить подходящую строку из таблицы Customers.
+            DataRow[] drsCust = autoLotDs.Tables["Customers"].Select($"CustID = {custID}");
+            strOrderInfo += $"Заказчик {drsCust[0]["CustID"]}: {drsCust[0]["FirstName"].ToString().Trim()} {drsCust[0]["LastName"].ToString().Trim()}\n";
+
+            // Перейти из таблицы Customers в таблицу Orders.
+            DataRow[] drsOrder = drsCust[0].GetChildRows(autoLotDs.Relations["CustomerOrder"]);
+
+            // Проход в цикле по всем заказам этого клиента.
+            foreach (DataRow order in drsOrder)
+            {
+                strOrderInfo += $"----\nНомер заказа: {order["OrderID"]}\n";
+
+                // Получить автомобиль, на который ссылается этот заказ.
+                DataRow[] drsInv = order.GetParentRows(autoLotDs.Relations["InventoryOrder"]);
+
+                // Получить информацию для (ОДНОГО) автомобиля из этого заказа.
+                DataRow car = drsInv[0];
+                strOrderInfo += $"Марка: {car["Make"]}\n";
+                strOrderInfo += $"Цвет: {car["Color"]}\n";
+                strOrderInfo += $"Дружественное имя: {car["PetName"]}\n";
+            }
+            MessageBox.Show(strOrderInfo, "Детали заказа");
+        }
     }
 }
