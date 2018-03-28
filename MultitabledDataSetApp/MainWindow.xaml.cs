@@ -72,7 +72,13 @@ namespace MultitabledDataSetApp
 
         private void BuildTableRelationship()
         {
-            throw new NotImplementedException();
+            // Создать объект отношения между данными CustomerOrder.
+            DataRelation dr = new DataRelation("CustomerOrder", autoLotDs.Tables["Customers"].Columns["CustID"], autoLotDs.Tables["Orders"].Columns["CustID"]);
+            autoLotDs.Relations.Add(dr);
+
+            // Создать объект отношения между данными InventoryOrder.
+            dr = new DataRelation("InventoryOrder", autoLotDs.Tables["Inventory"].Columns["CarID"], autoLotDs.Tables["Orders"].Columns["CarID"]);
+            autoLotDs.Relations.Add(dr);
         }
     }
 }
