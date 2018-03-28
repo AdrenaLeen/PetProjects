@@ -80,5 +80,19 @@ namespace MultitabledDataSetApp
             dr = new DataRelation("InventoryOrder", autoLotDs.Tables["Inventory"].Columns["CarID"], autoLotDs.Tables["Orders"].Columns["CarID"]);
             autoLotDs.Relations.Add(dr);
         }
+
+        private void btnUpdateDatabase_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                invTableAdapter.Update(autoLotDs, "Inventory");
+                custTableAdapter.Update(autoLotDs, "Customers");
+                ordersTableAdapter.Update(autoLotDs, "Orders");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

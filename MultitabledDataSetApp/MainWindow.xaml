@@ -13,7 +13,7 @@
         <DataGrid Name="dataGridViewCustomers" HorizontalAlignment="Left" Height="100" Margin="15,175,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding}"/>
         <Label Content="Текущее содержимое таблицы Orders" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dataGridViewOrders" HorizontalAlignment="Left" Height="100" Margin="15,315,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding}"/>
-        <Button Name="btnUpdateDatabase" Content="Обновить базу данных" HorizontalAlignment="Right" Margin="0,430,10,0" VerticalAlignment="Top" Width="Auto"/>
+        <Button Name="btnUpdateDatabase" Content="Обновить базу данных" HorizontalAlignment="Right" Margin="0,430,10,0" VerticalAlignment="Top" Width="Auto" Click="btnUpdateDatabase_Click"/>
 
     </Grid>
 </Window>
