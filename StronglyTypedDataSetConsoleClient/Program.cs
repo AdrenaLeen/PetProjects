@@ -23,7 +23,14 @@ namespace StronglyTypedDataSetConsoleClient
             // Заполнить объект DataSet новой таблицей по имени Inventory.
             adapter.Fill(table);
             PrintInventory(table);
-            
+
+            // Добавить строки, обновить и вывести повторно.
+            AddRecords(table, adapter);
+            table.Clear();
+            adapter.Fill(table);
+            PrintInventory(table);
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 
@@ -45,6 +52,34 @@ namespace StronglyTypedDataSetConsoleClient
                     Console.Write($"{dt.Rows[curRow][curCol]}\t");
                 }
                 Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+
+        public static void AddRecords(AutoLotDataSet.InventoryDataTable table, InventoryTableAdapter adapter)
+        {
+            try
+            {
+                // Получить из таблицы новую строго типизированную строку.
+                AutoLotDataSet.InventoryRow newRow = table.NewInventoryRow();
+
+                // Заполнить строку данными.
+                newRow.Color = "Фиолетовый";
+                newRow.Make = "BMW";
+                newRow.PetName = "Саку";
+
+                // Вставить новую строку.
+                table.AddInventoryRow(newRow);
+
+                // Добавить ещё одну строку, используя перегруженный метод добавления.
+                table.AddInventoryRow("Yugo", "Зелёный", "Живчик");
+
+                // Обновить базу данных.
+                adapter.Update(table);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
