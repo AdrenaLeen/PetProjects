@@ -29,7 +29,11 @@ namespace StronglyTypedDataSetConsoleClient
             table.Clear();
             adapter.Fill(table);
             PrintInventory(table);
-            Console.WriteLine();
+
+            RemoveRecords(table, adapter);
+            table.Clear();
+            adapter.Fill(table);
+            PrintInventory(table);
 
             Console.ReadLine();
         }
@@ -76,6 +80,21 @@ namespace StronglyTypedDataSetConsoleClient
 
                 // Обновить базу данных.
                 adapter.Update(table);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private static void RemoveRecords(AutoLotDataSet.InventoryDataTable table, InventoryTableAdapter adapter)
+        {
+            try
+            {
+                AutoLotDataSet.InventoryRow rowToDelete = table.FindByCarId(8);
+                adapter.Delete(rowToDelete.CarId, rowToDelete.Make, rowToDelete.Color, rowToDelete.PetName);
+                rowToDelete = table.FindByCarId(9);
+                adapter.Delete(rowToDelete.CarId, rowToDelete.Make, rowToDelete.Color, rowToDelete.PetName);
             }
             catch (Exception ex)
             {
