@@ -22,6 +22,7 @@ namespace LinqToDataSetApp
 
             PrintAllCarIDs(data);
             ShowRedCars(data);
+            BuildDataTableFromQuery(data);
 
             Console.ReadLine();
         }
@@ -56,6 +57,27 @@ namespace LinqToDataSetApp
             foreach (var item in cars)
             {
                 Console.WriteLine($"-> CarID = {item.ID} - это {item.Make}");
+            }
+            Console.WriteLine();
+        }
+
+        static void BuildDataTableFromQuery(DataTable data)
+        {
+            var cars = from car in data.AsEnumerable()
+                       where car.Field<int>("CarID") > 5
+                       select car;
+
+            // Использовать этот результирующий набор для построения нового объекта DataTable.
+            DataTable newTable = cars.CopyToDataTable();
+
+            // Вывести содержимое DataTable.
+            for (int curRow = 0; curRow < newTable.Rows.Count; curRow++)
+            {
+                for (int curCol = 0; curCol < newTable.Columns.Count; curCol++)
+                {
+                    Console.Write($"{newTable.Rows[curRow][curCol].ToString().Trim()}\t");
+                }
+                Console.WriteLine();
             }
             Console.WriteLine();
         }
