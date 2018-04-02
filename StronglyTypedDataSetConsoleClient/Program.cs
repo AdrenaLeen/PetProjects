@@ -35,6 +35,8 @@ namespace StronglyTypedDataSetConsoleClient
             adapter.Fill(table);
             PrintInventory(table);
 
+            CallStoredProc();
+
             Console.ReadLine();
         }
 
@@ -95,6 +97,23 @@ namespace StronglyTypedDataSetConsoleClient
                 adapter.Delete(rowToDelete.CarId, rowToDelete.Make, rowToDelete.Color, rowToDelete.PetName);
                 rowToDelete = table.FindByCarId(9);
                 adapter.Delete(rowToDelete.CarId, rowToDelete.Make, rowToDelete.Color, rowToDelete.PetName);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public static void CallStoredProc()
+        {
+            try
+            {
+                QueriesTableAdapter queriesTableAdapter = new QueriesTableAdapter();
+                Console.Write("Введите ID автомобиля для поиска: ");
+                string carID = Console.ReadLine() ?? "0";
+                string carName = "";
+                queriesTableAdapter.GetPetName(int.Parse(carID), ref carName);
+                Console.WriteLine($"У CarID {carID} имя {carName}");
             }
             catch (Exception ex)
             {

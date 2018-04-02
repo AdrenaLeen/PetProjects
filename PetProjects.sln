@@ -273,6 +273,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitabledDataSetApp", "Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyTypedDataSetConsoleClient", "StronglyTypedDataSetConsoleClient\StronglyTypedDataSetConsoleClient.csproj", "{8ADBFFEC-C93E-45FF-A2D0-0A61AD6B8F92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToDataSetApp", "LinqToDataSetApp\LinqToDataSetApp.csproj", "{844F9CB6-2919-4245-955F-9D1D22BFDCCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -819,6 +821,10 @@ Global
 		{8ADBFFEC-C93E-45FF-A2D0-0A61AD6B8F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADBFFEC-C93E-45FF-A2D0-0A61AD6B8F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADBFFEC-C93E-45FF-A2D0-0A61AD6B8F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
