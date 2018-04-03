@@ -15,6 +15,7 @@ namespace AutoLotConsoleApp
             int carId = AddNewRecord();
             Console.WriteLine(carId);
             PrintAllInventory();
+            FunWithLinqQueries();
             Console.ReadLine();
         }
 
@@ -46,7 +47,25 @@ namespace AutoLotConsoleApp
             // Выбрать все элементы из таблицы Inventory базы данных AutoLot и вывести данные с применением специального метода ToString() сущностного класса Car.
             using (AutoLotEntities context = new AutoLotEntities())
             {
-                foreach (Car c in context.Cars.SqlQuery("Select CarId,Make,Color,PetName as CarNickName from Inventory where Make=@p0", "BMW")) Console.WriteLine(c);
+                IQueryable<Car> cars = context.Cars.Where(c => c.Make == "BMW");
+                foreach (Car c in cars) Console.WriteLine(c);
+            }
+        }
+
+        private static void FunWithLinqQueries()
+        {
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                // Получить все данные из таблицы Inventory.
+                Car[] allData = context.Cars.ToArray();
+
+                // Получить проекцию новых данных.
+                var colorsMakes = from item in allData select new { item.Color, item.Make };
+                foreach (var item in colorsMakes) Console.WriteLine(item);
+
+                // Получить только элементы, в которых Color == "Чёрный".
+                IEnumerable<Car> blackCars = from item in allData where item.Color == "Чёрный" select item;
+                foreach (Car item in blackCars) Console.WriteLine(item);
             }
         }
     }
