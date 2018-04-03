@@ -14,6 +14,7 @@ namespace AutoLotConsoleApp
             Console.WriteLine("***** ADO.NET EF *****");
             int carId = AddNewRecord();
             Console.WriteLine(carId);
+            PrintAllInventory();
             Console.ReadLine();
         }
 
@@ -37,6 +38,15 @@ namespace AutoLotConsoleApp
                     Console.WriteLine(ex.InnerException.Message);
                     return 0;
                 }
+            }
+        }
+
+        private static void PrintAllInventory()
+        {
+            // Выбрать все элементы из таблицы Inventory базы данных AutoLot и вывести данные с применением специального метода ToString() сущностного класса Car.
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                foreach (Car c in context.Cars) Console.WriteLine(c);
             }
         }
     }
