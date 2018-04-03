@@ -46,7 +46,7 @@ namespace AutoLotConsoleApp
             // Выбрать все элементы из таблицы Inventory базы данных AutoLot и вывести данные с применением специального метода ToString() сущностного класса Car.
             using (AutoLotEntities context = new AutoLotEntities())
             {
-                foreach (Car c in context.Cars) Console.WriteLine(c);
+                foreach (Car c in context.Cars.SqlQuery("Select CarId,Make,Color,PetName as CarNickName from Inventory where Make=@p0", "BMW")) Console.WriteLine(c);
             }
         }
     }
