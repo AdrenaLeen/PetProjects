@@ -13,6 +13,7 @@ namespace AutoLotConsoleApp
         {
             Console.WriteLine("***** ADO.NET EF *****");
             int carId = AddNewRecord();
+            RemoveRecord(carId);
             Console.WriteLine(carId);
             PrintAllInventory();
             FunWithLinqQueries();
@@ -73,6 +74,21 @@ namespace AutoLotConsoleApp
                 // Получить только элементы, в которых Color == "Чёрный".
                 IEnumerable<Car> blackCars = from item in allData where item.Color == "Чёрный" select item;
                 foreach (Car item in blackCars) Console.WriteLine(item);
+            }
+        }
+
+        private static void RemoveRecord(int carId)
+        {
+            // Найти запись об автомобиле, подлежащую удалению, по первичному ключу.
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                // Проверить наличие записи.
+                Car carToDelete = context.Cars.Find(carId);
+                if (carToDelete != null)
+                {
+                    context.Cars.Remove(carToDelete);
+                    context.SaveChanges();
+                }
             }
         }
     }
