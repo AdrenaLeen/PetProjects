@@ -275,6 +275,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyTypedDataSetConsole
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToDataSetApp", "LinqToDataSetApp\LinqToDataSetApp.csproj", "{844F9CB6-2919-4245-955F-9D1D22BFDCCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotConsoleApp", "AutoLotConsoleApp\AutoLotConsoleApp.csproj", "{C9160DFF-0603-470D-A70E-823F42B4A7A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -825,6 +827,10 @@ Global
 		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{844F9CB6-2919-4245-955F-9D1D22BFDCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9160DFF-0603-470D-A70E-823F42B4A7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9160DFF-0603-470D-A70E-823F42B4A7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9160DFF-0603-470D-A70E-823F42B4A7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9160DFF-0603-470D-A70E-823F42B4A7A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
