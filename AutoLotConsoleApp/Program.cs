@@ -20,6 +20,7 @@ namespace AutoLotConsoleApp
             Console.WriteLine(carId);
             PrintAllInventory();
             FunWithLinqQueries();
+            UpdateRecord(carId);
             Console.ReadLine();
         }
 
@@ -109,6 +110,22 @@ namespace AutoLotConsoleApp
                 catch (DbUpdateConcurrencyException ex)
                 {
                     Console.WriteLine(ex);
+                }
+            }
+        }
+
+        private static void UpdateRecord(int carId)
+        {
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                // Найти запись об автомобиле, подлежащую обновлению, по первичному ключу.
+                Car carToUpdate = context.Cars.Find(carId);
+                if (carToUpdate != null)
+                {
+                    Console.WriteLine(context.Entry(carToUpdate).State);
+                    carToUpdate.Color = "Голубой";
+                    Console.WriteLine(context.Entry(carToUpdate).State);
+                    context.SaveChanges();
                 }
             }
         }
