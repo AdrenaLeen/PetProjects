@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,7 @@ namespace AutoLotConsoleApp
             Console.WriteLine("***** ADO.NET EF *****");
             int carId = AddNewRecord();
             RemoveRecord(carId);
+            RemoveRecordUsingEntityState(carId);
             Console.WriteLine(carId);
             PrintAllInventory();
             FunWithLinqQueries();
@@ -88,6 +91,24 @@ namespace AutoLotConsoleApp
                 {
                     context.Cars.Remove(carToDelete);
                     context.SaveChanges();
+                }
+            }
+        }
+
+        private static void RemoveRecordUsingEntityState(int carId)
+        {
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+
+                Car carToDelete = new Car() { CarId = carId };
+                context.Entry(carToDelete).State = EntityState.Deleted;
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    Console.WriteLine(ex);
                 }
             }
         }
