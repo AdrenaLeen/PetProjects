@@ -3,29 +3,18 @@
     using System;
     using System.Data.Entity;
     using System.Linq;
+    using AutoLotDAL.Models;
 
     public class AutoLotEntities : DbContext
     {
-        // Контекст настроен для использования строки подключения "AutoLotEntities" из файла конфигурации  
-        // приложения (App.config или Web.config). По умолчанию эта строка подключения указывает на базу данных 
-        // "AutoLotDAL.EF.AutoLotEntities" в экземпляре LocalDb. 
-        // 
-        // Если требуется выбрать другую базу данных или поставщик базы данных, измените строку подключения "AutoLotEntities" 
-        // в файле конфигурации приложения.
         public AutoLotEntities()
-            : base("name=AutoLotEntities")
+            : base("name=AutoLotConnection")
         {
         }
 
-        // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
-        // о настройке и использовании модели Code First см. в статье http://go.microsoft.com/fwlink/?LinkId=390109.
-
-        // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public virtual DbSet<CreditRisk> CreditRisks { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Inventory> Inventory { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }
