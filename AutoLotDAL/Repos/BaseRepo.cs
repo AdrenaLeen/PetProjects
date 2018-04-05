@@ -14,14 +14,6 @@ namespace AutoLotDAL.Repos
         public AutoLotEntities Context { get; } = new AutoLotEntities();
         protected DbSet<T> Table;
 
-        public T GetOne(int? id) => Table.Find(id);
-
-        public async Task<T> GetOneAsync(int? id) => await Table.FindAsync(id);
-
-        public List<T> GetAll() => Table.ToList();
-
-        public Task<List<T>> GetAllAsync() => Table.ToListAsync();
-
         internal int SaveChanges()
         {
             try
@@ -49,6 +41,7 @@ namespace AutoLotDAL.Repos
                 throw;
             }
         }
+
         internal async Task<int> SaveChangesAsync()
         {
             try
@@ -76,5 +69,21 @@ namespace AutoLotDAL.Repos
                 throw;
             }
         }
+
+        public T GetOne(int? id) => Table.Find(id);
+
+        public async Task<T> GetOneAsync(int? id) => await Table.FindAsync(id);
+
+        public List<T> GetAll() => Table.ToList();
+
+        public Task<List<T>> GetAllAsync() => Table.ToListAsync();
+
+        public List<T> ExecuteQuery(string sql) => Table.SqlQuery(sql).ToList();
+
+        public Task<List<T>> ExecuteQueryAsync(string sql) => Table.SqlQuery(sql).ToListAsync();
+
+        public List<T> ExecuteQuery(string sql, object[] sqlParametersObjects) => Table.SqlQuery(sql, sqlParametersObjects).ToList();
+
+        public Task<List<T>> ExecuteQueryAsync(string sql, object[] sqlParametersObjects) => Table.SqlQuery(sql).ToListAsync();
     }
 }
