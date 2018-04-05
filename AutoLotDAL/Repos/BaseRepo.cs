@@ -14,6 +14,14 @@ namespace AutoLotDAL.Repos
         public AutoLotEntities Context { get; } = new AutoLotEntities();
         protected DbSet<T> Table;
 
+        public T GetOne(int? id) => Table.Find(id);
+
+        public async Task<T> GetOneAsync(int? id) => await Table.FindAsync(id);
+
+        public List<T> GetAll() => Table.ToList();
+
+        public Task<List<T>> GetAllAsync() => Table.ToListAsync();
+
         internal int SaveChanges()
         {
             try
