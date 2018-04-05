@@ -131,5 +131,17 @@ namespace AutoLotDAL.Repos
             // Освободить здесь любые управляемые объекты.
             disposed = true;
         }
+
+        public int Save(T entity)
+        {
+            Context.Entry(entity).State = EntityState.Modified;
+            return SaveChanges();
+        }
+
+        public async Task<int> SaveAsync(T entity)
+        {
+            Context.Entry(entity).State = EntityState.Modified;
+            return await SaveChangesAsync();
+        }
     }
 }
