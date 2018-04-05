@@ -9,7 +9,7 @@ using System.Data.Entity.Infrastructure;
 
 namespace AutoLotDAL.Repos
 {
-    public abstract class BaseRepo<T> where T:class,new()
+    public abstract class BaseRepo<T>: IDisposable where T:class,new()
     {
         public AutoLotEntities Context { get; } = new AutoLotEntities();
         protected DbSet<T> Table;
@@ -85,5 +85,51 @@ namespace AutoLotDAL.Repos
         public List<T> ExecuteQuery(string sql, object[] sqlParametersObjects) => Table.SqlQuery(sql, sqlParametersObjects).ToList();
 
         public Task<List<T>> ExecuteQueryAsync(string sql, object[] sqlParametersObjects) => Table.SqlQuery(sql).ToListAsync();
+
+        public int Add(T entity)
+        {
+            Table.Add(entity);
+            return SaveChanges();
+        }
+
+        public async Task<int> AddAsync(T entity)
+        {
+            Table.Add(entity);
+            return await SaveChangesAsync();
+        }
+
+        public int AddRange(IList<T> entities)
+        {
+            Table.AddRange(entities);
+            return SaveChanges();
+        }
+
+        public Task<int> AddRangeAsync(IList<T> entities)
+        {
+            Table.AddRange(entities);
+            return SaveChangesAsync();
+        }
+
+        bool disposed = false;
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed) return;
+
+            if (disposing)
+            {
+                Context.Dispose();
+                
+                // Освободить здесь любые управляемые объекты.
+            }
+
+            // Освободить здесь любые управляемые объекты.
+            disposed = true;
+        }
     }
 }
