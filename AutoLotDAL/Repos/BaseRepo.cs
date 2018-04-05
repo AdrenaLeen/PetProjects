@@ -143,5 +143,17 @@ namespace AutoLotDAL.Repos
             Context.Entry(entity).State = EntityState.Modified;
             return await SaveChangesAsync();
         }
+
+        public int Delete(T entity)
+        {
+            Context.Entry(entity).State = EntityState.Deleted;
+            return SaveChanges();
+        }
+
+        public async Task<int> DeleteAsync(T entity)
+        {
+            Context.Entry(entity).State = EntityState.Deleted;
+            return await SaveChangesAsync();
+        }
     }
 }
