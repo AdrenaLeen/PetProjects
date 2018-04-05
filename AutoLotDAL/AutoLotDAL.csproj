@@ -70,8 +70,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repos\BaseRepo.cs" />
+    <Compile Include="Repos\CreditRiskRepo.cs" />
+    <Compile Include="Repos\CustomerRepo.cs" />
     <Compile Include="Repos\InventoryRepo.cs" />
     <Compile Include="Repos\IRepo.cs" />
+    <Compile Include="Repos\OrderRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
