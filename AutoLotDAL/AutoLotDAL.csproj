@@ -69,6 +69,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repos\BaseRepo.cs" />
     <Compile Include="Repos\IRepo.cs" />
   </ItemGroup>
   <ItemGroup>
