@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="DisconnectedLayer\InventoryDALDC.cs" />
     <Compile Include="EF\AutoLotEntities.cs" />
+    <Compile Include="EF\DataInitializer.cs" />
     <Compile Include="Models\CreditRisk.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Inventory.cs" />
