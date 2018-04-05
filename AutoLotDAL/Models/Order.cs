@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoLotDAL.Models
 {
-    class Order
+    public class Order
     {
     }
 }
