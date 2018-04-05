@@ -54,7 +54,11 @@
       <DependentUpon>AutoLotDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DisconnectedLayer\InventoryDALDC.cs" />
+    <Compile Include="Models\CreditRisk.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\NewCar.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
