@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoLotDAL.Models;
+using System.Data.Entity.Infrastructure;
 
 namespace AutoLotTestDrive
 {
@@ -25,6 +26,12 @@ namespace AutoLotTestDrive
             PrintAllInventory();
             ShowAllOrders();
             ShowAllOrdersEagerlyFetched();
+            PrintAllCustomersAndCreditRisks();
+            CustomerRepo customerRepo = new CustomerRepo();
+            Customer customer = customerRepo.GetOne(4);
+            customerRepo.Context.Entry(customer).State = EntityState.Detached;
+            CreditRisk risk = MakeCustomerARisk(customer);
+            PrintAllCustomersAndCreditRisks();
             Console.ReadLine();
         }
 
@@ -92,6 +99,54 @@ namespace AutoLotTestDrive
                 foreach (Order itm in orders)
                 {
                     Console.WriteLine($"-> {itm.Customer.FullName} ожидает {itm.Car.PetName}");
+                }
+            }
+        }
+
+        private static CreditRisk MakeCustomerARisk(Customer customer)
+        {
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                context.Customers.Attach(customer);
+                context.Customers.Remove(customer);
+                CreditRisk creditRisk = new CreditRisk()
+                {
+                    FirstName = customer.FirstName,
+                    LastName = customer.LastName
+                };
+                context.CreditRisks.Add(creditRisk);
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                return creditRisk;
+            }
+        }
+
+        private static void PrintAllCustomersAndCreditRisks()
+        {
+            Console.WriteLine("*********** Заказчики ***********");
+            using (CustomerRepo repo = new CustomerRepo())
+            {
+                foreach (Customer cust in repo.GetAll())
+                {
+                    Console.WriteLine($"-> {cust.FirstName} {cust.LastName} - это заказчик.");
+                }
+            }
+            Console.WriteLine("*********** Кредитные риски ***********");
+            using (CreditRiskRepo repo = new CreditRiskRepo())
+            {
+                foreach (CreditRisk risk in repo.GetAll())
+                {
+                    Console.WriteLine($"-> {risk.FirstName} {risk.LastName} - это кредитный риск!");
                 }
             }
         }
