@@ -21,6 +21,7 @@ namespace AutoLotTestDrive
             AddNewRecord(car1);
             AddNewRecord(car2);
             AddNewRecords(new List<Inventory> { car1, car2 });
+            UpdateRecord(car1.CarId);
             PrintAllInventory();
             Console.ReadLine();
         }
@@ -48,6 +49,23 @@ namespace AutoLotTestDrive
             using (InventoryRepo repo = new InventoryRepo())
             {
                 repo.AddRange(cars);
+            }
+        }
+
+        private static void UpdateRecord(int carId)
+        {
+            using (InventoryRepo repo = new InventoryRepo())
+            {
+                // Получить запись об автомобиле, изменить её и сохранить!
+                Inventory carToUpdate = repo.GetOne(carId);
+                if (carToUpdate != null)
+                {
+                    Console.WriteLine($"До изменения: {repo.Context.Entry(carToUpdate).State}");
+                    carToUpdate.Color = "Голубой";
+                    Console.WriteLine($"После изменения: {repo.Context.Entry(carToUpdate).State}");
+                    repo.Save(carToUpdate);
+                    Console.WriteLine($"После сохранения: {repo.Context.Entry(carToUpdate).State}");
+                }
             }
         }
     }
