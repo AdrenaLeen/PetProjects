@@ -23,6 +23,7 @@ namespace AutoLotTestDrive
             AddNewRecords(new List<Inventory> { car1, car2 });
             UpdateRecord(car1.CarId);
             PrintAllInventory();
+            ShowAllOrders();
             Console.ReadLine();
         }
 
@@ -65,6 +66,18 @@ namespace AutoLotTestDrive
                     Console.WriteLine($"После изменения: {repo.Context.Entry(carToUpdate).State}");
                     repo.Save(carToUpdate);
                     Console.WriteLine($"После сохранения: {repo.Context.Entry(carToUpdate).State}");
+                }
+            }
+        }
+
+        private static void ShowAllOrders()
+        {
+            using (OrderRepo repo = new OrderRepo())
+            {
+                Console.WriteLine("*********** Ожидающие заказы ***********");
+                foreach (Order itm in repo.GetAll())
+                {
+                    Console.WriteLine($"->{itm.Customer.FullName} ждёт {itm.Car.PetName}");
                 }
             }
         }
