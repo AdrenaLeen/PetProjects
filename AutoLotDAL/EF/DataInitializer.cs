@@ -14,24 +14,24 @@ namespace AutoLotDAL.EF
         {
             List<Customer> customers = new List<Customer>
             {
-                new Customer {FirstName = "Dave", LastName = "Brenner"},
-                new Customer {FirstName = "Matt", LastName = "Walton"},
-                new Customer {FirstName = "Steve", LastName = "Hagen"},
-                new Customer {FirstName = "Pat", LastName = "Walton"},
-                new Customer {FirstName = "Bad", LastName = "Customer"},
+                new Customer {FirstName = "Дейв", LastName = "Бреннер"},
+                new Customer {FirstName = "Мэтт", LastName = "Уолтон"},
+                new Customer {FirstName = "Стив", LastName = "Хаген"},
+                new Customer {FirstName = "Пэт", LastName = "Уолтон"},
+                new Customer {FirstName = "Плохой", LastName = "Заказчик"},
             };
             customers.ForEach(x => context.Customers.Add(x));
             List<Inventory> cars = new List<Inventory>
             {
-                new Inventory {Make = "VW", Color = "Black", PetName = "Zippy"},
-                new Inventory {Make = "Ford", Color = "Rust", PetName = "Rusty"},
-                new Inventory {Make = "Saab", Color = "Black", PetName = "Mel"},
-                new Inventory {Make = "Yugo", Color = "Yellow", PetName = "Clunker"},
-                new Inventory {Make = "BMW", Color = "Black", PetName = "Bimmer"},
-                new Inventory {Make = "BMW", Color = "Green", PetName = "Hank"},
-                new Inventory {Make = "BMW", Color = "Pink", PetName = "Pinky"},
-                new Inventory {Make = "Pinto", Color = "Black", PetName = "Pete"},
-                new Inventory {Make = "Yugo", Color = "Brown", PetName = "Brownie"},
+                new Inventory {Make = "VW", Color = "Чёрный", PetName = "Живчик"},
+                new Inventory {Make = "Ford", Color = "Ржавый", PetName = "Расти"},
+                new Inventory {Make = "Saab", Color = "Чёрный", PetName = "Мэл"},
+                new Inventory {Make = "Yugo", Color = "Жёлтый", PetName = "Драндулет"},
+                new Inventory {Make = "BMW", Color = "Чёрный", PetName = "Бумер"},
+                new Inventory {Make = "BMW", Color = "Зелёный", PetName = "Хэнк"},
+                new Inventory {Make = "BMW", Color = "Розовый", PetName = "Пинки"},
+                new Inventory {Make = "Pinto", Color = "Чёрный", PetName = "Пит"},
+                new Inventory {Make = "Yugo", Color = "Коричневый", PetName = "Брауни"},
             };
             cars.ForEach(x => context.Inventory.Add(x));
             List<Order> orders = new List<Order>
