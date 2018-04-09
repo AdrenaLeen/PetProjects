@@ -24,6 +24,7 @@ namespace AutoLotTestDrive
             UpdateRecord(car1.CarId);
             PrintAllInventory();
             ShowAllOrders();
+            ShowAllOrdersEagerlyFetched();
             Console.ReadLine();
         }
 
@@ -78,6 +79,19 @@ namespace AutoLotTestDrive
                 foreach (Order itm in repo.GetAll())
                 {
                     Console.WriteLine($"->{itm.Customer.FullName} ждёт {itm.Car.PetName}");
+                }
+            }
+        }
+
+        private static void ShowAllOrdersEagerlyFetched()
+        {
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                Console.WriteLine("*********** Ожидающие заказы ***********");
+                List<Order> orders = context.Orders.Include(x => x.Customer).Include(y => y.Car).ToList();
+                foreach (Order itm in orders)
+                {
+                    Console.WriteLine($"-> {itm.Customer.FullName} ожидает {itm.Car.PetName}");
                 }
             }
         }
