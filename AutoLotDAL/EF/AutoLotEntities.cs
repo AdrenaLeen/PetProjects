@@ -31,6 +31,18 @@
 
         private void OnSavingChanges(object sender, EventArgs eventArgs)
         {
+            // Параметр sender имеет тип ObjectContext. Можно получать текущие и исходные значения, а также отменять / модифицировать операцию сохранения любым желаемым образом.
+            ObjectContext context = sender as ObjectContext;
+            if (context == null) return;
+            foreach (ObjectStateEntry item in context.ObjectStateManager.GetObjectStateEntries(EntityState.Modified | EntityState.Added))
+            {
+                // Делать здесь что-то важное.
+                if ((item.Entity as Inventory) != null)
+                {
+                    Inventory entity = (Inventory)item.Entity;
+                    if (entity.Color == "Красный") item.RejectPropertyChanges(nameof(entity.Color));
+                }
+            }
         }
 
         private void OnObjectMaterialized(object sender, ObjectMaterializedEventArgs e)
