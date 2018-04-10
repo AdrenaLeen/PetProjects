@@ -15,7 +15,6 @@ namespace AutoLotTestDrive
     {
         static void Main()
         {
-            Database.SetInitializer(new DataInitializer());
             Console.WriteLine("***** ADO.NET EF Code First *****");
             Inventory car1 = new Inventory() { Make = "Yugo", Color = "Коричневый", PetName = "Брауни" };
             Inventory car2 = new Inventory() { Make = "SmartCar", Color = "Коричневый", PetName = "Шорти" };
