@@ -23,6 +23,7 @@ namespace AutoLotTestDrive
             customerRepo.Context.Entry(customer).State = EntityState.Detached;
             CreditRisk risk = MakeCustomerARisk(customer);
             PrintAllCustomersAndCreditRisks();
+            UpdateRecordWIthConcurrency();
             Console.ReadLine();
         }
 
@@ -141,6 +142,36 @@ namespace AutoLotTestDrive
                 {
                     Console.WriteLine($"-> {risk.FirstName} {risk.LastName} - это кредитный риск!");
                 }
+            }
+        }
+
+        private static void UpdateRecordWIthConcurrency()
+        {
+            Inventory car = new Inventory() { Make = "Yugo", Color = "Коричневый", PetName = "Брауни" };
+            AddNewRecord(car);
+            InventoryRepo repo1 = new InventoryRepo();
+            Inventory car1 = repo1.GetOne(car.CarId);
+            car1.PetName = "Обновлено";
+            InventoryRepo repo2 = new InventoryRepo();
+            Inventory car2 = repo2.GetOne(car.CarId);
+            car2.Make = "Nissan";
+            repo1.Save(car1);
+            try
+            {
+                repo2.Save(car2);
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                Console.WriteLine(ex);
+            }
+            RemoveRecordById(car1.CarId, car1.Timestamp);
+        }
+
+        private static void RemoveRecordById(int carId, byte[] timeStamp)
+        {
+            using (InventoryRepo repo = new InventoryRepo())
+            {
+                repo.Delete(carId, timeStamp);
             }
         }
     }
