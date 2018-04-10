@@ -100,15 +100,17 @@ namespace AutoLotTestDrive
                     LastName = customer.LastName
                 };
                 context.CreditRisks.Add(creditRisk);
+                CreditRisk creditRiskDupe = new CreditRisk()
+                {
+                    FirstName = customer.FirstName,
+                    LastName = customer.LastName
+                };
+                context.CreditRisks.Add(creditRiskDupe);
                 try
                 {
                     context.SaveChanges();
                 }
                 catch (DbUpdateException ex)
-                {
-                    Console.WriteLine(ex);
-                }
-                catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                 }
