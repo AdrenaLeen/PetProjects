@@ -16,21 +16,7 @@ namespace AutoLotTestDrive
         static void Main()
         {
             Console.WriteLine("***** ADO.NET EF Code First *****");
-            Inventory car1 = new Inventory() { Make = "Yugo", Color = "Коричневый", PetName = "Брауни" };
-            Inventory car2 = new Inventory() { Make = "SmartCar", Color = "Коричневый", PetName = "Шорти" };
-            AddNewRecord(car1);
-            AddNewRecord(car2);
-            AddNewRecords(new List<Inventory> { car1, car2 });
-            UpdateRecord(car1.CarId);
             PrintAllInventory();
-            ShowAllOrders();
-            ShowAllOrdersEagerlyFetched();
-            PrintAllCustomersAndCreditRisks();
-            CustomerRepo customerRepo = new CustomerRepo();
-            Customer customer = customerRepo.GetOne(4);
-            customerRepo.Context.Entry(customer).State = EntityState.Detached;
-            CreditRisk risk = MakeCustomerARisk(customer);
-            PrintAllCustomersAndCreditRisks();
             Console.ReadLine();
         }
 
