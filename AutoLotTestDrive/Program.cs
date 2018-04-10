@@ -17,6 +17,12 @@ namespace AutoLotTestDrive
         {
             Console.WriteLine("***** ADO.NET EF Code First *****");
             PrintAllInventory();
+            PrintAllCustomersAndCreditRisks();
+            CustomerRepo customerRepo = new CustomerRepo();
+            Customer customer = customerRepo.GetOne(5);
+            customerRepo.Context.Entry(customer).State = EntityState.Detached;
+            CreditRisk risk = MakeCustomerARisk(customer);
+            PrintAllCustomersAndCreditRisks();
             Console.ReadLine();
         }
 
