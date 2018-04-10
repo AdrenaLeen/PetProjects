@@ -58,6 +58,7 @@
     <Compile Include="DisconnectedLayer\InventoryDALDC.cs" />
     <Compile Include="EF\AutoLotEntities.cs" />
     <Compile Include="EF\DataInitializer.cs" />
+    <Compile Include="Interception\ConsoleWriterInterceptor.cs" />
     <Compile Include="Migrations\201804091348320_InitialCreate.cs" />
     <Compile Include="Migrations\201804091348320_InitialCreate.Designer.cs">
       <DependentUpon>201804091348320_InitialCreate.cs</DependentUpon>
