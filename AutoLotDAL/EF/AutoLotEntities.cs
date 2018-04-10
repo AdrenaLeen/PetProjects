@@ -11,13 +11,8 @@
 
     public class AutoLotEntities : DbContext
     {
-        static readonly DatabaseLogger databaseLogger = new DatabaseLogger("sqllog.txt", true);
-
         public AutoLotEntities() : base("name=AutoLotConnection")
         {
-            databaseLogger.StartLogging();
-            DbInterception.Add(databaseLogger);
-
             // Код перехватчика.
             ObjectContext context = (this as IObjectContextAdapter).ObjectContext;
             context.ObjectMaterialized += OnObjectMaterialized;
@@ -47,13 +42,6 @@
 
         private void OnObjectMaterialized(object sender, ObjectMaterializedEventArgs e)
         {
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            DbInterception.Remove(databaseLogger);
-            databaseLogger.StopLogging();
-            base.Dispose(disposing);
         }
     }
 }
