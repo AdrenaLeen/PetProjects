@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace LinqToXmlFirstLook
 {
@@ -12,6 +13,7 @@ namespace LinqToXmlFirstLook
         static void Main()
         {
             BuildXmlDocWithDOM();
+            BuildXmlDocWithLINQToXml();
             Console.ReadLine();
         }
 
@@ -46,6 +48,22 @@ namespace LinqToXmlFirstLook
             // Вставить завершённый XML в объект XmlDocument и сохранить в файле.
             doc.AppendChild(inventory);
             doc.Save("Inventory.xml");
+        }
+
+        private static void BuildXmlDocWithLINQToXml()
+        {
+            // Создать документ XML в более функциональной манере.
+            XElement doc =
+                new XElement("Inventory",
+                    new XElement("Car", new XAttribute("ID", "1000"),
+                        new XElement("PetName", "Джимбо"),
+                        new XElement("Color", "Красный"),
+                        new XElement("Make", "Ford")
+                    )
+                );
+
+            // Сохранить документ в файле.
+            doc.Save("InventoryWithLINQ.xml");
         }
     }
 }
