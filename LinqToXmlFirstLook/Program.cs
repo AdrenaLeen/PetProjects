@@ -14,6 +14,7 @@ namespace LinqToXmlFirstLook
         {
             BuildXmlDocWithDOM();
             BuildXmlDocWithLINQToXml();
+            DeleteNodeFromDoc();
             Console.ReadLine();
         }
 
@@ -64,6 +65,22 @@ namespace LinqToXmlFirstLook
 
             // Сохранить документ в файле.
             doc.Save("InventoryWithLINQ.xml");
+        }
+
+        private static void DeleteNodeFromDoc()
+        {
+            XElement doc =
+                new XElement("Inventory",
+                    new XElement("Car", new XAttribute("ID", "1000"),
+                        new XElement("PetName", "Джимбо"),
+                        new XElement("Color", "Красный"),
+                        new XElement("Make", "Ford")
+                    )
+                );
+
+            // Удалить элемент PetName из дерева.
+            doc.Descendants("PetName").Remove();
+            Console.WriteLine(doc);
         }
     }
 }
