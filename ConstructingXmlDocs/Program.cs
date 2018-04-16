@@ -13,6 +13,7 @@ namespace ConstructingXmlDocs
         {
             CreateFullXDocument();
             CreateRootAndChildren();
+            MakeXElementFromArray();
             Console.ReadLine();
         }
 
@@ -59,6 +60,24 @@ namespace ConstructingXmlDocs
 
             // Сохранить на диске.
             inventoryDoc.Save("SimpleInventory.xml");
+        }
+
+        static void MakeXElementFromArray()
+        {
+            // Создать анонимный массив анонимных типов.
+            var people = new[] {
+                new { FirstName = "Мэнди", Age = 40},
+                new { FirstName = "Эндрю", Age  = 32 },
+                new { FirstName = "Дэйв", Age  = 41 },
+                new { FirstName = "Сара", Age  = 31}
+            };
+            IEnumerable<XElement> arrayDataAsXElements = from c in people
+                                                         select
+                                                         new XElement("Person",
+                                                             new XAttribute("Age", c.Age),
+                                                             new XElement("FirstName", c.FirstName));
+            XElement peopleDoc = new XElement("People", arrayDataAsXElements);
+            Console.WriteLine(peopleDoc);
         }
     }
 }
