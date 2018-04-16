@@ -14,6 +14,7 @@ namespace ConstructingXmlDocs
             CreateFullXDocument();
             CreateRootAndChildren();
             MakeXElementFromArray();
+            ParseAndLoadExistingXml();
             Console.ReadLine();
         }
 
@@ -78,6 +79,24 @@ namespace ConstructingXmlDocs
                                                              new XElement("FirstName", c.FirstName));
             XElement peopleDoc = new XElement("People", arrayDataAsXElements);
             Console.WriteLine(peopleDoc);
+            Console.WriteLine();
+        }
+
+        static void ParseAndLoadExistingXml()
+        {
+            // Построить объект XElement из строки.
+            string myElement =
+              @"<Car ID ='3'>
+                  <Color>Жёлтый</Color>
+                  <Make>Yugo</Make>
+                </Car>";
+            XElement newElement = XElement.Parse(myElement);
+            Console.WriteLine(newElement);
+            Console.WriteLine();
+
+            // Загрузить файл SimpleInventory.xml.
+            XDocument myDoc = XDocument.Load("SimpleInventory.xml");
+            Console.WriteLine(myDoc);
         }
     }
 }
