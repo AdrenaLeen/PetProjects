@@ -24,5 +24,25 @@ namespace LinqToXmlWinApp
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Отобразить текущий документ XML склада в элементе управления TextBox.
+            txtInventory.Text = LinqToXmlObjectModel.GetXmlInventory().ToString();
+        }
+
+        private void btnAddNewItem_Click(object sender, RoutedEventArgs e)
+        {
+            // Добавить к документу новый элемент.
+            LinqToXmlObjectModel.InsertNewElement(txtMake.Text, txtColor.Text, txtPetName.Text);
+
+            // Отобразить текущий документ XML для склада в элементе управления TextBox.
+            txtInventory.Text = LinqToXmlObjectModel.GetXmlInventory().ToString();
+        }
+
+        private void btnLookUpColors_Click(object sender, RoutedEventArgs e)
+        {
+            LinqToXmlObjectModel.LookUpColorsForMake(txtMakeToLookUp.Text);
+        }
     }
 }
