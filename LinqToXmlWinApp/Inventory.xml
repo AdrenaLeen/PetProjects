@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Inventory>
+  <Car carID ="0">
+    <Make>Ford</Make>
+    <Color>Голубой</Color>
+    <PetName>Чак</PetName>
+  </Car>
+  <Car carID ="1">
+    <Make>VW</Make>
+    <Color>Серебрянный</Color>
+    <PetName>Мэри</PetName>
+  </Car>
+  <Car carID ="2">
+    <Make>Yugo</Make>
+    <Color>Розовый</Color>
+    <PetName>Джиппер</PetName>
+  </Car>
+  <Car carID ="55">
+    <Make>Ford</Make>
+    <Color>Жёлтый</Color>
+    <PetName>Макс</PetName>
+  </Car>
+  <Car carID ="98">
+    <Make>BMW</Make>
+    <Color>Чёрный</Color>
+    <PetName>Живчик</PetName>
+  </Car>
+</Inventory>
