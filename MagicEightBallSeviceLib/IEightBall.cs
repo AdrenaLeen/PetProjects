@@ -7,7 +7,7 @@ using System.ServiceModel;
 
 namespace MagicEightBallSeviceLib
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://xskuznetsova.ru")]
     public interface IEightBall
     {
         // Задайте вопрос, получите ответ!
