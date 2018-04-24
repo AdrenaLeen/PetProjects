@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MagicEightBallSeviceLib\MagicEightBallSeviceLib.csproj">
+    <ProjectReference Include="..\MagicEightBallSeviceLib\MagicEightBallServiceLib.csproj">
       <Project>{470962a5-672b-4428-8ffd-0669c2fc5b48}</Project>
-      <Name>MagicEightBallSeviceLib</Name>
+      <Name>MagicEightBallServiceLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
