@@ -7,8 +7,8 @@
     <ProjectGuid>{470962A5-672B-4428-8FFD-0669C2FC5B48}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MagicEightBallSeviceLib</RootNamespace>
-    <AssemblyName>MagicEightBallSeviceLib</AssemblyName>
+    <RootNamespace>MagicEightBallServiceLib</RootNamespace>
+    <AssemblyName>MagicEightBallServiceLib</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 
-namespace MagicEightBallSeviceLib
+namespace MagicEightBallServiceLib
 {
     [ServiceContract(Namespace = "http://xskuznetsova.ru")]
     public interface IEightBall
