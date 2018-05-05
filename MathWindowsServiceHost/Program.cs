@@ -17,7 +17,7 @@ namespace MathWindowsServiceHost
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new MathService()
+                new MathWinService()
             };
             ServiceBase.Run(ServicesToRun);
         }

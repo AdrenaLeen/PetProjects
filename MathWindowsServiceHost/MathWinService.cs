@@ -12,12 +12,12 @@ using System.ServiceModel;
 
 namespace MathWindowsServiceHost
 {
-    public partial class MathService : ServiceBase
+    public partial class MathWinService : ServiceBase
     {
         // Переменная-член типа ServiceHost.
         private ServiceHost myHost;
 
-        public MathService()
+        public MathWinService()
         {
             InitializeComponent();
         }

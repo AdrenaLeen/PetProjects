@@ -1,6 +1,6 @@
 ﻿namespace MathWindowsServiceHost
 {
-    partial class MathService
+    partial class MathWinService
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
