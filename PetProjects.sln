@@ -297,6 +297,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathWindowsServiceHost", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathClient", "MathClient\MathClient.csproj", "{82E89495-8C1A-4CB6-9B84-1A2A45251360}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AutoLotWCFService", "AutoLotWCFService\", "{1FECD34B-A469-4B3E-990C-26B0FCC7B973}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
+		ProjectReferences = "{9771a628-68fb-4677-90b1-c992155fe30f}|AutoLotDAL.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54828"
+		Debug.AspNetCompiler.PhysicalPath = "AutoLotWCFService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54828\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54828"
+		Release.AspNetCompiler.PhysicalPath = "AutoLotWCFService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54828\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54828"
+		SlnRelativePath = "AutoLotWCFService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -891,6 +914,10 @@ Global
 		{82E89495-8C1A-4CB6-9B84-1A2A45251360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82E89495-8C1A-4CB6-9B84-1A2A45251360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82E89495-8C1A-4CB6-9B84-1A2A45251360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FECD34B-A469-4B3E-990C-26B0FCC7B973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FECD34B-A469-4B3E-990C-26B0FCC7B973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FECD34B-A469-4B3E-990C-26B0FCC7B973}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FECD34B-A469-4B3E-990C-26B0FCC7B973}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
