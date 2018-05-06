@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.ComponentModel;
 
 namespace WpfAppAllCode
 {
@@ -29,6 +30,9 @@ namespace WpfAppAllCode
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             Height = height;
             Width = width;
+
+            Closing += MainWindow_Closing;
+            Closed += MainWindow_Closed;
         }
 
         private void btnExitApp_Clicked(object sender, RoutedEventArgs e)
@@ -38,6 +42,21 @@ namespace WpfAppAllCode
 
             // Закрыть окно.
             Close();
+        }
+
+        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            // Выяснить, действительно ли пользователь желает закрыть окно.
+            string msg = "Хотите ли вы закрыть окно без сохранения?";
+            MessageBoxResult result = MessageBox.Show(msg, "Моё приложение", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            // Если пользователь не желает закрывать окно, то отменить закрытие.
+            if (result == MessageBoxResult.No) e.Cancel = true;
+        }
+
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            MessageBox.Show("Увидимся!");
         }
     }
 }
