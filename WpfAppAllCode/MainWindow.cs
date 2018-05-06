@@ -35,6 +35,7 @@ namespace WpfAppAllCode
             Closing += MainWindow_Closing;
             Closed += MainWindow_Closed;
             MouseMove += MainWindow_MouseMove;
+            KeyDown += MainWindow_KeyDown;
         }
 
         private void btnExitApp_Clicked(object sender, RoutedEventArgs e)
@@ -65,6 +66,12 @@ namespace WpfAppAllCode
         {
             // Отобразить в заголовке окна текущую позицию (x, y) курсора мыши.
             Title = e.GetPosition(this).ToString();
+        }
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Отобразить на кнопке нажатую клавишу.
+            btnExitApp.Content = e.Key.ToString();
         }
     }
 }
