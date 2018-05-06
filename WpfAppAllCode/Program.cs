@@ -29,13 +29,9 @@ namespace WpfAppAllCode
 
         static void AppStartUp(object sender, StartupEventArgs e)
         {
-            // Создать объект Window и установить некоторые базовые свойства.
-            Window mainWindow = new Window();
-            mainWindow.Title = "Моё первое приложение WPF!";
-            mainWindow.Height = 200;
-            mainWindow.Width = 300;
-            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            mainWindow.Show();
+            // Создать объект MainWindow.
+            MainWindow main = new MainWindow("Моё лучшее приложение WPF!", 200, 300);
+            main.Show();
         }
     }
 }
