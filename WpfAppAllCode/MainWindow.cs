@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace WpfAppAllCode
 {
@@ -33,6 +34,7 @@ namespace WpfAppAllCode
 
             Closing += MainWindow_Closing;
             Closed += MainWindow_Closed;
+            MouseMove += MainWindow_MouseMove;
         }
 
         private void btnExitApp_Clicked(object sender, RoutedEventArgs e)
@@ -57,6 +59,12 @@ namespace WpfAppAllCode
         private void MainWindow_Closed(object sender, EventArgs e)
         {
             MessageBox.Show("Увидимся!");
+        }
+
+        private void MainWindow_MouseMove(object sender, MouseEventArgs e)
+        {
+            // Отобразить в заголовке окна текущую позицию (x, y) курсора мыши.
+            Title = e.GetPosition(this).ToString();
         }
     }
 }
