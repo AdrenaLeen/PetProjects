@@ -33,6 +33,9 @@ namespace WpfAppAllCode
 
         private void btnExitApp_Clicked(object sender, RoutedEventArgs e)
         {
+            // Указал ли пользователь /godmode?
+            if ((bool)Application.Current.Properties["GodMode"]) MessageBox.Show("Читер!");
+
             // Закрыть окно.
             Close();
         }

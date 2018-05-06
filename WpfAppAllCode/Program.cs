@@ -29,6 +29,17 @@ namespace WpfAppAllCode
 
         static void AppStartUp(object sender, StartupEventArgs e)
         {
+            // Проверить входные аргументы командной строки на предмет наличия флага /GODMODE.
+            Current.Properties["GodMode"] = false;
+            foreach (string arg in e.Args)
+            {
+                if (arg.ToLower() == "/godmode")
+                {
+                    Current.Properties["GodMode"] = true;
+                    break;
+                }
+            }
+
             // Создать объект MainWindow.
             MainWindow main = new MainWindow("Моё лучшее приложение WPF!", 200, 300);
             main.Show();
