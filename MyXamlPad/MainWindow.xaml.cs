@@ -29,7 +29,17 @@ namespace MyXamlPad
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            // При загрузке главного окна приложения поместить некоторый базовый текст XAML в текстовый блок.
+            if (File.Exists("YourXaml.xaml")) txtXamlData.Text = File.ReadAllText("YourXaml.xaml");
+            else
+            {
+                txtXamlData.Text = "<Window xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"\n"
+                + "xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"\n"
+                + "Height =\"400\" Width =\"500\" WindowStartupLocation=\"CenterScreen\">\n"
+                + "<StackPanel>\n"
+                + "</StackPanel>\n"
+                + "</Window>";
+            }
         }
 
         private void Window_Closed(object sender, EventArgs e)
