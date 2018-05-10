@@ -49,7 +49,30 @@ namespace MyXamlPad
 
         private void btnViewXaml_Click(object sender, RoutedEventArgs e)
         {
+            // Записать файлы из текстового блока в локальный файл *.xaml.
+            File.WriteAllText("YourXaml.xaml", txtXamlData.Text);
 
+            // Это окно, к которому будет динамически применяться разметка XAML.
+            Window myWindow = null;
+
+            // Открыть локальный файл *.xaml.
+            try
+            {
+                using (Stream sr = File.Open("YourXaml.xaml", FileMode.Open))
+                {
+                    // Подключить разметку XAML к объекту Window.
+                    myWindow = (Window)XamlReader.Load(sr);
+
+                    // Отобразить диалоговое окно и выполнить очистку.
+                    myWindow.ShowDialog();
+                    myWindow.Close();
+                    myWindow = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
