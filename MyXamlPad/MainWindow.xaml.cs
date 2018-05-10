@@ -44,7 +44,9 @@ namespace MyXamlPad
 
         private void Window_Closed(object sender, EventArgs e)
         {
-
+            // Записать данные из текстового поля в локальный файл *.xaml.
+            File.WriteAllText("YourXaml.xaml", txtXamlData.Text);
+            Application.Current.Shutdown();
         }
 
         private void btnViewXaml_Click(object sender, RoutedEventArgs e)
