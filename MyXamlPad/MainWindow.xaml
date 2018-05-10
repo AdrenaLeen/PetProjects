@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyXamlPad"
         mc:Ignorable="d"
+        Loaded="Window_Loaded" Closed="Window_Closed"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" Name="btnViewXaml" Width="100" Height="40" Content="Показать Xaml" Click="btnViewXaml_Click" />
+        <TextBox AcceptsReturn="True" Name="txtXamlData" FontSize="14" Background="Black" Foreground="Yellow" BorderBrush="Blue" VerticalScrollBarVisibility="Auto" AcceptsTab="True" />
+    </DockPanel>
 </Window>
