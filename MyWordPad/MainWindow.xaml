@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="Моя программа проверки орфографии" Height="450" Width="800">
     <DockPanel>
-        
+        <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" Background="White" BorderBrush="Black">
+            <MenuItem Header="_Файл">
+                <Separator />
+                <MenuItem Name="FileExit" Header="_Выход" MouseEnter="FileExit_MouseEnter" MouseLeave="FileExit_MouseLeave" Click="FileExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Сервис">
+                <MenuItem Name="ToolsSpellingHints" Header="_Подсказки по правописанию" MouseEnter="ToolsSpellingHints_MouseEnter" MouseLeave="ToolsSpellingHints_MouseLeave" Click="ToolsSpellingHints_Click" />
+            </MenuItem>
+        </Menu>
     </DockPanel>
 </Window>

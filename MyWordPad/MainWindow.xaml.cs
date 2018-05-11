@@ -24,5 +24,36 @@ namespace MyWordPad
         {
             InitializeComponent();
         }
+
+        private void FileExit_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void FileExit_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void FileExit_Click(object sender, RoutedEventArgs e)
+        {
+            // Закрыть это окно.
+            Close();
+        }
+
+        private void ToolsSpellingHints_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void ToolsSpellingHints_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void ToolsSpellingHints_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
