@@ -53,7 +53,19 @@ namespace MyWordPad
 
         private void ToolsSpellingHints_Click(object sender, RoutedEventArgs e)
         {
+            string spellingHints = string.Empty;
 
+            // Попробовать получить ошибку правописания в текущем положении курсора ввода.
+            SpellingError error = txtData.GetSpellingError(txtData.CaretIndex);
+            if (error != null)
+            {
+                // Построить строку с предполагаемыми вариантами правописания.
+                foreach (string s in error.Suggestions) spellingHints += $"{s}\n";
+
+                // Отобразить предполагаемые варианты и раскрыть элемент Expander.
+                lblSpellingHints.Content = spellingHints;
+                expanderSpelling.IsExpanded = true;
+            }
         }
     }
 }
