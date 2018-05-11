@@ -328,6 +328,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXamlPad", "MyXamlPad\MyXa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualLayoutTesterApp", "VisualLayoutTesterApp\VisualLayoutTesterApp.csproj", "{5F8DFC83-C02F-45BA-8825-5109D96F9CE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWordPad", "MyWordPad\MyWordPad.csproj", "{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -942,6 +944,10 @@ Global
 		{5F8DFC83-C02F-45BA-8825-5109D96F9CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F8DFC83-C02F-45BA-8825-5109D96F9CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F8DFC83-C02F-45BA-8825-5109D96F9CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
