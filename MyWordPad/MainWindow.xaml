@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:MyWordPad"
         mc:Ignorable="d"
         Title="Моя программа проверки орфографии" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCmd_Executed" CanExecute="OpenCmd_CanExecute" />
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveCmd_Executed" CanExecute="SaveCmd_CanExecute" />
+    </Window.CommandBindings>
     <DockPanel>
         <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" Background="White" BorderBrush="Black">
             <MenuItem Header="_Файл">
+                <MenuItem Command="ApplicationCommands.Open" />
+                <MenuItem Command="ApplicationCommands.Save" />
                 <Separator />
                 <MenuItem Name="FileExit" Header="_Выход" MouseEnter="FileExit_MouseEnter" MouseLeave="FileExit_MouseLeave" Click="FileExit_Click"/>
             </MenuItem>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace MyWordPad
 {
@@ -86,6 +88,44 @@ namespace MyWordPad
                 lblSpellingHints.Content = spellingHints;
                 expanderSpelling.IsExpanded = true;
             }
+        }
+
+        private void OpenCmd_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Создать диалоговое окно открытия файла и показать в нём только текстовые файлы.
+            OpenFileDialog openDlg = new OpenFileDialog { Filter = "Текстовые файлы |*.txt" };
+
+            // Был ли совершён щелчок на кнопке OK?
+            if (true == openDlg.ShowDialog())
+            {
+                // Загрузить содержимое выбранного файла.
+                string dataFromFile = File.ReadAllText(openDlg.FileName);
+
+                // Отобразить строку в TextBox.
+                txtData.Text = dataFromFile;
+            }
+        }
+
+        private void OpenCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void SaveCmd_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            var saveDlg = new SaveFileDialog { Filter = "Текстовые файлы |*.txt" };
+
+            // Был ли совершён щелчок на кнопке OK?
+            if (true == saveDlg.ShowDialog())
+            {
+                // Сохранить данные из TextBox в указанном файле.
+                File.WriteAllText(saveDlg.FileName, txtData.Text);
+            }
+        }
+
+        private void SaveCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
         }
     }
 }
