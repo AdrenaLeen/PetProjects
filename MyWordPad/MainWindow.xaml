@@ -21,5 +21,10 @@
             <Separator />
             <Button Content="Проверить" MouseEnter="ToolsSpellingHints_MouseEnter" MouseLeave="ToolsSpellingHints_MouseLeave" Click="ToolsSpellingHints_Click" Cursor="Help" />
         </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom" Background="Beige">
+            <StatusBarItem>
+                <TextBlock Name="statBarText" Text="Готов" />
+            </StatusBarItem>
+        </StatusBar>
     </DockPanel>
 </Window>
