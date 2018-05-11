@@ -12,6 +12,11 @@
                 <Separator />
                 <MenuItem Name="FileExit" Header="_Выход" MouseEnter="FileExit_MouseEnter" MouseLeave="FileExit_MouseLeave" Click="FileExit_Click"/>
             </MenuItem>
+            <MenuItem Header="_Правка">
+                <MenuItem Command="ApplicationCommands.Copy" />
+                <MenuItem Command="ApplicationCommands.Cut" />
+                <MenuItem Command="ApplicationCommands.Paste" />
+            </MenuItem>
             <MenuItem Header="_Сервис">
                 <MenuItem Name="ToolsSpellingHints" Header="_Подсказки по правописанию" MouseEnter="ToolsSpellingHints_MouseEnter" MouseLeave="ToolsSpellingHints_MouseLeave" Click="ToolsSpellingHints_Click" />
             </MenuItem>
