@@ -23,6 +23,26 @@ namespace MyWordPad
         public MainWindow()
         {
             InitializeComponent();
+            SetF1CommandBinding();
+        }
+
+        private void SetF1CommandBinding()
+        {
+            CommandBinding helpBinding = new CommandBinding(ApplicationCommands.Help);
+            helpBinding.CanExecute += CanHelpExecute;
+            helpBinding.Executed += HelpExecuted;
+            CommandBindings.Add(helpBinding);
+        }
+
+        private void HelpExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Слушайте, это не так сложно. Просто введите что-нибудь!", "Справка!");
+        }
+
+        private void CanHelpExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            // Если нужно предотвратить выполнение команды, то можно установить CanExecute в false.
+            e.CanExecute = true;
         }
 
         private void FileExit_MouseEnter(object sender, MouseEventArgs e)
