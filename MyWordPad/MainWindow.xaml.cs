@@ -27,12 +27,12 @@ namespace MyWordPad
 
         private void FileExit_MouseEnter(object sender, MouseEventArgs e)
         {
-
+            statBarText.Text = "Завершить работу приложения";
         }
 
         private void FileExit_MouseLeave(object sender, MouseEventArgs e)
         {
-
+            statBarText.Text = "Показать советы по правописанию";
         }
 
         private void FileExit_Click(object sender, RoutedEventArgs e)
