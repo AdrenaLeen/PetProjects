@@ -16,5 +16,10 @@
                 <MenuItem Name="ToolsSpellingHints" Header="_Подсказки по правописанию" MouseEnter="ToolsSpellingHints_MouseEnter" MouseLeave="ToolsSpellingHints_MouseLeave" Click="ToolsSpellingHints_Click" />
             </MenuItem>
         </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="Выход" MouseEnter="FileExit_MouseEnter" MouseLeave="FileExit_MouseLeave" Click="FileExit_Click" />
+            <Separator />
+            <Button Content="Проверить" MouseEnter="ToolsSpellingHints_MouseEnter" MouseLeave="ToolsSpellingHints_MouseLeave" Click="ToolsSpellingHints_Click" Cursor="Help" />
+        </ToolBar>
     </DockPanel>
 </Window>
