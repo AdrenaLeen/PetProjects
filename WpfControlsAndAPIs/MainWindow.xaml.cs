@@ -24,12 +24,29 @@ namespace WpfControlsAndAPIs
         {
             InitializeComponent();
 
-            // Вставить здесь код, требуемый при создании объекта.
+            // Установить режим Ink в качестве стандартного.
+            myInkCanvas.EditingMode = InkCanvasEditingMode.Ink;
+            inkRadio.IsChecked = true;
+            comboColors.SelectedIndex = 0;
         }
 
         private void RadioButtonClicked(object sender, RoutedEventArgs e)
         {
-            // TODO: Добавить сюда реализацию обработчика событий.
+            // В зависимости от того, какая кнопка отправила событие, поместить InkCanvas в нужный режим оперирования.
+            switch ((sender as RadioButton)?.Content.ToString())
+            {
+                case "Режим пера!":
+                    myInkCanvas.EditingMode = InkCanvasEditingMode.Ink;
+                    break;
+
+                case "Режим ластика!":
+                    myInkCanvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
+                    break;
+
+                case "Режим выбора!":
+                    myInkCanvas.EditingMode = InkCanvasEditingMode.Select;
+                    break;
+            }
         }
 
         private void ColorChanged(object sender, SelectionChangedEventArgs e)

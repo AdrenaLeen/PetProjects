@@ -25,6 +25,7 @@
                             <ComboBoxItem Content="Синий"/>
                         </ComboBox>
                     </ToolBar>
+                    <InkCanvas Name="myInkCanvas" Height="190"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Документы">
