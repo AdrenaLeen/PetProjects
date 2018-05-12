@@ -330,6 +330,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualLayoutTesterApp", "Vi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWordPad", "MyWordPad\MyWordPad.csproj", "{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRoutedEvents", "WpfRoutedEvents\WpfRoutedEvents.csproj", "{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -948,6 +950,10 @@ Global
 		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A0CFC2-0FC6-4BF3-ABD6-76321B882451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
