@@ -9,7 +9,19 @@
     <Grid>
         <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="500">
             <TabItem Header="Ink API">
-                <StackPanel Background="#FFE5E5E5"/>
+                <StackPanel Background="#FFE5E5E5">
+                    <ToolBar Name="inkToolbar" Height="60">
+                        <RadioButton Name="inkRadio" Content="Режим пера!" Height="50" Width="100"/>
+                        <RadioButton Name="eraseRadio" Content="Режим ластика!" Height="50" Width="100"/>
+                        <RadioButton Name="selectRadio" Content="Режим выбора!" Height="50" Width="100"/>
+                        <Separator/>
+                        <ComboBox Name="comboColors" Width="100">
+                            <ComboBoxItem Content="Красный"/>
+                            <ComboBoxItem Content="Зелёный"/>
+                            <ComboBoxItem Content="Синий"/>
+                        </ComboBox>
+                    </ToolBar>
+                </StackPanel>
             </TabItem>
             <TabItem Header="Документы">
                 <Grid Background="#FFE5E5E5"/>
