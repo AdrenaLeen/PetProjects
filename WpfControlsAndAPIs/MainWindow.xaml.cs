@@ -23,6 +23,18 @@ namespace WpfControlsAndAPIs
         public MainWindow()
         {
             InitializeComponent();
+
+            // Вставить здесь код, требуемый при создании объекта.
+        }
+
+        private void RadioButtonClicked(object sender, RoutedEventArgs e)
+        {
+            // TODO: Добавить сюда реализацию обработчика событий.
+        }
+
+        private void ColorChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // TODO: Добавить сюда реализацию обработчика событий.
         }
     }
 }

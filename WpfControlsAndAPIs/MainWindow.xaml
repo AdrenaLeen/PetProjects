@@ -13,13 +13,13 @@
                     <ToolBar Name="inkToolbar" Height="60">
                         <Border Margin="0,2,0,3" Width="315">
                             <Grid>
-                                <RadioButton x:Name="inkRadio" GroupName="InkMode" Content="Режим пера!" Margin="0,0,200,0"/>
-                                <RadioButton x:Name="eraseRadio" GroupName="InkMode" Content="Режим ластика!" Margin="95,0"/>
-                                <RadioButton x:Name="selectRadio" GroupName="InkMode" Content="Режим выбора!" Margin="205,0,0,0"/>
+                                <RadioButton x:Name="inkRadio" GroupName="InkMode" Content="Режим пера!" Margin="0,0,200,0" Click="RadioButtonClicked"/>
+                                <RadioButton x:Name="eraseRadio" GroupName="InkMode" Content="Режим ластика!" Margin="95,0" Click="RadioButtonClicked"/>
+                                <RadioButton x:Name="selectRadio" GroupName="InkMode" Content="Режим выбора!" Margin="205,0,0,0" Click="RadioButtonClicked"/>
                             </Grid>
                         </Border>
                         <Separator/>
-                        <ComboBox x:Name="comboColors" Width="100">
+                        <ComboBox Name="comboColors" Width="100" SelectionChanged="ColorChanged">
                             <ComboBoxItem Content="Красный"/>
                             <ComboBoxItem Content="Зелёный"/>
                             <ComboBoxItem Content="Синий"/>
