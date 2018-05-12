@@ -9,7 +9,7 @@
     <Grid>
         <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="500">
             <TabItem Header="Ink API">
-                <Grid Background="#FFE5E5E5"/>
+                <StackPanel Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Документы">
                 <Grid Background="#FFE5E5E5"/>
