@@ -11,7 +11,7 @@
             <StackPanel Orientation="Horizontal">
                 <Label Height="45" FontSize="20">Необычная кнопка!</Label>
                 <Canvas Height="50" Width="100">
-                    <Ellipse Name="outerEllipse" Fill="Green" Height="25" Width="50" Cursor="Hand" Canvas.Left="25" Canvas.Top="10" MouseDown="outerEllipse_MouseDown" />
+                    <Ellipse Name="outerEllipse" Fill="Green" Height="25" Width="50" Cursor="Hand" Canvas.Left="25" Canvas.Top="10" MouseDown="outerEllipse_MouseDown" PreviewMouseDown="outerEllipse_PreviewMouseDown" />
                     <Ellipse Name="innerEllipse" Fill="Yellow" Height="15" Width="36" Canvas.Top="15" Canvas.Left="32" />
                 </Canvas>
             </StackPanel>

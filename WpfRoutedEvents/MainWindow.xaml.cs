@@ -20,6 +20,8 @@ namespace WpfRoutedEvents
     /// </summary>
     public partial class MainWindow : Window
     {
+        string mouseActivity = string.Empty;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,17 +29,23 @@ namespace WpfRoutedEvents
 
         private void btnClickMe_Click(object sender, RoutedEventArgs e)
         {
-            // Делать что-нибудь, когда на кнопке произведён щелчок.
-            MessageBox.Show("Кнопка нажата");
+            AddEventInfo(sender, e);
+            MessageBox.Show(mouseActivity, "Информация о вашем событии");
+
+            // Очистить строку для следующего цикла.
+            mouseActivity = "";
         }
+
+        private void AddEventInfo(object sender, RoutedEventArgs e) => mouseActivity += $"{sender} послал событие {e.RoutedEvent.RoutingStrategy} по имени {e.RoutedEvent.Name}.\n";
 
         private void outerEllipse_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            // Изменить заголовок окна.
-            Title = "Вы нажали на внешний эллипс!";
+            AddEventInfo(sender, e);
+        }
 
-            // Остановить пузырьковое распространение.
-            e.Handled = true;
+        private void outerEllipse_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            AddEventInfo(sender, e);
         }
     }
 }
