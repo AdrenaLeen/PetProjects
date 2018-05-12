@@ -30,5 +30,11 @@ namespace WpfRoutedEvents
             // Делать что-нибудь, когда на кнопке произведён щелчок.
             MessageBox.Show("Кнопка нажата");
         }
+
+        private void outerEllipse_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Изменить заголовок окна.
+            Title = "Вы нажали на внешний эллипс!";
+        }
     }
 }
