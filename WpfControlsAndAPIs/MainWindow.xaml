@@ -11,11 +11,15 @@
             <TabItem Header="Ink API">
                 <StackPanel Background="#FFE5E5E5">
                     <ToolBar Name="inkToolbar" Height="60">
-                        <RadioButton Name="inkRadio" Content="Режим пера!" Height="50" Width="100"/>
-                        <RadioButton Name="eraseRadio" Content="Режим ластика!" Height="50" Width="100"/>
-                        <RadioButton Name="selectRadio" Content="Режим выбора!" Height="50" Width="100"/>
+                        <Border Margin="0,2,0,3" Width="315">
+                            <Grid>
+                                <RadioButton x:Name="inkRadio" GroupName="InkMode" Content="Режим пера!" Margin="0,0,200,0"/>
+                                <RadioButton x:Name="eraseRadio" GroupName="InkMode" Content="Режим ластика!" Margin="95,0"/>
+                                <RadioButton x:Name="selectRadio" GroupName="InkMode" Content="Режим выбора!" Margin="205,0,0,0"/>
+                            </Grid>
+                        </Border>
                         <Separator/>
-                        <ComboBox Name="comboColors" Width="100">
+                        <ComboBox x:Name="comboColors" Width="100">
                             <ComboBoxItem Content="Красный"/>
                             <ComboBoxItem Content="Зелёный"/>
                             <ComboBoxItem Content="Синий"/>
