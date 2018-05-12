@@ -51,7 +51,11 @@ namespace WpfControlsAndAPIs
 
         private void ColorChanged(object sender, SelectionChangedEventArgs e)
         {
-            // TODO: Добавить сюда реализацию обработчика событий.
+            // Получить свойство Tag выбранного элемента StackPanel.
+            string colorToUse = (comboColors.SelectedItem as StackPanel).Tag.ToString();
+
+            // Изменить цвет, используемый для визуализации штрихов.
+            myInkCanvas.DefaultDrawingAttributes.Color = (Color)ColorConverter.ConvertFromString(colorToUse);
         }
     }
 }
