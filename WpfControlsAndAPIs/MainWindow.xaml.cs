@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Windows.Ink;
 
 namespace WpfControlsAndAPIs
 {
@@ -56,6 +58,32 @@ namespace WpfControlsAndAPIs
 
             // Изменить цвет, используемый для визуализации штрихов.
             myInkCanvas.DefaultDrawingAttributes.Color = (Color)ColorConverter.ConvertFromString(colorToUse);
+        }
+
+        private void SaveData(object sender, RoutedEventArgs e)
+        {
+            // Сохранить все данные InkCanvas в локальном файле.
+            using (FileStream fs = new FileStream("StrokeData.bin", FileMode.Create))
+            {
+                myInkCanvas.Strokes.Save(fs);
+                fs.Close();
+            }
+        }
+
+        private void LoadData(object sender, RoutedEventArgs e)
+        {
+            // Наполнить StrokeCollection из файла.
+            using (FileStream fs = new FileStream("StrokeData.bin", FileMode.Open, FileAccess.Read))
+            {
+                StrokeCollection strokes = new StrokeCollection(fs);
+                myInkCanvas.Strokes = strokes;
+            }
+        }
+
+        private void Clear(object sender, RoutedEventArgs e)
+        {
+            // Очистить все штрихи.
+            myInkCanvas.Strokes.Clear();
         }
     }
 }

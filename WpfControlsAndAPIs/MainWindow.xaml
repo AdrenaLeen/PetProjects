@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="600">
+        <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="780">
             <TabItem Header="Ink API">
                 <StackPanel Background="#FFE5E5E5">
                     <ToolBar Name="inkToolbar" Height="60">
                         <Border Margin="0,2,0,3" Width="315">
                             <Grid>
-                                <RadioButton x:Name="inkRadio" GroupName="InkMode" Content="Режим пера!" Margin="0,0,200,0" Click="RadioButtonClicked"/>
-                                <RadioButton x:Name="eraseRadio" GroupName="InkMode" Content="Режим ластика!" Margin="95,0" Click="RadioButtonClicked"/>
-                                <RadioButton x:Name="selectRadio" GroupName="InkMode" Content="Режим выбора!" Margin="205,0,0,0" Click="RadioButtonClicked"/>
+                                <RadioButton Name="inkRadio" GroupName="InkMode" Content="Режим пера!" Margin="0,0,200,0" Click="RadioButtonClicked"/>
+                                <RadioButton Name="eraseRadio" GroupName="InkMode" Content="Режим ластика!" Margin="95,0" Click="RadioButtonClicked"/>
+                                <RadioButton Name="selectRadio" GroupName="InkMode" Content="Режим выбора!" Margin="205,0,0,0" Click="RadioButtonClicked"/>
                             </Grid>
                         </Border>
                         <Separator/>
@@ -24,17 +24,18 @@
                                 <Ellipse Fill ="Red" Height ="50" Width ="50"/>
                                 <Label FontSize ="20" HorizontalAlignment="Center"	VerticalAlignment="Center" Content="Красный"/>
                             </StackPanel>
-
                             <StackPanel Orientation ="Horizontal" Tag="Green">
                                 <Ellipse Fill ="Green" Height ="50" Width ="50"/>
                                 <Label FontSize ="20" HorizontalAlignment="Center"	VerticalAlignment="Center" Content="Зелёный"/>
                             </StackPanel>
-
                             <StackPanel Orientation ="Horizontal" Tag="Blue">
                                 <Ellipse Fill ="Blue" Height ="50" Width ="50"/>
                                 <Label FontSize ="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Синий"/>
                             </StackPanel>
                         </ComboBox>
+                        <Button Name="btnSave" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Сохранить" Click="SaveData"/>
+                        <Button Name="btnLoad" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Загрузить" Click="LoadData"/>
+                        <Button Name="btnClear" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Очистить" Click="Clear"/>
                     </ToolBar>
                     <InkCanvas Name="myInkCanvas" Height="190"/>
                 </StackPanel>
