@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Windows.Ink;
+using System.Windows.Annotations;
+using System.Windows.Annotations.Storage;
 
 namespace WpfControlsAndAPIs
 {
@@ -31,6 +33,7 @@ namespace WpfControlsAndAPIs
             inkRadio.IsChecked = true;
             comboColors.SelectedIndex = 0;
             PopulateDocument();
+            EnableAnnotations();
         }
 
         private void RadioButtonClicked(object sender, RoutedEventArgs e)
@@ -115,6 +118,21 @@ namespace WpfControlsAndAPIs
             paraBodyText.Inlines.Add(prefix);
             paraBodyText.Inlines.Add(infix);
             paraBodyText.Inlines.Add(suffix);
+        }
+
+        private void EnableAnnotations()
+        {
+            // Создать объект AnnotationService, который работает с FlowDocumentReader.
+            AnnotationService anoService = new AnnotationService(myDocumentReader);
+
+            // Создать объект MemoryStream, который будет содержать аннотации.
+            MemoryStream anoStream = new MemoryStream();
+
+            // Создать XML-хранилище на основе MemoryStream. Этот объект можно использовать для программного добавления, удаления или поиска аннотаций.
+            AnnotationStore store = new XmlStreamStore(anoStream);
+
+            // Включить службы аннотаций.
+            anoService.Enable(store);
         }
     }
 }
