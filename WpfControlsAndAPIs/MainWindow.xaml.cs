@@ -59,6 +59,7 @@ namespace WpfControlsAndAPIs
                     }
                 }
             };
+            SetBindings();
         }
 
         private void RadioButtonClicked(object sender, RoutedEventArgs e)
@@ -158,6 +159,20 @@ namespace WpfControlsAndAPIs
 
             // Включить службы аннотаций.
             anoService.Enable(store);
+        }
+
+        private void SetBindings()
+        {
+            // Создать объект Binding.
+            Binding b = new Binding();
+
+            // Зарегистрировать преобразователь, источник и путь.
+            b.Converter = new MyDoubleConverter();
+            b.Source = mySB;
+            b.Path = new PropertyPath("Value");
+
+            // Вызвать метод SetBinding объекта Label.
+            labelSBThumb.SetBinding(ContentProperty, b);
         }
     }
 }
