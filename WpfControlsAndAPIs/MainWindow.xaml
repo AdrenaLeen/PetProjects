@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="780">
+        <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="780">
             <TabItem Header="Ink API">
                 <StackPanel Background="#FFE5E5E5">
                     <ToolBar Name="inkToolbar" Height="60">
@@ -37,11 +37,24 @@
                         <Button Name="btnLoad" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Загрузить" Click="LoadData"/>
                         <Button Name="btnClear" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Очистить" Click="Clear"/>
                     </ToolBar>
-                    <InkCanvas Name="myInkCanvas" Height="190"/>
+                    <InkCanvas Name="myInkCanvas" Height="242"/>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Документы">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Name="tabDocuments" Header="Документы" VerticalAlignment="Bottom" Height="20">
+                <StackPanel Background="#FFE5E5E5">
+                    <ToolBar>
+                        <Button BorderBrush="Green" Content="Добавить клейкую заметку"/>
+                        <Button BorderBrush="Green" Content="Удалить клейкую заметку"/>
+                        <Button BorderBrush="Green" Content="Подсветить текст"/>
+                    </ToolBar>
+                    <FlowDocumentReader Name="myDocumentReader" Height="275">
+                        <FlowDocument>
+                            <Section Foreground="Yellow" Background="Black">
+                                <Paragraph FontSize="20">Вот некоторые забавные факты об API WPF-документов!</Paragraph>
+                            </Section>
+                        </FlowDocument>
+                    </FlowDocumentReader>
+                </StackPanel>
             </TabItem>
             <TabItem Header="Привязка данных" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="110">
                 <Grid Background="#FFE5E5E5"/>
