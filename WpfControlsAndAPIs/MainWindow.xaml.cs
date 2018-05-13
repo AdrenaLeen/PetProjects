@@ -17,6 +17,7 @@ using System.Windows.Ink;
 using System.Windows.Annotations;
 using System.Windows.Annotations.Storage;
 using System.Windows.Markup;
+using AutoLotDAL.Repos;
 
 namespace WpfControlsAndAPIs
 {
@@ -60,6 +61,7 @@ namespace WpfControlsAndAPIs
                 }
             };
             SetBindings();
+            ConfigureGrid();
         }
 
         private void RadioButtonClicked(object sender, RoutedEventArgs e)
@@ -173,6 +175,15 @@ namespace WpfControlsAndAPIs
 
             // Вызвать метод SetBinding объекта Label.
             labelSBThumb.SetBinding(ContentProperty, b);
+        }
+
+        private void ConfigureGrid()
+        {
+            using (InventoryRepo repo = new InventoryRepo())
+            {
+                // Построить запрос LINQ, который извлекает необходимые данные из таблицы Inventory.
+                gridInventory.ItemsSource = repo.GetAll().Select(x => new { x.CarId, x.Make, x.Color, x.PetName });
+            }
         }
     }
 }

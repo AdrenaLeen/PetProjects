@@ -41,7 +41,7 @@
                     <InkCanvas Name="myInkCanvas" Height="242"/>
                 </StackPanel>
             </TabItem>
-            <TabItem Name="tabDocuments" Header="Документы" VerticalAlignment="Bottom" Height="20">
+            <TabItem Header="Документы">
                 <StackPanel Background="#FFE5E5E5">
                     <ToolBar>
                         <Button BorderBrush="Green" Content="Добавить клейкую заметку" Command="a:AnnotationService.CreateTextStickyNoteCommand"/>
@@ -61,7 +61,7 @@
                     </FlowDocumentReader>
                 </StackPanel>
             </TabItem>
-            <TabItem Name="tabDataBinding" Header="Привязка данных" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="110">
+            <TabItem Header="Привязка данных">
                 <StackPanel Background="#FFE5E5E5" Width="380" DataContext="{Binding ElementName=mySB}">
                     <Label Content="Передвинуть полосу прокрутки, чтобы увидеть текущее значение"/>
                     <ScrollBar Name="mySB" Orientation="Horizontal" Height="30" Minimum="1" Maximum="100" LargeChange="1" SmallChange="1"/>
@@ -69,8 +69,10 @@
                     <Button Content="Нажми" Height="140" FontSize="{Binding Value}"/>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="DataGrid" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="75">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="DataGrid">
+                <StackPanel Background="#FFE5E5E5">
+                    <DataGrid Name="gridInventory" Height="300" AlternationCount="2" AlternatingRowBackground="#FF23F026" RowBackground="#FFEC46F3"/>
+                </StackPanel>
             </TabItem>
         </TabControl>
 
