@@ -62,10 +62,10 @@
                 </StackPanel>
             </TabItem>
             <TabItem Name="tabDataBinding" Header="Привязка данных" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="110">
-                <StackPanel Background="#FFE5E5E5" Width="250">
+                <StackPanel Background="#FFE5E5E5" Width="380">
                     <Label Content="Передвинуть полосу прокрутки, чтобы увидеть текущее значение"/>
                     <ScrollBar Name="mySB" Orientation="Horizontal" Height="30" Minimum="1" Maximum="100" LargeChange="1" SmallChange="1"/>
-                    <Label Name="labelSBThumb" Height="30" BorderBrush="Blue" BorderThickness="2" Content="0"/>
+                    <Label Name="labelSBThumb" Height="30" BorderBrush="Blue" BorderThickness="2" Content="{Binding Value, ElementName=mySB}"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="DataGrid" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="75">
