@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfControlsAndAPIs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="810">
     <Grid>
         <TabControl Name="myTabSystem" HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="780">
             <TabItem Header="Ink API">
@@ -52,6 +52,8 @@
                             <Section Foreground="Yellow" Background="Black">
                                 <Paragraph FontSize="20">Вот некоторые забавные факты об API WPF-документов!</Paragraph>
                             </Section>
+                            <List Name="listOfFunFacts"/>
+                            <Paragraph Name="paraBodyText"/>
                         </FlowDocument>
                     </FlowDocumentReader>
                 </StackPanel>

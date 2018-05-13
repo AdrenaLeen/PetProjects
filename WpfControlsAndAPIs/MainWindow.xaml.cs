@@ -30,6 +30,7 @@ namespace WpfControlsAndAPIs
             myInkCanvas.EditingMode = InkCanvasEditingMode.Ink;
             inkRadio.IsChecked = true;
             comboColors.SelectedIndex = 0;
+            PopulateDocument();
         }
 
         private void RadioButtonClicked(object sender, RoutedEventArgs e)
@@ -84,6 +85,36 @@ namespace WpfControlsAndAPIs
         {
             // Очистить все штрихи.
             myInkCanvas.Strokes.Clear();
+        }
+
+        private void PopulateDocument()
+        {
+            // Добавить некоторые данные в элемент List.
+            listOfFunFacts.FontSize = 14;
+            listOfFunFacts.MarkerStyle = TextMarkerStyle.Circle;
+            listOfFunFacts.ListItems.Add(new ListItem(new Paragraph(new Run("Фиксированные документы предназначены для представления готовых к печати WYSIWYG документов!"))));
+            listOfFunFacts.ListItems.Add(new ListItem(new Paragraph(new Run("API поддерживает таблицы и встроенные данные!"))));
+            listOfFunFacts.ListItems.Add(new ListItem(new Paragraph(new Run("Потоковые документы доступны только для чтения!"))));
+            listOfFunFacts.ListItems.Add(new ListItem(new Paragraph(new Run("BlockUIContainer позволяет вам встраивать элементы управления WPF в документ!")
+              )));
+
+            // Добавить некоторые данные в элемент Paragraph. Первая часть абзаца.
+            Run prefix = new Run("Этот абзац был сгенерирован ");
+
+            // Середина абзаца.
+            Bold b = new Bold();
+            Run infix = new Run("динамически");
+            infix.Foreground = Brushes.Red;
+            infix.FontSize = 30;
+            b.Inlines.Add(infix);
+
+            // Последняя часть абзаца.
+            Run suffix = new Run(" во время выполнения!");
+
+            // Добавить все части в коллекцию встроенных элементов Paragraph.
+            paraBodyText.Inlines.Add(prefix);
+            paraBodyText.Inlines.Add(infix);
+            paraBodyText.Inlines.Add(suffix);
         }
     }
 }
