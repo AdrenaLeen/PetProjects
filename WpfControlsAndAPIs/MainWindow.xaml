@@ -47,6 +47,8 @@
                         <Button BorderBrush="Green" Content="Добавить клейкую заметку" Command="a:AnnotationService.CreateTextStickyNoteCommand"/>
                         <Button BorderBrush="Green" Content="Удалить клейкую заметку" Command="a:AnnotationService.DeleteStickyNotesCommand"/>
                         <Button BorderBrush="Green" Content="Подсветить текст" Command="a:AnnotationService.CreateHighlightCommand"/>
+                        <Button Name="btnSaveDoc" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Сохранить"/>
+                        <Button Name="btnLoadDoc" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="75" Content="Загрузить"/>
                     </ToolBar>
                     <FlowDocumentReader Name="myDocumentReader" Height="275">
                         <FlowDocument>

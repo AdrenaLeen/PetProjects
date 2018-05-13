@@ -16,6 +16,7 @@ using System.IO;
 using System.Windows.Ink;
 using System.Windows.Annotations;
 using System.Windows.Annotations.Storage;
+using System.Windows.Markup;
 
 namespace WpfControlsAndAPIs
 {
@@ -34,6 +35,30 @@ namespace WpfControlsAndAPIs
             comboColors.SelectedIndex = 0;
             PopulateDocument();
             EnableAnnotations();
+
+            // Построить обработчики событий Click для сохранения и загрузки документа нефиксированного формата.
+            btnSaveDoc.Click += (o, s) =>
+            {
+                using (FileStream fStream = File.Open("documentData.xaml", FileMode.Create))
+                {
+                    XamlWriter.Save(this.myDocumentReader.Document, fStream);
+                }
+            };
+            btnLoadDoc.Click += (o, s) =>
+            {
+                using (FileStream fStream = File.Open("documentData.xaml", FileMode.Open))
+                {
+                    try
+                    {
+                        FlowDocument doc = XamlReader.Load(fStream) as FlowDocument;
+                        myDocumentReader.Document = doc;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ошибка загрузки документа!");
+                    }
+                }
+            };
         }
 
         private void RadioButtonClicked(object sender, RoutedEventArgs e)
