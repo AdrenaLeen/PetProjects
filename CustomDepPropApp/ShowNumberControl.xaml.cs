@@ -32,6 +32,13 @@ namespace CustomDepPropApp
         }
 
         // Это сделает возможной анимацию, применение стилей, привязку и т.д.
-        public static readonly DependencyProperty CurrentNumberProperty = DependencyProperty.Register("CurrentNumber", typeof(int), typeof(ShowNumberControl), new PropertyMetadata(0));
+        public static readonly DependencyProperty CurrentNumberProperty = DependencyProperty.Register("CurrentNumber", typeof(int), typeof(ShowNumberControl), new UIPropertyMetadata(100), new ValidateValueCallback(ValidateCurrentNumber));
+
+        public static bool ValidateCurrentNumber(object value)
+        {
+            // Очень просто бизнес-правило: значение должно находиться в диапазоне между 0 и 500.
+            if (Convert.ToInt32(value) >= 0 && Convert.ToInt32(value) <= 500) return true;
+            else return false;
+        }
     }
 }
