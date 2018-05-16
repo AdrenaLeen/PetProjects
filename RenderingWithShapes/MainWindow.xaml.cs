@@ -40,7 +40,14 @@ namespace RenderingWithShapes
             switch (currentShape)
             {
                 case SelectedShape.Circle:
-                    shapeToRender = new Ellipse() { Fill = Brushes.Green, Height = 35, Width = 35 };
+                    shapeToRender = new Ellipse() { Height = 35, Width = 35 };
+
+                    // Создать кисть RadialGradientBrush в коде.
+                    RadialGradientBrush brush = new RadialGradientBrush();
+                    brush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF87E71B"), 0.589));
+                    brush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF2BA92B"), 0));
+                    brush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF34B71B"), 1));
+                    shapeToRender.Fill = brush;
                     break;
                 case SelectedShape.Rectangle:
                     shapeToRender = new Rectangle() { Fill = Brushes.Red, Height = 35, Width = 35, RadiusX = 10, RadiusY = 10 };
