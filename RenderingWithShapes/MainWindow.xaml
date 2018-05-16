@@ -9,7 +9,15 @@
     <DockPanel LastChildFill="True">
         <ToolBar DockPanel.Dock="Top" Name="mainToolBar" Height="50">
             <RadioButton Name="circleOption" GroupName="shapeSelection" Click="circleOption_Click">
-                <Ellipse Fill="Green" Height="35" Width="35"/>
+                <Ellipse Height="35" Width="35">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF87E71B" Offset="0.589"/>
+                            <GradientStop Color="#FF2BA92B" Offset="0"/>
+                            <GradientStop Color="#FF34B71B" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
             </RadioButton>
             <RadioButton Name="rectOption" GroupName="shapeSelection" Click="rectOption_Click">
                 <Rectangle Fill="Red" Height="35" Width="35" RadiusY="10" RadiusX="10"/>
