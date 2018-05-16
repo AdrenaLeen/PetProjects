@@ -25,7 +25,8 @@
             <RadioButton Name="lineOption" GroupName="shapeSelection" Click="lineOption_Click">
                 <Line Height="35" Width="35" StrokeThickness="10" Stroke="Blue" X1="10" Y1="10" Y2="25" X2="25" StrokeStartLineCap="Triangle" StrokeEndLineCap="Round"/>
             </RadioButton>
+            <ToggleButton Name="flipCanvas" Content="Отзеркалить!" Click="flipCanvas_Click"/>
         </ToolBar>
-        <Canvas Background="LightBlue" Name="canvasDrawingArea" MouseLeftButtonDown="canvasDrawingArea_MouseLeftButtonDown" MouseRightButtonDown="canvasDrawingArea_MouseRightButtonDown"/>
+        <Canvas Background="LightBlue" Name="canvasDrawingArea" MouseLeftButtonDown="canvasDrawingArea_MouseLeftButtonDown" MouseRightButtonDown="canvasDrawingArea_MouseRightButtonDown" ClipToBounds="True"/>
     </DockPanel>
 </Window>

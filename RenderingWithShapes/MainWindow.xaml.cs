@@ -26,6 +26,7 @@ namespace RenderingWithShapes
         }
 
         private SelectedShape currentShape;
+        private bool isFlipped = false;
 
         public MainWindow()
         {
@@ -69,6 +70,13 @@ namespace RenderingWithShapes
                     return;
             }
 
+            // isFlipped - закрытое булевское поле. Его значение переключается при щелчке на кнопке переключения.
+            if (isFlipped)
+            {
+                RotateTransform rotate = new RotateTransform(-180);
+                shapeToRender.RenderTransform = rotate;
+            }
+
             // Установить верхний левый угол для рисования на холсте.
             Canvas.SetLeft(shapeToRender, e.GetPosition(canvasDrawingArea).X);
             Canvas.SetTop(shapeToRender, e.GetPosition(canvasDrawingArea).Y);
@@ -103,6 +111,21 @@ namespace RenderingWithShapes
             // Если переменная result не равна null, то щелчок произведён на фигуре!
             // Получить фигуру, на которой совершён щелчок, и удалить её из Canvas.
             if (result != null) canvasDrawingArea.Children.Remove(result.VisualHit as Shape);
+        }
+
+        private void flipCanvas_Click(object sender, RoutedEventArgs e)
+        {
+            if (flipCanvas.IsChecked == true)
+            {
+                RotateTransform rotate = new RotateTransform(-180);
+                canvasDrawingArea.LayoutTransform = rotate;
+                isFlipped = true;
+            }
+            else
+            {
+                canvasDrawingArea.LayoutTransform = null;
+                isFlipped = false;
+            }
         }
     }
 }
