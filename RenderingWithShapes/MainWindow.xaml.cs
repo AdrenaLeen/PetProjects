@@ -84,5 +84,18 @@ namespace RenderingWithShapes
         {
             currentShape = SelectedShape.Line;
         }
+
+        private void canvasDrawingArea_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Сначала получить координаты X,Y позиции, где пользователь выполнил щелчок.
+            Point pt = e.GetPosition((Canvas)sender);
+
+            // Использовать метод HitTest() класса VisualTreeHelper, чтобы выяснить, щёлкнул ли пользователь на элементе внутри Canvas.
+            HitTestResult result = VisualTreeHelper.HitTest(canvasDrawingArea, pt);
+
+            // Если переменная result не равна null, то щелчок произведён на фигуре!
+            // Получить фигуру, на которой совершён щелчок, и удалить её из Canvas.
+            if (result != null) canvasDrawingArea.Children.Remove(result.VisualHit as Shape);
+        }
     }
 }

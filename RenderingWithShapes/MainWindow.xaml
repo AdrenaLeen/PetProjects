@@ -18,6 +18,6 @@
                 <Line Height="35" Width="35" StrokeThickness="10" Stroke="Blue" X1="10" Y1="10" Y2="25" X2="25" StrokeStartLineCap="Triangle" StrokeEndLineCap="Round"/>
             </RadioButton>
         </ToolBar>
-        <Canvas Background="LightBlue" Name="canvasDrawingArea" MouseLeftButtonDown="canvasDrawingArea_MouseLeftButtonDown"/>
+        <Canvas Background="LightBlue" Name="canvasDrawingArea" MouseLeftButtonDown="canvasDrawingArea_MouseLeftButtonDown" MouseRightButtonDown="canvasDrawingArea_MouseRightButtonDown"/>
     </DockPanel>
 </Window>
