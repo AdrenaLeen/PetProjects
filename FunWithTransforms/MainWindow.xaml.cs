@@ -24,5 +24,20 @@ namespace FunWithTransforms
         {
             InitializeComponent();
         }
+
+        private void btnSkew_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRotate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFlip_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

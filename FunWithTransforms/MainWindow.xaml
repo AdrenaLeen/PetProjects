@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Button Name="btnSkew" Content="Перекосить" Click="btnSkew_Click"/>
+            <Button Name="btnRotate" Content="Повернуть" Click="btnRotate_Click"/>
+            <Button Name="btnFlip" Content="Перевернуть" Click="btnFlip_Click"/>
+        </StackPanel>
+        <Canvas Name="myCanvas" Grid.Column="1" Grid.Row="0">
+            <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top"	Height="190"  Width="90" Stroke="Black" Canvas.Left="20" Canvas.Top="30">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF951ED8" Offset="0.215"/>
+                        <GradientStop Color="#FF2FECB0" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="110" Stroke="Black" Canvas.Left="130" Canvas.Top="130">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB91DDC" Offset="0.355"/>
+                        <GradientStop Color="#FFB0381D" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
     </Grid>
 </Window>
