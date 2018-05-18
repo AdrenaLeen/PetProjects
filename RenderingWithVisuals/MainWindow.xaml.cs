@@ -24,6 +24,7 @@ namespace RenderingWithVisuals
         public MainWindow()
         {
             InitializeComponent();
+            MouseDown += MyVisualHost_MouseDown;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -48,6 +49,29 @@ namespace RenderingWithVisuals
 
             // Установить источник для элемента управления Image!
             myImage.Source = bmp;
+        }
+
+        private void MyVisualHost_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Выяснить, где пользователь выполнил щелчок.
+            Point pt = e.GetPosition((UIElement)sender);
+
+            // Вызвать вспомогательную функцию через делегат, чтобы посмотреть, был ли совершён щелчок на визуальном объекте.
+            VisualTreeHelper.HitTest(this, null,
+            MyCallback, new PointHitTestParameters(pt));
+        }
+
+        public HitTestResultBehavior MyCallback(HitTestResult result)
+        {
+            // Если щелчок был совершён на визуальном объекте, то переключиться между скошенной и нормальной визуализацией.
+            if (result.VisualHit.GetType() == typeof(DrawingVisual))
+            {
+                if (((DrawingVisual)result.VisualHit).Transform == null) ((DrawingVisual)result.VisualHit).Transform = new SkewTransform(7, 7);
+                else ((DrawingVisual)result.VisualHit).Transform = null;
+            }
+
+            // Сообщить методу HitTest() о прекращении углубления в визуальное дерево.
+            return HitTestResultBehavior.Stop;
         }
     }
 }
