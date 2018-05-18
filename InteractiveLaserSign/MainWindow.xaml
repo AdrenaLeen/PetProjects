@@ -18,8 +18,8 @@
         <Path Data="F1 M 302.72,239.68 L 311.68,239.68 311.68,465.44 302.72,465.44 z"  Stroke="#ff000000" StrokeThickness="0.8" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
         <Path Data="F1 M 283.84,282.24 L 292.32,280 330.72,422.88 322.08,425.12 z"  Fill="#ff000000" />
         <Path Data="F1 M 283.84,282.24 L 292.32,280 330.72,422.88 322.08,425.12 z"  Stroke="#ff000000" StrokeThickness="0.8" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
-        <Path Data="F1 M 246.88,256.96 L 254.56,252.48 367.52,448.16 359.84,452.64 z"  Fill="#ff000000" />
-        <Path Name="Line1" Data="F1 M 246.88,256.96 L 254.56,252.48 367.52,448.16 359.84,452.64 z"  Stroke="#ff000000" StrokeThickness="0.64" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
+        <Path Name="Line1" Data="F1 M 246.88,256.96 L 254.56,252.48 367.52,448.16 359.84,452.64 z"  Fill="#ff000000" />
+        <Path Data="F1 M 246.88,256.96 L 254.56,252.48 367.52,448.16 359.84,452.64 z"  Stroke="#ff000000" StrokeThickness="0.64" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" MouseLeftButtonDown="Line1_MouseLeftButtonDown" />
         <Path Data="F1 M 251.84,303.36 L 258.08,297.12 362.72,401.76 356.32,408 z"  Fill="#ff000000" />
         <Path Data="F1 M 251.84,303.36 L 258.08,297.12 362.72,401.76 356.32,408 z"  Stroke="#ff000000" StrokeThickness="0.48" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
         <Path Data="F1 M 207.2,300 L 211.68,292.16 407.2,405.12 402.72,412.96 z"  Fill="#ff000000" />
@@ -30,8 +30,8 @@
         <Path Data="F1 M 194.24,356.96 L 194.24,348 496.48,348 496.48,356.96 z"  Stroke="#ff000000" StrokeThickness="0.8" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
         <Path Data="F1 M 236.96,376 L 234.56,367.36 377.44,329.12 379.84,337.76 z"  Fill="#ff000000" />
         <Path Data="F1 M 236.96,376 L 234.56,367.36 377.44,329.12 379.84,337.76 z"  Stroke="#ff000000" StrokeThickness="0.214359" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
-        <Path Data="F1 M 211.68,412.96 L 207.2,405.12 402.72,292.16 407.2,300 z"  Fill="#ff000000" />
-        <Path Name="Line2" Data="F1 M 211.68,412.96 L 207.2,405.12 402.72,292.16 407.2,300 z"  Stroke="#ff000000" StrokeThickness="0.369504" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
+        <Path Name="Line2" Data="F1 M 211.68,412.96 L 207.2,405.12 402.72,292.16 407.2,300 z"  Fill="#ff000000" />
+        <Path Data="F1 M 211.68,412.96 L 207.2,405.12 402.72,292.16 407.2,300 z"  Stroke="#ff000000" StrokeThickness="0.369504" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" MouseLeftButtonDown="Line2_MouseLeftButtonDown" />
         <Path Data="F1 M 258.08,408 L 251.84,401.76 356.32,297.12 362.72,303.36 z"  Fill="#ff000000" />
         <Path Data="F1 M 258.08,408 L 251.84,401.76 356.32,297.12 362.72,303.36 z"  Stroke="#ff000000" StrokeThickness="0.48" StrokeLineJoin="Miter" StrokeStartLineCap="Square" StrokeEndLineCap="Square" StrokeMiterLimit="4" />
         <Path Data="F1 M 254.56,452.64 L 246.88,448.16 359.84,252.48 367.52,256.96 z"  Fill="#ff000000" />

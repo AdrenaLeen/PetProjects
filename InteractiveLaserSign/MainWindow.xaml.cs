@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Effects;
 
 namespace InteractiveLaserSign
 {
@@ -23,6 +24,20 @@ namespace InteractiveLaserSign
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Line1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Изменить цвет при щелчке.
+            Line1.Fill = new SolidColorBrush(Colors.Red);
+        }
+
+        private void Line2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Размыть при щелчке.
+            BlurEffect blur = new BlurEffect();
+            blur.Radius = 10;
+            Line2.Effect = blur;
         }
     }
 }
