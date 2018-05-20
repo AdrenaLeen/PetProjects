@@ -344,6 +344,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractiveLaserSign", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderingWithVisuals", "RenderingWithVisuals\RenderingWithVisuals.csproj", "{ABBBE1FF-C6B3-458C-8090-15023BC41ACA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryResourcesApp", "BinaryResourcesApp\BinaryResourcesApp.csproj", "{DE6A728B-844E-4E70-9076-7FD7545F1D5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -990,6 +992,10 @@ Global
 		{ABBBE1FF-C6B3-458C-8090-15023BC41ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABBBE1FF-C6B3-458C-8090-15023BC41ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABBBE1FF-C6B3-458C-8090-15023BC41ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
