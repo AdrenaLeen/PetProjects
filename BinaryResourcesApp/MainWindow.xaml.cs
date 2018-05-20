@@ -36,12 +36,10 @@ namespace BinaryResourcesApp
         {
             try
             {
-                string path = Environment.CurrentDirectory;
-
                 // Загрузить эти изображения во время загрузки окна.
-                images.Add(new BitmapImage(new Uri($@"{path}\Images\Deer.jpg")));
-                images.Add(new BitmapImage(new Uri($@"{path}\Images\Dogs.jpg")));
-                images.Add(new BitmapImage(new Uri($@"{path}\Images\Welcome.jpg")));
+                images.Add(new BitmapImage(new Uri(@"/Images/Deer.jpg", UriKind.Relative)));
+                images.Add(new BitmapImage(new Uri(@"/Images/Dogs.jpg", UriKind.Relative)));
+                images.Add(new BitmapImage(new Uri(@"/Images/Welcome.jpg", UriKind.Relative)));
 
                 // Показать первое изображение в List<>.
                 imageHolder.Source = images[currImage];
