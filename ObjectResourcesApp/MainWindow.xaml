@@ -6,16 +6,9 @@
         xmlns:local="clr-namespace:ObjectResourcesApp"
         mc:Ignorable="d"
         Title="Объектные ресурсы" Height="350" Width="525">
-    <Window.Resources>
-        <RadialGradientBrush x:Key="myBrush">
-            <GradientStop Color="#FFC44EC4" Offset="0"/>
-            <GradientStop Color="#FF829CEB" Offset="1"/>
-            <GradientStop Color="#FF793879" Offset="0.67"/>
-        </RadialGradientBrush>
-    </Window.Resources>
     <StackPanel Orientation="Horizontal">
         <Button Name="btnOK" Margin="25" Height="200" Width="200" Content="OK" FontSize="20" Background="{DynamicResource myBrush}" Click="btnOK_Click"/>
-        <Button Margin="25" Height="200" Width="200" FontSize="20">
+        <Button Name="btnCancel" Margin="25" Height="200" Width="200" FontSize="20" Click="btnCancel_Click">
             <StackPanel>
                 <Label HorizontalAlignment="Center" Content="Отмена!"/>
                 <Ellipse Height="100" Width="100" Fill="{DynamicResource myBrush}"/>
