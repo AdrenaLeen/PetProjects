@@ -4,10 +4,10 @@
              xmlns:local="clr-namespace:ObjectResourcesApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <RadialGradientBrush x:Key="myBrush">
-            <GradientStop Color="#FFC44EC4" Offset="0"/>
-            <GradientStop Color="#FF829CEB" Offset="1"/>
-            <GradientStop Color="#FF793879" Offset="0.67"/>
-        </RadialGradientBrush>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MyBrushes.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
