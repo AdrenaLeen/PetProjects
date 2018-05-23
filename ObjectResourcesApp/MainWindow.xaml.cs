@@ -24,5 +24,11 @@ namespace ObjectResourcesApp
         {
             InitializeComponent();
         }
+
+        private void btnOK_Click(object sender, RoutedEventArgs e)
+        {
+            // Поместить в ячейку myBrush совершенно новую кисть.
+            Resources["myBrush"] = new SolidColorBrush(Colors.Red);
+        }
     }
 }
