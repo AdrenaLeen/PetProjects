@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:ObjectResourcesApp">
+                    xmlns:local="clr-namespace:MyBrushesLibrary">
     <RadialGradientBrush x:Key="myBrush">
         <GradientStop Color="#FFC44EC4" Offset="0"/>
         <GradientStop Color="#FF829CEB" Offset="1"/>
