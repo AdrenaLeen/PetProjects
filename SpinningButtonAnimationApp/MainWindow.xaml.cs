@@ -38,6 +38,9 @@ namespace SpinningButtonAnimationApp
                 DoubleAnimation dblAnim = new DoubleAnimation();
                 dblAnim.Completed += (o, s) => { isSpinning = false; };
 
+                // На завершение поворота кнопке отводится четыре секунды.
+                dblAnim.Duration = new Duration(TimeSpan.FromSeconds(4));
+
                 // Установить начальное и конечное значения.
                 dblAnim.From = 0;
                 dblAnim.To = 360;
