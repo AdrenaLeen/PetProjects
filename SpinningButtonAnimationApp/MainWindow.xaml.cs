@@ -61,6 +61,12 @@ namespace SpinningButtonAnimationApp
                 From = 1.0,
                 To = 0.0
             };
+
+            // По завершении запустить в обратном порядке.
+            dblAnim.AutoReverse = true;
+
+            // Повторять бесконечно.
+            dblAnim.RepeatBehavior = RepeatBehavior.Forever;
             btnSpinner.BeginAnimation(OpacityProperty, dblAnim);
         }
     }
