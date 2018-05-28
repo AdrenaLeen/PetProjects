@@ -16,5 +16,13 @@
             <Setter Property="Background" Value="DarkGreen"/>
             <Setter Property="Foreground" Value="Yellow"/>
         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
     </Application.Resources>
 </Application>

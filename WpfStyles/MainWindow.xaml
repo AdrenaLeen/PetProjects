@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfStyles"
         mc:Ignorable="d"
-        Title="Окно со стилем!" Height="250" Width="525" WindowStartupLocation="CenterScreen">
+        Title="Окно со стилем!" Height="270" Width="525" WindowStartupLocation="CenterScreen">
     <StackPanel>
         <Label Name="lblInfo" Content="Этот стиль скучный..." Style="{StaticResource BasicControlStyle}" Width="150"/>
         <Button Name="btnTestButton" Content="OK!" Cursor="Help" Style="{StaticResource BigGreenButton}" Width="250"/>
+        <TextBox x:Name="txtTest"/>
+        <TextBox x:Name="txtTest2" Style="{x:Null}" BorderBrush="Black"	BorderThickness="5" Height="60" Width="100" Text="Ха!"/>
     </StackPanel>
 </Window>
