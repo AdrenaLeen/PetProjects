@@ -24,9 +24,13 @@
             <Setter Property="BorderBrush" Value="Red"/>
             <Setter Property="FontStyle" Value="Italic"/>
             <Style.Triggers>
-                <Trigger Property="IsFocused" Value="True">
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsFocused" Value="True"/>
+                        <Condition Property="IsMouseOver" Value="True"/>
+                    </MultiTrigger.Conditions>
                     <Setter Property="Background" Value="Yellow"/>
-                </Trigger>
+                </MultiTrigger>
             </Style.Triggers>
         </Style>
         <Style x:Key="TiltButton" TargetType="Button" BasedOn="{StaticResource BigGreenButton}">
