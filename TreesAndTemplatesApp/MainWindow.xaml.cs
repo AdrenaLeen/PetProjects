@@ -51,7 +51,21 @@ namespace TreesAndTemplatesApp
 
         private void btnShowVisualTree_Click(object sender, RoutedEventArgs e)
         {
+            dataToShow = "";
+            BuildVisualTree(0, this);
+            txtDisplayArea.Text = dataToShow;
+        }
 
+        void BuildVisualTree(int depth, DependencyObject obj)
+        {
+            // Добавить имя типа к переменной-члену dataToShow member.
+            dataToShow += $"{new string(' ', depth)}{obj.GetType().Name}\n";
+
+            // Выполнить рекурсивный вызов для каждого визуально дочернего элемента.
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            {
+                BuildVisualTree(depth + 1, VisualTreeHelper.GetChild(obj, i));
+            }
         }
     }
 }
