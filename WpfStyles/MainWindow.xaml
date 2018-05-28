@@ -8,6 +8,6 @@
         Title="Окно со стилем!" Height="250" Width="525" WindowStartupLocation="CenterScreen">
     <StackPanel>
         <Label Name="lblInfo" Content="Этот стиль скучный..." Style="{StaticResource BasicControlStyle}" Width="150"/>
-        <Button Name="btnTestButton" Content="Да, но мы повторно используем настройки!" Style="{StaticResource BasicControlStyle}" Width="300"/>
+        <Button Name="btnTestButton" Content="Да, но мы повторно используем настройки!" Cursor="Help" Style="{StaticResource BasicControlStyle}" Width="300"/>
     </StackPanel>
 </Window>
