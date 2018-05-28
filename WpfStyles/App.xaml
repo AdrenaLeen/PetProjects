@@ -4,10 +4,17 @@
              xmlns:local="clr-namespace:WpfStyles"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="BasicControlStyle">
+        <Style x:Key="BasicControlStyle" TargetType="Control">
             <Setter Property="Control.FontSize" Value="14"/>
             <Setter Property="Control.Height" Value="40"/>
             <Setter Property="Control.Cursor" Value="Hand"/>
+        </Style>
+        <Style x:Key="BigGreenButton" TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="DarkGreen"/>
+            <Setter Property="Foreground" Value="Yellow"/>
         </Style>
     </Application.Resources>
 </Application>
