@@ -1,0 +1,13 @@
+﻿<Application x:Class="WpfStyles.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfStyles"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="BasicControlStyle">
+            <Setter Property="Control.FontSize" Value="14"/>
+            <Setter Property="Control.Height" Value="40"/>
+            <Setter Property="Control.Cursor" Value="Hand"/>
+        </Style>
+    </Application.Resources>
+</Application>

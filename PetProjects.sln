@@ -352,6 +352,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrushesLibrary", "MyBrush
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinningButtonAnimationApp", "SpinningButtonAnimationApp\SpinningButtonAnimationApp.csproj", "{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfStyles", "WpfStyles\WpfStyles.csproj", "{5A90CF30-5515-42BC-9A82-10B075ED35A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1014,6 +1016,10 @@ Global
 		{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A90CF30-5515-42BC-9A82-10B075ED35A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A90CF30-5515-42BC-9A82-10B075ED35A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A90CF30-5515-42BC-9A82-10B075ED35A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A90CF30-5515-42BC-9A82-10B075ED35A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
