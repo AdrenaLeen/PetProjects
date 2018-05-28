@@ -23,6 +23,22 @@ namespace WpfStyles
         public MainWindow()
         {
             InitializeComponent();
+
+            // Заполнить окно со списком всеми стилями для элементов Button.
+            lstStyles.Items.Add("GrowingButtonStyle");
+            lstStyles.Items.Add("TiltButton");
+            lstStyles.Items.Add("BigGreenButton");
+            lstStyles.Items.Add("BasicControlStyle");
+        }
+
+        private void lstStyles_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Получить имя стиля, выбранное в окне со списком.
+            Style currStyle = (Style)TryFindResource(lstStyles.SelectedValue);
+            if (currStyle == null) return;
+
+            // Установить стиль для типа кнопки.
+            btnStyle.Style = currStyle;
         }
     }
 }

@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfStyles"
         mc:Ignorable="d"
-        Title="Окно со стилем!" Height="310" Width="525" WindowStartupLocation="CenterScreen">
-    <StackPanel>
-        <Label Name="lblInfo" Content="Этот стиль скучный..." Style="{StaticResource BasicControlStyle}" Width="150"/>
-        <Button Name="btnTestButton" Content="OK!" Cursor="Help" Style="{StaticResource TiltButton}" Margin="0,0,0,40"/>
-        <TextBox x:Name="txtTest"/>
-        <TextBox x:Name="txtTest2" Style="{x:Null}" BorderBrush="Black"	BorderThickness="5" Height="60" Width="100" Text="Ха!"/>
-    </StackPanel>
+        Title="Окно со стилем!" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Label Content="Пожалуйста, выберите стиль для этой кнопки:" Height="50"/>
+            <ListBox Name="lstStyles" Height="80" Width="150" Background="LightBlue" SelectionChanged="lstStyles_SelectionChanged"/>
+        </StackPanel>
+        <Button Name="btnStyle" Height="40" Width="100" Content="OK!"/>
+    </DockPanel>
 </Window>
