@@ -23,6 +23,11 @@
             <Setter Property="BorderThickness" Value="5"/>
             <Setter Property="BorderBrush" Value="Red"/>
             <Setter Property="FontStyle" Value="Italic"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="Yellow"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style x:Key="TiltButton" TargetType="Button" BasedOn="{StaticResource BigGreenButton}">
             <Setter Property="Foreground" Value="White"/>
