@@ -7,15 +7,8 @@
         mc:Ignorable="d"
         Title="Шаблоны" Height="350" Width="500">
     <StackPanel>
-        <Button Name="myButton" Width="100" Height="100" Click="myButton_Click">
-            <Button.Template>
-                <ControlTemplate>
-                    <Grid Name="controlLayout">
-                        <Ellipse Name="buttonSurface" Fill="LightBlue"/>
-                        <Label Name="buttonCaption" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Content="OK!"/>
-                    </Grid>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+        <Button Name="myButton" Width="100" Height="100" Click="myButton_Click" Template="{StaticResource RoundButtonTemplate}"/>
+        <Button Width="100" Height="100" Template="{StaticResource RoundButtonTemplate}"/>
+        <Button Width="100" Height="100" Template="{StaticResource RoundButtonTemplate}"/>
     </StackPanel>
 </Window>
