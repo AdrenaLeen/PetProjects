@@ -33,5 +33,17 @@ namespace Notifications
             };
             cboCars.ItemsSource = cars;
         }
+
+        private void btnChangeColor_Click(object sender, RoutedEventArgs e)
+        {
+            Inventory car = cars?.FirstOrDefault(x => x.CarId == ((Inventory)cboCars.SelectedItem)?.CarId);
+            if (car != null) car.Color = "Розовый";
+        }
+
+        private void btnAddCar_Click(object sender, RoutedEventArgs e)
+        {
+            int maxCount = cars?.Max(x => x.CarId) ?? 0;
+            cars?.Add(new Inventory { CarId = ++maxCount, Color = "Жёлтый", Make = "VW", PetName = "Пташка" });
+        }
     }
 }
