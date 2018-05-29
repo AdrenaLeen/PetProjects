@@ -21,16 +21,16 @@ namespace Notifications
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly IList<Inventory> cars;
+        readonly InventoryList cars;
 
         public MainWindow()
         {
             InitializeComponent();
-            cars = new List<Inventory>
+            cars = new InventoryList(new List<Inventory>
             {
                 new Inventory{CarId=1, Color="Голубой", Make="Chevy", PetName="Кит"},
                 new Inventory{CarId=2, Color="Красный", Make="Ford", PetName="Красный всадник"}
-            };
+            });
             cboCars.ItemsSource = cars;
         }
 
@@ -44,6 +44,11 @@ namespace Notifications
         {
             int maxCount = cars?.Max(x => x.CarId) ?? 0;
             cars?.Add(new Inventory { CarId = ++maxCount, Color = "Жёлтый", Make = "VW", PetName = "Пташка" });
+        }
+
+        private void btnRemoveCar_Click(object sender, RoutedEventArgs e)
+        {
+            cars.RemoveAt(0);
         }
     }
 }
