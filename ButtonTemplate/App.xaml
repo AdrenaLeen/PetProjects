@@ -9,6 +9,20 @@
                 <Ellipse x:Name="buttonSurface" Fill="LightBlue"/>
                 <Label x:Name="buttonCaption" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Content="OK!"/>
             </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="buttonSurface" Property="Fill" Value="Blue"/>
+                    <Setter TargetName="buttonCaption" Property="Foreground" Value="Yellow"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="controlLayout" Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                    <Setter TargetName="controlLayout" Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
         </ControlTemplate>
     </Application.Resources>
 </Application>
