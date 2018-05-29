@@ -58,10 +58,23 @@ namespace Notifications.Models
             }
         }
 
+        private bool isChanged;
+        public bool IsChanged
+        {
+            get { return isChanged; }
+            set
+            {
+                if (value == isChanged) return;
+                isChanged = value;
+                OnPropertyChanged();
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         internal void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
+            if (propertyName != nameof(IsChanged)) IsChanged = true;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

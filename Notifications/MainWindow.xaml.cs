@@ -29,8 +29,8 @@ namespace Notifications
             InitializeComponent();
             cars = new ObservableCollection<Inventory>
             {
-                new Inventory{CarId=1, Color="Голубой", Make="Chevy", PetName="Кит"},
-                new Inventory{CarId=2, Color="Красный", Make="Ford", PetName="Красный всадник"}
+                new Inventory{CarId=1, Color="Голубой", Make="Chevy", PetName="Кит", IsChanged=false},
+                new Inventory{CarId=2, Color="Красный", Make="Ford", PetName="Красный всадник", IsChanged=false}
             };
             cboCars.ItemsSource = cars;
         }
@@ -44,7 +44,7 @@ namespace Notifications
         private void btnAddCar_Click(object sender, RoutedEventArgs e)
         {
             int maxCount = cars?.Max(x => x.CarId) ?? 0;
-            cars?.Add(new Inventory { CarId = ++maxCount, Color = "Жёлтый", Make = "VW", PetName = "Пташка" });
+            cars?.Add(new Inventory { CarId = ++maxCount, Color = "Жёлтый", Make = "VW", PetName = "Пташка", IsChanged=false });
         }
 
         private void btnRemoveCar_Click(object sender, RoutedEventArgs e)
