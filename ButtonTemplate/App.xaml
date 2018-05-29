@@ -24,5 +24,11 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+        <ControlTemplate x:Key="NewRoundButtonTemplate" TargetType="Button">
+            <Grid>
+                <Ellipse Fill="{TemplateBinding Background}"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
     </Application.Resources>
 </Application>
