@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Notifications.Models;
+using System.Collections.ObjectModel;
 
 namespace Notifications
 {
@@ -21,16 +22,16 @@ namespace Notifications
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly InventoryList cars;
+        readonly ObservableCollection<Inventory> cars;
 
         public MainWindow()
         {
             InitializeComponent();
-            cars = new InventoryList(new List<Inventory>
+            cars = new ObservableCollection<Inventory>
             {
                 new Inventory{CarId=1, Color="Голубой", Make="Chevy", PetName="Кит"},
                 new Inventory{CarId=2, Color="Красный", Make="Ford", PetName="Красный всадник"}
-            });
+            };
             cboCars.ItemsSource = cars;
         }
 
