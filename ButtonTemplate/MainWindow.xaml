@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Шаблоны" Height="350" Width="500">
     <StackPanel>
-        <Button Name="myButton" Width="100" Height="100" Click="myButton_Click" Template="{StaticResource RoundButtonTemplate}"/>
-        <Button Width="100" Height="100" Template="{StaticResource RoundButtonTemplate}"/>
-        <Button Width="100" Height="100" Template="{StaticResource RoundButtonTemplate}"/>
+        <Button Name="myButton" Width="100" Height="100" Background="Red" Content="Привет!" Click="myButton_Click" Template="{StaticResource RoundButtonTemplate}"/>
+        <Button Width="100" Height="100" Background="LightGreen" Content="Отмена!" Template="{StaticResource RoundButtonTemplate}"/>
+        <Button Width="100" Height="100" Background="Yellow" Content="Формат" Template="{StaticResource RoundButtonTemplate}"/>
     </StackPanel>
 </Window>

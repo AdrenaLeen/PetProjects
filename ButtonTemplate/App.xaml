@@ -6,8 +6,8 @@
     <Application.Resources>
         <ControlTemplate x:Key="RoundButtonTemplate" TargetType="{x:Type Button}">
             <Grid x:Name="controlLayout">
-                <Ellipse x:Name="buttonSurface" Fill="LightBlue"/>
-                <Label x:Name="buttonCaption" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Content="OK!"/>
+                <Ellipse x:Name="buttonSurface" Fill="{TemplateBinding Background}"/>
+                <Label x:Name="buttonCaption" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Content="{TemplateBinding Content}"/>
             </Grid>
             <ControlTemplate.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
