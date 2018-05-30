@@ -8,21 +8,30 @@ using System.Threading.Tasks;
 
 namespace Notifications.Models
 {
-    public partial class Inventory : INotifyDataErrorInfo
+    public partial class Inventory : IDataErrorInfo, INotifyDataErrorInfo
     {
         public string this[string columnName]
         {
             get
             {
+                bool hasError = false;
                 switch (columnName)
                 {
                     case nameof(CarId):
                         break;
                     case nameof(Make):
-                        if (Make == "ModelT") return "Слишком старая";
-                        return CheckMakeAndColor();
+                        hasError = CheckMakeAndColor();
+                        if (Make == "ModelT")
+                        {
+                            AddError(nameof(Make), "Слишком старая");
+                            hasError = true;
+                        }
+                        if (!hasError) ClearErrors(nameof(Make));
+                        break;
                     case nameof(Color):
-                        return CheckMakeAndColor();
+                        hasError = CheckMakeAndColor();
+                        if (!hasError) ClearErrors(nameof(Color));
+                        break;
                     case nameof(PetName):
                         break;
                 }
@@ -44,10 +53,15 @@ namespace Notifications.Models
             return errors.ContainsKey(propertyName) ? errors[propertyName] : null;
         }
 
-        internal string CheckMakeAndColor()
+        internal bool CheckMakeAndColor()
         {
-            if (Make == "Chevy" && Color == "Розовый") return $"{Make} не поставляется в цвете {Color}";
-            return string.Empty;
+            if (Make == "Chevy" && Color == "Розовый")
+            {
+                AddError(nameof(Make), $"{Make} не поставляется в цвете {Color}");
+                AddError(nameof(Color), $"{Make} не поставляется в цвете {Color}");
+                return true;
+            }
+            return false;
         }
 
         private void OnErrorsChanged(string propertyName)
