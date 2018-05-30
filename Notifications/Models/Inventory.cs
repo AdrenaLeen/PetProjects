@@ -31,7 +31,6 @@ namespace Notifications.Models
                 if (value == make) return;
                 make = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(Color));
             }
         }
 
@@ -44,7 +43,6 @@ namespace Notifications.Models
                 if (value == color) return;
                 color = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(Make));
             }
         }
 
