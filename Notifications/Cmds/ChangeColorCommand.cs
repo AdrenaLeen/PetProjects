@@ -8,16 +8,10 @@ using Notifications.Models;
 
 namespace Notifications.Cmds
 {
-    class ChangeColorCommand : ICommand
+    internal class ChangeColorCommand : CommandBase
     {
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public override bool CanExecute(object parameter) => (parameter as Inventory) != null;
 
-        public bool CanExecute(object parameter) => (parameter as Inventory) != null;
-
-        public void Execute(object parameter) => ((Inventory)parameter).Color = "Розовый";
+        public override void Execute(object parameter) => ((Inventory)parameter).Color = "Розовый";
     }
 }
