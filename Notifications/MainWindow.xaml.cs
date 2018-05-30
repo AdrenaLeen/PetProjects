@@ -26,6 +26,7 @@ namespace Notifications
         readonly ObservableCollection<Inventory> cars;
         private ICommand changeColorCommand = null;
         private ICommand removeCarCommand = null;
+        private ICommand addCarCommand = null;
 
         public MainWindow()
         {
@@ -38,13 +39,8 @@ namespace Notifications
             cboCars.ItemsSource = cars;
         }
 
-        private void btnAddCar_Click(object sender, RoutedEventArgs e)
-        {
-            int maxCount = cars?.Max(x => x.CarId) ?? 0;
-            cars?.Add(new Inventory { CarId = ++maxCount, Color = "Жёлтый", Make = "VW", PetName = "Пташка", IsChanged=false });
-        }
-
         public ICommand ChangeColorCmd => changeColorCommand ?? (changeColorCommand = new ChangeColorCommand());
         public ICommand RemoveCarCmd => removeCarCommand ?? (removeCarCommand = new RemoveCarCommand(cars));
+        public ICommand AddCarCmd => addCarCommand ?? (addCarCommand = new AddCarCommand(cars));
     }
 }

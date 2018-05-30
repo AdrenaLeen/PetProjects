@@ -65,7 +65,7 @@
             <Label Grid.Column="0" Grid.Row="3" Content="Дружественное имя"/>
             <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=PetName, ValidatesOnDataErrors=True}"/>
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,5,0,5" >
-                <Button Name="btnAddCar" Content="Добавить автомобиль" Margin="5,0,5,0" Padding="4,2" Click="btnAddCar_Click"/>
+                <Button Name="btnAddCar" Content="Добавить автомобиль" Margin="5,0,5,0" Padding="4,2" Command="{Binding Path=AddCarCmd, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
                 <Button Name="btnChangeColor" Content="Изменить цвет" Margin="5,0,5,0" Padding="4,2" Command="{Binding Path=ChangeColorCmd, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" CommandParameter="{Binding ElementName=cboCars, Path=SelectedItem}"/>
                 <Button Name="btnRemoveCar" Content="Удалить автомобиль" Margin="5,0,0,0" Padding="4,2" Command="{Binding Path=RemoveCarCmd, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" CommandParameter="{Binding ElementName=cboCars, Path=SelectedItem}"/>
             </StackPanel>

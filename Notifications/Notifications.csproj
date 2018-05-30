@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Cmds\AddCarCommand.cs" />
     <Compile Include="Cmds\ChangeColorCommand.cs" />
     <Compile Include="Cmds\CommandBase.cs" />
     <Compile Include="Cmds\RemoveCarCommand.cs" />
