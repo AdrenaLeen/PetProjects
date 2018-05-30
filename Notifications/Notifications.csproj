@@ -68,6 +68,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\EntityBase.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\InventoryList.cs" />
     <Compile Include="Models\InventoryPartial.cs" />
