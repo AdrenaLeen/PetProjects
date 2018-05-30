@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Notifications.Models
         }
 
         private string make;
+        [Required, StringLength(50)]
         public string Make
         {
             get { return make; }
@@ -35,6 +37,7 @@ namespace Notifications.Models
         }
 
         private string color;
+        [Required, StringLength(50)]
         public string Color
         {
             get { return color; }
@@ -47,6 +50,7 @@ namespace Notifications.Models
         }
 
         private string petName;
+        [StringLength(50)]
         public string PetName
         {
             get { return petName; }
