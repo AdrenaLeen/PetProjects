@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notifications"
         mc:Ignorable="d"
-        Title="Уведомления!" Height="225" Width="400" WindowStartupLocation="CenterScreen">
+        Title="Уведомления!" Height="250" Width="400" WindowStartupLocation="CenterScreen">
     <Grid IsSharedSizeScope="True" Margin="5,0,5,5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -30,20 +30,23 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="Марка"/>
-            <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=Make}"/>
-            <Label Grid.Column="0" Grid.Row="1" Content="Цвет"/>
-            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=Color, UpdateSourceTrigger=PropertyChanged}"/>
-            <Label Grid.Column="0" Grid.Row="2" Content="Дружественное имя"/>
-            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=PetName}"/>
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,5,0,5" >
+            <Label Grid.Column="0" Grid.Row="0" Content="Id"/>
+            <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=CarId}"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="Марка"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=Make}"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="Цвет"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=Color, UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="Дружественное имя"/>
+            <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=PetName}"/>
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,5,0,5" >
                 <Button Name="btnAddCar" Content="Добавить автомобиль" Margin="5,0,5,0" Padding="4,2" Click="btnAddCar_Click"/>
                 <Button Name="btnChangeColor" Content="Изменить цвет" Margin="5,0,5,0" Padding="4,2" Click="btnChangeColor_Click"/>
                 <Button Name="btnRemoveCar" Content="Удалить автомобиль" Margin="5,0,0,0" Padding="4,2" Click="btnRemoveCar_Click"/>
             </StackPanel>
-            <Label Grid.Column="0" Grid.Row="4" Content="Изменено"/>
-            <CheckBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Margin="10,0,0,0" IsEnabled="False" IsChecked="{Binding Path=IsChanged}" />
+            <Label Grid.Column="0" Grid.Row="5" Content="Изменено"/>
+            <CheckBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Margin="10,5,0,5" IsEnabled="False" IsChecked="{Binding Path=IsChanged}" />
         </Grid>
     </Grid>
 </Window>
