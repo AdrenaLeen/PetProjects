@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Notifications.Models;
 using System.Collections.ObjectModel;
+using Notifications.Cmds;
 
 namespace Notifications
 {
@@ -23,6 +24,7 @@ namespace Notifications
     public partial class MainWindow : Window
     {
         readonly ObservableCollection<Inventory> cars;
+        private ICommand changeColorCommand = null;
 
         public MainWindow()
         {
@@ -35,12 +37,6 @@ namespace Notifications
             cboCars.ItemsSource = cars;
         }
 
-        private void btnChangeColor_Click(object sender, RoutedEventArgs e)
-        {
-            Inventory car = cars?.FirstOrDefault(x => x.CarId == ((Inventory)cboCars.SelectedItem)?.CarId);
-            if (car != null) car.Color = "Розовый";
-        }
-
         private void btnAddCar_Click(object sender, RoutedEventArgs e)
         {
             int maxCount = cars?.Max(x => x.CarId) ?? 0;
@@ -51,5 +47,7 @@ namespace Notifications
         {
             cars.RemoveAt(0);
         }
+
+        public ICommand ChangeColorCmd => changeColorCommand ?? (changeColorCommand = new ChangeColorCommand());
     }
 }
