@@ -33,13 +33,13 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0" Content="Id"/>
-            <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=CarId, ValidatesOnExceptions=True}"/>
+            <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=CarId, ValidatesOnDataErrors=True}"/>
             <Label Grid.Column="0" Grid.Row="1" Content="Марка"/>
-            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=Make, ValidatesOnExceptions=True}"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=Make, ValidatesOnDataErrors=True}"/>
             <Label Grid.Column="0" Grid.Row="2" Content="Цвет"/>
-            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=Color, ValidatesOnExceptions=True}"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=Color, ValidatesOnDataErrors=True}"/>
             <Label Grid.Column="0" Grid.Row="3" Content="Дружественное имя"/>
-            <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=PetName, ValidatesOnExceptions=True}"/>
+            <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=PetName, ValidatesOnDataErrors=True}"/>
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,5,0,5" >
                 <Button Name="btnAddCar" Content="Добавить автомобиль" Margin="5,0,5,0" Padding="4,2" Click="btnAddCar_Click"/>
                 <Button Name="btnChangeColor" Content="Изменить цвет" Margin="5,0,5,0" Padding="4,2" Click="btnChangeColor_Click"/>

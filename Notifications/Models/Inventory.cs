@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Notifications.Models
 {
-    public class Inventory : INotifyPropertyChanged
+    public partial class Inventory : INotifyPropertyChanged
     {
         private int carId;
         public int CarId
@@ -31,6 +31,7 @@ namespace Notifications.Models
                 if (value == make) return;
                 make = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(Color));
             }
         }
 
@@ -43,6 +44,7 @@ namespace Notifications.Models
                 if (value == color) return;
                 color = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(Make));
             }
         }
 
