@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Notifications.Models
 {
@@ -53,6 +54,14 @@ namespace Notifications.Models
                 changed = true;
             });
             if (changed) OnErrorsChanged(propertyName);
+        }
+
+        protected string[] GetErrorsFromAnnotations<T>(string propertyName, T value)
+        {
+            List<ValidationResult> results = new List<ValidationResult>();
+            ValidationContext vc = new ValidationContext(this, null, null) { MemberName = propertyName };
+            bool isValid = Validator.TryValidateProperty(value, vc, results);
+            return isValid ? null : Array.ConvertAll(results.ToArray(), o => o.ErrorMessage);
         }
     }
 }

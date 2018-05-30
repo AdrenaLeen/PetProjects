@@ -14,10 +14,12 @@ namespace Notifications.Models
         {
             get
             {
+                string[] errors = null;
                 bool hasError = false;
                 switch (columnName)
                 {
                     case nameof(CarId):
+                        errors = GetErrorsFromAnnotations(nameof(CarId), CarId);
                         break;
                     case nameof(Make):
                         hasError = CheckMakeAndColor();
@@ -26,15 +28,22 @@ namespace Notifications.Models
                             AddError(nameof(Make), "Слишком старая");
                             hasError = true;
                         }
-                        if (!hasError) ClearErrors(nameof(Make));
+                        errors = GetErrorsFromAnnotations(nameof(Make), Make);
                         break;
                     case nameof(Color):
                         hasError = CheckMakeAndColor();
-                        if (!hasError) ClearErrors(nameof(Color));
+                        errors = GetErrorsFromAnnotations(nameof(Color), Color);
                         break;
                     case nameof(PetName):
+                        errors = GetErrorsFromAnnotations(nameof(PetName), PetName);
                         break;
                 }
+                if (errors != null && errors.Length != 0)
+                {
+                    AddErrors(columnName, errors);
+                    hasError = true;
+                }
+                if (!hasError) ClearErrors(columnName);
                 return string.Empty;
             }
         }
