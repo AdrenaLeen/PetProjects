@@ -40,7 +40,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="Автомобиль"/>
-            <ComboBox Name="cboCars" Grid.Column="1" DisplayMemberPath="PetName" />
+            <ComboBox Name="cboCars" Grid.Column="1" DisplayMemberPath="PetName" ItemsSource="{Binding Path=Cars}" />
         </Grid>
         <Grid Name="testGrid" Grid.Row="1" DataContext="{Binding ElementName=cboCars, Path=SelectedItem}">
             <Grid.ColumnDefinitions>

@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Notifications.Models;
 using System.Collections.ObjectModel;
 using Notifications.Cmds;
+using Notifications.ViewModels;
 
 namespace Notifications
 {
@@ -31,12 +32,7 @@ namespace Notifications
         public MainWindow()
         {
             InitializeComponent();
-            cars = new ObservableCollection<Inventory>
-            {
-                new Inventory{CarId=1, Color="Голубой", Make="Chevy", PetName="Кит", IsChanged=false},
-                new Inventory{CarId=2, Color="Красный", Make="Ford", PetName="Красный всадник", IsChanged=false}
-            };
-            cboCars.ItemsSource = cars;
+            DataContext = new MainWindowViewModel();
         }
 
         public ICommand ChangeColorCmd => changeColorCommand ?? (changeColorCommand = new ChangeColorCommand());
