@@ -24,19 +24,10 @@ namespace Notifications
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly ObservableCollection<Inventory> cars;
-        private ICommand changeColorCommand = null;
-        private ICommand removeCarCommand = null;
-        private ICommand addCarCommand = null;
-
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
         }
-
-        public ICommand ChangeColorCmd => changeColorCommand ?? (changeColorCommand = new ChangeColorCommand());
-        public ICommand RemoveCarCmd => removeCarCommand ?? (removeCarCommand = new RemoveCarCommand(cars));
-        public ICommand AddCarCmd => addCarCommand ?? (addCarCommand = new AddCarCommand(cars));
     }
 }
