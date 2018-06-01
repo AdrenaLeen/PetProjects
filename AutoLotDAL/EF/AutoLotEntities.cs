@@ -42,6 +42,8 @@
 
         private void OnObjectMaterialized(object sender, ObjectMaterializedEventArgs e)
         {
+            EntityBase model = e.Entity as EntityBase;
+            if (model != null) model.IsChanged = false;
         }
     }
 }
