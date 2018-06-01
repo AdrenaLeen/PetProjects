@@ -7,9 +7,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using PropertyChanged;
 
 namespace AutoLotDAL.Models
 {
+    [AddINotifyPropertyChangedInterface]
     public class EntityBase : IDataErrorInfo, INotifyDataErrorInfo
     {
         [Timestamp]
