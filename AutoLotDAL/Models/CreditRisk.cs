@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AutoLotDAL.Models
 {
-    public partial class CreditRisk
+    public partial class CreditRisk : EntityBase
     {
         [Key]
         public int CustId { get; set; }
@@ -20,8 +20,5 @@ namespace AutoLotDAL.Models
         [StringLength(50)]
         [Index("IDX_CreditRisk_Name", IsUnique = true, Order = 1)]
         public string LastName { get; set; }
-
-        [Timestamp]
-        public byte[] Timestamp { get; set; }
     }
 }

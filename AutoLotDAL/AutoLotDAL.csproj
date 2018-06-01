@@ -70,6 +70,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CreditRisk.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\EntityBase.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\NewCar.cs" />
     <Compile Include="Models\Order.cs" />
