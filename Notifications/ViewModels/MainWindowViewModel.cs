@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Notifications.Models;
 using Notifications.Cmds;
+using AutoLotDAL.Models;
+using AutoLotDAL.Repos;
 
 namespace Notifications.ViewModels
 {
@@ -19,11 +20,7 @@ namespace Notifications.ViewModels
 
         public MainWindowViewModel()
         {
-            Cars = new ObservableCollection<Inventory>
-            {
-                new Inventory{CarId=1, Color="Голубой", Make="Chevy", PetName="Кит", IsChanged=false},
-                new Inventory{CarId=2, Color="Красный", Make="Ford", PetName="Красный всадник", IsChanged=false}
-            };
+            Cars = new ObservableCollection<Inventory>(new InventoryRepo().GetAll());
         }
 
         public ICommand ChangeColorCmd => changeColorCommand ?? (changeColorCommand = new ChangeColorCommand());
