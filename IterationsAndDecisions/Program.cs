@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IterationsAndDecisions
 {
@@ -19,6 +16,8 @@ namespace IterationsAndDecisions
             SwitchExample();
             SwitchOnStringExample();
             SwitchOnEnumExample();
+            ExecutePatternMatchingSwitch();
+            ExecutePatternMatchingSwitchWithWhen();
             Console.ReadLine();
         }
 
@@ -180,6 +179,72 @@ namespace IterationsAndDecisions
                     break;
             }
 
+            Console.WriteLine();
+        }
+
+        static void ExecutePatternMatchingSwitch()
+        {
+            Console.WriteLine("1 [Целое число (5)], 2 [Строка (\"Привет\")], 3 [Десятичное число (2.5)]");
+            Console.Write("Пожалуйста, выберете вариант: ");
+            string userChoice = Console.ReadLine();
+            object choice;
+
+            // Стандартный оператор switch, в котором применяется сопоставление с образцом с константами
+            switch (userChoice)
+            {
+                case "1":
+                    choice = 5;
+                    break;
+                case "2":
+                    choice = "Привет";
+                    break;
+                case "3":
+                    choice = 2.5m;
+                    break;
+                default:
+                    choice = 5;
+                    break;
+            }
+
+            // Новый оператор switch, в котором применяется сопоставление с образцом с типами
+            switch (choice)
+            {
+                case int i:
+                    Console.WriteLine($"Выбрано целое число {i}.");
+                    break;
+                case string s:
+                    Console.WriteLine($"Выбрана строка {s}");
+                    break;
+                case decimal d:
+                    Console.WriteLine($"Выбрано десятичное число {d}.");
+                    break;
+                default:
+                    Console.WriteLine("Выбрано что-то другое.");
+                    break;
+            }
+            Console.WriteLine();
+        }
+
+        static void ExecutePatternMatchingSwitchWithWhen()
+        {
+            Console.WriteLine("1 [C#], 2 [VB]");
+            Console.Write("Пожалуйста, выберите предпочитаемый язык: ");
+            object langChoice = Console.ReadLine();
+            object choice = int.TryParse(langChoice.ToString(), out int c) ? c : langChoice;
+            switch (choice)
+            {
+                case int i when i == 2:
+                case string s when s.Equals("VB", StringComparison.OrdinalIgnoreCase):
+                    Console.WriteLine("VB: ООП, многопоточность и многое другое!");
+                    break;
+                case int i when i == 1:
+                case string s when s.Equals("C#", StringComparison.OrdinalIgnoreCase):
+                    Console.WriteLine("Хороший выбор. C# - замечательный язык.");
+                    break;
+                default:
+                    Console.WriteLine("Хорошо, удачи с этим!");
+                    break;
+            }
             Console.WriteLine();
         }
     }
