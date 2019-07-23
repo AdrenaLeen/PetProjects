@@ -14,14 +14,14 @@ namespace SimpleCSharpApp
             Console.WriteLine();
 
             // Обработать любые входные аргументы.
-            for (int i = 0; i < args.Length; i++) Console.WriteLine("Arg: {0}", args[i]);
+            for (int i = 0; i < args.Length; i++) Console.WriteLine($"Arg: {args[i]}");
 
             // Обработать любые входные аргументы, используя foreach.
-            foreach (string arg in args) Console.WriteLine("Arg: {0}", arg);
+            foreach (string arg in args) Console.WriteLine($"Arg: {arg}");
 
             // Получить аргументы с использованием System.Environment.
             string[] theArgs = Environment.GetCommandLineArgs();
-            foreach (string arg in theArgs) Console.WriteLine("Arg: {0}", arg);
+            foreach (string arg in theArgs) Console.WriteLine($"Arg: {arg}");
 
             // Вспомогательный метод внутри класса Program.
             ShowEnvironmentDetails();
@@ -37,16 +37,16 @@ namespace SimpleCSharpApp
             // Вывести информацию о дисковых устройствах данной машины и другие интересные детали.
 
             // Логические устройства
-            foreach (string drive in Environment.GetLogicalDrives()) Console.WriteLine("Диск: {0}", drive);
+            foreach (string drive in Environment.GetLogicalDrives()) Console.WriteLine($"Диск: {drive}");
 
             // Версия операционной системы
-            Console.WriteLine("ОС: {0}", Environment.OSVersion);
+            Console.WriteLine($"ОС: {Environment.OSVersion}");
 
             // Количество процессоров
-            Console.WriteLine("Количество процессоров: {0}", Environment.ProcessorCount);
+            Console.WriteLine($"Количество процессоров: {Environment.ProcessorCount}");
 
             // Версия платформы .NET
-            Console.WriteLine("Версия .NET: {0}", Environment.Version);
+            Console.WriteLine($"Версия .NET: {Environment.Version}");
         }
     }
 }
