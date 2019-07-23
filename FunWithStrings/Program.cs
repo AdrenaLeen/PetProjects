@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace FunWithStrings
 {
@@ -27,6 +24,7 @@ namespace FunWithStrings
             Console.WriteLine();
 
             StringsAreImmutable();
+            StringsAreImmutable2();
             FunWithStringBuilder();
             StringInterpolation();
 
@@ -39,22 +37,22 @@ namespace FunWithStrings
             string firstName = "Фредди";
 
             // Значение firstName.
-            Console.WriteLine("Значение firstName: {0}", firstName);
+            Console.WriteLine($"Значение firstName: {firstName}");
 
             // Длина firstName.
-            Console.WriteLine("firstName содержит {0} букв.", firstName.Length);
+            Console.WriteLine($"firstName содержит {firstName.Length} букв.");
 
             // firstName в верхнем регистре.
-            Console.WriteLine("firstName в верхнем регистре: {0}", firstName.ToUpper());
+            Console.WriteLine($"firstName в верхнем регистре: {firstName.ToUpper()}");
 
             // firstName в нижнем регистре.
-            Console.WriteLine("firstName в нижнем регистре: {0}", firstName.ToLower());
+            Console.WriteLine($"firstName в нижнем регистре: {firstName.ToLower()}");
 
             // Содержит ли firstName букву и?
-            Console.WriteLine("firstName содержит букву и?: {0}", firstName.Contains("и"));
+            Console.WriteLine($"firstName содержит букву и?: {firstName.Contains("и")}");
 
             // firstName после замены.
-            Console.WriteLine("Новое имя: {0}", firstName.Replace("ди", ""));
+            Console.WriteLine($"Новое имя: {firstName.Replace("ди", "")}");
             Console.WriteLine();
         }
 
@@ -86,14 +84,14 @@ namespace FunWithStrings
         {
             // Установить начальное значение для строки.
             string s1 = "Это моя строка.";
-            Console.WriteLine("s1 = {0}", s1);
+            Console.WriteLine($"s1 = {s1}");
 
             // Преобразована ли строка s1 в верхний регистр?
             string upperString = s1.ToUpper();
-            Console.WriteLine("upperString = {0}", upperString);
+            Console.WriteLine($"upperString = {upperString}");
 
             // Нет! Строка s1 осталась в том же виде!
-            Console.WriteLine("s1 = {0}", s1);
+            Console.WriteLine($"s1 = {s1}");
         }
 
         static void StringsAreImmutable2()
@@ -115,7 +113,7 @@ namespace FunWithStrings
             Console.WriteLine(sb.ToString());
             sb.Replace("2", "Invisible War");
             Console.WriteLine(sb.ToString());
-            Console.WriteLine("sb содержит {0} символов.", sb.Length);
+            Console.WriteLine($"sb содержит {sb.Length} символов.");
             Console.WriteLine();
         }
 
