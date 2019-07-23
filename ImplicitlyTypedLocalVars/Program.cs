@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImplicitlyTypedLocalVars
 {
@@ -18,6 +15,8 @@ namespace ImplicitlyTypedLocalVars
             string myString = "Вставай!";
             var myData = myString;
 
+            GetAnInt();
+            ImplicitTypingIsStrongTyping();
             LinqQueryOverInts();
 
             Console.ReadLine();
