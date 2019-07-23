@@ -21,6 +21,7 @@ namespace BasicDataTypes
             ParseFromStrings();
             UseDatesAndTimes();
             UseBigInteger();
+            DigitSeparators();
 
             Console.ReadLine();
         }
@@ -161,6 +162,22 @@ namespace BasicDataTypes
 
             // Значение reallyBig
             Console.WriteLine($"Значение reallyBig равно {reallyBig}");
+            Console.WriteLine();
+        }
+
+        static void DigitSeparators()
+        {
+            Console.WriteLine("=> Использование разделителей групп цифр");
+            Console.Write("Integer: ");
+            Console.WriteLine(123_456);
+            Console.Write("Long: ");
+            Console.WriteLine(123_456_789L);
+            Console.Write("Float: ");
+            Console.WriteLine(123_456.1234F);
+            Console.Write("Double: ");
+            Console.WriteLine(123_456.12);
+            Console.Write("Decimal: ");
+            Console.WriteLine(123_456.12M);
         }
     }
 }
