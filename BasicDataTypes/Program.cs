@@ -22,6 +22,7 @@ namespace BasicDataTypes
             UseDatesAndTimes();
             UseBigInteger();
             DigitSeparators();
+            BinaryLiterals();
 
             Console.ReadLine();
         }
@@ -178,6 +179,15 @@ namespace BasicDataTypes
             Console.WriteLine(123_456.12);
             Console.Write("Decimal: ");
             Console.WriteLine(123_456.12M);
+            Console.WriteLine();
+        }
+
+        static void BinaryLiterals()
+        {
+            Console.WriteLine("=> Использование двоичных литералов");
+            Console.WriteLine($"Шестнадцать: {0b0001_0000}");
+            Console.WriteLine($"Тридцать два: {0b0010_0000}");
+            Console.WriteLine($"Шестьдесят четыре: {0b0100_0000}");
         }
     }
 }
