@@ -7,7 +7,7 @@ namespace FunWithMethods
         static void Main()
         {
             Console.WriteLine("***** Методы и модификаторы параметров *****");
-            
+
             // Передать две переменные по значению.
             int x = 9, y = 10;
             Console.WriteLine($"До вызова: X: {x}, Y: {y}");
@@ -28,6 +28,20 @@ namespace FunWithMethods
             Console.WriteLine($"До: {s1}, {s2}");
             SwapStrings(ref s1, ref s2);
             Console.WriteLine($"После: {s1}, {s2}");
+
+            string[] stringArray = { "один", "два", "три" };
+            int pos = 1;
+            Console.WriteLine("Использовать простой вывод");
+            Console.WriteLine($"До: {stringArray[0]}, {stringArray[1]}, {stringArray[2]}");
+            string output = SimpleReturn(stringArray, pos);
+            output = "новый";
+            Console.WriteLine($"После: {stringArray[0]}, {stringArray[1]}, {stringArray[2]}");
+
+            Console.WriteLine("Использовать ссылочный вывод");
+            Console.WriteLine($"До: {stringArray[0]}, {stringArray[1]}, {stringArray[2]}");
+            ref string refOutput = ref SampleRefReturn(stringArray, pos);
+            refOutput = "новый";
+            Console.WriteLine($"После: {stringArray[0]}, {stringArray[1]}, {stringArray[2]}");
 
             // Передать список значений double, разделённых запятыми...
             double average;
@@ -87,6 +101,12 @@ namespace FunWithMethods
             s1 = s2;
             s2 = tempStr;
         }
+
+        // Возвращает значение по позиции в массиве.
+        public static string SimpleReturn(string[] strArray, int position) => strArray[position];
+
+        // Возвращение ссылки.
+        public static ref string SampleRefReturn(string[] strArray, int position) => ref strArray[position];
 
         // Возвращение среднего из некоторого количества значений double.
         static double CalculateAverage(params double[] values)
