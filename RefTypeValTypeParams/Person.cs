@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RefTypeValTypeParams
 {
@@ -19,9 +15,6 @@ namespace RefTypeValTypeParams
         }
         public Person() { }
 
-        public void Display()
-        {
-            Console.WriteLine($"Имя: {personName}, Возраст: {personAge}");
-        }
+        public void Display() => Console.WriteLine($"Имя: {personName}, Возраст: {personAge}");
     }
 }
