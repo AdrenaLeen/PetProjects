@@ -39,6 +39,10 @@ namespace FunWithTuples
             Console.WriteLine($"Boolean: {samples.c}");
             Console.WriteLine();
 
+            var (first, _, last) = SplitNames("Ксения Сергеевна Кузнецова");
+            Console.WriteLine($"{first} {last}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 
