@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FunWithMethods
 {
@@ -18,15 +14,11 @@ namespace FunWithMethods
             Console.WriteLine("Ответ: {0}", Add(x, y));
             Console.WriteLine($"После вызова: X: {x}, Y: {y}");
 
-            // Присваивать начальные значения локальным переменным, используемым как выходные параметры, не обязательно при условии, что в таком качестве они применяются впервые.
-            int ans;
-            Add(90, 90, out ans);
+            // Присваивать начальные значения локальным переменным, используемым как выходные параметры, не обязательно при условии, что в таком качестве они применяются впервые. Версия C# 7 позволяет объявлять параметры out в вызове метода.
+            Add(90, 90, out int ans);
             Console.WriteLine($"90 + 90 = {ans}");
 
-            int i;
-            string str;
-            bool b;
-            FillTheseValues(out i, out str, out b);
+            FillTheseValues(out int i, out string str, out bool b);
             Console.WriteLine($"Int: {i}");
             Console.WriteLine($"String: {str}");
             Console.WriteLine($"Boolean: {b}");
