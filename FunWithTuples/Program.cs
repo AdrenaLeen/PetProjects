@@ -43,6 +43,11 @@ namespace FunWithTuples
             Console.WriteLine($"{first} {last}");
             Console.WriteLine();
 
+            Point p = new Point(7, 5);
+            (int XPos, int YPos) = p.Deconstruct();
+            Console.WriteLine($"X: {XPos}");
+            Console.WriteLine($"Y: {YPos}");
+
             Console.ReadLine();
         }
 
