@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ValueAndReferenceTypes
 {
@@ -22,9 +18,6 @@ namespace ValueAndReferenceTypes
             rectRight = right;
         }
 
-        public void Display()
-        {
-            Console.WriteLine($"Строка = {rectInfo.infoString}, верх = {rectTop}, низ = {rectBottom}, лево = {rectLeft}, право = {rectRight}");
-        }
+        public void Display() => Console.WriteLine($"Строка = {rectInfo.infoString}, верх = {rectTop}, низ = {rectBottom}, лево = {rectLeft}, право = {rectRight}");
     }
 }

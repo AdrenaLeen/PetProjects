@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ValueAndReferenceTypes
 {
@@ -32,9 +28,6 @@ namespace ValueAndReferenceTypes
         }
 
         // Отобразить текущую позицию.
-        public void Display()
-        {
-            Console.WriteLine($"X = {X}, Y = {Y}");
-        }
+        public void Display() => Console.WriteLine($"X = {X}, Y = {Y}");
     }
 }
