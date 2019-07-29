@@ -23,8 +23,14 @@ namespace FunWithTuples
             Console.WriteLine($"Первый элемент: {valuesWithNames.Item1}");
             Console.WriteLine($"Второй элемент: {valuesWithNames.Item2}");
             Console.WriteLine($"Третий элемент: {valuesWithNames.Item3}");
+            Console.WriteLine();
 
             (int Field1, int Field2) example = (Custom1: 5, Custom2: 7);
+
+            Console.WriteLine("=> Выведение имён свойств кортежей");
+            var foo = new { Prop1 = "первый", Prop2 = "второй" };
+            (string Prop1, string Prop2) bar = (foo.Prop1, foo.Prop2);
+            Console.WriteLine($"{bar.Prop1};{bar.Prop2}");
 
             Console.ReadLine();
         }
