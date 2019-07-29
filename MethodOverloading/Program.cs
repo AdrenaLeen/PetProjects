@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MethodOverloading
 {
@@ -25,19 +21,10 @@ namespace MethodOverloading
         }
 
         // Перегруженный метод Add().
-        static int Add(int x, int y)
-        {
-            return x + y;
-        }
+        static int Add(int x, int y) => x + y;
 
-        static double Add(double x, double y)
-        {
-            return x + y;
-        }
+        static double Add(double x, double y) => x + y;
 
-        static long Add(long x, long y)
-        {
-            return x + y;
-        }
+        static long Add(long x, long y) => x + y;
     }
 }
