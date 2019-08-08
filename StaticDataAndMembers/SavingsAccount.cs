@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StaticDataAndMembers
 {
@@ -22,20 +18,11 @@ namespace StaticDataAndMembers
         }
 
         // Обратите внимание, что наш конструктор устанавливает значение статического поля currInterestRate.
-        public SavingsAccount(double balance)
-        {
-            currBalance = balance;
-        }
+        public SavingsAccount(double balance) => currBalance = balance;
 
         // Статические члены для установки/получения процентной ставки.
-        public static void SetInterestRate(double newRate)
-        {
-            currInterestRate = newRate;
-        }
+        public static void SetInterestRate(double newRate) => currInterestRate = newRate;
 
-        public static double GetInterestRate()
-        {
-            return currInterestRate;
-        }
+        public static double GetInterestRate() => currInterestRate;
     }
 }
