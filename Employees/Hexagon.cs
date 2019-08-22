@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Employees
 {
@@ -11,9 +7,6 @@ namespace Employees
     {
         public Hexagon() { }
         public Hexagon(string name) : base(name) { }
-        public override void Draw()
-        {
-            Console.WriteLine($"Отрисовка {PetName} класса Hexagon");
-        }
+        public override void Draw() => Console.WriteLine($"Отрисовка {PetName} класса Hexagon");
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Employees
 {
@@ -59,6 +55,7 @@ namespace Employees
                 if (h == null) Console.WriteLine("Этот элемент не является шестиугольником");
                 else h.Draw();
             }
+            CastingExamples();
 
             Console.ReadLine();
         }
@@ -69,15 +66,14 @@ namespace Employees
             // Предоставить место на парковке компании...
             Console.WriteLine($"{emp.Name} был продвинут по служебной лестнице!");
 
-            if (emp is SalesPerson)
+            switch (emp)
             {
-                Console.WriteLine($"{emp.Name} сделал {((SalesPerson)emp).SalesNumber} продаж!");
-                Console.WriteLine();
-            }
-            if (emp is Manager)
-            {
-                Console.WriteLine($"У {emp.Name} {((Manager)emp).StockOptions} опционов...");
-                Console.WriteLine();
+                case SalesPerson s when s.SalesNumber > 5:
+                    Console.WriteLine($"{emp.Name} сделал {s.SalesNumber} продаж!");
+                    break;
+                case Manager m:
+                    Console.WriteLine($"У {emp.Name} {m.StockOptions} опционов...");
+                    break;
             }
         }
 

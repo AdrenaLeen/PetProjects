@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectOverrides
 {
@@ -20,10 +16,7 @@ namespace ObjectOverrides
             Person p2 = p1;
             object o = p2;
             // Указывают ли ссылки на один и тот же объект в памяти?
-            if (o.Equals(p1) && p2.Equals(o))
-            {
-                Console.WriteLine("Одинаковые сущности!");
-            }
+            if (o.Equals(p1) && p2.Equals(o)) Console.WriteLine("Одинаковые сущности!");
 
             // ПРИМЕЧАНИЕ: эти объекты идентичны и предназначены для тестирования методов Equals() и GetHashCode().
             Person p3 = new Person("Гомер", "Симпсон", 50);

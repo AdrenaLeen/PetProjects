@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Employees
 {
@@ -31,15 +27,12 @@ namespace Employees
             Pay = pay;
         }
 
-        public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay)
-        {
-            empSSN = ssn;
-        }
+        public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay) => empSSN = ssn;
 
         // Свойства.
         public string Name
         {
-            get { return empName; }
+            get => empName;
             set
             {
                 // Здесь value на самом деле имеет тип string.
@@ -52,28 +45,25 @@ namespace Employees
         // int представляет тип данных, инкапсулируемых этим свойством. Обратите внимание на отсутствие круглых скобок.
         public int ID
         {
-            get { return empID; }
-            set { empID = value; }
+            get => empID;
+            set => empID = value;
         }
         public float Pay
         {
-            get { return currPay; }
-            set { currPay = value; }
+            get => currPay;
+            set => currPay = value;
         }
         public int Age
         {
-            get { return empAge; }
-            set { empAge = value; }
+            get => empAge;
+            set => empAge = value;
         }
-        public string SocialSecurityNumber
-        {
-            get { return empSSN; }
-        }
+        public string SocialSecurityNumber => empSSN;
         // Открывает доступ к объекту через специальное свойство.
         public BenefitPackage Benefits
         {
-            get { return empBenefits; }
-            set { empBenefits = value; }
+            get => empBenefits;
+            set => empBenefits = value;
         }
     }
 }

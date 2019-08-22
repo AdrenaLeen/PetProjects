@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeApp
 {
@@ -56,8 +52,8 @@ namespace EmployeeApp
         }
         public int Age
         {
-            get { return empAge; }
-            set { empAge = value; }
+            get => empAge;
+            set => empAge = value;
         }
         public string SocialSecurityNumber
         {

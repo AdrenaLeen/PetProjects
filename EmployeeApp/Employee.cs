@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeApp
 {
@@ -28,10 +24,7 @@ namespace EmployeeApp
         }
 
         // Метод доступа (метод get).
-        public string GetName()
-        {
-            return empName;
-        }
+        public string GetName() => empName;
 
         // Метод изменения (метод set).
         public void SetName(string name)

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Employees
 {
@@ -19,18 +15,12 @@ namespace Employees
             }
 
             // Предположим, что есть другие члены, представляющие медицинские/стоматологические программы и т.д.
-            public double ComputePayDeduction()
-            {
-                return 125.0;
-            }
+            public double ComputePayDeduction() => 125.0;
         }
 
         // Методы.
         // Теперь этот метод может быть переопределён в производном классе.
-        public virtual void GiveBonus(float amount)
-        {
-            Pay += amount;
-        }
+        public virtual void GiveBonus(float amount) => Pay += amount;
 
         // Обновлённый метод DisplayStats() теперь учитывает возраст.
         public virtual void DisplayStats()
@@ -47,10 +37,7 @@ namespace Employees
         }
 
         // Метод доступа (метод get).
-        public string GetName()
-        {
-            return empName;
-        }
+        public string GetName() => empName;
 
         // Метод изменения (метод set).
         public void SetName(string name)
@@ -61,9 +48,6 @@ namespace Employees
         }
 
         // Открывает доступ к некоторому поведению, связанному со льготами.
-        public double GetBenefitCost()
-        {
-            return empBenefits.ComputePayDeduction();
-        }
+        public double GetBenefitCost() => empBenefits.ComputePayDeduction();
     }
 }

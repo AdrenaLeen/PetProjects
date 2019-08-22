@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shapes
+﻿namespace Shapes
 {
     // Абстрактный базовый класс иерархии
     abstract class Shape
     {
-        public Shape(string name = "Безымянный")
-        {
-            PetName = name;
-        }
+        public Shape(string name = "Безымянный") => PetName = name;
 
         public string PetName { get; set; }
 

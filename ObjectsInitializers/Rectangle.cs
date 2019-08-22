@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectsInitializers
 {
@@ -13,13 +9,13 @@ namespace ObjectsInitializers
 
         public Point TopLeft
         {
-            get { return topLeft; }
-            set { topLeft = value; }
+            get => topLeft;
+            set => topLeft = value;
         }
         public Point BottomRight
         {
-            get { return bottomRight; }
-            set { bottomRight = value; }
+            get => bottomRight;
+            set => bottomRight = value;
         }
 
         public void DisplayStats()

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectsInitializers
 {
@@ -22,10 +18,7 @@ namespace ObjectsInitializers
             Color = PointColor.Gold;
         }
 
-        public Point(PointColor ptColor)
-        {
-            Color = ptColor;
-        }
+        public Point(PointColor ptColor) => Color = ptColor;
 
         public Point() : this(PointColor.BloodRed) { }
 

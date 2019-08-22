@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ObjectOverrides
+﻿namespace ObjectOverrides
 {
     // Не забывайте, что класс Person расширяет Object.
     // Предположим, что имеется свойство SSN.
@@ -23,21 +17,12 @@ namespace ObjectOverrides
         }
         public Person() { }
 
-        public override string ToString()
-        {
-            return $"[Имя: {FirstName}; Фамилия: {LastName}; Возраст: {Age}]";
-        }
+        public override string ToString() => $"[Имя: {FirstName}; Фамилия: {LastName}; Возраст: {Age}]";
 
-        public override bool Equals(object obj)
-        {
-            // Больше нет необходимости приводить obj с типу Person, т.к. у всех типов имеется метод ToString().
-            return obj.ToString() == ToString();
-        }
+        // Больше нет необходимости приводить obj с типу Person, т.к. у всех типов имеется метод ToString().
+        public override bool Equals(object obj) => obj.ToString() == ToString();
 
         // Возвратить хеш-код на основе значения, возвращаемого методом ToString() для объекта Person.
-        public override int GetHashCode()
-        {
-            return SSN.GetHashCode();
-        }
+        public override int GetHashCode() => SSN.GetHashCode();
     }
 }
