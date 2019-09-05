@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
+﻿using System.Collections;
 
 namespace CustomEnumeratorWithYield
 {
@@ -25,7 +20,13 @@ namespace CustomEnumeratorWithYield
         // Метод итератора.
         public IEnumerator GetEnumerator()
         {
-            foreach (Car c in carArray) yield return c;
+            return actualImplementation();
+
+            // Закрытая функция
+            IEnumerator actualImplementation()
+            {
+                foreach (Car c in carArray) yield return c;
+            }
         }
 
         public IEnumerable GetTheCars(bool returnRevesed)
