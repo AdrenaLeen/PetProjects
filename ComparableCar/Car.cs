@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
 
 namespace ComparableCar
@@ -26,7 +22,7 @@ namespace ComparableCar
         private bool carIsDead;
 
         // В автомобиле имеется радиоприёмник.
-        private Radio theMusicBox = new Radio();
+        private readonly Radio theMusicBox = new Radio();
 
         // Конструкторы.
         public Car() { }
@@ -58,8 +54,7 @@ namespace ComparableCar
                     CurrentSpeed = 0;
                     // Использовать ключевое слово throw для генерации исключения.
                     // Мы хотим обращаться к свойству HelpLink, поэтому необходимо создать локальную переменную перед генерацией объекта Exception.
-                    CarIsDeadException ex = new CarIsDeadException($"{PetName} перегрет!", "Забыли убрать ногу с газа.", DateTime.Now);
-                    ex.HelpLink = "http://www.CarsRUs.com";
+                    CarIsDeadException ex = new CarIsDeadException($"{PetName} перегрет!", "Забыли убрать ногу с газа.", DateTime.Now) { HelpLink = "http://www.CarsRUs.com" };
                     throw ex;
                 }
                 // Вывод текущей скорости.
@@ -70,8 +65,7 @@ namespace ComparableCar
         // Реализация итерфейса IComparable.
         int IComparable.CompareTo(object obj)
         {
-            Car temp = obj as Car;
-            if (temp != null) return CarID.CompareTo(temp.CarID);
+            if (obj is Car temp) return CarID.CompareTo(temp.CarID);
             else throw new ArgumentException("Параметр не является объектом типа Car!");
         }
     }
