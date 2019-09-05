@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InterfaceHierarchy
 {
@@ -19,8 +15,7 @@ namespace InterfaceHierarchy
             myBitmap.DrawUpsideDown();
 
             // Получить IAdvancedDraw явным образом.
-            IAdvancedDraw iAdvDraw = myBitmap as IAdvancedDraw;
-            if (iAdvDraw != null) iAdvDraw.DrawUpsideDown();
+            if (myBitmap is IAdvancedDraw iAdvDraw) iAdvDraw.DrawUpsideDown();
 
             Console.ReadLine();
         }
