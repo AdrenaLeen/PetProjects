@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomInterface
 {
@@ -40,11 +36,11 @@ namespace CustomInterface
 
             for (int i = 0; i < myShapes.Length; i++)
             {
-                // Вспомните, что базовый класс Shape определяет абстрактный член Draw(), поэтому все фигуры знают, как себя рисовать.
+                // Базовый класс Shape определяет абстрактный член Draw(), поэтому все фигуры знают, как себя рисовать.
                 myShapes[i].Draw();
 
                 // У каких фигур есть вершины?
-                if (myShapes[i] is IPointy) Console.WriteLine($"-> Количество вершин: {((IPointy)myShapes[i]).Points}");
+                if (myShapes[i] is IPointy ip) Console.WriteLine($"-> Количество вершин: {ip.Points}");
                 else Console.WriteLine($"-> У {myShapes[i].PetName} нет вершин!");
                 Console.WriteLine();
 
