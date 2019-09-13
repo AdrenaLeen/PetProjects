@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FunWithGenericCollections
 {
@@ -83,10 +80,7 @@ namespace FunWithGenericCollections
             }
         }
 
-        static void GetCoffee(Person p)
-        {
-            Console.WriteLine($"{p.FirstName} получил кофе!");
-        }
+        static void GetCoffee(Person p) => Console.WriteLine($"{p.FirstName} получил кофе!");
 
         static void UseGenericQueue()
         {
