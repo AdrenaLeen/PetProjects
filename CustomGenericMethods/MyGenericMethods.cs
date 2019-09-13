@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomGenericMethods
 {
@@ -18,10 +14,7 @@ namespace CustomGenericMethods
             b = temp;
         }
 
-        public static void DisplayBaseClass<T>()
-        {
-            // BaseType - это метод, используемый в рефлексии.
-            Console.WriteLine($"Базовый класс {typeof(T)}: {typeof(T).BaseType}.");
-        }
+        // BaseType - это метод, используемый в рефлексии.
+        public static void DisplayBaseClass<T>() => Console.WriteLine($"Базовый класс {typeof(T)}: {typeof(T).BaseType}.");
     }
 }
