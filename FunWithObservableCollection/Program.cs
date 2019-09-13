@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 
 namespace FunWithObservableCollection
 {
@@ -19,20 +16,20 @@ namespace FunWithObservableCollection
             };
 
             // Привязаться к событию CollectionChanged.
-            people.CollectionChanged += people_CollectionChanged;
+            people.CollectionChanged += People_CollectionChanged;
             people.Add(new Person("Фрэд", "Смит", 32));
             people.RemoveAt(0);
 
             Console.ReadLine();
         }
 
-        static void people_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        static void People_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             // Выяснить действие, которое привело к генерации события.
             Console.WriteLine($"Событие для этого события: {e.Action}");
 
             // Было что-то удалено.
-            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
+            if (e.Action == NotifyCollectionChangedAction.Remove)
             {
                 Console.WriteLine("Здесь старые элементы:");
                 foreach (Person p in e.OldItems) Console.WriteLine(p);
@@ -40,7 +37,7 @@ namespace FunWithObservableCollection
             }
 
             // Было что-то добавлено.
-            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
+            if (e.Action == NotifyCollectionChangedAction.Add)
             {
                 // Теперь вывести новые элементы, которые были вставлены.
                 Console.WriteLine("Здесь новые элементы:");
