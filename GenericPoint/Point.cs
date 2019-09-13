@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericPoint
+﻿namespace GenericPoint
 {
     // Обобщённая структура Point.
     public struct Point<T>
@@ -20,17 +14,14 @@ namespace GenericPoint
             Y = yVal;
         }
 
-        public override string ToString()
-        {
-            return $"[{X}, {Y}]";
-        }
+        public override string ToString() => $"[{X}, {Y}]";
 
         // Сбросить поля в стандартные значения для заданного параметра типа.
         // Ключевое слово default в языке C# перегружено. При использовании с обобщениями оно представляет стандартное значение для параметра типа.
         public void ResetPoint()
         {
-            X = default(T);
-            Y = default(T);
+            X = default;
+            Y = default;
         }
     }
 }
