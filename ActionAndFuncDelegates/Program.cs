@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ActionAndFuncDelegates
 {
@@ -41,14 +37,8 @@ namespace ActionAndFuncDelegates
         }
 
         // Цель для делегата Func<>.
-        static int Add(int x, int y)
-        {
-            return x + y;
-        }
+        static int Add(int x, int y) => x + y;
 
-        static string SumToString(int x, int y)
-        {
-            return (x + y).ToString();
-        }
+        static string SumToString(int x, int y) => (x + y).ToString();
     }
 }
