@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PublicDelegateProblem
+﻿namespace PublicDelegateProblem
 {
     public class Car
     {
@@ -14,9 +8,6 @@ namespace PublicDelegateProblem
         public CarEngineHandler listOfHandlers;
 
         // Просто вызвать уведомление Exploded.
-        public void Accelerate(int delta)
-        {
-            if (listOfHandlers != null) listOfHandlers("Простите, эта машина умерла...");
-        }
+        public void Accelerate() => listOfHandlers?.Invoke("Простите, эта машина умерла...");
     }
 }
