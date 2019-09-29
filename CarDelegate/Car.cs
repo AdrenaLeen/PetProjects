@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarDelegate
 {
@@ -39,19 +35,13 @@ namespace CarDelegate
             else Delegate.Combine(listOfHandlers, methodToCall);
         }
 
-        public void UnRegisterWithCarEngine(CarEngineHandler methodToCall)
-        {
-            listOfHandlers -= methodToCall;
-        }
+        public void UnRegisterWithCarEngine(CarEngineHandler methodToCall) => listOfHandlers -= methodToCall;
 
         // 4. Реализовать метод Accelerate() для обращения к списку вызовов делегата в подходящих обстоятельствах.
         public void Accelerate(int delta)
         {
             // Если этот автомобиль сломан, отправить сообщение об этом.
-            if (carIsDead)
-            {
-                if (listOfHandlers != null) listOfHandlers("Простите, эта машина умерла...");
-            }
+            if (carIsDead) listOfHandlers?.Invoke("Простите, эта машина умерла...");
             else
             {
                 CurrentSpeed += delta;
