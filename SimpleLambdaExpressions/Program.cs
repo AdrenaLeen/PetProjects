@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleLambdaExpressions
 {
@@ -34,11 +31,8 @@ namespace SimpleLambdaExpressions
         }
 
         // Цель для делегата Predicate<>.
-        static bool IsEvenNumber(int i)
-        {
-            // Это чётное число?
-            return (i % 2) == 0;
-        }
+        // Это чётное число?
+        static bool IsEvenNumber(int i) => (i % 2) == 0;
 
         static void AnonymousMethodSyntax()
         {
