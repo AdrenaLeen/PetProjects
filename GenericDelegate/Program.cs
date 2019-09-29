@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericDelegate
 {
@@ -24,14 +20,8 @@ namespace GenericDelegate
             Console.ReadLine();
         }
 
-        static void StringTarget(string arg)
-        {
-            Console.WriteLine($"arg в верхнем регистре: {arg.ToUpper()}");
-        }
+        static void StringTarget(string arg) => Console.WriteLine($"arg в верхнем регистре: {arg.ToUpper()}");
 
-        static void IntTarget(int arg)
-        {
-            Console.WriteLine($"++arg: {++arg}");
-        }
+        static void IntTarget(int arg) => Console.WriteLine($"++arg: {++arg}");
     }
 }
