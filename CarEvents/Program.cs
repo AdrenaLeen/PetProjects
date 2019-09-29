@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarEvents
 {
@@ -30,19 +26,10 @@ namespace CarEvents
             Console.ReadLine();
         }
 
-        public static void CarAboutToBlow(string msg)
-        {
-            Console.WriteLine(msg);
-        }
+        public static void CarAboutToBlow(string msg) => Console.WriteLine(msg);
 
-        public static void CarIsAlmostDoomed(string msg)
-        {
-            Console.WriteLine($"=> Критическое сообщение от объекта Car: {msg}");
-        }
+        public static void CarIsAlmostDoomed(string msg) => Console.WriteLine($"=> Критическое сообщение от объекта Car: {msg}");
 
-        public static void CarExploded(string msg)
-        {
-            Console.WriteLine(msg);
-        }
+        public static void CarExploded(string msg) => Console.WriteLine(msg);
     }
 }
