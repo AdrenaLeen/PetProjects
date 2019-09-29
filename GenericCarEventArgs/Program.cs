@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericCarEventArgs
 {
@@ -35,21 +31,11 @@ namespace GenericCarEventArgs
         public static void CarAboutToBlow(object sender, CarEventArgs e)
         {
             // Просто для подстраховки перед приведением произвести проверку во время выполнения.
-            if (sender is Car)
-            {
-                Car c = (Car)sender;
-                Console.WriteLine($"Критическое сообщение от {c.PetName}: {e.msg}");
-            }
+            if (sender is Car c) Console.WriteLine($"Критическое сообщение от {c.PetName}: {e.msg}");
         }
 
-        public static void CarIsAlmostDoomed(object sender, CarEventArgs e)
-        {
-            Console.WriteLine($"=> Критическое сообщение от объекта Car: {e.msg}");
-        }
+        public static void CarIsAlmostDoomed(object sender, CarEventArgs e) => Console.WriteLine($"=> Критическое сообщение от объекта Car: {e.msg}");
 
-        public static void CarExploded(object sender, CarEventArgs e)
-        {
-            Console.WriteLine(e.msg);
-        }
+        public static void CarExploded(object sender, CarEventArgs e) => Console.WriteLine(e.msg);
     }
 }
