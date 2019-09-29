@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarDelegateMethodGroupConversion
 {
@@ -28,9 +24,6 @@ namespace CarDelegateMethodGroupConversion
             Console.ReadLine();
         }
 
-        static void CallMeHere(string msg)
-        {
-            Console.WriteLine($"=> Сообщение от объекта Car: {msg}");
-        }
+        static void CallMeHere(string msg) => Console.WriteLine($"=> Сообщение от объекта Car: {msg}");
     }
 }
