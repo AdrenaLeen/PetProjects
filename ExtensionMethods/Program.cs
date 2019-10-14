@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Media;
 
 namespace ExtensionMethods
 {
@@ -17,11 +15,11 @@ namespace ExtensionMethods
             myInt.DisplayDefiningAssembly();
 
             // То же и в DataSet!
-            System.Data.DataSet d = new System.Data.DataSet();
+            DataSet d = new DataSet();
             d.DisplayDefiningAssembly();
 
             // И в SoundPlayer!
-            System.Media.SoundPlayer sp = new System.Media.SoundPlayer();
+            SoundPlayer sp = new SoundPlayer();
             sp.DisplayDefiningAssembly();
 
             // Использовать новую функциональность int.
