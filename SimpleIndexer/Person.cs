@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleIndexer
+﻿namespace SimpleIndexer
 {
     class Person
     {
@@ -20,9 +14,6 @@ namespace SimpleIndexer
             LastName = lastName;
         }
 
-        public override string ToString()
-        {
-            return $"Имя: {FirstName} {LastName}, Возраст: {Age}";
-        }
+        public override string ToString() => $"Имя: {FirstName} {LastName}, Возраст: {Age}";
     }
 }
