@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnsafeCode
 {
@@ -41,11 +37,8 @@ namespace UnsafeCode
             Console.ReadLine();
         }
 
-        unsafe static void SquareIntPointer(int* myIntPointer)
-        {
-            // Возвести значение в квадрат просто для тестирования.
-            *myIntPointer *= *myIntPointer;
-        }
+        // Возвести значение в квадрат просто для тестирования.
+        unsafe static void SquareIntPointer(int* myIntPointer) => *myIntPointer *= *myIntPointer;
 
         unsafe static void PrintValueAndAddress()
         {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UnsafeCode
+﻿namespace UnsafeCode
 {
     // Вся эта структура является небезопасной и может использовать только в небезопасном контексте.
     unsafe struct Node
