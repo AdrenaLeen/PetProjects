@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InterfaceExtensions
 {
@@ -13,7 +10,7 @@ namespace InterfaceExtensions
             Console.WriteLine("***** Расширение типов, реализующих интерфейсы *****");
 
             // System.Array реализует IEnumerable!
-            string[] data = { "Wow", "this", "is", "sort", "of", "annoying", "but", "in", "a", "weird", "way", "fun!"};
+            string[] data = { "Wow", "this", "is", "sort", "of", "annoying", "but", "in", "a", "weird", "way", "fun!" };
 
             data.PrintDataAndBeep();
             Console.WriteLine();
