@@ -137,7 +137,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverArray", "LinqOverAr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqRetValues", "LinqRetValues\LinqRetValues.csproj", "{6118AA37-E440-4A59-9B91-46866E9DA350}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListOverCollections", "ListOverCollections\ListOverCollections.csproj", "{D2FA6396-F22C-43AE-880D-A508AAADF6D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverCollections", "ListOverCollections\LinqOverCollections.csproj", "{D2FA6396-F22C-43AE-880D-A508AAADF6D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "FunWithLinqExpressions\FunWithLinqExpressions.csproj", "{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}"
 EndProject
