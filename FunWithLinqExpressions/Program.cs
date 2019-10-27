@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FunWithLinqExpressions
 {
@@ -114,8 +112,8 @@ namespace FunWithLinqExpressions
 
         static void DisplayDiff()
         {
-            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
-            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<string> { "BMW", "Saab", "Aztec" };
             IEnumerable<string> carDiff = (from c in myCars select c).Except(from c2 in yourCars select c2);
 
             Console.WriteLine("Здесь то, чего у вас нет, но есть у меня:");
@@ -128,8 +126,8 @@ namespace FunWithLinqExpressions
 
         static void DisplayIntersection()
         {
-            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
-            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<string> { "BMW", "Saab", "Aztec" };
 
             // Получить общие члены.
             IEnumerable<string> carIntersect = (from c in myCars select c).Intersect(from c2 in yourCars select c2);
@@ -144,8 +142,8 @@ namespace FunWithLinqExpressions
 
         static void DisplayUnion()
         {
-            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
-            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<string> { "BMW", "Saab", "Aztec" };
 
             // Получить объединение двух контейнеров.
             IEnumerable<string> carUnion = (from c in myCars select c).Union(from c2 in yourCars select c2);
@@ -160,8 +158,8 @@ namespace FunWithLinqExpressions
 
         static void DisplayConcat()
         {
-            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
-            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<string> { "BMW", "Saab", "Aztec" };
             IEnumerable<string> carConcat = (from c in myCars select c).Concat(from c2 in yourCars select c2);
 
             // Выводит: Yugo Aztec BMW BMW Saab Aztec.
@@ -172,8 +170,8 @@ namespace FunWithLinqExpressions
 
         static void DisplayConcatNoDups()
         {
-            List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
-            List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+            List<string> myCars = new List<string> { "Yugo", "Aztec", "BMW" };
+            List<string> yourCars = new List<string> { "BMW", "Saab", "Aztec" };
 
             IEnumerable<string> carConcat = (from c in myCars select c).Concat(from c2 in yourCars select c2);
 
