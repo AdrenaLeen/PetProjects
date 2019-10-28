@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LazyObjectInstantiation
 {
@@ -10,7 +6,7 @@ namespace LazyObjectInstantiation
     class AllTracks
     {
         // Наш проигрыватель может содержать максимум 10 000 композиций.
-        private Song[] allSongs = new Song[10000];
+        private readonly Song[] allSongs = new Song[10000];
 
         public AllTracks()
         {

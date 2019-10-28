@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LazyObjectInstantiation
 {
@@ -25,17 +21,13 @@ namespace LazyObjectInstantiation
 
         // При использовании переменной Lazy() взывается стандартный конструктор класса AllTracks.
         // Использовать лямбда-выражение для добавления дополнительного кода, который выполняется при создании объекта AllTracks.
-        private Lazy<AllTracks> allSongs = new Lazy<AllTracks>(() =>
+        private readonly Lazy<AllTracks> allSongs = new Lazy<AllTracks>(() =>
         {
             Console.WriteLine("Создание объекта AllTracks!");
             return new AllTracks();
-        }
-        );
+        });
 
-        public AllTracks GetAllTracks()
-        {
-            // Возвратить все композиции.
-            return allSongs.Value;
-        }
+        // Возвратить все композиции.
+        public AllTracks GetAllTracks() => allSongs.Value;
     }
 }
