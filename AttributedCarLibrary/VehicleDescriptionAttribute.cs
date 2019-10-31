@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Обеспечить совместимость с CLS для всех открытых типов в этой сборке.
 [assembly: CLSCompliant(true)]
@@ -14,10 +10,7 @@ namespace AttributedCarLibrary
     {
         public string Description { get; set; }
 
-        public VehicleDescriptionAttribute(string vehicalDescription)
-        {
-            Description = vehicalDescription;
-        }
+        public VehicleDescriptionAttribute(string vehicalDescription) => Description = vehicalDescription;
 
         public VehicleDescriptionAttribute() { }
     }
