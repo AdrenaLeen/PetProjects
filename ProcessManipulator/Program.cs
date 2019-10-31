@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Linq;
 
 namespace ProcessManipulator
 {
@@ -44,10 +41,9 @@ namespace ProcessManipulator
         // Если процесс с PID, равным 987, не существует, сгенерировать исключение во время выполнения.
         static void GetSpecificProcess()
         {
-            Process theProc = null;
             try
             {
-                theProc = Process.GetProcessById(987);
+                Process theProc = Process.GetProcessById(987);
             }
             catch (ArgumentException ex)
             {
@@ -57,7 +53,7 @@ namespace ProcessManipulator
 
         static void EnumThreadsForPid(int pID)
         {
-            Process theProc = null;
+            Process theProc;
             try
             {
                 theProc = Process.GetProcessById(pID);
@@ -82,7 +78,7 @@ namespace ProcessManipulator
 
         static void EnumModsForPid(int pID)
         {
-            Process theProc = null;
+            Process theProc;
             try
             {
                 theProc = Process.GetProcessById(pID);
@@ -110,8 +106,10 @@ namespace ProcessManipulator
             // Запустить Internet Explorer и перейти на сайт facebook.com с развёрнутым на весь экран окном.
             try
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo("IExplore.exe", "www.facebook.com");
-                startInfo.WindowStyle = ProcessWindowStyle.Maximized;
+                ProcessStartInfo startInfo = new ProcessStartInfo("IExplore.exe", "www.facebook.com")
+                {
+                    WindowStyle = ProcessWindowStyle.Maximized
+                };
                 ieProc = Process.Start(startInfo);
             }
             catch (InvalidOperationException ex)
