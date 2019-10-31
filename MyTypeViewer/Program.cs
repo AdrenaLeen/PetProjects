@@ -10,14 +10,12 @@ namespace MyTypeViewer
         static void Main()
         {
             Console.WriteLine("***** Добро пожаловать в MyTypeViewer *****");
-            string typeName = "";
-
             do
             {
                 Console.Write("Введите имя типа для оценки или введите Q для выхода: ");
 
                 // Получить имя типа.
-                typeName = Console.ReadLine();
+                string typeName = Console.ReadLine();
 
                 // Пользователь желает завершить работу?
                 if (typeName.ToUpper() == "Q") break;
