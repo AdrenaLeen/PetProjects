@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Текущие автомобили" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dataGridCars" HorizontalAlignment="Left" Height="200" Margin="10,40,0,0" VerticalAlignment="Top" Width="500"/>
-        <Button Name="btnAddNewCar" Content="Добавить новый автомобиль" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="Auto" Padding="3,5" Click="btnAddNewCar_Click"/>
-        <Button Name="btnExportToExcel" Content="Экспортировать текущие автомобили в Excel" HorizontalAlignment="Right" Margin="0,250,10,0" VerticalAlignment="Top" Width="Auto" Padding="3,5" Click="btnExportToExcel_Click"/>
+        <Button Name="btnAddNewCar" Content="Добавить новый автомобиль" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="Auto" Padding="3,5" Click="BtnAddNewCar_Click"/>
+        <Button Name="btnExportToExcel" Content="Экспортировать текущие автомобили в Excel" HorizontalAlignment="Right" Margin="0,250,10,0" VerticalAlignment="Top" Width="Auto" Padding="3,5" Click="BtnExportToExcel_Click"/>
     </Grid>
 </Window>

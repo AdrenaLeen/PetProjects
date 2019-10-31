@@ -47,7 +47,7 @@ namespace ExportDataToOfficeApp
             dataGridCars.ItemsSource = carsInStock;
         }
 
-        private void btnAddNewCar_Click(object sender, RoutedEventArgs e)
+        private void BtnAddNewCar_Click(object sender, RoutedEventArgs e)
         {
             NewCarDialog d = new NewCarDialog();
             if (d.ShowDialog() == true)
@@ -58,7 +58,7 @@ namespace ExportDataToOfficeApp
             }
         }
 
-        private void btnExportToExcel_Click(object sender, RoutedEventArgs e)
+        private void BtnExportToExcel_Click(object sender, RoutedEventArgs e)
         {
             ExportToExcel(carsInStock);
         }
@@ -66,9 +66,11 @@ namespace ExportDataToOfficeApp
         static void ExportToExcel(List<Car> carsInStock)
         {
             // Загрузить Excel и затем создать новую пустую рабочую книгу.
-            Excel.Application excelApp = new Excel.Application();
-            // Сделать пользовательский интерфейс Excel видимым на рабочем столе.
-            excelApp.Visible = true;
+            Excel.Application excelApp = new Excel.Application
+            {
+                // Сделать пользовательский интерфейс Excel видимым на рабочем столе.
+                Visible = true
+            };
             excelApp.Workbooks.Add();
 
             // В этом примере используется единственный рабочий лист.
@@ -94,40 +96,6 @@ namespace ExportDataToOfficeApp
 
             // Сохранить файл, завершить работу Excel и отобразить сообщение пользователю.
             workSheet.SaveAs(string.Format(@"{0}\Inventory.xlsx", Environment.CurrentDirectory));
-            excelApp.Quit();
-            MessageBox.Show("Файл Inventory.xslx сохранён в папке приложения.", "Экспорт завершён!");
-        }
-
-        static void ExportToExcel2008(List<Car> carsInStock)
-        {
-            Excel.Application excelApp = new Excel.Application();
-
-            // Потребуется пометить пропущенные параметры!
-            excelApp.Workbooks.Add(Type.Missing);
-
-            // Потребуется привести Object к _Worksheet! 
-            Excel._Worksheet workSheet = (Excel._Worksheet)excelApp.ActiveSheet;
-
-            // Потребуется привести каждый Object к Range и затем обратиться к низкоуровневому свойству Value2!
-            ((Excel.Range)excelApp.Cells[1, "A"]).Value2 = "Производитель";
-            ((Excel.Range)excelApp.Cells[1, "B"]).Value2 = "Цвет";
-            ((Excel.Range)excelApp.Cells[1, "C"]).Value2 = "Дружественное имя";
-
-            int row = 1;
-            foreach (Car c in carsInStock)
-            {
-                row++;
-                // Потребуется привести каждый Object к Range и затем обратиться к низкоуровневому свойству Value2!
-                ((Excel.Range)workSheet.Cells[row, "A"]).Value2 = c.Make;
-                ((Excel.Range)workSheet.Cells[row, "B"]).Value2 = c.Color;
-                ((Excel.Range)workSheet.Cells[row, "C"]).Value2 = c.PetName;
-            }
-
-            // Потребуется вызвать метод get_Range с указанием всех пропущенных аргументов!
-            excelApp.get_Range("A1", Type.Missing).AutoFormat(Excel.XlRangeAutoFormat.xlRangeAutoFormatClassic2, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-
-            // Потребуется указать все пропущенные необязательные аргументы!
-            workSheet.SaveAs(string.Format(@"{0}\Inventory.xlsx", Environment.CurrentDirectory), Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             excelApp.Quit();
             MessageBox.Show("Файл Inventory.xslx сохранён в папке приложения.", "Экспорт завершён!");
         }
