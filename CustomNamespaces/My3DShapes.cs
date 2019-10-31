@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Chapter14.My3DShapes
+﻿namespace Chapter14.My3DShapes
 {
     // Класс для представления трёхмерного круга.
     public class Circle { }

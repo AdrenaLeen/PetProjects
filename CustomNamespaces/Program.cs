@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MyShapes;
-using Chapter14.My3DShapes;
 using System.Runtime.Serialization.Formatters.Binary;
 
 // Устранить неоднозначность, используя специальный псевдоним.
