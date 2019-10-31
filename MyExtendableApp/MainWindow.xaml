@@ -9,7 +9,7 @@
     <Grid>
         <Menu VerticalAlignment="Top" HorizontalAlignment="Left" Margin="7,0,0,0">
             <MenuItem Header="Файл">
-                <Button Name="snapInModuleToolStripMenuItem" Content="Подключить модуль" Click="snapInModuleToolStripMenuItem_Click" />
+                <Button Name="snapInModuleToolStripMenuItem" Content="Подключить модуль" Click="SnapInModuleToolStripMenuItem_Click" />
             </MenuItem>
         </Menu>
         <ListBox Name="lstLoadedSnapIns" HorizontalAlignment="Left" Height="100" Margin="7,50,0,0" VerticalAlignment="Top" Width="490"/>

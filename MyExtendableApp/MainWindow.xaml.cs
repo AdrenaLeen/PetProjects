@@ -28,7 +28,7 @@ namespace MyExtendableApp
             InitializeComponent();
         }
 
-        private void snapInModuleToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        private void SnapInModuleToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             // Позволить пользователю выбрать сборку для загрузки.
             OpenFileDialog dlg = new OpenFileDialog();
@@ -85,10 +85,7 @@ namespace MyExtendableApp
                                            select ci;
 
             // Отобразить данные.
-            foreach (CompanyInfoAttribute c in compInfo)
-            {
-                MessageBox.Show(c.CompanyUrl, $"Больше информации о {c.CompanyName} может быть найдено в");
-            }
+            foreach (CompanyInfoAttribute c in compInfo) MessageBox.Show(c.CompanyUrl, $"Больше информации о {c.CompanyName} может быть найдено в");
         }
     }
 }
