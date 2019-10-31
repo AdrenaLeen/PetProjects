@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
-using System.IO;
 
 namespace SharedAsmReflector
 {
@@ -28,10 +25,8 @@ namespace SharedAsmReflector
         static void Main()
         {
             Console.WriteLine("***** Рефлексия разделяемых сборок *****");
-
             // Загрузить System.Windows.Forms.dll из GAC.
-            string displayName = null;
-            displayName = "System.Windows.Forms,Version=4.0.0.0,PublicKeyToken=b77a5c561934e089,Culture=\"\"";
+            string displayName = "System.Windows.Forms,Version=4.0.0.0,PublicKeyToken=b77a5c561934e089,Culture=\"\"";
             Assembly asm = Assembly.Load(displayName);
             DisplayInfo(asm);
             Console.WriteLine("Готово!");
