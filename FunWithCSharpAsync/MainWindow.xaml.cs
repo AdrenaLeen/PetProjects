@@ -26,10 +26,7 @@ namespace FunWithCSharpAsync
             InitializeComponent();
         }
 
-        private async void btnCallMethod_Click(object sender, RoutedEventArgs e)
-        {
-            this.Title = await DoWorkAsync();
-        }
+        private async void BtnCallMethod_Click(object sender, RoutedEventArgs e) => Title = await DoWorkAsync();
 
         private async Task<string> DoWorkAsync()
         {
@@ -49,13 +46,13 @@ namespace FunWithCSharpAsync
             });
         }
 
-        private async void btnVoidMethodCall_Click(object sender, RoutedEventArgs e)
+        private async void BtnVoidMethodCall_Click(object sender, RoutedEventArgs e)
         {
             await MethodReturningVoidAsync();
             MessageBox.Show("Готово!");
         }
 
-        private async void btnMutliAwaits_Click(object sender, RoutedEventArgs e)
+        private async void BtnMutliAwaits_Click(object sender, RoutedEventArgs e)
         {
             await Task.Run(() => { Thread.Sleep(2000); });
             MessageBox.Show("Завершена первая задача!");
