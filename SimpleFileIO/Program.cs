@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace SimpleFileIO
@@ -20,7 +16,7 @@ namespace SimpleFileIO
                 File.WriteAllLines(@"D:\tasks.txt", myTasks);
 
                 // Прочитать все данные и вывести на консоль.
-                foreach (string task in File.ReadAllLines(@"D:\tasks.txt")) Console.WriteLine("TODO: {0}", task);
+                foreach (string task in File.ReadAllLines(@"D:\tasks.txt")) Console.WriteLine($"TODO: {task}");
             }
             catch (Exception ex)
             {
