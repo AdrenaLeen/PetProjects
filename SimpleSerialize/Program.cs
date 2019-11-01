@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Xml.Serialization;
 
@@ -17,9 +14,11 @@ namespace SimpleSerialize
             Console.WriteLine("***** Сериализация объектов *****");
 
             // Создать объект JamesBondCar и установить состояние.
-            JamesBondCar jbc = new JamesBondCar();
-            jbc.canFly = true;
-            jbc.canSubmerge = false;
+            JamesBondCar jbc = new JamesBondCar
+            {
+                canFly = true,
+                canSubmerge = false
+            };
             jbc.theRadio.stationPresets = new double[] { 89.3, 105.1, 97.1 };
             jbc.theRadio.hasTweeters = true;
 
