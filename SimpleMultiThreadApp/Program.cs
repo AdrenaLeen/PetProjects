@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -30,8 +26,10 @@ namespace SimpleMultiThreadApp
             {
                 case "2":
                     // Создать поток.
-                    Thread backgroundThread = new Thread(new ThreadStart(p.PrintNumbers));
-                    backgroundThread.Name = "Secondary";
+                    Thread backgroundThread = new Thread(new ThreadStart(p.PrintNumbers))
+                    {
+                        Name = "Secondary"
+                    };
                     backgroundThread.Start();
                     break;
                 case "1":
