@@ -28,20 +28,22 @@ namespace MyEBookReader
             InitializeComponent();
         }
 
-        private void btnDownload_Click(object sender, RoutedEventArgs e)
+        private void BtnDownload_Click(object sender, RoutedEventArgs e)
         {
-            WebClient wc = new WebClient();
-            wc.DownloadStringCompleted += (s, eArgs) =>
+            using (WebClient wc = new WebClient())
             {
-                theEBook = eArgs.Result;
-                txtBook.Text = theEBook;
-            };
+                wc.DownloadStringCompleted += (s, eArgs) =>
+                {
+                    theEBook = eArgs.Result;
+                    txtBook.Text = theEBook;
+                };
 
-            // Загрузить электронную книгу "A Tale of Two Cities" Чарльза Диккенса.
-            wc.DownloadStringAsync(new Uri("http://www.gutenberg.org/files/98/98-8.txt"));
+                // Загрузить электронную книгу "A Tale of Two Cities" Чарльза Диккенса.
+                wc.DownloadStringAsync(new Uri("http://www.gutenberg.org/files/98/98-8.txt"));
+            }
         }
 
-        private void btnGetStats_Click(object sender, RoutedEventArgs e)
+        private void BtnGetStats_Click(object sender, RoutedEventArgs e)
         {
             // Получить слова из электронной книги.
             string[] words = theEBook.Split(new char[] { ' ', '\u000A', ',', '.', ';', ':', '-', '?', '/' }, StringSplitOptions.RemoveEmptyEntries);
@@ -77,9 +79,6 @@ namespace MyEBookReader
             return commonWords;
         }
 
-        private string FindLongestWord(string[] words)
-        {
-            return (from w in words orderby w.Length descending select w).FirstOrDefault();
-        }
+        private string FindLongestWord(string[] words) => (from w in words orderby w.Length descending select w).FirstOrDefault();
     }
 }
