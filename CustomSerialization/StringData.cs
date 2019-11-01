@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
 namespace CustomSerialization
@@ -10,8 +6,8 @@ namespace CustomSerialization
     [Serializable]
     class StringData : ISerializable
     {
-        private string dataItemOne = "Первый блок данных";
-        private string dataItemTwo = "Больше данных";
+        private readonly string dataItemOne = "Первый блок данных";
+        private readonly string dataItemTwo = "Больше данных";
 
         public StringData() { }
         protected StringData(SerializationInfo si, StreamingContext ctx)
