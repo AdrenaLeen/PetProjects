@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PLINQ" Height="350" Width="525">
     <Grid>
-        <Button Name="btnExecute" Content="Выполнить" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="75" Click="btnExecute_Click"/>
-        <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+        <Button Name="btnExecute" Content="Выполнить" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnExecute_Click"/>
+        <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnCancel_Click"/>
     </Grid>
 </Window>

@@ -21,20 +21,17 @@ namespace PLINQDataProcessingWithCancellation
     /// </summary>
     public partial class MainWindow : Window
     {
-        private CancellationTokenSource cancelToken = new CancellationTokenSource();
+        private readonly CancellationTokenSource cancelToken = new CancellationTokenSource();
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void btnExecute_Click(object sender, RoutedEventArgs e)
+        private void BtnExecute_Click(object sender, RoutedEventArgs e)
         {
             // Запустить новую "задачу" для обработки целых чисел.
-            Task.Factory.StartNew(() =>
-            {
-                ProcessIntData();
-            });
+            Task.Factory.StartNew(() => { ProcessIntData(); });
         }
 
         private void ProcessIntData()
@@ -54,16 +51,10 @@ namespace PLINQDataProcessingWithCancellation
             }
             catch (OperationCanceledException ex)
             {
-                this.Dispatcher.Invoke((Action)delegate
-                {
-                    this.Title = ex.Message;
-                });
+                Dispatcher.Invoke(delegate { Title = ex.Message; });
             }
         }
 
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-            cancelToken.Cancel();
-        }
+        private void BtnCancel_Click(object sender, RoutedEventArgs e) => cancelToken.Cancel();
     }
 }
