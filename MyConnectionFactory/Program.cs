@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-using System.Data.OleDb;
-using System.Data.Odbc;
 using System.Configuration;
+using System.Data;
+using System.Data.Odbc;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace MyConnectionFactory
 {
@@ -24,7 +20,7 @@ namespace MyConnectionFactory
             string dataProviderString = ConfigurationManager.AppSettings["provider"];
 
             // Преобразовать строку в перечисление.
-            DataProvider dataProvider = DataProvider.None;
+            DataProvider dataProvider;
             if (Enum.IsDefined(typeof(DataProvider), dataProviderString))
             {
                 dataProvider = (DataProvider)Enum.Parse(typeof(DataProvider), dataProviderString);
@@ -37,8 +33,10 @@ namespace MyConnectionFactory
             }
 
             // Получить конкретное подключение.
-            IDbConnection myConnection = GetConnection(dataProvider);
-            Console.WriteLine($"Ваше подключение: {myConnection?.GetType().Name ?? "неизвестный тип"}");
+            using (IDbConnection myConnection = GetConnection(dataProvider))
+            {
+                Console.WriteLine($"Ваше подключение: {myConnection?.GetType().Name ?? "неизвестный тип"}");
+            }
             
             // Открыть, использовать и закрыть подключение...
             Console.ReadLine();
@@ -47,7 +45,7 @@ namespace MyConnectionFactory
         // Этот метод возвращает конкретный объект подключения на основе значения перечисления DataProvider.
         static IDbConnection GetConnection(DataProvider dataProvider)
         {
-            IDbConnection connection = null;
+            IDbConnection connection;
             switch (dataProvider)
             {
                 case DataProvider.SqlServer:
