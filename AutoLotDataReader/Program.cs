@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace AutoLotDataReader
@@ -17,10 +13,11 @@ namespace AutoLotDataReader
             string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AutoLot;Integrated Security=True;";
 
             // Создать строку подключения с помощью объекта построителя.
-            SqlConnectionStringBuilder cnStringBuilder = new SqlConnectionStringBuilder(connectionString);
-
-            // Изменить значение таймаута.
-            cnStringBuilder.ConnectTimeout = 5;
+            SqlConnectionStringBuilder cnStringBuilder = new SqlConnectionStringBuilder(connectionString)
+            {
+                // Изменить значение таймаута.
+                ConnectTimeout = 5
+            };
 
             // Создать и открыть подключение.
             using (SqlConnection connection = new SqlConnection())
@@ -33,29 +30,29 @@ namespace AutoLotDataReader
 
                 // Создать объект команды SQL.
                 string sql = "Select * From Inventory;Select * from Customers";
-                SqlCommand myCommand = new SqlCommand(sql, connection);
-
-                // Создать ещё один объект команды посредством свойств.
-                SqlCommand testCommand = new SqlCommand();
-                testCommand.Connection = connection;
-                testCommand.CommandText = sql;
-
-                // Подключить объект чтения данных с помощью ExecuteReader().
-                using (SqlDataReader myDataReader = myCommand.ExecuteReader())
+                using (SqlCommand myCommand = new SqlCommand(sql, connection))
                 {
-                    do
+                    // Создать ещё один объект команды посредством свойств.
+                    using (SqlCommand testCommand = new SqlCommand())
                     {
-                        // Пройти в цикле по результатам.
-                        while (myDataReader.Read())
+                        testCommand.Connection = connection;
+                        testCommand.CommandText = sql;
+                    }
+
+                    // Подключить объект чтения данных с помощью ExecuteReader().
+                    using (SqlDataReader myDataReader = myCommand.ExecuteReader())
+                    {
+                        do
                         {
-                            Console.WriteLine("***** Запись *****");
-                            for (int i = 0; i < myDataReader.FieldCount; i++)
+                            // Пройти в цикле по результатам.
+                            while (myDataReader.Read())
                             {
-                                Console.WriteLine($"{myDataReader.GetName(i)} = {myDataReader.GetValue(i)}");
+                                Console.WriteLine("***** Запись *****");
+                                for (int i = 0; i < myDataReader.FieldCount; i++) Console.WriteLine($"{myDataReader.GetName(i)} = {myDataReader.GetValue(i)}");
+                                Console.WriteLine();
                             }
-                            Console.WriteLine();
-                        }
-                    } while (myDataReader.NextResult());
+                        } while (myDataReader.NextResult());
+                    }
                 }
             }
             Console.ReadLine();
