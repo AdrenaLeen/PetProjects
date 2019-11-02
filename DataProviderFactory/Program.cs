@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -34,12 +30,8 @@ namespace DataProviderFactory
                 connection.ConnectionString = connectionString;
                 connection.Open();
 
-                SqlConnection sqlConnection = connection as SqlConnection;
-                if (sqlConnection != null)
-                {
-                    // Вывести информацию об используемой версии SQL Server.
-                    Console.WriteLine(sqlConnection.ServerVersion);
-                }
+                // Вывести информацию об используемой версии SQL Server.
+                if (connection is SqlConnection sqlConnection) Console.WriteLine(sqlConnection.ServerVersion);
 
                 // Создать объект команды.
                 DbCommand command = factory.CreateCommand();
