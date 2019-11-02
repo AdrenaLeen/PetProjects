@@ -1,13 +1,10 @@
 ﻿namespace AutoLotDAL.EF
 {
+    using AutoLotDAL.Models;
     using System;
     using System.Data.Entity;
-    using System.Linq;
-    using AutoLotDAL.Models;
-    using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Infrastructure.Interception;
-    using AutoLotDAL.Interception;
     using System.Data.Entity.Core.Objects;
+    using System.Data.Entity.Infrastructure;
 
     public class AutoLotEntities : DbContext
     {
@@ -27,8 +24,7 @@
         private void OnSavingChanges(object sender, EventArgs eventArgs)
         {
             // Параметр sender имеет тип ObjectContext. Можно получать текущие и исходные значения, а также отменять / модифицировать операцию сохранения любым желаемым образом.
-            ObjectContext context = sender as ObjectContext;
-            if (context == null) return;
+            if (!(sender is ObjectContext context)) return;
             foreach (ObjectStateEntry item in context.ObjectStateManager.GetObjectStateEntries(EntityState.Modified | EntityState.Added))
             {
                 // Делать здесь что-то важное.
@@ -42,8 +38,7 @@
 
         private void OnObjectMaterialized(object sender, ObjectMaterializedEventArgs e)
         {
-            EntityBase model = e.Entity as EntityBase;
-            if (model != null) model.IsChanged = false;
+            if (e.Entity is EntityBase model) model.IsChanged = false;
         }
     }
 }

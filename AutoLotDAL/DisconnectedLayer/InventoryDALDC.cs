@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace AutoLotDAL.DisconnectedLayer
 {
     public class InventoryDALDC
     {
         // Поля данных.
-        private string connectionString;
-        private SqlDataAdapter adapter = null;
+        private readonly string connectionString;
+        private readonly SqlDataAdapter adapter = null;
 
         public InventoryDALDC(string connStr)
         {
@@ -28,7 +23,7 @@ namespace AutoLotDAL.DisconnectedLayer
             adapter = new SqlDataAdapter("Select * From Inventory", connectionString);
 
             // Динамически получить остальные объекты команд во время выполнения, используя SqlCommandBuilder.
-            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            using (SqlCommandBuilder builder = new SqlCommandBuilder(adapter)) { }
         }
 
         public DataTable GetAllInventory()
@@ -38,9 +33,6 @@ namespace AutoLotDAL.DisconnectedLayer
             return inv;
         }
 
-        public void UpdateInventory(DataTable modifiedTable)
-        {
-            adapter.Update(modifiedTable);
-        }
+        public void UpdateInventory(DataTable modifiedTable) => adapter.Update(modifiedTable);
     }
 }

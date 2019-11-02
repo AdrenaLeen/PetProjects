@@ -17,10 +17,7 @@ namespace AutoLotDAL.ConnectedLayer
             sqlConnection.Open();
         }
 
-        public void CloseConnection()
-        {
-            sqlConnection.Close();
-        }
+        public void CloseConnection() => sqlConnection.Close();
 
         public void InsertAuto(string color, string make, string petName)
         {
@@ -188,24 +185,22 @@ namespace AutoLotDAL.ConnectedLayer
             // Первым делом найти текущее имя по идентификатору клиента.
             string fName;
             string lName;
-            SqlCommand cmdSelect = new SqlCommand($"Select * from Customers where CustId = {custId}", sqlConnection);
-            using (SqlDataReader dataReader = cmdSelect.ExecuteReader())
+            using (SqlCommand cmdSelect = new SqlCommand($"Select * from Customers where CustId = {custId}", sqlConnection))
             {
-                if (dataReader.HasRows)
+                using (SqlDataReader dataReader = cmdSelect.ExecuteReader())
                 {
-                    dataReader.Read();
-                    fName = (string)dataReader["FirstName"];
-                    lName = (string)dataReader["LastName"];
-                }
-                else
-                {
-                    return;
+                    if (dataReader.HasRows)
+                    {
+                        dataReader.Read();
+                        fName = (string)dataReader["FirstName"];
+                        lName = (string)dataReader["LastName"];
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
             }
-
-            // Создать объекты команд, которые представляют каждый шаг операции.
-            SqlCommand cmdRemove = new SqlCommand($"Delete from Customers where CustId = {custId}", sqlConnection);
-            SqlCommand cmdInsert = new SqlCommand($"Insert Into CreditRisks (FirstName, LastName) Values('{fName}', '{lName}')", sqlConnection);
 
             // Это будет получено из объекта подключения.
             SqlTransaction tx = null;
@@ -213,13 +208,20 @@ namespace AutoLotDAL.ConnectedLayer
             {
                 tx = sqlConnection.BeginTransaction();
 
-                // Включить команды в транзакцию.
-                cmdInsert.Transaction = tx;
-                cmdRemove.Transaction = tx;
+                // Создать объекты команд, которые представляют каждый шаг операции.
+                using (SqlCommand cmdRemove = new SqlCommand($"Delete from Customers where CustId = {custId}", sqlConnection))
+                {
+                    using (SqlCommand cmdInsert = new SqlCommand($"Insert Into CreditRisks (FirstName, LastName) Values('{fName}', '{lName}')", sqlConnection))
+                    {
+                        // Включить команды в транзакцию.
+                        cmdInsert.Transaction = tx;
+                        cmdRemove.Transaction = tx;
 
-                // Выполнить команды.
-                cmdInsert.ExecuteNonQuery();
-                cmdRemove.ExecuteNonQuery();
+                        // Выполнить команды.
+                        cmdInsert.ExecuteNonQuery();
+                        cmdRemove.ExecuteNonQuery();
+                    }
+                }
 
                 // Эмулировать ошибку.
                 if (throwEx)

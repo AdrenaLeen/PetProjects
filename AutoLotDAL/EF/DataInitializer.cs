@@ -1,10 +1,6 @@
-﻿using System;
+﻿using AutoLotDAL.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.Entity;
-using AutoLotDAL.Models;
 
 namespace AutoLotDAL.EF
 {

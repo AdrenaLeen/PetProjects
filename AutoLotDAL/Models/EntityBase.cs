@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PropertyChanged;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using PropertyChanged;
+using System.Linq;
 
 namespace AutoLotDAL.Models
 {
@@ -36,10 +34,7 @@ namespace AutoLotDAL.Models
             return errors.ContainsKey(propertyName) ? errors[propertyName] : null;
         }
 
-        protected void OnErrorsChanged(string propertyName)
-        {
-            ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-        }
+        protected void OnErrorsChanged(string propertyName) => ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
 
         protected void ClearErrors(string propertyName = "")
         {
@@ -47,10 +42,7 @@ namespace AutoLotDAL.Models
             OnErrorsChanged(propertyName);
         }
 
-        protected void AddError(string propertyName, string error)
-        {
-            AddErrors(propertyName, new List<string> { error });
-        }
+        protected void AddError(string propertyName, string error) => AddErrors(propertyName, new List<string> { error });
 
         protected void AddErrors(string propertyName, IList<string> myErrors)
         {

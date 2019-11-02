@@ -1,11 +1,10 @@
-﻿using System;
+﻿using AutoLotDAL.EF;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotDAL.EF;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AutoLotDAL.Repos
 {
@@ -20,22 +19,22 @@ namespace AutoLotDAL.Repos
             {
                 return Context.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 // Генерируется, когда возникла ошибка параллелизма; пока что просто сгенерировать исключение повторно.
                 throw;
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
                 // Генерируется, когда обновление базы данных терпит отказ. Проверить внутреннее исключение (исключения), чтобы получить дополнительные сведения и затронутые объекты; пока что просто сгенерировать исключение повторно.
                 throw;
             }
-            catch (CommitFailedException ex)
+            catch (CommitFailedException)
             {
                 // Обработать здесь ошибки, связанные с транзакцией; пока что просто сгенерировать исключение повторно.
                 throw;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Были сгенерированы какие-то другие исключения, которые должны быть обработаны.
                 throw;
@@ -48,22 +47,22 @@ namespace AutoLotDAL.Repos
             {
                 return await Context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 // Генерируется, когда возникла ошибка параллелизма; пока что просто сгенерировать исключение повторно.
                 throw;
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
                 // Генерируется, когда обновление базы данных терпит отказ. Проверить внутреннее исключение (исключения), чтобы получить дополнительные сведения и затронутые объекты; пока что просто сгенерировать исключение повторно.
                 throw;
             }
-            catch (CommitFailedException ex)
+            catch (CommitFailedException)
             {
                 // Обработать здесь ошибки, связанные с транзакцией; пока что просто сгенерировать исключение повторно.
                 throw;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Были сгенерированы какие-то другие исключения, которые должны быть обработаны.
                 throw;
@@ -121,12 +120,8 @@ namespace AutoLotDAL.Repos
         {
             if (disposed) return;
 
-            if (disposing)
-            {
-                Context.Dispose();
-                
-                // Освободить здесь любые управляемые объекты.
-            }
+            // Освободить здесь любые управляемые объекты.
+            if (disposing) Context.Dispose();
 
             // Освободить здесь любые управляемые объекты.
             disposed = true;

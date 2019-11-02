@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AutoLotDAL.Models;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using AutoLotDAL.Models;
 
 namespace AutoLotDAL.Repos
 {
     public class OrderRepo: BaseRepo<Order>, IRepo<Order>
     {
-        public OrderRepo()
-        {
-            Table = Context.Orders;
-        }
+        public OrderRepo() => Table = Context.Orders;
 
         public int Delete(int id, byte[] timeStamp)
         {
