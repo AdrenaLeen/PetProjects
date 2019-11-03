@@ -1,17 +1,11 @@
-﻿using System;
+﻿using AutoLotDAL.ConnectedLayer;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
-using AutoLotDAL.ConnectedLayer;
-using System.Data;
 using System.Configuration;
+using System.Data;
 
 public class AutoLotService : IAutoLotService
 {
-    private string ConnString = ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ToString();
+    private readonly string ConnString = ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ToString();
 
     public void InsertCar(int id, string make, string color, string petname)
     {
@@ -44,11 +38,13 @@ public class AutoLotService : IAutoLotService
         DataTableReader reader = dt.CreateDataReader();
         while (reader.Read())
         {
-            InventoryRecord r = new InventoryRecord();
-            r.ID = (int)reader["CarID"];
-            r.Color = ((string)reader["Color"]);
-            r.Make = ((string)reader["Make"]);
-            r.PetName = ((string)reader["PetName"]);
+            InventoryRecord r = new InventoryRecord
+            {
+                ID = (int)reader["CarID"],
+                Color = (string)reader["Color"],
+                Make = (string)reader["Make"],
+                PetName = (string)reader["PetName"]
+            };
             records.Add(r);
         }
 

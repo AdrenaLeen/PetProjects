@@ -299,7 +299,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathClient", "MathClient\Ma
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AutoLotWCFService", "AutoLotWCFService\", "{1FECD34B-A469-4B3E-990C-26B0FCC7B973}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
 		ProjectReferences = "{9771a628-68fb-4677-90b1-c992155fe30f}|AutoLotDAL.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_54828"
 		Debug.AspNetCompiler.PhysicalPath = "AutoLotWCFService\"
