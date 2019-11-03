@@ -1,11 +1,9 @@
-﻿using System;
+﻿using AutoLotConsoleApp.EF;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotConsoleApp.EF;
 
 namespace AutoLotConsoleApp
 {
@@ -56,10 +54,7 @@ namespace AutoLotConsoleApp
                 foreach (Car c in context.Cars)
                 {
                     context.Entry(c).Collection(x => x.Orders).Load();
-                    foreach (Order o in c.Orders)
-                    {
-                        Console.WriteLine(o.OrderId);
-                    }
+                    foreach (Order o in c.Orders) Console.WriteLine(o.OrderId);
                 }
             }
         }
