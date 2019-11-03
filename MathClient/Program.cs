@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using MathClient.ServiceReference1;
+using System;
 using System.Threading;
-using System.Threading.Tasks;
-using MathClient.ServiceReference1;
 
 namespace MathClient
 {
@@ -19,9 +15,9 @@ namespace MathClient
 
                 // Суммировать числа в асинхронной манере с применением лямбда-выражения.
                 IAsyncResult result = proxy.BeginAdd(2, 3, ar =>
-                    {
-                        Console.WriteLine($"2 + 3 = {proxy.EndAdd(ar)}");
-                    }, null);
+                {
+                    Console.WriteLine($"2 + 3 = {proxy.EndAdd(ar)}");
+                }, null);
 
                 while (!result.IsCompleted)
                 {
