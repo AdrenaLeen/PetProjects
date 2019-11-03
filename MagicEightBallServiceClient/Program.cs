@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MagicEightBallServiceClient.ServiceReference1;
+﻿using MagicEightBallServiceClient.ServiceReference1;
+using System;
 
 namespace MagicEightBallServiceClient
 {

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MagicEightBallServiceLib;
+using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-using MagicEightBallServiceLib;
 
 namespace MagicEightBallServiceHost
 {
