@@ -25,14 +25,8 @@ namespace WpfTesterApp
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Вы нажали на кнопку!");
-        }
+        private void Button_Click(object sender, RoutedEventArgs e) => MessageBox.Show("Вы нажали на кнопку!");
 
-        private void Window_MouseMove(object sender, MouseEventArgs e)
-        {
-            Title = e.GetPosition(this).ToString();
-        }
+        private void Window_MouseMove(object sender, MouseEventArgs e) => Title = e.GetPosition(this).ToString();
     }
 }
