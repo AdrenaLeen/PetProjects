@@ -26,17 +26,14 @@ namespace InteractiveLaserSign
             InitializeComponent();
         }
 
-        private void Line1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
+        private void Line1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
             // Изменить цвет при щелчке.
             Line1.Fill = new SolidColorBrush(Colors.Red);
-        }
 
         private void Line2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // Размыть при щелчке.
-            BlurEffect blur = new BlurEffect();
-            blur.Radius = 10;
+            BlurEffect blur = new BlurEffect { Radius = 10 };
             Line2.Effect = blur;
         }
     }
