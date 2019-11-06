@@ -27,8 +27,8 @@ namespace CustomDepPropApp
 
         public int CurrentNumber
         {
-            get { return (int)GetValue(CurrentNumberProperty); }
-            set { SetValue(CurrentNumberProperty, value); }
+            get => (int)GetValue(CurrentNumberProperty);
+            set => SetValue(CurrentNumberProperty, value);
         }
 
         // Это сделает возможной анимацию, применение стилей, привязку и т.д.
