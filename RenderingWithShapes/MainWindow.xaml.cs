@@ -33,9 +33,9 @@ namespace RenderingWithShapes
             InitializeComponent();
         }
 
-        private void canvasDrawingArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CanvasDrawingArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Shape shapeToRender = null;
+            Shape shapeToRender;
 
             // Сконфигурировать корректную фигуру для рисования.
             switch (currentShape)
@@ -85,22 +85,13 @@ namespace RenderingWithShapes
             canvasDrawingArea.Children.Add(shapeToRender);
         }
 
-        private void circleOption_Click(object sender, RoutedEventArgs e)
-        {
-            currentShape = SelectedShape.Circle;
-        }
+        private void CircleOption_Click(object sender, RoutedEventArgs e) => currentShape = SelectedShape.Circle;
 
-        private void rectOption_Click(object sender, RoutedEventArgs e)
-        {
-            currentShape = SelectedShape.Rectangle;
-        }
+        private void RectOption_Click(object sender, RoutedEventArgs e) => currentShape = SelectedShape.Rectangle;
 
-        private void lineOption_Click(object sender, RoutedEventArgs e)
-        {
-            currentShape = SelectedShape.Line;
-        }
+        private void LineOption_Click(object sender, RoutedEventArgs e) => currentShape = SelectedShape.Line;
 
-        private void canvasDrawingArea_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        private void CanvasDrawingArea_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             // Сначала получить координаты X,Y позиции, где пользователь выполнил щелчок.
             Point pt = e.GetPosition((Canvas)sender);
@@ -113,7 +104,7 @@ namespace RenderingWithShapes
             if (result != null) canvasDrawingArea.Children.Remove(result.VisualHit as Shape);
         }
 
-        private void flipCanvas_Click(object sender, RoutedEventArgs e)
+        private void FlipCanvas_Click(object sender, RoutedEventArgs e)
         {
             if (flipCanvas.IsChecked == true)
             {
