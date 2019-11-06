@@ -36,32 +36,19 @@ namespace MyWordPad
             CommandBindings.Add(helpBinding);
         }
 
-        private void HelpExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
-            MessageBox.Show("Слушайте, это не так сложно. Просто введите что-нибудь!", "Справка!");
-        }
+        private void HelpExecuted(object sender, ExecutedRoutedEventArgs e) => MessageBox.Show("Слушайте, это не так сложно. Просто введите что-нибудь!", "Справка!");
 
-        private void CanHelpExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
+        private void CanHelpExecute(object sender, CanExecuteRoutedEventArgs e) =>
             // Если нужно предотвратить выполнение команды, то можно установить CanExecute в false.
             e.CanExecute = true;
-        }
 
-        private void FileExit_MouseEnter(object sender, MouseEventArgs e)
-        {
-            statBarText.Text = "Завершить работу приложения";
-        }
+        private void FileExit_MouseEnter(object sender, MouseEventArgs e) => statBarText.Text = "Завершить работу приложения";
 
-        private void FileExit_MouseLeave(object sender, MouseEventArgs e)
-        {
-            statBarText.Text = "Показать советы по правописанию";
-        }
+        private void FileExit_MouseLeave(object sender, MouseEventArgs e) => statBarText.Text = "Показать советы по правописанию";
 
-        private void FileExit_Click(object sender, RoutedEventArgs e)
-        {
+        private void FileExit_Click(object sender, RoutedEventArgs e) =>
             // Закрыть это окно.
             Close();
-        }
 
         private void ToolsSpellingHints_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -106,10 +93,7 @@ namespace MyWordPad
             }
         }
 
-        private void OpenCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            e.CanExecute = true;
-        }
+        private void OpenCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e) => e.CanExecute = true;
 
         private void SaveCmd_Executed(object sender, ExecutedRoutedEventArgs e)
         {
@@ -117,15 +101,10 @@ namespace MyWordPad
 
             // Был ли совершён щелчок на кнопке OK?
             if (true == saveDlg.ShowDialog())
-            {
                 // Сохранить данные из TextBox в указанном файле.
                 File.WriteAllText(saveDlg.FileName, txtData.Text);
-            }
         }
 
-        private void SaveCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            e.CanExecute = true;
-        }
+        private void SaveCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e) => e.CanExecute = true;
     }
 }
