@@ -27,7 +27,7 @@ namespace WpfRoutedEvents
             InitializeComponent();
         }
 
-        private void btnClickMe_Click(object sender, RoutedEventArgs e)
+        private void BtnClickMe_Click(object sender, RoutedEventArgs e)
         {
             AddEventInfo(sender, e);
             MessageBox.Show(mouseActivity, "Информация о вашем событии");
@@ -38,14 +38,8 @@ namespace WpfRoutedEvents
 
         private void AddEventInfo(object sender, RoutedEventArgs e) => mouseActivity += $"{sender} послал событие {e.RoutedEvent.RoutingStrategy} по имени {e.RoutedEvent.Name}.\n";
 
-        private void outerEllipse_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            AddEventInfo(sender, e);
-        }
+        private void OuterEllipse_MouseDown(object sender, MouseButtonEventArgs e) => AddEventInfo(sender, e);
 
-        private void outerEllipse_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            AddEventInfo(sender, e);
-        }
+        private void OuterEllipse_PreviewMouseDown(object sender, MouseButtonEventArgs e) => AddEventInfo(sender, e);
     }
 }
