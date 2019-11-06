@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 using System.Windows.Media;
 
 namespace RenderingWithVisuals
@@ -12,16 +7,11 @@ namespace RenderingWithVisuals
     class CustomVisualFrameworkElement : FrameworkElement
     {
         // Коллекция всех визуальных объектов.
-        VisualCollection theVisuals;
+        readonly VisualCollection theVisuals;
 
-        public CustomVisualFrameworkElement()
-        {
-            // Заполнить коллекцию VisualCollection несколькими объектами DrawingVisual.
-            // Аргумент конструктора представляет владельца визуальных объектов.
-            theVisuals = new VisualCollection(this);
-            theVisuals.Add(AddRect());
-            theVisuals.Add(AddCircle());
-        }
+        // Заполнить коллекцию VisualCollection несколькими объектами DrawingVisual.
+        // Аргумент конструктора представляет владельца визуальных объектов.
+        public CustomVisualFrameworkElement() => theVisuals = new VisualCollection(this) { AddRect(), AddCircle() };
 
         private Visual AddCircle()
         {
@@ -48,10 +38,7 @@ namespace RenderingWithVisuals
             return drawingVisual;
         }
 
-        protected override int VisualChildrenCount
-        {
-            get { return theVisuals.Count; }
-        }
+        protected override int VisualChildrenCount => theVisuals.Count;
 
         protected override Visual GetVisualChild(int index)
         {
