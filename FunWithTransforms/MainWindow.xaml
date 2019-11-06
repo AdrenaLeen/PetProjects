@@ -12,9 +12,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0">
-            <Button Name="btnSkew" Content="Перекосить" Click="btnSkew_Click"/>
-            <Button Name="btnRotate" Content="Повернуть" Click="btnRotate_Click"/>
-            <Button Name="btnFlip" Content="Зеркально отобразить" Click="btnFlip_Click"/>
+            <Button Name="btnSkew" Content="Перекосить" Click="BtnSkew_Click"/>
+            <Button Name="btnRotate" Content="Повернуть" Click="BtnRotate_Click"/>
+            <Button Name="btnFlip" Content="Зеркально отобразить" Click="BtnFlip_Click"/>
         </StackPanel>
         <Canvas Name="myCanvas" Grid.Column="1" Grid.Row="0">
             <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top"	Height="190"  Width="90" Stroke="Black" Canvas.Left="20" Canvas.Top="30">

@@ -25,19 +25,10 @@ namespace FunWithTransforms
             InitializeComponent();
         }
 
-        private void btnSkew_Click(object sender, RoutedEventArgs e)
-        {
-            myCanvas.LayoutTransform = new SkewTransform(40, -20);
-        }
+        private void BtnSkew_Click(object sender, RoutedEventArgs e) => myCanvas.LayoutTransform = new SkewTransform(40, -20);
 
-        private void btnRotate_Click(object sender, RoutedEventArgs e)
-        {
-            myCanvas.LayoutTransform = new RotateTransform(180);
-        }
+        private void BtnRotate_Click(object sender, RoutedEventArgs e) => myCanvas.LayoutTransform = new RotateTransform(180);
 
-        private void btnFlip_Click(object sender, RoutedEventArgs e)
-        {
-            myCanvas.LayoutTransform = new ScaleTransform(-1, 1);
-        }
+        private void BtnFlip_Click(object sender, RoutedEventArgs e) => myCanvas.LayoutTransform = new ScaleTransform(-1, 1);
     }
 }
