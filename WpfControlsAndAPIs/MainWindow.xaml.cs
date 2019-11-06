@@ -112,11 +112,9 @@ namespace WpfControlsAndAPIs
             }
         }
 
-        private void Clear(object sender, RoutedEventArgs e)
-        {
+        private void Clear(object sender, RoutedEventArgs e) =>
             // Очистить все штрихи.
             myInkCanvas.Strokes.Clear();
-        }
 
         private void PopulateDocument()
         {
@@ -134,9 +132,11 @@ namespace WpfControlsAndAPIs
 
             // Середина абзаца.
             Bold b = new Bold();
-            Run infix = new Run("динамически");
-            infix.Foreground = Brushes.Red;
-            infix.FontSize = 30;
+            Run infix = new Run("динамически")
+            {
+                Foreground = Brushes.Red,
+                FontSize = 30
+            };
             b.Inlines.Add(infix);
 
             // Последняя часть абзаца.
@@ -166,12 +166,13 @@ namespace WpfControlsAndAPIs
         private void SetBindings()
         {
             // Создать объект Binding.
-            Binding b = new Binding();
-
-            // Зарегистрировать преобразователь, источник и путь.
-            b.Converter = new MyDoubleConverter();
-            b.Source = mySB;
-            b.Path = new PropertyPath("Value");
+            Binding b = new Binding
+            {
+                // Зарегистрировать преобразователь, источник и путь.
+                Converter = new MyDoubleConverter(),
+                Source = mySB,
+                Path = new PropertyPath("Value")
+            };
 
             // Вызвать метод SetBinding объекта Label.
             labelSBThumb.SetBinding(ContentProperty, b);
