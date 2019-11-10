@@ -31,7 +31,7 @@ namespace WpfStyles
             lstStyles.Items.Add("BasicControlStyle");
         }
 
-        private void lstStyles_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LstStyles_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Получить имя стиля, выбранное в окне со списком.
             Style currStyle = (Style)TryFindResource(lstStyles.SelectedValue);
