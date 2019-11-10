@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Объектные ресурсы" Height="350" Width="525">
     <StackPanel Orientation="Horizontal">
-        <Button Name="btnOK" Margin="25" Height="200" Width="200" Content="OK" FontSize="20" Background="{DynamicResource myBrush}" Click="btnOK_Click"/>
-        <Button Name="btnCancel" Margin="25" Height="200" Width="200" FontSize="20" Click="btnCancel_Click">
+        <Button Name="btnOK" Margin="25" Height="200" Width="200" Content="OK" FontSize="20" Background="{DynamicResource myBrush}" Click="BtnOK_Click"/>
+        <Button Name="btnCancel" Margin="25" Height="200" Width="200" FontSize="20" Click="BtnCancel_Click">
             <StackPanel>
                 <Label HorizontalAlignment="Center" Content="Отмена!"/>
                 <Ellipse Height="100" Width="100" Fill="{DynamicResource myBrush}"/>

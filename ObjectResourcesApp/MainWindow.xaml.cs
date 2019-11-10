@@ -25,17 +25,17 @@ namespace ObjectResourcesApp
             InitializeComponent();
         }
 
-        private void btnOK_Click(object sender, RoutedEventArgs e)
-        {
+        private void BtnOK_Click(object sender, RoutedEventArgs e) =>
             // Поместить в ячейку myBrush совершенно новую кисть.
             Resources["myBrush"] = new SolidColorBrush(Colors.Red);
-        }
 
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            TestWindow w = new TestWindow();
-            w.Owner = this;
-            w.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            TestWindow w = new TestWindow
+            {
+                Owner = this,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
             w.ShowDialog();
         }
     }

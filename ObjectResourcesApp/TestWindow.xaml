@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="TestWindow" Height="300" Width="300" Background="{DynamicResource myBrush}">
     <Grid>
-        <Button Name="btnClose" Margin="100,100,100,100" Content="Закрыть окно" Click="btnClose_Click"/>
+        <Button Name="btnClose" Margin="100,100,100,100" Content="Закрыть окно" Click="BtnClose_Click"/>
     </Grid>
 </Window>

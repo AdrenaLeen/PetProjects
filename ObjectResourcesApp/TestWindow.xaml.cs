@@ -24,9 +24,6 @@ namespace ObjectResourcesApp
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+        private void BtnClose_Click(object sender, RoutedEventArgs e) => Close();
     }
 }
