@@ -28,7 +28,7 @@ namespace SpinningButtonAnimationApp
             InitializeComponent();
         }
 
-        private void btnSpinner_MouseEnter(object sender, MouseEventArgs e)
+        private void BtnSpinner_MouseEnter(object sender, MouseEventArgs e)
         {
             if (!isSpinning)
             {
@@ -54,7 +54,7 @@ namespace SpinningButtonAnimationApp
             }
         }
 
-        private void btnSpinner_Click(object sender, RoutedEventArgs e)
+        private void BtnSpinner_Click(object sender, RoutedEventArgs e)
         {
             DoubleAnimation dblAnim = new DoubleAnimation
             {

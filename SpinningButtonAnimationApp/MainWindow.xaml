@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Анимация в коде C#" Height="350" Width="525" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Name="btnSpinner" Height="50" Width="100" Content="Я кручусь!" MouseEnter="btnSpinner_MouseEnter" Click="btnSpinner_Click"/>
+        <Button Name="btnSpinner" Height="50" Width="100" Content="Я кручусь!" MouseEnter="BtnSpinner_MouseEnter" Click="BtnSpinner_Click"/>
     </Grid>
 </Window>
