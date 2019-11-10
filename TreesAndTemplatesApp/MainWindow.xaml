@@ -9,15 +9,15 @@
     <DockPanel LastChildFill="True">
         <Border Height="50" DockPanel.Dock="Top" BorderBrush="Blue">
             <StackPanel Orientation="Horizontal">
-                <Button Name="btnShowLogicalTree" Content="Логическое дерево окна" Margin="4" BorderBrush="Blue" Height="40" Click="btnShowLogicalTree_Click"/>
-                <Button Name="btnShowVisualTree" Content="Визуальное дерево окна" BorderBrush="Blue" Height="40" Click="btnShowVisualTree_Click"/>
+                <Button Name="btnShowLogicalTree" Content="Логическое дерево окна" Margin="4" BorderBrush="Blue" Height="40" Click="BtnShowLogicalTree_Click"/>
+                <Button Name="btnShowVisualTree" Content="Визуальное дерево окна" BorderBrush="Blue" Height="40" Click="BtnShowVisualTree_Click"/>
             </StackPanel>
         </Border>
         <Border DockPanel.Dock="Left" Margin="10" BorderBrush="DarkGreen" BorderThickness="4" Width="360">
             <StackPanel>
                 <Label Content="Введите полное имя элемента управления WPF" Width="340" FontWeight="DemiBold" />
                 <TextBox Name="txtFullName" Width="340" BorderBrush="Green" Background="BlanchedAlmond" Height="22" Text="System.Windows.Controls.Button" />
-                <Button Name="btnTemplate" Content="Посмотреть шаблон" BorderBrush="Green" Height="40" Width="120" Margin="5" Click="btnTemplate_Click" HorizontalAlignment="Left" />
+                <Button Name="btnTemplate" Content="Посмотреть шаблон" BorderBrush="Green" Height="40" Width="120" Margin="5" Click="BtnTemplate_Click" HorizontalAlignment="Left" />
                 <Border BorderBrush="DarkGreen" BorderThickness="2" Height="260" Width="300" Margin="10" Background="LightGreen" >
                     <StackPanel Name="stackTemplatePanel" />
                 </Border>

@@ -31,7 +31,7 @@ namespace TreesAndTemplatesApp
             InitializeComponent();
         }
 
-        private void btnShowLogicalTree_Click(object sender, RoutedEventArgs e)
+        private void BtnShowLogicalTree_Click(object sender, RoutedEventArgs e)
         {
             dataToShow = "";
             BuildLogicalTree(0, this);
@@ -47,13 +47,10 @@ namespace TreesAndTemplatesApp
             if (!(obj is DependencyObject)) return;
 
             // Выполнить рекурсивный вызов для каждого логического дочернего элемента.
-            foreach (object child in LogicalTreeHelper.GetChildren((DependencyObject)obj))
-            {
-                BuildLogicalTree(depth + 5, child);
-            }
+            foreach (object child in LogicalTreeHelper.GetChildren((DependencyObject)obj)) BuildLogicalTree(depth + 5, child);
         }
 
-        private void btnShowVisualTree_Click(object sender, RoutedEventArgs e)
+        private void BtnShowVisualTree_Click(object sender, RoutedEventArgs e)
         {
             dataToShow = "";
             BuildVisualTree(0, this);
@@ -66,13 +63,10 @@ namespace TreesAndTemplatesApp
             dataToShow += $"{new string(' ', depth)}{obj.GetType().Name}\n";
 
             // Выполнить рекурсивный вызов для каждого визуально дочернего элемента.
-            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
-            {
-                BuildVisualTree(depth + 1, VisualTreeHelper.GetChild(obj, i));
-            }
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++) BuildVisualTree(depth + 1, VisualTreeHelper.GetChild(obj, i));
         }
 
-        private void btnTemplate_Click(object sender, RoutedEventArgs e)
+        private void BtnTemplate_Click(object sender, RoutedEventArgs e)
         {
             dataToShow = "";
             ShowTemplate();
