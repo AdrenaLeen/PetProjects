@@ -25,9 +25,6 @@ namespace ButtonTemplate
             InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Вы нажали на кнопку");
-        }
+        private void MyButton_Click(object sender, RoutedEventArgs e) => MessageBox.Show("Вы нажали на кнопку");
     }
 }

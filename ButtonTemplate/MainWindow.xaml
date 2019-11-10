@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Шаблоны" Height="500" Width="500">
     <StackPanel>
-        <Button Name="myButton" Width="100" Height="100" Background="Red" Content="Привет!" Click="myButton_Click" Style="{StaticResource RoundButtonStyle}"/>
+        <Button Name="myButton" Width="100" Height="100" Background="Red" Content="Привет!" Click="MyButton_Click" Style="{StaticResource RoundButtonStyle}"/>
         <Button Width="100" Height="100" Background="LightGreen" Content="Отмена!" Template="{StaticResource RoundButtonTemplate}"/>
         <Button Width="100" Height="100" Background="Yellow" Content="Формат" Template="{StaticResource RoundButtonTemplate}"/>
         <Button Width="100" Height="100" Background="Yellow" Template="{StaticResource RoundButtonTemplate}">
