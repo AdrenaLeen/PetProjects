@@ -21,7 +21,7 @@ namespace BinaryResourcesApp
     public partial class MainWindow : Window
     {
         // Список файлов BitmapImage.
-        List<BitmapImage> images = new List<BitmapImage>();
+        readonly List<BitmapImage> images = new List<BitmapImage>();
 
         // Текущая позиция в списке.
         private int currImage = 0;
@@ -50,13 +50,13 @@ namespace BinaryResourcesApp
             }
         }
 
-        private void btnPreviousImage_Click(object sender, RoutedEventArgs e)
+        private void BtnPreviousImage_Click(object sender, RoutedEventArgs e)
         {
             if (--currImage < 0) currImage = maxImages;
             imageHolder.Source = images[currImage];
         }
 
-        private void btnNextImage_Click(object sender, RoutedEventArgs e)
+        private void BtnNextImage_Click(object sender, RoutedEventArgs e)
         {
             if (++currImage > maxImages) currImage = 0;
             imageHolder.Source = images[currImage];

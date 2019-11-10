@@ -9,8 +9,8 @@
         Loaded="Window_Loaded">
     <DockPanel LastChildFill="True">
         <ToolBar Height="60" Name="picturePickerToolbar" DockPanel.Dock="Top">
-            <Button Name="btnPreviousImage" Height="40" Width="100" BorderBrush="Black" Margin="5" Content="Предыдущее" Click="btnPreviousImage_Click"/>
-            <Button Name="btnNextImage" Height="40" Width="100" BorderBrush="Black" Margin="5" Content="Следующее" Click="btnNextImage_Click"/>
+            <Button Name="btnPreviousImage" Height="40" Width="100" BorderBrush="Black" Margin="5" Content="Предыдущее" Click="BtnPreviousImage_Click"/>
+            <Button Name="btnNextImage" Height="40" Width="100" BorderBrush="Black" Margin="5" Content="Следующее" Click="BtnNextImage_Click"/>
         </ToolBar>
         <Border BorderThickness="2" BorderBrush="Green">
             <Image Name="imageHolder" Stretch="Fill"/>
