@@ -66,12 +66,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MathServiceLibrary\MathServiceLibrary.csproj">
-      <Project>{086d1c9a-e8f8-4dbc-95ae-c20c33eb2f7b}</Project>
-      <Name>MathServiceLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
