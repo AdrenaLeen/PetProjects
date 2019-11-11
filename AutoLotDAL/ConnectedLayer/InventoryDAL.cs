@@ -8,16 +8,74 @@ namespace AutoLotDAL.ConnectedLayer
 {
     public class InventoryDAL
     {
+        private readonly string connectionString;
+
         // Этот член будет использоваться всеми методами.
         private SqlConnection sqlConnection = null;
 
-        public void OpenConnection(string connectionString)
+        public InventoryDAL() : this(@"Data Source=.\SQLEXPRESS;Initial Catalog=AutoLot;Integrated Security=True;") { }
+
+        public InventoryDAL(string connString) => connectionString = connString;
+
+        public void OpenConnection()
         {
             sqlConnection = new SqlConnection { ConnectionString = connectionString };
             sqlConnection.Open();
         }
 
         public void CloseConnection() => sqlConnection.Close();
+
+        public List<Car> GetAllInventory()
+        {
+            OpenConnection();
+
+            // Здесь будут храниться записи.
+            List<Car> inventory = new List<Car>();
+
+            // Подготовить объект команды.
+            string sql = "Select * From Inventory";
+            using (SqlCommand command = new SqlCommand(sql, sqlConnection))
+            {
+                command.CommandType = CommandType.Text;
+                SqlDataReader dataReader = command.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dataReader.Read())
+                {
+                    inventory.Add(new Car
+                    {
+                        CarId = (int)dataReader["CarId"],
+                        Color = (string)dataReader["Color"],
+                        Make = (string)dataReader["Make"],
+                        PetName = (string)dataReader["PetName"]
+                    });
+                }
+                dataReader.Close();
+            }
+            return inventory;
+        }
+
+        public Car GetCar(int id)
+        {
+            OpenConnection();
+            Car car = null;
+            string sql = $"Select * From Inventory where CarId = {id}";
+            using (SqlCommand command = new SqlCommand(sql, sqlConnection))
+            {
+                command.CommandType = CommandType.Text;
+                SqlDataReader dataReader = command.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dataReader.Read())
+                {
+                    car = new Car
+                    {
+                        CarId = (int)dataReader["CarId"],
+                        Color = (string)dataReader["Color"],
+                        Make = (string)dataReader["Make"],
+                        PetName = (string)dataReader["PetName"]
+                    };
+                }
+                dataReader.Close();
+            }
+            return car;
+        }
 
         public void InsertAuto(string color, string make, string petName)
         {
@@ -59,7 +117,7 @@ namespace AutoLotDAL.ConnectedLayer
             }
         }
 
-        public void InsertAuto(NewCar car)
+        public void InsertAuto(Car car)
         {
             // Сформатировать и выполнить оператор SQL.
             string sql = $"Insert Into Inventory (Make, Color, PetName) Values ('{car.Make}', '{car.Color}', '{car.PetName}')";
@@ -73,6 +131,7 @@ namespace AutoLotDAL.ConnectedLayer
 
         public void DeleteCar(int id)
         {
+            OpenConnection();
             // Удалить запись об автомобиле с указанным CarId.
             string sql = $"Delete from Inventory where CarId = '{id}'";
             using (SqlCommand cmd = new SqlCommand(sql, sqlConnection))
@@ -87,6 +146,7 @@ namespace AutoLotDAL.ConnectedLayer
                     throw error;
                 }
             }
+            CloseConnection();
         }
 
         public void UpdateCarPetName(int id, string newPetName)
@@ -99,10 +159,10 @@ namespace AutoLotDAL.ConnectedLayer
             }
         }
 
-        public List<NewCar> GetAllInventoryAsList()
+        public List<Car> GetAllInventoryAsList()
         {
             // Здесь будут храниться записи.
-            List<NewCar> inv = new List<NewCar>();
+            List<Car> inv = new List<Car>();
 
             // Подготовить объект команды.
             string sql = "Select * From Inventory";
@@ -111,7 +171,7 @@ namespace AutoLotDAL.ConnectedLayer
                 SqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    inv.Add(new NewCar
+                    inv.Add(new Car
                     {
                         CarId = (int)dataReader["CarId"],
                         Color = (string)dataReader["Color"],
@@ -144,6 +204,7 @@ namespace AutoLotDAL.ConnectedLayer
 
         public string LookUpPetName(int carId)
         {
+            OpenConnection();
             string carPetName;
 
             // Установить имя хранимой процедуры.
@@ -176,6 +237,7 @@ namespace AutoLotDAL.ConnectedLayer
 
                 // Возвратить выходной параметр.
                 carPetName = (string)command.Parameters["@petName"].Value;
+                CloseConnection();
             }
             return carPetName;
         }

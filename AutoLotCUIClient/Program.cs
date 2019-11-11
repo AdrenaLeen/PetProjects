@@ -80,10 +80,10 @@ namespace AutoLotCUIClient
         private static void ListInventoryViaList(InventoryDAL invDAL)
         {
             // Получить список автомобилей на складе.
-            List<NewCar> record = invDAL.GetAllInventoryAsList();
+            List<Car> record = invDAL.GetAllInventoryAsList();
 
             Console.WriteLine("CarId:\tMake:\tColor:\tPetName:");
-            foreach (NewCar c in record) Console.WriteLine($"{c.CarId}\t{c.Make}\t{c.Color}\t{c.PetName}");
+            foreach (Car c in record) Console.WriteLine($"{c.CarId}\t{c.Make}\t{c.Color}\t{c.PetName}");
         }
 
         private static void DeleteCar(InventoryDAL invDAL)
@@ -126,7 +126,7 @@ namespace AutoLotCUIClient
             string newCarPetName = Console.ReadLine();
 
             // Передать информацию библиотеке доступа к данным.
-            NewCar c = new NewCar
+            Car c = new Car
             {
                 Color = newCarColor,
                 Make = newCarMake,

@@ -1,6 +1,6 @@
 ﻿namespace AutoLotDAL.Models
 {
-    public class NewCar
+    public class Car
     {
         public int CarId { get; set; }
         public string Color { get; set; }

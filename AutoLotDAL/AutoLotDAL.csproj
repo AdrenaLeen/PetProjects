@@ -81,7 +81,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\EntityBase.cs" />
     <Compile Include="Models\Inventory.cs" />
-    <Compile Include="Models\NewCar.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Partials\InventoryPartial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
