@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutoLotDAL.BulkImport
 {
@@ -22,11 +20,13 @@ namespace AutoLotDAL.BulkImport
                 .ToDictionary(pair => pair.Name, pair => pair.index);
         }
 
+        public MyDataReader(List<T> records) : this() => Records = records;
+
         public object this[int i] => throw new NotImplementedException();
 
         public object this[string name] => throw new NotImplementedException();
 
-        public List<T> Records { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<T> Records { get; set; }
 
         public int Depth => throw new NotImplementedException();
 
@@ -38,7 +38,7 @@ namespace AutoLotDAL.BulkImport
 
         public void Close()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Dispose()
