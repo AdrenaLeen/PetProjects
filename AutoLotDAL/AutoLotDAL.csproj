@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BulkImport\IMyDataReader.cs" />
+    <Compile Include="BulkImport\MyDataReader.cs" />
     <Compile Include="ConnectedLayer\InventoryDAL.cs" />
     <Compile Include="DataSets\AutoLotDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
