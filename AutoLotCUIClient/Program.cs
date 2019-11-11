@@ -3,7 +3,6 @@ using AutoLotDAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 
 namespace AutoLotCUIClient
 {
@@ -16,7 +15,6 @@ namespace AutoLotCUIClient
             // Получить строку подключения из файла App.config.
             string connectionString = ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ConnectionString;
             bool userDone = false;
-            string userCommand = "";
 
             // Создать объект InventoryDAL.
             InventoryDAL invDAL = new InventoryDAL();
@@ -30,7 +28,7 @@ namespace AutoLotCUIClient
                 {
                     Console.WriteLine();
                     Console.Write("Пожалуйста, введите команду: ");
-                    userCommand = Console.ReadLine();
+                    string userCommand = Console.ReadLine();
                     Console.WriteLine();
                     switch (userCommand?.ToUpper() ?? "")
                     {
@@ -85,40 +83,7 @@ namespace AutoLotCUIClient
             List<NewCar> record = invDAL.GetAllInventoryAsList();
 
             Console.WriteLine("CarId:\tMake:\tColor:\tPetName:");
-            foreach (NewCar c in record)
-            {
-                Console.WriteLine($"{c.CarId}\t{c.Make}\t{c.Color}\t{c.PetName}");
-            }
-        }
-
-        private static void ListInventory(InventoryDAL invDAL)
-        {
-            // Получить список автомобилей на складе.
-            DataTable dt = invDAL.GetAllInventoryAsDataTable();
-
-            // Передать объект DataTable во вспомогательную функцию для отображения.
-            DisplayTable(dt);
-        }
-
-        private static void DisplayTable(DataTable dt)
-        {
-            // Вывести имена столбцов.
-            for (int curCol = 0; curCol < dt.Columns.Count; curCol++)
-            {
-                Console.Write($"{dt.Columns[curCol].ColumnName}\t");
-            }
-            Console.WriteLine();
-            Console.WriteLine("----------------------------------");
-
-            // Вывести содержимое объекта DataTable.
-            for (int curRow = 0; curRow < dt.Rows.Count; curRow++)
-            {
-                for (int curCol = 0; curCol < dt.Columns.Count; curCol++)
-                {
-                    Console.Write($"{dt.Rows[curRow][curCol]}\t");
-                }
-                Console.WriteLine();
-            }
+            foreach (NewCar c in record) Console.WriteLine($"{c.CarId}\t{c.Make}\t{c.Color}\t{c.PetName}");
         }
 
         private static void DeleteCar(InventoryDAL invDAL)

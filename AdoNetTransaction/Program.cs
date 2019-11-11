@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotDAL.ConnectedLayer;
-using AutoLotDAL.Models;
+﻿using AutoLotDAL.ConnectedLayer;
+using System;
 using System.Configuration;
 
 namespace AdoNetTransaction
@@ -20,16 +15,13 @@ namespace AdoNetTransaction
 
             Console.Write("Генерировать ли исключение (Y или N): ");
             string userAnswer = Console.ReadLine();
-            if (userAnswer?.ToLower() == "n")
-            {
-                throwEx = false;
-            }
+            if (userAnswer?.ToLower() == "n") throwEx = false;
 
             InventoryDAL dal = new InventoryDAL();
             dal.OpenConnection(ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ConnectionString);
 
-            // Обработать клиента с идентификатором 5 - в следующей строке кода должен быть указан идентификатор записи для клиента Гомер Симпсон.
-            dal.ProcessCreditRisk(throwEx, 5);
+            // Обработать клиента 1 - ввести идентификатор клиента, подлежащего перемещению.
+            dal.ProcessCreditRisk(throwEx, 1);
             Console.WriteLine("Проверьте таблицу CreditRisk");
             Console.ReadLine();
         }
