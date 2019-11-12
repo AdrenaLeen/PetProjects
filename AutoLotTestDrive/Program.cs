@@ -1,12 +1,8 @@
 ﻿using AutoLotDAL.EF;
+using AutoLotDAL.Models;
 using AutoLotDAL.Repos;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotDAL.Models;
 using System.Data.Entity.Infrastructure;
 
 namespace AutoLotTestDrive
@@ -18,10 +14,12 @@ namespace AutoLotTestDrive
             Console.WriteLine("***** ADO.NET EF Code First *****");
             PrintAllInventory();
             PrintAllCustomersAndCreditRisks();
-            CustomerRepo customerRepo = new CustomerRepo();
-            Customer customer = customerRepo.GetOne(5);
-            customerRepo.Context.Entry(customer).State = EntityState.Detached;
-            CreditRisk risk = MakeCustomerARisk(customer);
+            using (CustomerRepo customerRepo = new CustomerRepo())
+            {
+                Customer customer = customerRepo.GetOne(1);
+                customerRepo.Context.Entry(customer).State = EntityState.Detached;
+                CreditRisk risk = MakeCustomerARisk(customer);
+            }
             PrintAllCustomersAndCreditRisks();
             UpdateRecordWIthConcurrency();
             Console.ReadLine();
@@ -41,57 +39,6 @@ namespace AutoLotTestDrive
             using (InventoryRepo repo = new InventoryRepo())
             {
                 repo.Add(car);
-            }
-        }
-
-        private static void AddNewRecords(IList<Inventory> cars)
-        {
-            // Добавить записи в таблицу Inventory базы данных AutoLot.
-            using (InventoryRepo repo = new InventoryRepo())
-            {
-                repo.AddRange(cars);
-            }
-        }
-
-        private static void UpdateRecord(int carId)
-        {
-            using (InventoryRepo repo = new InventoryRepo())
-            {
-                // Получить запись об автомобиле, изменить её и сохранить!
-                Inventory carToUpdate = repo.GetOne(carId);
-                if (carToUpdate != null)
-                {
-                    Console.WriteLine($"До изменения: {repo.Context.Entry(carToUpdate).State}");
-                    carToUpdate.Color = "Голубой";
-                    Console.WriteLine($"После изменения: {repo.Context.Entry(carToUpdate).State}");
-                    repo.Save(carToUpdate);
-                    Console.WriteLine($"После сохранения: {repo.Context.Entry(carToUpdate).State}");
-                }
-            }
-        }
-
-        private static void ShowAllOrders()
-        {
-            using (OrderRepo repo = new OrderRepo())
-            {
-                Console.WriteLine("*********** Ожидающие заказы ***********");
-                foreach (Order itm in repo.GetAll())
-                {
-                    Console.WriteLine($"->{itm.Customer.FullName} ждёт {itm.Car.PetName}");
-                }
-            }
-        }
-
-        private static void ShowAllOrdersEagerlyFetched()
-        {
-            using (AutoLotEntities context = new AutoLotEntities())
-            {
-                Console.WriteLine("*********** Ожидающие заказы ***********");
-                List<Order> orders = context.Orders.Include(x => x.Customer).Include(y => y.Car).ToList();
-                foreach (Order itm in orders)
-                {
-                    Console.WriteLine($"-> {itm.Customer.FullName} ожидает {itm.Car.PetName}");
-                }
             }
         }
 
