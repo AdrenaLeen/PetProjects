@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoLotDAL.DataSets;
+﻿using AutoLotDAL.DataSets;
 using AutoLotDAL.DataSets.AutoLotDataSetTableAdapters;
+using System;
 
 namespace StronglyTypedDataSetConsoleClient
 {

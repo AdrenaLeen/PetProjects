@@ -331,9 +331,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithTuples", "FunWithTup
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotClient", "AutoLotClient\AutoLotClient.csproj", "{8FA39379-861B-4EB5-89DD-85D0516D4828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDALCore", "AutoLotDALCore\AutoLotDALCore.csproj", "{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLotDALCore", "AutoLotDALCore\AutoLotDALCore.csproj", "{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDALCoreTestDriver", "AutoLotDALCoreTestDriver\AutoLotDALCoreTestDriver.csproj", "{162A651B-F5DB-46DD-998C-F8A09495968B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLotDALCoreTestDriver", "AutoLotDALCoreTestDriver\AutoLotDALCoreTestDriver.csproj", "{162A651B-F5DB-46DD-998C-F8A09495968B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{3AF95349-0657-43E3-9C2F-24D684A5BD8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1005,6 +1007,10 @@ Global
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
