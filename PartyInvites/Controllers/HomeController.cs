@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PartyInvites.Models;
+using System;
 using System.Diagnostics;
 
 namespace PartyInvites.Controllers
@@ -16,6 +17,8 @@ namespace PartyInvites.Controllers
 
         public ViewResult Index()
         {
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ? "Доброе утро" : "Добрый день";
             return View("MyView");
         }
 
