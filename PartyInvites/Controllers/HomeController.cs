@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PartyInvites.Models;
 using System;
 
 namespace PartyInvites.Controllers
@@ -14,6 +15,13 @@ namespace PartyInvites.Controllers
 
         public ViewResult RsvpForm()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            // Что-то сделать: сохранить ответ от гостя
             return View();
         }
     }
