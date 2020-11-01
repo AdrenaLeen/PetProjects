@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="~/css/styles.css" />
 </head>
 <body>
-    <div class="panel panel-success">
-        <div class="panel-heading text-center"><h4>RSVP</h4></div>
-        <div class="panel-body">
-            <form class="p-a-1" asp-action="RsvpForm" method="post">
+    <div class="card">
+        <div class="card-header text-white bg-success text-center"><h4>RSVP</h4></div>
+        <div class="card-body">
+            <form asp-action="RsvpForm" method="post">
                 <div asp-validation-summary="All"></div>
                 <div class="form-group">
                     <label asp-for="Name">Ваше имя:</label>
