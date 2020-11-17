@@ -7,16 +7,13 @@ namespace Razor.Controllers
     {
         public ViewResult Index()
         {
-            Product myProduct = new Product
-            {
-                ProductID = 1,
-                Name = "Каяк",
-                Description = "Лодка на одного человека",
-                Category = "Watersports",
-                Price = 275M
+            Product[] array = {
+                new Product {Name = "Каяк", Price = 275M},
+                new Product {Name = "Спасательный жилет", Price = 48.95M},
+                new Product {Name = "Футбольный мяч", Price = 19.50M},
+                new Product {Name = "Угловой флаг", Price = 34.95M}
             };
-            ViewBag.StockLevel = 2;
-            return View(myProduct);
+            return View(array);
         }
     }
 }
