@@ -1,14 +1,8 @@
 ﻿@model Product
 
-@{ Layout = null; }
+@{
+    Layout = "_BasicLayout";
+    ViewBag.Title = "Наименование товара";
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Главная</title>
-</head>
-<body>
-    @Model.Name
-</body>
-</html>
+Наименование товара: @Model.Name
