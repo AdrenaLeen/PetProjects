@@ -343,6 +343,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithVisualStudio", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithVisualStudio.Tests", "WorkingWithVisualStudio.Tests\WorkingWithVisualStudio.Tests.csproj", "{1E9EF3CB-C7DE-48F3-9BB5-E89BF6440E9B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsStore", "SportsStore\SportsStore.csproj", "{022A9FCC-CAA7-4FA6-AD76-0BF0BCDE4B0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1029,6 +1031,10 @@ Global
 		{1E9EF3CB-C7DE-48F3-9BB5-E89BF6440E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E9EF3CB-C7DE-48F3-9BB5-E89BF6440E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E9EF3CB-C7DE-48F3-9BB5-E89BF6440E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022A9FCC-CAA7-4FA6-AD76-0BF0BCDE4B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022A9FCC-CAA7-4FA6-AD76-0BF0BCDE4B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022A9FCC-CAA7-4FA6-AD76-0BF0BCDE4B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022A9FCC-CAA7-4FA6-AD76-0BF0BCDE4B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
