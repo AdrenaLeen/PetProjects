@@ -32,7 +32,7 @@ namespace SportsStore
             services.AddScoped(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IOrderRepository, EFOrderRepository>();
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddMemoryCache();
             services.AddSession();
         }
@@ -53,6 +53,7 @@ namespace SportsStore
             app.UseSession();
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -77,7 +78,8 @@ namespace SportsStore
                     defaults: new { Controller = "Product", action = "List", page = 1 });
                 endpoints.MapControllerRoute(
                     name: null,
-                    pattern: "{controller}/{action}/{id?}");
+                    pattern: "{controller}/{action}/{id?}",
+                    defaults: new { Controller = "Home", action = "Index" });
             });
             SeedData.EnsurePopulated(app);
             IdentitySeedData.EnsurePopulated(app);
