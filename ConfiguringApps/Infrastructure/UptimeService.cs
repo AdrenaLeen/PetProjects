@@ -4,7 +4,7 @@ namespace ConfiguringApps.Infrastructure
 {
     public class UptimeService
     {
-        Stopwatch timer;
+        readonly Stopwatch timer;
 
         public UptimeService() => timer = Stopwatch.StartNew();
 

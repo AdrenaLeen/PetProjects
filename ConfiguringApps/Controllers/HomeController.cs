@@ -8,8 +8,8 @@ namespace ConfiguringApps.Controllers
 {
     public class HomeController : Controller
     {
-        UptimeService uptime;
-        ILogger<HomeController> logger;
+        readonly UptimeService uptime;
+        readonly ILogger<HomeController> logger;
 
         public HomeController(UptimeService up, ILogger<HomeController> log)
         {

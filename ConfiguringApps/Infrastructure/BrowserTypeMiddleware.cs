@@ -6,7 +6,7 @@ namespace ConfiguringApps.Infrastructure
 {
     public class BrowserTypeMiddleware
     {
-        RequestDelegate nextDelegate;
+        readonly RequestDelegate nextDelegate;
 
         public BrowserTypeMiddleware(RequestDelegate next) => nextDelegate = next;
 

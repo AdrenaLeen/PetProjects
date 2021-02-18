@@ -5,7 +5,7 @@ namespace ConfiguringApps.Infrastructure
 {
     public class ShortCircuitMiddleware
     {
-        RequestDelegate nextDelegate;
+        readonly RequestDelegate nextDelegate;
 
         public ShortCircuitMiddleware(RequestDelegate next) => nextDelegate = next;
 

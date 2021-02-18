@@ -6,7 +6,7 @@ namespace ConfiguringApps.Infrastructure
 {
     public class ErrorMiddleware
     {
-        RequestDelegate nextDelegate;
+        readonly RequestDelegate nextDelegate;
 
         public ErrorMiddleware(RequestDelegate next) => nextDelegate = next;
 

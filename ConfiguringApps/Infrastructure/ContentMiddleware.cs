@@ -6,8 +6,8 @@ namespace ConfiguringApps.Infrastructure
 {
     public class ContentMiddleware
     {
-        RequestDelegate nextDelegate;
-        UptimeService uptime;
+        readonly RequestDelegate nextDelegate;
+        readonly UptimeService uptime;
 
         public ContentMiddleware(RequestDelegate next, UptimeService up)
         {
