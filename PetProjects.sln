@@ -349,6 +349,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsStore.Tests", "Sports
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguringApps", "ConfiguringApps\ConfiguringApps.csproj", "{1667C4B2-D84E-476E-81CD-4DDEB8988ADE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlsAndRoutes", "UrlsAndRoutes\UrlsAndRoutes.csproj", "{DC563373-47DE-4A80-A6B5-825AE4B4C8B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1047,6 +1049,10 @@ Global
 		{1667C4B2-D84E-476E-81CD-4DDEB8988ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1667C4B2-D84E-476E-81CD-4DDEB8988ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1667C4B2-D84E-476E-81CD-4DDEB8988ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC563373-47DE-4A80-A6B5-825AE4B4C8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC563373-47DE-4A80-A6B5-825AE4B4C8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC563373-47DE-4A80-A6B5-825AE4B4C8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC563373-47DE-4A80-A6B5-825AE4B4C8B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

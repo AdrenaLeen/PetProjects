@@ -1,0 +1,30 @@
+﻿@model Result
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Маршрутизация</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="m-1 p-1">
+    <table class="table table-bordered table-striped table-condensed">
+        <tr>
+            <th>Контроллер:</th>
+            <td>@Model.Controller</td>
+        </tr>
+        <tr>
+            <th>Действие:</th>
+            <td>@Model.Action</td>
+        </tr>
+        @foreach (string key in Model.Data.Keys)
+        {
+            <tr>
+                <th>@key:</th>
+                <td>@Model.Data[key]</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
