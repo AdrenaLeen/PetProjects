@@ -1,7 +1,6 @@
-using System;
-using Xunit;
 using ControllersAndActions.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using Xunit;
 
 namespace ControllersAndActions.Tests
 {
