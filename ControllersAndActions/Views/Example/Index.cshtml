@@ -1,0 +1,15 @@
+﻿@model DateTime
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Контроллеры и действия</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="container">
+    <p>День: @ViewBag.Date.DayOfWeek</p>
+    <p>Сообщение: @ViewBag.Message</p>
+</body>
+</html>
