@@ -1,17 +1,21 @@
-﻿using DependencyInjection.Models;
+﻿using Filters.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DependencyInjection
+namespace Filters
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IRepository, MemoryRepository>();
-            services.AddTransient<IModelStorage, DictionaryStorage>();
-            services.AddTransient<ProductTotalizer>();
-            services.AddRazorPages();
+            services.AddScoped<IFilterDiagnostics, DefaultFilterDiagnostics>();
+            services.AddScoped<TimeFilter>();
+            services.AddScoped<ViewResultDiagnostics>();
+            services.AddScoped<DiagnosticsFilter>();
+            services.AddRazorPages().AddMvcOptions(options =>
+            {
+                options.Filters.Add(new MessageAttribute("This is the Globally-Scoped Filter"));
+            });
         }
 
         public void Configure(IApplicationBuilder app)

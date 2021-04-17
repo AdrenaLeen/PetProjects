@@ -1,0 +1,37 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Фильтры</title>
+    <link asp-href-include="lib/bootstrap/dist/css/*.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+    @if (Model is string)
+    {
+        @Model
+    }
+    else if (Model is IDictionary<string, string>)
+    {
+        IDictionary<string,string> dict = Model as IDictionary<string, string>;
+        <table class="table table-condensed table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (KeyValuePair<string,string> kvp in dict)
+                {
+                    <tr>
+                        <td>@kvp.Key</td>
+                        <td>@kvp.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</body>
+</html>
