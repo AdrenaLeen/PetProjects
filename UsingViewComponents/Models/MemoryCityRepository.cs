@@ -4,7 +4,7 @@ namespace UsingViewComponents.Models
 {
     public class MemoryCityRepository : ICityRepository
     {
-        List<City> cities = new List<City>
+        readonly List<City> cities = new List<City>
         {
             new City { Name = "Лондон", Country = "UK", Population = 8539000 },
             new City { Name = "Нью Йорк", Country = "USA", Population = 8406000 },

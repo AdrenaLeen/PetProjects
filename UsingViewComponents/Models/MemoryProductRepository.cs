@@ -4,7 +4,7 @@ namespace UsingViewComponents.Models
 {
     public class MemoryProductRepository : IProductRepository
     {
-        List<Product> products = new List<Product>
+        readonly List<Product> products = new List<Product>
         {
             new Product { Name = "Каяк", Price = 275M },
             new Product { Name = "Спасательный жилет", Price = 48.95M },
