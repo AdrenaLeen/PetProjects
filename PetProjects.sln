@@ -365,6 +365,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiControllers", "ApiContro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Views", "Views\Views.csproj", "{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingViewComponents", "UsingViewComponents\UsingViewComponents.csproj", "{FDA5AA77-F265-42CD-9A1D-B750E174D27D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1095,6 +1097,10 @@ Global
 		{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
