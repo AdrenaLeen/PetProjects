@@ -1,0 +1,33 @@
+﻿@model Person
+@{ Layout = "_Layout"; }
+
+<div class="bg-primary card-body text-white">
+    <h2>Субъект</h2>
+</div>
+
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>PersonId:</th>
+        <td>@Model.PersonId</td>
+    </tr>
+    <tr>
+        <th>Имя:</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Фамилия:</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>Роль:</th>
+        <td>@Model.Role</td>
+    </tr>
+    <tr>
+        <th>Город:</th>
+        <td>@Model.HomeAddress?.City</td>
+    </tr>
+    <tr>
+        <th>Страна:</th>
+        <td>@Model.HomeAddress?.Country</td>
+    </tr>
+</table>
