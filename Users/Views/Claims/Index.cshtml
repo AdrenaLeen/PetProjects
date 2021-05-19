@@ -1,0 +1,33 @@
+﻿@using System.Security.Claims
+@model IEnumerable<Claim>
+
+<div class="bg-primary card-body text-white">
+    <h4>Утверждения</h4>
+</div>
+
+<table class="table table-condensed table-bordered">
+    <tr>
+        <th>Субъект</th>
+        <th>Источник</th>
+        <th>Тип</th>
+        <th>Значение</th>
+    </tr>
+    @if (Model == null || Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="4" class="text-center">Нет утверждений</td>
+        </tr>
+    }
+    else
+    {
+        @foreach (Claim claim in Model.OrderBy(x => x.Type))
+        {
+            <tr>
+                <td>@claim.Subject.Name</td>
+                <td>@claim.Issuer</td>
+                <td identity-claim-type="@claim.Type"></td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    }
+</table>
