@@ -379,6 +379,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelValidation", "ModelVal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users", "Users\Users.csproj", "{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConventionsAndConstraints", "ConventionsAndConstraints\ConventionsAndConstraints.csproj", "{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1137,6 +1139,10 @@ Global
 		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
