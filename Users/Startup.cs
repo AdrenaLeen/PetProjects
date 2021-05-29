@@ -53,8 +53,8 @@ namespace Users
             });
             services.AddAuthentication().AddGoogle(opts =>
             {
-                opts.ClientId = "144224494355-8n1mjcaji1rq0abc8jo8dcb5t6hgrqn2.apps.googleusercontent.com";
-                opts.ClientSecret = "M8JOLMIkfh9gzZwRFrlS9Zuj";
+                opts.ClientId = "676394913166-gpgptfqjdkd47lr5krd6rg2b6nnhdmk4.apps.googleusercontent.com";
+                opts.ClientSecret = "kOXEYK4acIb7mcJ0Nls6Ss0F";
             });
             services.AddDbContext<AppIdentityDbContext>(options => options.UseNpgsql(configuration["ConnectionStrings:SportsStoreIdentity"]));
             services.AddIdentity<AppUser, IdentityRole>(opts =>
