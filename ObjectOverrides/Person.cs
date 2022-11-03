@@ -1,6 +1,6 @@
 ﻿namespace ObjectOverrides
 {
-    // Не забывайте, что класс Person расширяет Object.
+    // Класс Person расширяет Object.
     // Предположим, что имеется свойство SSN.
     class Person
     {

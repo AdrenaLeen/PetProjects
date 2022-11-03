@@ -1,52 +1,39 @@
-﻿using System;
+﻿// Отобразить пользователю простое сообщение.
+Console.WriteLine("***** Моё первое C#-приложение *****");
+Console.WriteLine("Hello World!");
+Console.WriteLine();
 
-namespace SimpleCSharpApp
+// Обработать любые входные аргументы.
+for (int i = 0; i < args.Length; i++) Console.WriteLine($"Arg: {args[i]}");
+
+// Обработать любые входные аргументы, используя foreach.
+foreach (string arg in args) Console.WriteLine($"Arg: {arg}");
+
+// Получить аргументы с использованием System.Environment.
+string[] theArgs = Environment.GetCommandLineArgs();
+foreach (string arg in theArgs) Console.WriteLine($"Arg: {arg}");
+
+// Вспомогательный метод внутри класса Program.
+ShowEnvironmentDetails();
+
+// Ожидать нажатия клавиши <Enter>, прежде чем завершить работу.
+Console.ReadLine();
+// Возвратить произвольный код ошибки.
+return -1;
+
+static void ShowEnvironmentDetails()
 {
-    class Program
-    {
-        // Обратите внимание, что теперь возвращается int, а не void.
-        // Обратите внимание, что в случае применения foreach отпадает необходимость в проверке размера массива.
-        static int Main(string[] args)
-        {
-            // Вывести пользователю простое сообщение.
-            Console.WriteLine("***** Моё первое C#-приложение *****");
-            Console.WriteLine("Hello World!");
-            Console.WriteLine();
+    // Вывести информацию о дисковых устройствах данной машины и другие интересные детали.
 
-            // Обработать любые входные аргументы.
-            for (int i = 0; i < args.Length; i++) Console.WriteLine($"Arg: {args[i]}");
+    // Логические устройства
+    foreach (string drive in Environment.GetLogicalDrives()) Console.WriteLine($"Диск: {drive}");
 
-            // Обработать любые входные аргументы, используя foreach.
-            foreach (string arg in args) Console.WriteLine($"Arg: {arg}");
+    // Версия операционной системы
+    Console.WriteLine($"ОС: {Environment.OSVersion}");
 
-            // Получить аргументы с использованием System.Environment.
-            string[] theArgs = Environment.GetCommandLineArgs();
-            foreach (string arg in theArgs) Console.WriteLine($"Arg: {arg}");
+    // Количество процессоров
+    Console.WriteLine($"Количество процессоров: {Environment.ProcessorCount}");
 
-            // Вспомогательный метод внутри класса Program.
-            ShowEnvironmentDetails();
-
-            // Ожидать нажатия клавиши <Enter>, прежде чем завершить работу.
-            Console.ReadLine();
-            // Возвратить произвольный код ошибки.
-            return -1;
-        }
-
-        static void ShowEnvironmentDetails()
-        {
-            // Вывести информацию о дисковых устройствах данной машины и другие интересные детали.
-
-            // Логические устройства
-            foreach (string drive in Environment.GetLogicalDrives()) Console.WriteLine($"Диск: {drive}");
-
-            // Версия операционной системы
-            Console.WriteLine($"ОС: {Environment.OSVersion}");
-
-            // Количество процессоров
-            Console.WriteLine($"Количество процессоров: {Environment.ProcessorCount}");
-
-            // Версия платформы .NET
-            Console.WriteLine($"Версия .NET: {Environment.Version}");
-        }
-    }
+    // Версия платформы .NET
+    Console.WriteLine($"Версия .NET: {Environment.Version}");
 }
