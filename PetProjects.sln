@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "VisualTypeDesignerApp\VisualTypeDesignerApp.csproj", "{9A534D90-E54C-45FF-983F-633AC6DF7855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConversions", "TypeConversions\TypeConversions.csproj", "{FD32776C-B743-4EF4-BD34-92CFE3D3013D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplicitlyTypedLocalVars", "ImplicitlyTypedLocalVars\ImplicitlyTypedLocalVars.csproj", "{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterationsAndDecisions", "IterationsAndDecisions\IterationsAndDecisions.csproj", "{D56C9F84-0F9C-4FA2-BF66-2E406B302427}"
@@ -373,13 +371,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users", "Users\Users.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConventionsAndConstraints", "ConventionsAndConstraints\ConventionsAndConstraints.csproj", "{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCSharpApp", "SimpleCSharpApp\SimpleCSharpApp.csproj", "{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCSharpApp", "SimpleCSharpApp\SimpleCSharpApp.csproj", "{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicConsoleIO", "BasicConsoleIO\BasicConsoleIO.csproj", "{ACF0C1D7-6CF6-4F82-93A7-C6CB1CF6B03F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicConsoleIO", "BasicConsoleIO\BasicConsoleIO.csproj", "{ACF0C1D7-6CF6-4F82-93A7-C6CB1CF6B03F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataTypes", "BasicDataTypes\BasicDataTypes.csproj", "{74AB7FB8-0BDB-4CDA-870F-78B8A3F1BF27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicDataTypes", "BasicDataTypes\BasicDataTypes.csproj", "{74AB7FB8-0BDB-4CDA-870F-78B8A3F1BF27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStrings", "FunWithStrings\FunWithStrings.csproj", "{28D9E83D-2B42-4B31-98B8-FE0969F34DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithStrings", "FunWithStrings\FunWithStrings.csproj", "{28D9E83D-2B42-4B31-98B8-FE0969F34DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConversions", "TypeConversions\TypeConversions.csproj", "{A69A83DB-45D4-44AC-9E48-03934F539BD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -391,10 +391,6 @@ Global
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD32776C-B743-4EF4-BD34-92CFE3D3013D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1DC584B-4A2F-440A-A8E0-A873F46DECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1143,6 +1139,10 @@ Global
 		{28D9E83D-2B42-4B31-98B8-FE0969F34DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28D9E83D-2B42-4B31-98B8-FE0969F34DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28D9E83D-2B42-4B31-98B8-FE0969F34DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69A83DB-45D4-44AC-9E48-03934F539BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69A83DB-45D4-44AC-9E48-03934F539BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69A83DB-45D4-44AC-9E48-03934F539BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69A83DB-45D4-44AC-9E48-03934F539BD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
