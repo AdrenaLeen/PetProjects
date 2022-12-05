@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "VisualTypeDesignerApp\VisualTypeDesignerApp.csproj", "{9A534D90-E54C-45FF-983F-633AC6DF7855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStructures", "FunWithStructures\FunWithStructures.csproj", "{3C99CB03-281B-41F2-B2D4-86638233E513}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueAndReferenceTypes", "ValueAndReferenceTypes\ValueAndReferenceTypes.csproj", "{7E1EB6C1-3E70-4130-869F-0A2E5DC1D7A5}"
@@ -381,6 +379,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "FunWithMe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethodOverloading", "FunWithMethodOverloading\FunWithMethodOverloading.csproj", "{33DCA327-19DD-46E6-9EAA-D07E2AC059B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -391,10 +391,6 @@ Global
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C99CB03-281B-41F2-B2D4-86638233E513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C99CB03-281B-41F2-B2D4-86638233E513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C99CB03-281B-41F2-B2D4-86638233E513}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1143,6 +1139,10 @@ Global
 		{33DCA327-19DD-46E6-9EAA-D07E2AC059B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33DCA327-19DD-46E6-9EAA-D07E2AC059B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33DCA327-19DD-46E6-9EAA-D07E2AC059B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
