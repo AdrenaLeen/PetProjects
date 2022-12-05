@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FunWithStructures
+﻿namespace FunWithStructures
 {
     struct Point
     {
