@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ValueAndReferenceTypes
+﻿namespace FunWithValueAndReferenceTypes
 {
     struct Point
     {
