@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "FunWithMe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverloading", "MethodOverloading\MethodOverloading.csproj", "{301C125D-BCEE-482C-B0DC-4F3FF95AA201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "FunWithArrays\FunWithArrays.csproj", "{5E71AE32-CC81-41BA-8ED2-B4E30C9DF1B2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStructures", "FunWithStructures\FunWithStructures.csproj", "{3C99CB03-281B-41F2-B2D4-86638233E513}"
@@ -375,11 +373,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicDataTypes", "BasicData
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithStrings", "FunWithStrings\FunWithStrings.csproj", "{28D9E83D-2B42-4B31-98B8-FE0969F34DAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConversions", "TypeConversions\TypeConversions.csproj", "{A69A83DB-45D4-44AC-9E48-03934F539BD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeConversions", "TypeConversions\TypeConversions.csproj", "{A69A83DB-45D4-44AC-9E48-03934F539BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplicitlyTypedLocalVars", "ImplicitlyTypedLocalVars\ImplicitlyTypedLocalVars.csproj", "{737C4D46-142E-4C64-B673-9598CDDF1FA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImplicitlyTypedLocalVars", "ImplicitlyTypedLocalVars\ImplicitlyTypedLocalVars.csproj", "{737C4D46-142E-4C64-B673-9598CDDF1FA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterationsAndDecisions", "IterationsAndDecisions\IterationsAndDecisions.csproj", "{56E4D193-4F96-44C4-B937-8444792A83D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IterationsAndDecisions", "IterationsAndDecisions\IterationsAndDecisions.csproj", "{56E4D193-4F96-44C4-B937-8444792A83D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "FunWithArrays\FunWithArrays.csproj", "{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -399,10 +399,6 @@ Global
 		{301C125D-BCEE-482C-B0DC-4F3FF95AA201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301C125D-BCEE-482C-B0DC-4F3FF95AA201}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{301C125D-BCEE-482C-B0DC-4F3FF95AA201}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E71AE32-CC81-41BA-8ED2-B4E30C9DF1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E71AE32-CC81-41BA-8ED2-B4E30C9DF1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E71AE32-CC81-41BA-8ED2-B4E30C9DF1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E71AE32-CC81-41BA-8ED2-B4E30C9DF1B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAC8CC8D-903F-4B91-A113-3DDE26E2B4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1143,6 +1139,10 @@ Global
 		{56E4D193-4F96-44C4-B937-8444792A83D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56E4D193-4F96-44C4-B937-8444792A83D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56E4D193-4F96-44C4-B937-8444792A83D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
