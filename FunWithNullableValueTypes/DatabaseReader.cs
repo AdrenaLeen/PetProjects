@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NullableTypes
+﻿namespace FunWithNullableValueTypes
 {
     class DatabaseReader
     {
@@ -13,15 +7,9 @@ namespace NullableTypes
         public bool? boolValue = true;
 
         // Обратите внимание на возвращаемый тип, допускающий null.
-        public int? GetIntFromDatabase()
-        {
-            return numericValue;
-        }
+        public int? GetIntFromDatabase() => numericValue;
 
         // Обратите внимание на возвращаемый тип, допускающий null.
-        public bool? GetBoolFromDatabase()
-        {
-            return boolValue;
-        }
+        public bool? GetBoolFromDatabase() => boolValue;
     }
 }
