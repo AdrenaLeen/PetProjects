@@ -1,19 +1,16 @@
-﻿using System;
-
-namespace RefTypeValTypeParams
+﻿namespace FunWithRefTypeValTypeParams
 {
     class Person
     {
         public string personName;
         public int personAge;
 
-        // Конструкторы.
+        // Конструктор.
         public Person(string name, int age)
         {
             personName = name;
             personAge = age;
         }
-        public Person() { }
 
         public void Display() => Console.WriteLine($"Имя: {personName}, Возраст: {personAge}");
     }

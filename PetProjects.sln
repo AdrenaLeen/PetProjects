@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "VisualTypeDesignerApp\VisualTypeDesignerApp.csproj", "{9A534D90-E54C-45FF-983F-633AC6DF7855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefTypeValTypeParams", "RefTypeValTypeParams\RefTypeValTypeParams.csproj", "{E7DE016C-5176-400F-942E-15BD23D94E07}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "NullableTypes\NullableTypes.csproj", "{01F9A1B3-0D2D-4C37-AFEF-EB2E127F1CB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClassExample", "SimpleClassExample\SimpleClassExample.csproj", "{8C5BF9FA-FC78-44D7-927D-1D1F39A8CDF7}"
@@ -367,21 +365,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImplicitlyTypedLocalVars", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IterationsAndDecisions", "IterationsAndDecisions\IterationsAndDecisions.csproj", "{56E4D193-4F96-44C4-B937-8444792A83D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "FunWithArrays\FunWithArrays.csproj", "{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithArrays", "FunWithArrays\FunWithArrays.csproj", "{5193BCE0-DB8A-4691-A725-ECEEAF44ED52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLocalFunctions", "FunWithLocalFunctions\FunWithLocalFunctions.csproj", "{063C4254-6AC9-4D5F-96A7-BDE755319662}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithLocalFunctions", "FunWithLocalFunctions\FunWithLocalFunctions.csproj", "{063C4254-6AC9-4D5F-96A7-BDE755319662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "FunWithMethods\FunWithMethods.csproj", "{BDBF014D-324B-4A6B-887A-A83732E46914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithMethods", "FunWithMethods\FunWithMethods.csproj", "{BDBF014D-324B-4A6B-887A-A83732E46914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethodOverloading", "FunWithMethodOverloading\FunWithMethodOverloading.csproj", "{33DCA327-19DD-46E6-9EAA-D07E2AC059B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithMethodOverloading", "FunWithMethodOverloading\FunWithMethodOverloading.csproj", "{33DCA327-19DD-46E6-9EAA-D07E2AC059B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{BDA0B76A-3F04-4C8E-BD75-162DC44192C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithBitwiseOperations", "FunWithBitwiseOperations\FunWithBitwiseOperations.csproj", "{3BF66C6C-24B0-489D-B66F-755D3504885F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithBitwiseOperations", "FunWithBitwiseOperations\FunWithBitwiseOperations.csproj", "{3BF66C6C-24B0-489D-B66F-755D3504885F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStructures", "FunWithStructures\FunWithStructures.csproj", "{5E783E56-7616-4FD6-A540-508ECF82470E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithStructures", "FunWithStructures\FunWithStructures.csproj", "{5E783E56-7616-4FD6-A540-508ECF82470E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithValueAndReferenceTypes", "FunWithValueAndReferenceTypes\FunWithValueAndReferenceTypes.csproj", "{1C28E449-5726-4586-B837-E330D40FB55E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithValueAndReferenceTypes", "FunWithValueAndReferenceTypes\FunWithValueAndReferenceTypes.csproj", "{1C28E449-5726-4586-B837-E330D40FB55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithRefTypeValTypeParams", "FunWithRefTypeValTypeParams\FunWithRefTypeValTypeParams.csproj", "{8B9FE044-8F93-45F4-AAC0-FE8BD7AA0B24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -393,10 +393,6 @@ Global
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7DE016C-5176-400F-942E-15BD23D94E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7DE016C-5176-400F-942E-15BD23D94E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7DE016C-5176-400F-942E-15BD23D94E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7DE016C-5176-400F-942E-15BD23D94E07}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01F9A1B3-0D2D-4C37-AFEF-EB2E127F1CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01F9A1B3-0D2D-4C37-AFEF-EB2E127F1CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F9A1B3-0D2D-4C37-AFEF-EB2E127F1CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1149,6 +1145,10 @@ Global
 		{1C28E449-5726-4586-B837-E330D40FB55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C28E449-5726-4586-B837-E330D40FB55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C28E449-5726-4586-B837-E330D40FB55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9FE044-8F93-45F4-AAC0-FE8BD7AA0B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9FE044-8F93-45F4-AAC0-FE8BD7AA0B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9FE044-8F93-45F4-AAC0-FE8BD7AA0B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9FE044-8F93-45F4-AAC0-FE8BD7AA0B24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
