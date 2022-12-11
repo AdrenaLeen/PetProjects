@@ -13,6 +13,6 @@
             Y = YPos;
         }
 
-        public (int XPos, int YPos) Deconstruct() => (X, Y);
+        public void Deconstruct(out int XPos, out int YPos) => (XPos,YPos) = (X, Y);
     }
 }
