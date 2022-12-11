@@ -27,6 +27,12 @@ int? moreData = dr.GetIntFromDatabase();
 if (!moreData.HasValue) moreData = 100;
 Console.WriteLine($"Значение moreData: {moreData}");
 
+// Операция присваивания с объединением с null
+int? nullableInt = null;
+nullableInt ??= 12;
+nullableInt ??= 14;
+Console.WriteLine(nullableInt);
+
 TesterMethod(null);
 
 Console.ReadLine();
