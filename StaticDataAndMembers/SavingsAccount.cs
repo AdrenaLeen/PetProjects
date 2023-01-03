@@ -1,8 +1,5 @@
-﻿using System;
-
-namespace StaticDataAndMembers
+﻿namespace StaticDataAndMembers
 {
-    // Простой класс депозитного счёта
     class SavingsAccount
     {
         // Данные уровня экземпляра
