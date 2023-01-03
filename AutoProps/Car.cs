@@ -1,15 +1,11 @@
-﻿using System;
-
-namespace AutoProps
+﻿namespace AutoProps
 {
     class Car
     {
         // Автоматические свойства! Нет нужды в определении поддерживаемых полей.
-        public string PetName { get; set; }
+        public string PetName { get; set; } = string.Empty;
         public int Speed { get; set; }
-        public string Color { get; set; }
-        // Свойство только для чтения? Допустимо!
-        public int MyReadOnlyProp { get; }
+        public string Color { get; set; } = string.Empty;
 
         public void DisplayStats()
         {

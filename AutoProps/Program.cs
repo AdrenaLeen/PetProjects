@@ -1,30 +1,24 @@
-﻿using System;
+﻿using AutoProps;
 
-namespace AutoProps
+Console.WriteLine("***** Автоматические свойства *****");
+
+// Создать объект автомобиля.
+var c = new Car
 {
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Автоматические свойства *****");
-            // Создать объект автомобиля.
-            Car c = new Car();
-            c.PetName = "Франк";
-            c.Speed = 55;
-            c.Color = "Красный";
-            Console.WriteLine($"Вашу машину зовут {c.PetName}? Это странно...");
-            c.DisplayStats();
-            // Поместить автомобиль в гараж.
-            Garage g = new Garage();
-            g.MyAuto = c;
-            // Нормально, выводится стандартное значение 0.
-            // Вывести количество автомобилей в гараже
-            Console.WriteLine($"Число машин в гараже: {g.NumberOfCars}");
-            // Ошибка времени выполнения! Поддерживающее поле в данный момент равно null!
-            // Вывести название автомобиля.
-            Console.WriteLine($"Вашу машину зовут: {g.MyAuto.PetName}");
+    PetName = "Франк",
+    Speed = 55,
+    Color = "Красный"
+};
+Console.WriteLine($"Вашу машину зовут {c.PetName}? Это странно...");
+c.DisplayStats();
 
-            Console.ReadLine();
-        }
-    }
-}
+// Поместить автомобиль в гараж.
+var g = new Garage { MyAuto = c };
+
+// Вывести количество автомобилей в гараже
+Console.WriteLine($"Число машин в гараже: {g.NumberOfCars}");
+
+// Вывести название автомобиля.
+Console.WriteLine($"Вашу машину зовут: {g.MyAuto.PetName}");
+
+Console.ReadLine();
