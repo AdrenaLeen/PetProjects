@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ObjectsInitializers
+﻿namespace ObjectsInitializers
 {
     class Rectangle
     {

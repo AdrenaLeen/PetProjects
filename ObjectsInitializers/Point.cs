@@ -1,31 +1,26 @@
-﻿using System;
-
-namespace ObjectsInitializers
+﻿namespace ObjectsInitializers
 {
-    public enum PointColor
-    { LightBlue, BloodRed, Gold }
-
     class Point
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public PointColor Color { get; set; }
+        public PointColorEnum Color { get; set; }
 
         public Point(int xVal, int yVal)
         {
             X = xVal;
             Y = yVal;
-            Color = PointColor.Gold;
+            Color = PointColorEnum.Gold;
         }
 
-        public Point(PointColor ptColor) => Color = ptColor;
+        public Point(PointColorEnum ptColor) => Color = ptColor;
 
-        public Point() : this(PointColor.BloodRed) { }
+        public Point() : this(PointColorEnum.BloodRed) { }
 
         public void DisplayStats()
         {
             Console.WriteLine($"[{X}, {Y}]");
-            Console.WriteLine("Point является {0}", Color);
+            Console.WriteLine($"Point является {Color}");
         }
     }
 }
