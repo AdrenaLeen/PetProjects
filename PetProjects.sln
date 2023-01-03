@@ -385,6 +385,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectsInitializers", "Obje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstData", "ConstData\ConstData.csproj", "{0137E3E7-B2C9-487A-9DA4-DE1CE4AA35D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithRecords", "FunWithRecords\FunWithRecords.csproj", "{F4EC9D4E-03A3-466F-B062-0E243BCF4EC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1155,6 +1157,10 @@ Global
 		{0137E3E7-B2C9-487A-9DA4-DE1CE4AA35D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0137E3E7-B2C9-487A-9DA4-DE1CE4AA35D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0137E3E7-B2C9-487A-9DA4-DE1CE4AA35D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EC9D4E-03A3-466F-B062-0E243BCF4EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EC9D4E-03A3-466F-B062-0E243BCF4EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EC9D4E-03A3-466F-B062-0E243BCF4EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EC9D4E-03A3-466F-B062-0E243BCF4EC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
