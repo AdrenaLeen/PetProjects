@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SimpleClassExample
+﻿namespace SimpleClassExample
 {
     class Motorcycle
     {

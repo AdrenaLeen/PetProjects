@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace SimpleClassExample
+﻿namespace SimpleClassExample
 {
     class Car
     {
-        // 'Состояние' объекта Car.
+        // "Состояние" объекта Car.
         public string petName;
         public int currSpeed;
 
@@ -23,6 +21,14 @@ namespace SimpleClassExample
         {
             petName = pn;
             currSpeed = cs;
+        }
+
+        public Car(string pn, int cs, out bool inDanger)
+        {
+            petName = pn;
+            currSpeed = cs;
+            if (cs > 100) inDanger = true;
+            else inDanger = false;
         }
 
         // Функциональность Car.
