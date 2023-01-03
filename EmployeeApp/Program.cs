@@ -1,31 +1,9 @@
-﻿using System;
+﻿using EmployeeApp;
 
-namespace EmployeeApp
-{
-    class Program
-    {
-        static void Main()
-        {
-            Employee emp = new Employee();
+Console.WriteLine("***** Инкапсуляция *****");
+var emp = new Employee("Марвин", 45, 123, 1000, "111-11-1111", EmployeePayTypeEnum.Salaried);
+Console.WriteLine(emp.Pay);
+emp.GiveBonus(100);
+Console.WriteLine(emp.Pay);
 
-            Console.WriteLine("***** Инкапсуляция *****");
-            Employee emp2 = new Employee("Марвин", 456, 30000);
-            emp2.GiveBonus(1000);
-            emp2.DisplayStats();
-
-            // Использовать методы get/set для взаимодействия с именем сотрудника, представленного объектом.
-            // Переустановка и затем получение свойства Name.
-            emp2.Name = "Марв";
-            Console.WriteLine($"Сотрудник назван: {emp2.Name}");
-
-            // Длиннее 15 символов! На консоль выводится сообщение об ошибке.
-            Employee emp3 = new Employee();
-            emp3.SetName("Зена королева воинов");
-
-            Employee joe = new Employee();
-            joe.Age++;
-
-            Console.ReadLine();
-        }
-    }
-}
+Console.ReadLine();

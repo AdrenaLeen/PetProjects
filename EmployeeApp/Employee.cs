@@ -1,13 +1,17 @@
-﻿using System;
-
-namespace EmployeeApp
+﻿namespace EmployeeApp
 {
     partial class Employee
     {
         // Методы.
         public void GiveBonus(float amount)
         {
-            Pay += amount;
+            Pay = this switch
+            {
+                { PayType: EmployeePayTypeEnum.Commission } => Pay += .10F * amount,
+                { PayType: EmployeePayTypeEnum.Hourly } => Pay += 40F * amount / 2080F,
+                { PayType: EmployeePayTypeEnum.Salaried } => Pay += amount,
+                _ => Pay += 0
+            };
         }
 
         // Обновлённый метод DisplayStats() теперь учитывает возраст.
