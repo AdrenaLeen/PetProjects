@@ -28,8 +28,6 @@ Console.ReadLine();
 
 static void GivePromotion(Employee emp)
 {
-    // Повысить зарплату...
-    // Предоставить место на парковке компании...
     Console.WriteLine($"{emp.Name} был продвинут по служебной лестнице!");
 
     switch (emp)
@@ -39,6 +37,9 @@ static void GivePromotion(Employee emp)
             break;
         case Manager m:
             Console.WriteLine($"У {emp.Name} {m.StockOptions} опционов...");
+            break;
+        case Employee _:
+            Console.WriteLine($"Невозможно продвинуть {emp.Name}. Некорректный тип сотрудника");
             break;
     }
 }
