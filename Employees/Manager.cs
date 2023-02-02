@@ -10,12 +10,13 @@ namespace Employees
         public Manager() { }
 
         // Это свойство определено в классе Manager.
-        public Manager(string fullName, int age, int empID, float currPay, string ssn, int numbOfOpts) : base(fullName, age, empID, currPay, ssn) => StockOptions = numbOfOpts;
+        public Manager(string fullName, int age, int empID, float currPay, string ssn, int numbOfOpts)
+            : base(fullName, age, empID, currPay, ssn, EmployeePayTypeEnum.Salaried) => StockOptions = numbOfOpts;
 
         public override void GiveBonus(float amount)
         {
             base.GiveBonus(amount);
-            Random r = new Random();
+            var r = new Random();
             StockOptions += r.Next(500);
         }
 

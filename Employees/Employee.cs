@@ -2,11 +2,8 @@
 
 namespace Employees
 {
-    // В класс Employee вложен класс BenefitPackage.
-    // Превращение класса Employee в абстрактный тип для предотвращения прямого создания его экземпляров.
     abstract partial class Employee
     {
-        // В класс BenefitPackage вложено перечисление BenefitPackageLevel.
         public class BenefitPackage
         {
             public enum BenefitPackageLevel
@@ -15,39 +12,33 @@ namespace Employees
             }
 
             // Предположим, что есть другие члены, представляющие медицинские/стоматологические программы и т.д.
-            public double ComputePayDeduction() => 125.0;
+            public static double ComputePayDeduction() => 125.0;
         }
 
-        // Методы.
-        // Теперь этот метод может быть переопределён в производном классе.
+        public Employee() { }
+        public Employee(string name, int id, float pay, string empSsn) : this(name, 0, id, pay, empSsn, EmployeePayTypeEnum.Salaried) { }
+        public Employee(string name, int age, int id, float pay, string empSsn, EmployeePayTypeEnum payType)
+        {
+            Name = name;
+            Age = age;
+            Id = id;
+            Pay = pay;
+            SocialSecurityNumber = empSsn;
+            PayType = payType;
+        }
+
         public virtual void GiveBonus(float amount) => Pay += amount;
 
-        // Обновлённый метод DisplayStats() теперь учитывает возраст.
+        // Открывает доступ к некоторому поведению, связанному со льготами.
+        public static double GetBenefitCost() => BenefitPackage.ComputePayDeduction();
+
         public virtual void DisplayStats()
         {
-            // Имя сотрудника
-            Console.WriteLine($"Имя: {Name}");
-            // Идентификационный номер сотрудника
-            Console.WriteLine($"ID: {ID}");
-            // Возраст
+            Console.WriteLine($"Имя сотрудника: {Name}");
+            Console.WriteLine($"Идентификационный номер сотрудника: {Id}");
             Console.WriteLine($"Возраст: {Age}");
-            // Текущая выплата
-            Console.WriteLine($"Выплата: {Pay}");
+            Console.WriteLine($"Текущая выплата: {Pay}");
             Console.WriteLine($"SSN: {SocialSecurityNumber}");
         }
-
-        // Метод доступа (метод get).
-        public string GetName() => empName;
-
-        // Метод изменения (метод set).
-        public void SetName(string name)
-        {
-            // Перед присваиванием проверить входное значение.
-            if (name.Length > 15) Console.WriteLine("Ошибка! Длина имени превышает 15 символов!");
-            else empName = name;
-        }
-
-        // Открывает доступ к некоторому поведению, связанному со льготами.
-        public double GetBenefitCost() => empBenefits.ComputePayDeduction();
     }
 }
