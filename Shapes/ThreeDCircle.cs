@@ -6,9 +6,9 @@ namespace Shapes
     class ThreeDCircle : Circle
     {
         // Скрыть свойство PetName, определённое выше в иерархии.
-        public new string PetName { get; set; }
+        public new string PetName { get; set; } = string.Empty;
 
         // Скрыть любую реализацию Draw(), находящуюся выше в иерархии.
-        public new void Draw() => Console.WriteLine("Отрисовка 3D круга");
+        public new static void Draw() => Console.WriteLine("Отрисовка 3D круга");
     }
 }

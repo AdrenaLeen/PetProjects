@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "Vi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleUtilityClass", "SimpleUtilityClass\SimpleUtilityClass.csproj", "{33A78D21-6B2B-40FD-93F8-36223EBAB386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectOverrides", "ObjectOverrides\ObjectOverrides.csproj", "{929E4963-1227-4858-8F87-7AC0470329EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleException", "SimpleException\SimpleException.csproj", "{0587996C-A2F8-4618-92C6-3E36EF1DBF83}"
@@ -389,6 +387,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees", "Employees\Empl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordInheritance", "RecordInheritance\RecordInheritance.csproj", "{22531CE8-BB83-4413-B393-0F0A5C4551A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{D2F10380-ADDE-4979-82B5-DAB39243DC7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -403,10 +403,6 @@ Global
 		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9CB95F6-84FB-411C-8894-1AFFE3E6224B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{929E4963-1227-4858-8F87-7AC0470329EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{929E4963-1227-4858-8F87-7AC0470329EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929E4963-1227-4858-8F87-7AC0470329EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{22531CE8-BB83-4413-B393-0F0A5C4551A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22531CE8-BB83-4413-B393-0F0A5C4551A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22531CE8-BB83-4413-B393-0F0A5C4551A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F10380-ADDE-4979-82B5-DAB39243DC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F10380-ADDE-4979-82B5-DAB39243DC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F10380-ADDE-4979-82B5-DAB39243DC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F10380-ADDE-4979-82B5-DAB39243DC7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
