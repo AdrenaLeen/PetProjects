@@ -1,25 +1,12 @@
-﻿using System;
+﻿using BasicInheritance;
 
-namespace BasicInheritance
-{
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Базовое наследование *****");
-            // Создать объект Car и установить базовую скорость.
-            Car myCar = new Car(80);
+Console.WriteLine("***** Базовое наследование *****");
+// Создать объект Car и установить максимальную и текущую скорости.
+var myCar = new Car(80) { Speed = 50 };
+Console.WriteLine($"Моя машина едет со скоростью {myCar.Speed} км/ч");
 
-            // Установить текущую скорость и вывести её на консоль.
-            myCar.Speed = 50;
-            Console.WriteLine($"Моя машина едет со скоростью {myCar.Speed} км/ч");
+// Создать объект MiniVan.
+var myVan = new MiniVan { Speed = 10 };
+Console.WriteLine($"Мой вэн едет со скоростью {myVan.Speed} км/ч");
 
-            // Создать объект MiniVan.
-            MiniVan myVan = new MiniVan();
-            myVan.Speed = 10;
-            Console.WriteLine($"Мой вэн едет со скоростью {myVan.Speed} км/ч");
-
-            Console.ReadLine();
-        }
-    }
-}
+Console.ReadLine();
