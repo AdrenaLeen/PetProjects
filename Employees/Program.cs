@@ -8,7 +8,7 @@ _ = new SalesPerson
     SalesNumber = 50
 };
 
-Manager chucky = new Manager("Чаки", 50, 92, 100000, "333-23-2322", 9000);
+var chucky = new Manager("Чаки", 50, 92, 100000, "333-23-2322", 9000);
 double cost = Employee.GetBenefitCost();
 
 // Определить уровень льгот
