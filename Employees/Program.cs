@@ -8,21 +8,19 @@ _ = new SalesPerson
     SalesNumber = 50
 };
 
+// Лучшая система бонусов!
 var chucky = new Manager("Чаки", 50, 92, 100000, "333-23-2322", 9000);
-double cost = Employee.GetBenefitCost();
-
-// Определить уровень льгот
-Employee.BenefitPackage.BenefitPackageLevel myBenefitLevel = Employee.BenefitPackage.BenefitPackageLevel.Platinum;
-
-// Выдать каждому сотруднику бонус?
 chucky.GiveBonus(300);
 chucky.DisplayStats();
 Console.WriteLine();
 
-SalesPerson fran = new SalesPerson("Фрэн", 43, 93, 3000, "932-32-3232", 31);
+var fran = new SalesPerson("Фрэн", 43, 93, 3000, "932-32-3232", 31);
 fran.GiveBonus(200);
 fran.DisplayStats();
 Console.WriteLine();
+
+double cost = Employee.GetBenefitCost();
+Console.WriteLine($"Размер льгот: {cost}");
 
 CastingExamples();
 
