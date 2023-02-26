@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace ProcessMultipleExceptions
 {
@@ -8,15 +7,20 @@ namespace ProcessMultipleExceptions
     [Serializable]
     class CarIsDeadException : ApplicationException
     {
-        public CarIsDeadException() { }
-        public CarIsDeadException(string message) : base(message) { }
-        public CarIsDeadException(string message, Exception inner) : base(message, inner) { }
-        protected CarIsDeadException(SerializationInfo info, StreamingContext context) : base(info, context) { }
-
-        // Любые дополнительные специальные свойства, конструкторы и члены данных...
         public DateTime ErrorTimeStamp { get; set; }
-        public string CauseOfError { get; set; }
-        public CarIsDeadException(string message, string cause, DateTime time) : base(message)
+        public string CauseOfError { get; set; } = string.Empty;
+        public CarIsDeadException() { }
+        public CarIsDeadException(string cause, DateTime time)
+        {
+            CauseOfError = cause;
+            ErrorTimeStamp = time;
+        }
+        public CarIsDeadException(string cause, DateTime time, string message, Exception inner) : base(message, inner)
+        {
+            CauseOfError = cause;
+            ErrorTimeStamp = time;
+        }
+        protected CarIsDeadException(string cause, DateTime time, SerializationInfo info, StreamingContext context) : base(info, context)
         {
             CauseOfError = cause;
             ErrorTimeStamp = time;

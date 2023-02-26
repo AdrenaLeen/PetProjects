@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "Vi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleUtilityClass", "SimpleUtilityClass\SimpleUtilityClass.csproj", "{33A78D21-6B2B-40FD-93F8-36223EBAB386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessMultipleExceptions", "ProcessMultipleExceptions\ProcessMultipleExceptions.csproj", "{29305921-7231-4C08-8817-61F9B845C9BB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "ICloneableExample\ICloneableExample.csproj", "{21088ECE-58F7-4DA1-9754-B5B212478655}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInterface", "CustomInterface\CustomInterface.csproj", "{287819FF-96EC-41E8-B4DA-E9D77B0D2324}"
@@ -389,6 +387,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleException", "SimpleEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomException", "CustomException\CustomException.csproj", "{31DFC17D-634B-4706-A0D8-D9A1C6120560}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessMultipleExceptions", "ProcessMultipleExceptions\ProcessMultipleExceptions.csproj", "{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -403,10 +403,6 @@ Global
 		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29305921-7231-4C08-8817-61F9B845C9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29305921-7231-4C08-8817-61F9B845C9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29305921-7231-4C08-8817-61F9B845C9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29305921-7231-4C08-8817-61F9B845C9BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{21088ECE-58F7-4DA1-9754-B5B212478655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{21088ECE-58F7-4DA1-9754-B5B212478655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21088ECE-58F7-4DA1-9754-B5B212478655}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{31DFC17D-634B-4706-A0D8-D9A1C6120560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31DFC17D-634B-4706-A0D8-D9A1C6120560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31DFC17D-634B-4706-A0D8-D9A1C6120560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
