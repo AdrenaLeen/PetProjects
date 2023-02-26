@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CustomException
+﻿namespace CustomException
 {
     class Car
     {
@@ -9,13 +7,13 @@ namespace CustomException
 
         // Свойства автомобиля.
         public int CurrentSpeed { get; set; } = 0;
-        public string PetName { get; set; } = "";
+        public string PetName { get; set; } = string.Empty;
 
         // Не вышел ли автомобиль из строя?
         private bool carIsDead;
 
         // В автомобиле имеется радиоприёмник.
-        private Radio theMusicBox = new Radio();
+        private readonly Radio theMusicBox = new();
 
         // Конструкторы.
         public Car() { }
@@ -45,9 +43,10 @@ namespace CustomException
                     CurrentSpeed = 0;
                     // Использовать ключевое слово throw для генерации исключения.
                     // Мы хотим обращаться к свойству HelpLink, поэтому необходимо создать локальную переменную перед генерацией объекта Exception.
-                    CarIsDeadException ex = new CarIsDeadException($"{PetName} перегрет!", "Забыли убрать ногу с газа.", DateTime.Now);
-                    ex.HelpLink = "http://www.CarsRUs.com";
-                    throw ex;
+                    throw new CarIsDeadException("Забыли убрать ногу с газа.", DateTime.Now)
+                    {
+                        HelpLink = "http://www.CarsRUs.com"
+                    };
                 }
                 // Вывод текущей скорости.
                 else Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
