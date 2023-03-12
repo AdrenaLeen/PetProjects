@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleUtilityClass", "Simpl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "ICloneableExample\ICloneableExample.csproj", "{21088ECE-58F7-4DA1-9754-B5B212478655}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInterface", "CustomInterface\CustomInterface.csproj", "{287819FF-96EC-41E8-B4DA-E9D77B0D2324}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceHierarchy", "InterfaceHierarchy\InterfaceHierarchy.csproj", "{9FBFC91D-7F6A-4A79-A531-B1430CC9D8D1}"
@@ -383,11 +381,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "Shapes\Shapes.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectOverrides", "ObjectOverrides\ObjectOverrides.csproj", "{5891578C-1105-49AD-ACF0-4B78CB66F1A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleException", "SimpleException\SimpleException.csproj", "{4F1C1635-E103-4518-A831-209086E65E4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleException", "SimpleException\SimpleException.csproj", "{4F1C1635-E103-4518-A831-209086E65E4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomException", "CustomException\CustomException.csproj", "{31DFC17D-634B-4706-A0D8-D9A1C6120560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomException", "CustomException\CustomException.csproj", "{31DFC17D-634B-4706-A0D8-D9A1C6120560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessMultipleExceptions", "ProcessMultipleExceptions\ProcessMultipleExceptions.csproj", "{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessMultipleExceptions", "ProcessMultipleExceptions\ProcessMultipleExceptions.csproj", "{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInterfaces", "CustomInterfaces\CustomInterfaces.csproj", "{90F406FB-0DA9-44D1-943A-D905769F91E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -407,10 +407,6 @@ Global
 		{21088ECE-58F7-4DA1-9754-B5B212478655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21088ECE-58F7-4DA1-9754-B5B212478655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21088ECE-58F7-4DA1-9754-B5B212478655}.Release|Any CPU.Build.0 = Release|Any CPU
-		{287819FF-96EC-41E8-B4DA-E9D77B0D2324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{287819FF-96EC-41E8-B4DA-E9D77B0D2324}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{287819FF-96EC-41E8-B4DA-E9D77B0D2324}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{287819FF-96EC-41E8-B4DA-E9D77B0D2324}.Release|Any CPU.Build.0 = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{158B30B9-F94F-49B8-B9D5-7AB084ED26B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F406FB-0DA9-44D1-943A-D905769F91E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F406FB-0DA9-44D1-943A-D905769F91E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F406FB-0DA9-44D1-943A-D905769F91E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F406FB-0DA9-44D1-943A-D905769F91E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,12 +1,8 @@
-﻿namespace CustomInterface
+﻿namespace CustomInterfaces
 {
-    // Абстрактный базовый класс иерархии
     abstract class Shape
     {
-        public Shape(string name = "Безымянный")
-        {
-            PetName = name;
-        }
+        public Shape(string name = "Безымянный") => PetName = name;
 
         public string PetName { get; set; }
 
