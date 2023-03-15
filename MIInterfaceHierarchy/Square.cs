@@ -1,8 +1,8 @@
-﻿namespace MIInterfaceHierarchy
+﻿namespace MiInterfaceHierarchy
 {
     class Square : IShape
     {
-        // Использование явной реализации для устранения конфликта имён членов.
+        // Использование явной реализации для устранения конфликта имен членов.
         void IPrintable.Draw()
         {
             // Вывести на принтер...
@@ -16,9 +16,6 @@
             // Печатать...
         }
 
-        public int GetNumberOfSides()
-        {
-            return 4;
-        }
+        public int GetNumberOfSides() => 4;
     }
 }

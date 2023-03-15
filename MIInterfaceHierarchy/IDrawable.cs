@@ -1,4 +1,4 @@
-﻿namespace MIInterfaceHierarchy
+﻿namespace MiInterfaceHierarchy
 {
     // Множественное наследование для интерфейсных тиов допускается.
     interface IDrawable

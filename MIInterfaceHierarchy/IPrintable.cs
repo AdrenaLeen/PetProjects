@@ -1,10 +1,10 @@
-﻿namespace MIInterfaceHierarchy
+﻿namespace MiInterfaceHierarchy
 {
     interface IPrintable
     {
         void Print();
         
-        // Возможен конфликт имён!
+        // Возможен конфликт имен!
         void Draw();
     }
 }
