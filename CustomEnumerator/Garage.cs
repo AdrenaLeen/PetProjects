@@ -3,10 +3,10 @@
 namespace CustomEnumerator
 {
     // Garage содержит набор объектов Car.
-    public class Garage : IEnumerable
+    class Garage : IEnumerable
     {
         // System.Array уже реализует IEnumerator!
-        private Car[] carArray = new Car[4];
+        private readonly Car[] carArray = new Car[4];
 
         // При запуске заполнить несколькими объектами Car.
         public Garage()
@@ -17,10 +17,7 @@ namespace CustomEnumerator
             carArray[3] = new Car("Фред", 30);
         }
 
-        public IEnumerator GetEnumerator()
-        {
-            // Возвратить IEnumerator объекта массива.
-            return carArray.GetEnumerator();
-        }
+        // Возвратить IEnumerator объекта массива.
+        public IEnumerator GetEnumerator() => carArray.GetEnumerator();
     }
 }

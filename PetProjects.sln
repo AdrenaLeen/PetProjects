@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "IClone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumerator", "CustomEnumerator\CustomEnumerator.csproj", "{A0231161-96AD-42B2-AF70-7334D561770E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumeratorWithYield", "CustomEnumeratorWithYield\CustomEnumeratorWithYield.csproj", "{09F94EC5-626D-42D9-82E8-47D143575449}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneablePoint", "CloneablePoint\CloneablePoint.csproj", "{2167A9E8-FE9A-4210-BFF8-D0EF6F531616}"
@@ -385,9 +383,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessMultipleExceptions",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomInterfaces", "CustomInterfaces\CustomInterfaces.csproj", "{90F406FB-0DA9-44D1-943A-D905769F91E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceHierarchy", "InterfaceHierarchy\InterfaceHierarchy.csproj", "{38A1BF08-381B-4EDD-A761-7B5D1219DDD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceHierarchy", "InterfaceHierarchy\InterfaceHierarchy.csproj", "{38A1BF08-381B-4EDD-A761-7B5D1219DDD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiInterfaceHierarchy", "MiInterfaceHierarchy\MiInterfaceHierarchy.csproj", "{D2134951-9AC4-4E51-993B-9A27F8FD290F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiInterfaceHierarchy", "MiInterfaceHierarchy\MiInterfaceHierarchy.csproj", "{D2134951-9AC4-4E51-993B-9A27F8FD290F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumerator", "CustomEnumerator\CustomEnumerator.csproj", "{1E87A33F-8499-43FC-8D55-E66527EA5E4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -411,10 +411,6 @@ Global
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0231161-96AD-42B2-AF70-7334D561770E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0231161-96AD-42B2-AF70-7334D561770E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0231161-96AD-42B2-AF70-7334D561770E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0231161-96AD-42B2-AF70-7334D561770E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09F94EC5-626D-42D9-82E8-47D143575449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09F94EC5-626D-42D9-82E8-47D143575449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09F94EC5-626D-42D9-82E8-47D143575449}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{D2134951-9AC4-4E51-993B-9A27F8FD290F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2134951-9AC4-4E51-993B-9A27F8FD290F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2134951-9AC4-4E51-993B-9A27F8FD290F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

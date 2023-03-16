@@ -1,13 +1,7 @@
-﻿using System;
-
-namespace CustomEnumerator
+﻿namespace CustomEnumerator
 {
     class Radio
     {
-        public void TurnOn(bool on)
-        {
-            if (on) Console.WriteLine("Зажигаем...");
-            else Console.WriteLine("Время тишины...");
-        }
+        public void TurnOn(bool on) => Console.WriteLine(on ? "Зажигаем..." : "Время тишины...");
     }
 }

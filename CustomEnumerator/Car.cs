@@ -15,7 +15,7 @@ namespace CustomEnumerator
         private bool carIsDead;
 
         // В автомобиле имеется радиоприёмник.
-        private Radio theMusicBox = new Radio();
+        private readonly Radio theMusicBox = new();
 
         // Конструкторы.
         public Car() { }
@@ -44,12 +44,15 @@ namespace CustomEnumerator
                     CurrentSpeed = 0;
                     // Использовать ключевое слово throw для генерации исключения.
                     // Мы хотим обращаться к свойству HelpLink, поэтому необходимо создать локальную переменную перед генерацией объекта Exception.
-                    Exception ex = new Exception($"{PetName} перегрет!");
-                    ex.HelpLink = "http://www.CarsRUs.com";
-                    // Предоставить специальные данные, касающиеся ошибки.
-                    ex.Data.Add("TimeStamp", $"Машина вышла из строя {DateTime.Now}");
-                    ex.Data.Add("Cause", "Забыли убрать ногу с газа.");
-                    throw ex;
+                    throw new Exception($"{PetName} перегрет!")
+                    {
+                        HelpLink = "http://www.CarsRUs.com",
+                        Data =
+                        {
+                            { "TimeStamp", $"Машина вышла из строя {DateTime.Now}" },
+                            { "Cause", "Забыли убрать ногу с газа." }
+                        }
+                    };
                 }
                 // Вывод текущей скорости.
                 else Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
