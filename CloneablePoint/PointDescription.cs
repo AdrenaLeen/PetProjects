@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CloneablePoint
+﻿namespace CloneablePoint
 {
     // Этот класс описывает точку.
     class PointDescription

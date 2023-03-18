@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace CloneablePoint
+﻿namespace CloneablePoint
 {
     // Теперь Point поддерживает способность клонирования.
     class Point : ICloneable
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public PointDescription desc = new PointDescription();
+        public PointDescription desc = new();
 
         public Point(int xPos, int yPos, string petName)
         {
@@ -23,21 +21,20 @@ namespace CloneablePoint
         public Point() { }
 
         // Переопределить Object.ToString().
-        public override string ToString()
-        {
-            return $"X = {X}; Y = {Y}; Название = {desc.PetName}; ID = {desc.PointID}";
-        }
+        public override string ToString() => $"X = {X}; Y = {Y}; Название = {desc.PetName}; ID = {desc.PointID}";
 
         // Возвратить копию текущего объекта.
         // Теперь необходимо скорректировать код для учёта члена PointDescription.
         public object Clone()
         {
             // Сначала получить поверхностную копию.
-            Point newPoint = (Point)MemberwiseClone();
+            var newPoint = (Point)MemberwiseClone();
 
             // Затем восполнить пробелы.
-            PointDescription currentDesc = new PointDescription();
-            currentDesc.PetName = desc.PetName;
+            var currentDesc = new PointDescription
+            {
+                PetName = desc.PetName
+            };
             newPoint.desc = currentDesc;
 
             return newPoint;
