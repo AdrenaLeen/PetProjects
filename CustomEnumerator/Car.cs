@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CustomEnumerator
+﻿namespace CustomEnumerator
 {
     class Car
     {
@@ -25,11 +23,8 @@ namespace CustomEnumerator
             PetName = name;
         }
 
-        public void CrankTunes(bool state)
-        {
-            // Делегировать запрос внутреннему объекту.
-            theMusicBox.TurnOn(state);
-        }
+        // Делегировать запрос внутреннему объекту.
+        public void CrankTunes(bool state) => theMusicBox.TurnOn(state);
 
         // Проверить, не перегрелся ли автомобиль.
         public void Accelerate(int delta)

@@ -3,10 +3,10 @@
 namespace CustomEnumeratorWithYield
 {
     // Garage содержит набор объектов Car.
-    public class Garage : IEnumerable
+    class Garage : IEnumerable
     {
         // System.Array уже реализует IEnumerator!
-        private Car[] carArray = new Car[4];
+        private readonly Car[] carArray = new Car[4];
 
         // При запуске заполнить несколькими объектами Car.
         public Garage()
@@ -20,10 +20,10 @@ namespace CustomEnumeratorWithYield
         // Метод итератора.
         public IEnumerator GetEnumerator()
         {
-            return actualImplementation();
+            return ActualImplementation();
 
             // Закрытая функция
-            IEnumerator actualImplementation()
+            IEnumerator ActualImplementation()
             {
                 foreach (Car c in carArray) yield return c;
             }
@@ -31,15 +31,20 @@ namespace CustomEnumeratorWithYield
 
         public IEnumerable GetTheCars(bool returnRevesed)
         {
-            // Возвратить элементы в обратном порядке.
-            if (returnRevesed)
+            return ActualImplementation();
+
+            IEnumerable ActualImplementation()
             {
-                for (int i = carArray.Length; i != 0; i--) yield return carArray[i - 1];
-            }
-            else
-            {
-                // Возвратить элементы в том порядке, в каком они размещены в массиве.
-                foreach (Car c in carArray) yield return c;
+                // Возвратить элементы в обратном порядке.
+                if (returnRevesed)
+                {
+                    for (int i = carArray.Length; i != 0; i--) yield return carArray[i - 1];
+                }
+                else
+                {
+                    // Возвратить элементы в том порядке, в каком они размещены в массиве.
+                    foreach (Car c in carArray) yield return c;
+                }
             }
         }
     }

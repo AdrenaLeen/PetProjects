@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "IClone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumeratorWithYield", "CustomEnumeratorWithYield\CustomEnumeratorWithYield.csproj", "{09F94EC5-626D-42D9-82E8-47D143575449}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneablePoint", "CloneablePoint\CloneablePoint.csproj", "{2167A9E8-FE9A-4210-BFF8-D0EF6F531616}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparableCar", "ComparableCar\ComparableCar.csproj", "{5F127AC6-9E7C-4327-ABE4-A959E00726A4}"
@@ -387,7 +385,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceHierarchy", "Inter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiInterfaceHierarchy", "MiInterfaceHierarchy\MiInterfaceHierarchy.csproj", "{D2134951-9AC4-4E51-993B-9A27F8FD290F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumerator", "CustomEnumerator\CustomEnumerator.csproj", "{1E87A33F-8499-43FC-8D55-E66527EA5E4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomEnumerator", "CustomEnumerator\CustomEnumerator.csproj", "{1E87A33F-8499-43FC-8D55-E66527EA5E4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumeratorWithYield", "CustomEnumeratorWithYield\CustomEnumeratorWithYield.csproj", "{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -411,10 +411,6 @@ Global
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09F94EC5-626D-42D9-82E8-47D143575449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09F94EC5-626D-42D9-82E8-47D143575449}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09F94EC5-626D-42D9-82E8-47D143575449}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09F94EC5-626D-42D9-82E8-47D143575449}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2167A9E8-FE9A-4210-BFF8-D0EF6F531616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2167A9E8-FE9A-4210-BFF8-D0EF6F531616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2167A9E8-FE9A-4210-BFF8-D0EF6F531616}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E87A33F-8499-43FC-8D55-E66527EA5E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
