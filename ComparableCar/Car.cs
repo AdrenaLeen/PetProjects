@@ -15,7 +15,7 @@ namespace ComparableCar
         public int CarID { get; set; }
 
         // Свойство, возвращающее PetNameComparer.
-        public static IComparer SortByPetName { get { return new PetNameComparer(); } }
+        public static IComparer SortByPetName => new PetNameComparer();
 
         // Не вышел ли автомобиль из строя?
         private bool carIsDead;
