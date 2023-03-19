@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace ComparableCar
 {
@@ -22,7 +21,7 @@ namespace ComparableCar
         private bool carIsDead;
 
         // В автомобиле имеется радиоприёмник.
-        private readonly Radio theMusicBox = new Radio();
+        private readonly Radio theMusicBox = new();
 
         // Конструкторы.
         public Car() { }
@@ -33,17 +32,13 @@ namespace ComparableCar
             CarID = id;
         }
 
-        public void CrankTunes(bool state)
-        {
-            // Делегировать запрос внутреннему объекту.
-            theMusicBox.TurnOn(state);
-        }
+        // Делегировать запрос внутреннему объекту.
+        public void CrankTunes(bool state) => theMusicBox.TurnOn(state);
 
         // Проверить, не перегрелся ли автомобиль.
         // Сгенерировать специальное исключение CarIsDeadException.
         public void Accelerate(int delta)
         {
-            if (delta < 0) throw new ArgumentOutOfRangeException("delta", "Значение скорости должно быть больше нуля!");
             if (carIsDead) Console.WriteLine($"{PetName} сломан...");
             else
             {
@@ -54,8 +49,16 @@ namespace ComparableCar
                     CurrentSpeed = 0;
                     // Использовать ключевое слово throw для генерации исключения.
                     // Мы хотим обращаться к свойству HelpLink, поэтому необходимо создать локальную переменную перед генерацией объекта Exception.
-                    CarIsDeadException ex = new CarIsDeadException($"{PetName} перегрет!", "Забыли убрать ногу с газа.", DateTime.Now) { HelpLink = "http://www.CarsRUs.com" };
-                    throw ex;
+                    // Предоставить специальные данные, касающиеся ошибки.
+                    throw new Exception($"{PetName} перегрет!")
+                    {
+                        HelpLink = "http://www.CarsRUs.com",
+                        Data =
+                        {
+                            { "TimeStamp", $"Машина вышла из строя {DateTime.Now}" },
+                            { "Cause", "Забыли убрать ногу с газа." }
+                        }
+                    };
                 }
                 // Вывод текущей скорости.
                 else Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
@@ -63,7 +66,7 @@ namespace ComparableCar
         }
 
         // Реализация итерфейса IComparable.
-        int IComparable.CompareTo(object obj)
+        int IComparable.CompareTo(object? obj)
         {
             if (obj is Car temp) return CarID.CompareTo(temp.CarID);
             else throw new ArgumentException("Параметр не является объектом типа Car!");

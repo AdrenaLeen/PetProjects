@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "IClone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparableCar", "ComparableCar\ComparableCar.csproj", "{5F127AC6-9E7C-4327-ABE4-A959E00726A4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssuesWithNongenericCollections", "IssuesWithNongenericCollections\IssuesWithNongenericCollections.csproj", "{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithGenericCollections", "FunWithGenericCollections\FunWithGenericCollections.csproj", "{2A2E4172-DBC8-4497-A65F-1212293318AE}"
@@ -385,9 +383,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiInterfaceHierarchy", "MiI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomEnumerator", "CustomEnumerator\CustomEnumerator.csproj", "{1E87A33F-8499-43FC-8D55-E66527EA5E4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEnumeratorWithYield", "CustomEnumeratorWithYield\CustomEnumeratorWithYield.csproj", "{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomEnumeratorWithYield", "CustomEnumeratorWithYield\CustomEnumeratorWithYield.csproj", "{0F0FCC4E-71A9-458D-B560-E6BBDD222AA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneablePoint", "CloneablePoint\CloneablePoint.csproj", "{EBF24121-853E-4886-A917-E8D676173F16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneablePoint", "CloneablePoint\CloneablePoint.csproj", "{EBF24121-853E-4886-A917-E8D676173F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparableCar", "ComparableCar\ComparableCar.csproj", "{37DD70F6-CC08-4E25-9027-3AFAF3593A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -411,10 +411,6 @@ Global
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F127AC6-9E7C-4327-ABE4-A959E00726A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F127AC6-9E7C-4327-ABE4-A959E00726A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F127AC6-9E7C-4327-ABE4-A959E00726A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F127AC6-9E7C-4327-ABE4-A959E00726A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{EBF24121-853E-4886-A917-E8D676173F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBF24121-853E-4886-A917-E8D676173F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBF24121-853E-4886-A917-E8D676173F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DD70F6-CC08-4E25-9027-3AFAF3593A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DD70F6-CC08-4E25-9027-3AFAF3593A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DD70F6-CC08-4E25-9027-3AFAF3593A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DD70F6-CC08-4E25-9027-3AFAF3593A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

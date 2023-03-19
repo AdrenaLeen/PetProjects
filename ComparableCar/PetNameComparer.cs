@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace ComparableCar
 {
@@ -7,9 +6,9 @@ namespace ComparableCar
     class PetNameComparer : IComparer
     {
         // Проверить дружественное имя каждого объекта
-        int IComparer.Compare(object o1, object o2)
+        int IComparer.Compare(object? o1, object? o2)
         {
-            if (o1 is Car t1 && o2 is Car t2) return String.Compare(t1.PetName, t2.PetName);
+            if (o1 is Car t1 && o2 is Car t2) return string.Compare(t1.PetName, t2.PetName);
             else throw new ArgumentException("Параметр не является объектом типа Car!");
         }
     }
