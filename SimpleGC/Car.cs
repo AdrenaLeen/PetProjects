@@ -3,7 +3,7 @@
     class Car
     {
         public int CurrentSpeed { get; set; }
-        public string PetName { get; set; }
+        public string PetName { get; set; } = string.Empty;
 
         public Car() { }
         public Car(string name, int speed)
