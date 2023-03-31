@@ -1,22 +1,13 @@
-﻿using System;
+﻿using LazyObjectInstantiation;
 
-namespace LazyObjectInstantiation
-{
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Ленивое создание объектов *****");
+Console.WriteLine("***** Ленивое создание объектов *****");
 
-            // В этом вызывающем коде получение всех композиций не производится, но косвенно всё равно создаются 10 000 объектов!
-            MediaPlayer myPlayer = new MediaPlayer();
-            myPlayer.Play();
+// В этом вызывающем коде получение всех композиций не производится, но косвенно всё равно создаются 10 000 объектов!
+var myPlayer = new MediaPlayer();
+myPlayer.Play();
 
-            // Размещение объекта AllTracks происходит только в случае вызова метода GetAllTracks().
-            MediaPlayer yourPlayer = new MediaPlayer();
-            AllTracks yourMusic = yourPlayer.GetAllTracks();
+// Размещение объекта AllTracks происходит только в случае вызова метода GetAllTracks().
+var yourPlayer = new MediaPlayer();
+AllTracks _ = yourPlayer.GetAllTracks();
 
-            Console.ReadLine();
-        }
-    }
-}
+Console.ReadLine();

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyObjectInstantiation
+﻿namespace LazyObjectInstantiation
 {
     // Объект MediaPlayer имеет объекты Lazy<AllTracks>.
     class MediaPlayer
@@ -21,7 +19,7 @@ namespace LazyObjectInstantiation
 
         // При использовании переменной Lazy() взывается стандартный конструктор класса AllTracks.
         // Использовать лямбда-выражение для добавления дополнительного кода, который выполняется при создании объекта AllTracks.
-        private readonly Lazy<AllTracks> allSongs = new Lazy<AllTracks>(() =>
+        private readonly Lazy<AllTracks> allSongs = new(() =>
         {
             Console.WriteLine("Создание объекта AllTracks!");
             return new AllTracks();

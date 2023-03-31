@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyObjectInstantiation
+﻿namespace LazyObjectInstantiation
 {
     // Представляет все композиции в проигрывателе.
     class AllTracks
