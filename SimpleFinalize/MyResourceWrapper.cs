@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SimpleFinalize
+﻿namespace SimpleFinalize
 {
     // Переопределить System.Object.Finalize() посредством синтаксиса финализатора.
     class MyResourceWrapper

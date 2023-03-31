@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{EE665386-F654-4D71-9D80-9AC330D4DCE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFinalize", "SimpleFinalize\SimpleFinalize.csproj", "{53688403-556E-4395-AC0C-DBFF7BFD2F25}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDispose", "SimpleDispose\SimpleDispose.csproj", "{975DC0E6-D1A9-444A-8659-9E8E08C61EDB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalizableDisposableClass", "FinalizableDisposableClass\FinalizableDisposableClass.csproj", "{53506AA5-9F05-46B4-8DCE-571D36BD672E}"
@@ -387,7 +385,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneablePoint", "Cloneable
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComparableCar", "ComparableCar\ComparableCar.csproj", "{37DD70F6-CC08-4E25-9027-3AFAF3593A83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGC", "SimpleGC\SimpleGC.csproj", "{3288496E-AE25-4085-8032-1F7ABD7157A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleGC", "SimpleGC\SimpleGC.csproj", "{3288496E-AE25-4085-8032-1F7ABD7157A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFinalize", "SimpleFinalize\SimpleFinalize.csproj", "{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -535,10 +535,6 @@ Global
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53688403-556E-4395-AC0C-DBFF7BFD2F25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{975DC0E6-D1A9-444A-8659-9E8E08C61EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{975DC0E6-D1A9-444A-8659-9E8E08C61EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975DC0E6-D1A9-444A-8659-9E8E08C61EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{3288496E-AE25-4085-8032-1F7ABD7157A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3288496E-AE25-4085-8032-1F7ABD7157A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3288496E-AE25-4085-8032-1F7ABD7157A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
