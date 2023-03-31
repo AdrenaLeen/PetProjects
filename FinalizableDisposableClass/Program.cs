@@ -1,21 +1,12 @@
-﻿using System;
+﻿using FinalizableDisposableClass;
 
-namespace FinalizableDisposableClass
-{
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Dispose() / Destructor Combo Platter *****");
+Console.WriteLine("***** Создание финализируемых и освобождаемых типов *****");
 
-            // Вызвать метод Dispose() вручную. Это не приведёт к вызову финализатора.
-            MyResourceWrapper rw = new MyResourceWrapper();
-            rw.Dispose();
+// Вызвать метод Dispose() вручную. Это не приведет к вызову финализатора.
+var rw = new MyResourceWrapper();
+rw.Dispose();
 
-            // Не вызывать метод Dispose(). Это приведёт к вызову финализатора и выдаче звукового сигнала.
-            MyResourceWrapper rw2 = new MyResourceWrapper();
+// Не вызывать метод Dispose(). Это запустит финализатор, когда объект будет обрабатываться сборщиком мусора.
+var _ = new MyResourceWrapper();
 
-            Console.ReadLine();
-        }
-    }
-}
+Console.ReadLine();

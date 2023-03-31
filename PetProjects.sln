@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{EE665386-F654-4D71-9D80-9AC330D4DCE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalizableDisposableClass", "FinalizableDisposableClass\FinalizableDisposableClass.csproj", "{53506AA5-9F05-46B4-8DCE-571D36BD672E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyObjectInstantiation", "LazyObjectInstantiation\LazyObjectInstantiation.csproj", "{A9E3062C-72FE-48E0-BEC6-D12ED2DF4F63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNamespaces", "CustomNamespaces\CustomNamespaces.csproj", "{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}"
@@ -385,9 +383,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComparableCar", "Comparable
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleGC", "SimpleGC\SimpleGC.csproj", "{3288496E-AE25-4085-8032-1F7ABD7157A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFinalize", "SimpleFinalize\SimpleFinalize.csproj", "{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFinalize", "SimpleFinalize\SimpleFinalize.csproj", "{646B0F6C-0993-43D9-A2BB-4B6E13E721BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDispose", "SimpleDispose\SimpleDispose.csproj", "{B74DC2D5-6E5D-4976-94BE-F282AFDCBE3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDispose", "SimpleDispose\SimpleDispose.csproj", "{B74DC2D5-6E5D-4976-94BE-F282AFDCBE3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalizableDisposableClass", "FinalizableDisposableClass\FinalizableDisposableClass.csproj", "{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -535,10 +535,6 @@ Global
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53506AA5-9F05-46B4-8DCE-571D36BD672E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53506AA5-9F05-46B4-8DCE-571D36BD672E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53506AA5-9F05-46B4-8DCE-571D36BD672E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53506AA5-9F05-46B4-8DCE-571D36BD672E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A9E3062C-72FE-48E0-BEC6-D12ED2DF4F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A9E3062C-72FE-48E0-BEC6-D12ED2DF4F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E3062C-72FE-48E0-BEC6-D12ED2DF4F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{B74DC2D5-6E5D-4976-94BE-F282AFDCBE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B74DC2D5-6E5D-4976-94BE-F282AFDCBE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B74DC2D5-6E5D-4976-94BE-F282AFDCBE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
