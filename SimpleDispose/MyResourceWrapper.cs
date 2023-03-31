@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SimpleDispose
+﻿namespace SimpleDispose
 {
     // Реализация интерфейса IDisposable.
     class MyResourceWrapper : IDisposable

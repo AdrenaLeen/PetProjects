@@ -1,22 +1,29 @@
-﻿using System;
+﻿using SimpleDispose;
 
-namespace SimpleDispose
+Console.WriteLine("***** Освобождение объектов *****");
+
+// Метод Dispose() вызывается автоматически при выходе за пределы области действия using.
+using (var rw = new MyResourceWrapper())
 {
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Освобождение объектов *****\n");
+    // Использовать объект rw.
+}
 
-            // Создать освобождаемый объект и вызвать метод Dispose() для освобождения любых внутренних ресурсов.
-            // Метод Dispose() вызывается автоматически при выходе за пределы области действия using.
-            // Использование списка с разделителями-запятыми для объявления нескольких объектов, подлежащих освобождению.
-            using (MyResourceWrapper rw = new MyResourceWrapper(), rw2 = new MyResourceWrapper())
-            {
-                // Работать с объектами rw и rw2.
-            }
+// Использование списка с разделителями-запятыми для объявления нескольких объектов, подлежащих освобождению.
+using (MyResourceWrapper rw = new(), rw2 = new())
+{
+    // Работать с объектами rw и rw2.
+}
 
-            Console.ReadLine();
-        }
-    }
+Console.WriteLine("Объявления using");
+UsingDeclaration();
+Console.ReadLine();
+
+static void UsingDeclaration()
+{
+    // Эта переменная будет находиться в области видимости вплоть до конца метода.
+    using var rw = new MyResourceWrapper();
+
+    // Сделать что-нибудь.
+    Console.WriteLine("Утилизация");
+    // В этой точке переменная освобождается.
 }
