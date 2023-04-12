@@ -4,7 +4,7 @@ namespace IssuesWithNongenericCollections
 {
     class PersonCollection : IEnumerable
     {
-        private ArrayList arPeople = new ArrayList();
+        private readonly ArrayList arPeople = new();
 
         // Приведение для вызывающего кода.
         public Person GetPerson(int pos) => (Person)arPeople[pos];

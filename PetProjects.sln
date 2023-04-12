@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "IClone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssuesWithNongenericCollections", "IssuesWithNongenericCollections\IssuesWithNongenericCollections.csproj", "{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithGenericCollections", "FunWithGenericCollections\FunWithGenericCollections.csproj", "{2A2E4172-DBC8-4497-A65F-1212293318AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithObservableCollection", "FunWithObservableCollection\FunWithObservableCollection.csproj", "{21E06AA8-2392-4C08-B5C5-86366E8C290E}"
@@ -385,9 +383,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFinalize", "SimpleFin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDispose", "SimpleDispose\SimpleDispose.csproj", "{B74DC2D5-6E5D-4976-94BE-F282AFDCBE3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalizableDisposableClass", "FinalizableDisposableClass\FinalizableDisposableClass.csproj", "{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalizableDisposableClass", "FinalizableDisposableClass\FinalizableDisposableClass.csproj", "{942F0DBA-2E35-4DBE-B1A0-D558344D0BD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyObjectInstantiation", "LazyObjectInstantiation\LazyObjectInstantiation.csproj", "{E504B4C1-CF2B-41F1-9FFB-F14885AC98DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyObjectInstantiation", "LazyObjectInstantiation\LazyObjectInstantiation.csproj", "{E504B4C1-CF2B-41F1-9FFB-F14885AC98DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssuesWithNongenericCollections", "IssuesWithNongenericCollections\IssuesWithNongenericCollections.csproj", "{62473B5C-81EA-4113-AD64-B286666DDACF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -411,10 +411,6 @@ Global
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DABB5FAA-30ED-4CFC-8108-859FDA6D9BD6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2A2E4172-DBC8-4497-A65F-1212293318AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2A2E4172-DBC8-4497-A65F-1212293318AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A2E4172-DBC8-4497-A65F-1212293318AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1167,6 +1163,10 @@ Global
 		{E504B4C1-CF2B-41F1-9FFB-F14885AC98DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E504B4C1-CF2B-41F1-9FFB-F14885AC98DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E504B4C1-CF2B-41F1-9FFB-F14885AC98DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62473B5C-81EA-4113-AD64-B286666DDACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62473B5C-81EA-4113-AD64-B286666DDACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62473B5C-81EA-4113-AD64-B286666DDACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62473B5C-81EA-4113-AD64-B286666DDACF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
