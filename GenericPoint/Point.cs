@@ -1,13 +1,13 @@
 ﻿namespace GenericPoint
 {
-    // Обобщённая структура Point.
+    // Обобщенная структура Point.
     public struct Point<T>
     {
-        // Обобщённые данные состояния.
-        public T X { get; set; }
-        public T Y { get; set; }
+        // Обобщенные данные состояния.
+        public T? X { get; set; }
+        public T? Y { get; set; }
 
-        // Обобщённый конструктор.
+        // Обобщенный конструктор.
         public Point(T xVal, T yVal)
         {
             X = xVal;
