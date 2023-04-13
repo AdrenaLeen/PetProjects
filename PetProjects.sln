@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "IClone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGenericMethods", "CustomGenericMethods\CustomGenericMethods.csproj", "{0A5FABE5-6D70-4568-BB2E-BB3185239BA0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericPoint", "GenericPoint\GenericPoint.csproj", "{D978D750-AEDF-46B5-A52A-1AD330DAFDD9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDelegate", "SimpleDelegate\SimpleDelegate.csproj", "{5435AEE2-A98C-4AFD-BC36-331F76A22430}"
@@ -391,6 +389,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithGenericCollections",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithObservableCollection", "FunWithObservableCollection\FunWithObservableCollection.csproj", "{78761EE5-B754-4025-809D-B252F38D0B50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGenericMethods", "CustomGenericMethods\CustomGenericMethods.csproj", "{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -413,10 +413,6 @@ Global
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A5FABE5-6D70-4568-BB2E-BB3185239BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A5FABE5-6D70-4568-BB2E-BB3185239BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A5FABE5-6D70-4568-BB2E-BB3185239BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A5FABE5-6D70-4568-BB2E-BB3185239BA0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D978D750-AEDF-46B5-A52A-1AD330DAFDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D978D750-AEDF-46B5-A52A-1AD330DAFDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D978D750-AEDF-46B5-A52A-1AD330DAFDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1173,6 +1169,10 @@ Global
 		{78761EE5-B754-4025-809D-B252F38D0B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78761EE5-B754-4025-809D-B252F38D0B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78761EE5-B754-4025-809D-B252F38D0B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
