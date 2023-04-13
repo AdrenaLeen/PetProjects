@@ -387,7 +387,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalizableDisposableClass"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyObjectInstantiation", "LazyObjectInstantiation\LazyObjectInstantiation.csproj", "{E504B4C1-CF2B-41F1-9FFB-F14885AC98DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssuesWithNongenericCollections", "IssuesWithNongenericCollections\IssuesWithNongenericCollections.csproj", "{62473B5C-81EA-4113-AD64-B286666DDACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssuesWithNongenericCollections", "IssuesWithNongenericCollections\IssuesWithNongenericCollections.csproj", "{62473B5C-81EA-4113-AD64-B286666DDACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithCollectionInitialization", "FunWithCollectionInitialization\FunWithCollectionInitialization.csproj", "{EA4F1F53-CA27-422B-A36A-F604641AB12D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1167,6 +1169,10 @@ Global
 		{62473B5C-81EA-4113-AD64-B286666DDACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62473B5C-81EA-4113-AD64-B286666DDACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62473B5C-81EA-4113-AD64-B286666DDACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4F1F53-CA27-422B-A36A-F604641AB12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4F1F53-CA27-422B-A36A-F604641AB12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4F1F53-CA27-422B-A36A-F604641AB12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4F1F53-CA27-422B-A36A-F604641AB12D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
