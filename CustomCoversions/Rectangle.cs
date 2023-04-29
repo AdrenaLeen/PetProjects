@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace CustomCoversions
+﻿namespace CustomCoversions
 {
-    struct Rectangle
+    public struct Rectangle
     {
         public int Width { get; set; }
         public int Height { get; set; }
 
-        public Rectangle(int w, int h) : this()
+        public Rectangle(int w, int h)
         {
             Width = w;
             Height = h;
@@ -24,14 +22,7 @@ namespace CustomCoversions
 
         public override string ToString() => $"[Ширина = {Width}; Высота = {Height}]";
 
-        public static implicit operator Rectangle(Square s)
-        {
-            Rectangle r = new Rectangle();
-            r.Height = s.Length;
-
-            // Предположим, что ширина нового квадрата будет равна (Length x 2).
-            r.Width = s.Length * 2;
-            return r;
-        }
+        // Предположим, что ширина нового квадрата будет равна (Length x 2).
+        public static implicit operator Rectangle(Square s) => new() { Height = s.Length, Width = s.Length * 2 };
     }
 }
