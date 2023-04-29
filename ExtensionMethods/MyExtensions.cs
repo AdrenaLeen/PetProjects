@@ -1,12 +1,12 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace ExtensionMethods
 {
     static class MyExtensions
     {
         // Этот метод позволяет объекту любого типа отобразить сборку, в которой он определён.
-        public static void DisplayDefiningAssembly(this object obj) => Console.WriteLine($"{obj.GetType().Name} живёт здесь: => {Assembly.GetAssembly(obj.GetType()).GetName().Name}");
+        public static void DisplayDefiningAssembly(this object obj) =>
+            Console.WriteLine($"{obj.GetType().Name} живёт здесь: => {Assembly.GetAssembly(obj.GetType())?.GetName().Name}");
 
         // Этот метод позволяет любому целочисленному значению изменить порядок следования десятичных цифр на обратный. Например, для 56 возвратится 65.
         public static int ReverseDigits(this int i)
@@ -18,7 +18,7 @@ namespace ExtensionMethods
             Array.Reverse(digits);
 
             // Поместить обратно в строку.
-            string newDigits = new string(digits);
+            string newDigits = new(digits);
 
             // Возвратить модифицированную строку как int.
             return int.Parse(newDigits);
