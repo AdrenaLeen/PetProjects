@@ -37,8 +37,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaExpressionsMultiplePa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarEventsWithLambdas", "CarEventsWithLambdas\CarEventsWithLambdas.csproj", "{777F0320-CF1E-4F5C-94CE-ED92F1155214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIndexer", "SimpleIndexer\SimpleIndexer.csproj", "{17F01DA5-CC98-426D-B762-2A57AE82D05D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloadedOps", "OverloadedOps\OverloadedOps.csproj", "{F049C89B-9981-4CE2-82AC-654CA4F1BCCA}"
@@ -385,11 +383,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithCollectionInitializa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithGenericCollections", "FunWithGenericCollections\FunWithGenericCollections.csproj", "{F6AE7C01-B7C0-4B7C-BC89-400982266199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithObservableCollection", "FunWithObservableCollection\FunWithObservableCollection.csproj", "{78761EE5-B754-4025-809D-B252F38D0B50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithObservableCollection", "FunWithObservableCollection\FunWithObservableCollection.csproj", "{78761EE5-B754-4025-809D-B252F38D0B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGenericMethods", "CustomGenericMethods\CustomGenericMethods.csproj", "{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomGenericMethods", "CustomGenericMethods\CustomGenericMethods.csproj", "{7473AA2B-D2D5-4281-81EA-D8DF6BCD23DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericPoint", "GenericPoint\GenericPoint.csproj", "{92CA196E-83A1-4064-8165-C0E737205EBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericPoint", "GenericPoint\GenericPoint.csproj", "{92CA196E-83A1-4064-8165-C0E737205EBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIndexer", "SimpleIndexer\SimpleIndexer.csproj", "{FCFB88C7-2C4A-4CD7-A3E3-40B705CBF6DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -465,10 +465,6 @@ Global
 		{777F0320-CF1E-4F5C-94CE-ED92F1155214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{777F0320-CF1E-4F5C-94CE-ED92F1155214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{777F0320-CF1E-4F5C-94CE-ED92F1155214}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17F01DA5-CC98-426D-B762-2A57AE82D05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17F01DA5-CC98-426D-B762-2A57AE82D05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17F01DA5-CC98-426D-B762-2A57AE82D05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17F01DA5-CC98-426D-B762-2A57AE82D05D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1173,6 +1169,10 @@ Global
 		{92CA196E-83A1-4064-8165-C0E737205EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92CA196E-83A1-4064-8165-C0E737205EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92CA196E-83A1-4064-8165-C0E737205EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFB88C7-2C4A-4CD7-A3E3-40B705CBF6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFB88C7-2C4A-4CD7-A3E3-40B705CBF6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFB88C7-2C4A-4CD7-A3E3-40B705CBF6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFB88C7-2C4A-4CD7-A3E3-40B705CBF6DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
