@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AnonimousMethods
+﻿namespace AnonimousMethods
 {
     class CarEventArgs : EventArgs
     {
