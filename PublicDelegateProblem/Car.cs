@@ -5,7 +5,7 @@
         public delegate void CarEngineHandler(string msgForCaller);
 
         // Теперь это член public!
-        public CarEngineHandler listOfHandlers;
+        public CarEngineHandler? listOfHandlers;
 
         // Просто вызвать уведомление Exploded.
         public void Accelerate() => listOfHandlers?.Invoke("Простите, эта машина умерла...");
