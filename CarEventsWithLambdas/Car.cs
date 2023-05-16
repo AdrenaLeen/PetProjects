@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace CarEventsWithLambdas
+﻿namespace CarEventsWithLambdas
 {
     class Car
     {
         public int CurrentSpeed { get; set; }
         public int MaxSpeed { get; set; }
-        public string PetName { get; set; }
+        public string PetName { get; set; } = string.Empty;
         private bool carIsDead;
 
         public Car() { MaxSpeed = 100; }
@@ -21,8 +19,8 @@ namespace CarEventsWithLambdas
         public delegate void CarEngineHandler(object sender, CarEventArgs e);
 
         // Car может отправлять следующие события.
-        public event CarEngineHandler Exploded;
-        public event CarEngineHandler AboutToBlow;
+        public event EventHandler<CarEventArgs>? Exploded;
+        public event EventHandler<CarEventArgs>? AboutToBlow;
 
         public void Accelerate(int delta)
         {
@@ -33,7 +31,7 @@ namespace CarEventsWithLambdas
                 CurrentSpeed += delta;
 
                 // Почти сломан?
-                if (10 == MaxSpeed - CurrentSpeed) AboutToBlow?.Invoke(this, new CarEventArgs("Осторожнее, приятель! Скоро взорвётся!"));
+                if (MaxSpeed - CurrentSpeed == 10) AboutToBlow?.Invoke(this, new CarEventArgs("Осторожнее, приятель! Скоро взорвётся!"));
 
                 // Всё ещё в порядке!
                 if (CurrentSpeed >= MaxSpeed) carIsDead = true;

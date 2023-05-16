@@ -1,25 +1,16 @@
-﻿using System;
+﻿using CarEventsWithLambdas;
 
-namespace CarEventsWithLambdas
-{
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Лямбда-выражения *****");
-            
-            // Создать объект Car обычным образом.
-            Car c1 = new Car("СлагБаг", 100, 10);
+Console.WriteLine("***** Лямбда-выражения *****");
 
-            // Привязаться к событиям с помощью лямбда-выражений.
-            c1.AboutToBlow += (sender, e) => Console.WriteLine(e.msg);
-            c1.Exploded += (sender, e) => Console.WriteLine(e.msg);
+// Создать объект Car обычным образом.
+var c1 = new Car("СлагБаг", 100, 10);
 
-            // Увеличить скорость (это инициирует события).
-            Console.WriteLine("***** Увеличение скорости *****");
-            for (int i = 0; i < 6; i++) c1.Accelerate(20);
+// Привязаться к событиям с помощью лямбда-выражений.
+c1.AboutToBlow += (sender, e) => Console.WriteLine(e.msg);
+c1.Exploded += (sender, e) => Console.WriteLine(e.msg);
 
-            Console.ReadLine();
-        }
-    }
-}
+// Увеличить скорость (это инициирует события).
+Console.WriteLine("***** Увеличение скорости *****");
+for (int i = 0; i < 6; i++) c1.Accelerate(20);
+
+Console.ReadLine();

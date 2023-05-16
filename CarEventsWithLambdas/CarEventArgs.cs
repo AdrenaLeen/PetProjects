@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CarEventsWithLambdas
+﻿namespace CarEventsWithLambdas
 {
     class CarEventArgs : EventArgs
     {
