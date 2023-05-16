@@ -1,9 +1,9 @@
-﻿namespace LambdaExpressionsMultipleParams
+﻿namespace LambdaExpressions
 {
-    class SimpleMath
+    public class SimpleMath
     {
         public delegate void MathMessage(string msg, int result);
-        private MathMessage mmDelegate;
+        private MathMessage? mmDelegate;
 
         public void SetMathHandler(MathMessage target) => mmDelegate = target;
 
