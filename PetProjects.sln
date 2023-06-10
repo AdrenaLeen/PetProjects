@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLambdaExpressions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverCollections", "ListOverCollections\LinqOverCollections.csproj", "{D2FA6396-F22C-43AE-880D-A508AAADF6D3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "FunWithLinqExpressions\FunWithLinqExpressions.csproj", "{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{EE665386-F654-4D71-9D80-9AC330D4DCE2}"
@@ -393,6 +391,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverArray", "LinqOverAr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqRetValues", "LinqRetValues\LinqRetValues.csproj", "{FBB416AE-4D0B-458C-A467-BCE21BD7B39C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverCollections", "LinqOverCollections\LinqOverCollections.csproj", "{396D589C-62D9-4753-BC45-ED7E999FB70F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,10 +435,6 @@ Global
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2FA6396-F22C-43AE-880D-A508AAADF6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2FA6396-F22C-43AE-880D-A508AAADF6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2FA6396-F22C-43AE-880D-A508AAADF6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2FA6396-F22C-43AE-880D-A508AAADF6D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1179,6 +1175,10 @@ Global
 		{FBB416AE-4D0B-458C-A467-BCE21BD7B39C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB416AE-4D0B-458C-A467-BCE21BD7B39C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB416AE-4D0B-458C-A467-BCE21BD7B39C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
