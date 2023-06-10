@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLambdaExpressions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "FunWithLinqExpressions\FunWithLinqExpressions.csproj", "{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{EE665386-F654-4D71-9D80-9AC330D4DCE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNamespaces", "CustomNamespaces\CustomNamespaces.csproj", "{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}"
@@ -393,6 +391,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqRetValues", "LinqRetVal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverCollections", "LinqOverCollections\LinqOverCollections.csproj", "{396D589C-62D9-4753-BC45-ED7E999FB70F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "FunWithLinqExpressions\FunWithLinqExpressions.csproj", "{11F2E67D-497C-4452-A69C-85262E81AF65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,10 +435,6 @@ Global
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC4FBF8D-1C9B-4612-BA0E-2A30A351599E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1179,6 +1175,10 @@ Global
 		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{396D589C-62D9-4753-BC45-ED7E999FB70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F2E67D-497C-4452-A69C-85262E81AF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F2E67D-497C-4452-A69C-85262E81AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F2E67D-497C-4452-A69C-85262E81AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F2E67D-497C-4452-A69C-85262E81AF65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
