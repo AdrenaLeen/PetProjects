@@ -1,43 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿Console.WriteLine("***** Возвращение результатов запроса LINQ *****");
+IEnumerable<string> subset = GetStringSubset();
+foreach (string item in subset) Console.WriteLine(item);
+Console.WriteLine();
+foreach (string item in GetStringSubsetAsArray()) Console.WriteLine(item);
 
-namespace LinqRetValues
+Console.ReadLine();
+
+static IEnumerable<string> GetStringSubset()
 {
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Возвращение результатов запроса LINQ *****");
-            IEnumerable<string> subset = GetStringSubset();
-            foreach (string item in subset) Console.WriteLine(item);
-            Console.WriteLine();
-            foreach (string item in GetStringSubsetAsArray()) Console.WriteLine(item);
+    string[] colors = { "Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple" };
 
-            Console.ReadLine();
-        }
+    // Обратите внимание, что subset является совместимым с IEnumerable<string> объектом.
+    IEnumerable<string> theRedColors = from c in colors
+                                       where c.Contains("Red")
+                                       select c;
 
-        static IEnumerable<string> GetStringSubset()
-        {
-            string[] colors = {"Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple"};
+    return theRedColors;
+}
 
-            // Обратите внимание, что subset является совместимым с IEnumerable<string> объектом.
-            IEnumerable<string> theRedColors = from c in colors
-                                               where c.Contains("Red")
-                                               select c;
+static string[] GetStringSubsetAsArray()
+{
+    string[] colors = { "Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple" };
+    var theRedColors = from c in colors
+                       where c.Contains("Red")
+                       select c;
 
-            return theRedColors;
-        }
-
-        static string[] GetStringSubsetAsArray()
-        {
-            string[] colors = {"Light Red", "Green", "Yellow", "Dark Red", "Red", "Purple"};
-            var theRedColors = from c in colors
-                               where c.Contains("Red")
-                               select c;
-
-            // Отобразить результаты в массив.
-            return theRedColors.ToArray();
-        }
-    }
+    // Отобразить результаты в массив.
+    return theRedColors.ToArray();
 }
