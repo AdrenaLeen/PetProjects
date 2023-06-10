@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLambdaExpressions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{EE665386-F654-4D71-9D80-9AC330D4DCE2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNamespaces", "CustomNamespaces\CustomNamespaces.csproj", "{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLibrary", "CarLibrary\CarLibrary.csproj", "{DC19F6CF-A5B7-4D62-9E90-ADB4C228812E}"
@@ -393,6 +391,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOverCollections", "Linq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithLinqExpressions", "FunWithLinqExpressions\FunWithLinqExpressions.csproj", "{11F2E67D-497C-4452-A69C-85262E81AF65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingEnumerable", "LinqUsingEnumerable\LinqUsingEnumerable.csproj", "{8971806D-F856-465F-8F72-0A8B3C48E724}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,10 +435,6 @@ Global
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE665386-F654-4D71-9D80-9AC330D4DCE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1179,6 +1175,10 @@ Global
 		{11F2E67D-497C-4452-A69C-85262E81AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F2E67D-497C-4452-A69C-85262E81AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F2E67D-497C-4452-A69C-85262E81AF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8971806D-F856-465F-8F72-0A8B3C48E724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8971806D-F856-465F-8F72-0A8B3C48E724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8971806D-F856-465F-8F72-0A8B3C48E724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8971806D-F856-465F-8F72-0A8B3C48E724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

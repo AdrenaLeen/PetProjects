@@ -1,82 +1,71 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using LinqUsingEnumerable;
 
-namespace LinqUsingEnumerable
+QueryStringWithOperators();
+QueryStringsWithEnumerableAndLambdas();
+QueryStringsWithEnumerableAndLambdas2();
+QueryStringsWithAnonymousMethods();
+VeryComplexQueryExpression.QueryStringsWithRawDelegates();
+
+Console.ReadLine();
+
+static void QueryStringWithOperators()
 {
-    class Program
-    {
-        static void Main()
-        {
-            QueryStringWithOperators();
-            QueryStringsWithEnumerableAndLambdas();
-            QueryStringsWithEnumerableAndLambdas2();
-            QueryStringsWithAnonymousMethods();
-            VeryComplexQueryExpression.QueryStringsWithRawDelegates();
+    Console.WriteLine("***** Использование операций запросов *****");
 
-            Console.ReadLine();
-        }
+    string[] currentVideoGames = { "Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2" };
+    IOrderedEnumerable<string> subset = from game in currentVideoGames
+                                        where game.Contains(" ")
+                                        orderby game
+                                        select game;
+    foreach (string s in subset) Console.WriteLine($"Элемент: {s}");
+    Console.WriteLine();
+}
 
-        static void QueryStringWithOperators()
-        {
-            Console.WriteLine("***** Использование операций запросов *****");
+static void QueryStringsWithEnumerableAndLambdas()
+{
+    Console.WriteLine("***** Использование Enumerable / лямбда-выражений *****");
 
-            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
-            IOrderedEnumerable<string> subset = from game in currentVideoGames
-                         where game.Contains(" ")
-                         orderby game
-                         select game;
-            foreach (string s in subset) Console.WriteLine($"Элемент: {s}");
-            Console.WriteLine();
-        }
+    string[] currentVideoGames = { "Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2" };
 
-        static void QueryStringsWithEnumerableAndLambdas()
-        {
-            Console.WriteLine("***** Использование Enumerable / лямбда-выражений *****");
+    // Построить выражение запроса с использование расширяющих методов, предоставленных типу Array через тип Enumerable.
+    IEnumerable<string> subset = currentVideoGames.Where(game => game.Contains(' ')).OrderBy(game => game).Select(game => game);
 
-            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
+    // Вывести результаты.
+    foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
 
-            // Построить выражение запроса с использование расширяющих методов, предоставленных типу Array через тип Enumerable.
-            IEnumerable<string> subset = currentVideoGames.Where(game => game.Contains(" ")).OrderBy(game => game).Select(game => game);
+    Console.WriteLine();
+}
 
-            // Вывести результаты.
-            foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
+static void QueryStringsWithEnumerableAndLambdas2()
+{
+    Console.WriteLine("***** Использование Enumerable / лямбда-выражений *****");
 
-            Console.WriteLine();
-        }
+    string[] currentVideoGames = { "Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2" };
 
-        static void QueryStringsWithEnumerableAndLambdas2()
-        {
-            Console.WriteLine("***** Использование Enumerable / лямбда-выражений *****");
+    // Разбить на части.
+    IEnumerable<string> gamesWithSpaces = currentVideoGames.Where(game => game.Contains(' '));
+    IOrderedEnumerable<string> orderedGames = gamesWithSpaces.OrderBy(game => game);
+    IEnumerable<string> subset = orderedGames.Select(game => game);
 
-            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
+    foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
+    Console.WriteLine();
+}
 
-            // Разбить на части.
-            IEnumerable<string> gamesWithSpaces = currentVideoGames.Where(game => game.Contains(" "));
-            IOrderedEnumerable<string> orderedGames = gamesWithSpaces.OrderBy(game => game);
-            IEnumerable<string> subset = orderedGames.Select(game => game);
+static void QueryStringsWithAnonymousMethods()
+{
+    Console.WriteLine("***** Использование анонимных методов *****");
 
-            foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
-            Console.WriteLine();
-        }
+    string[] currentVideoGames = { "Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2" };
 
-        static void QueryStringsWithAnonymousMethods()
-        {
-            Console.WriteLine("***** Использование анонимных методов *****");
+    // Построить необходимые делегаты Func<> с использованием анонимных методов.
+    var searchFilter = delegate (string game) { return game.Contains(' '); };
+    var itemToProcess = delegate (string s) { return s; };
 
-            string[] currentVideoGames = {"Morrowind", "Uncharted 2", "Fallout 3", "Daxter", "System Shock 2"};
+    // Передать делегаты в методы класса Enumerable.
+    IEnumerable<string> subset = currentVideoGames.Where(searchFilter).OrderBy(itemToProcess).Select(itemToProcess);
 
-            // Построить необходимые делегаты Func<> с использованием анонимных методов.
-            Func<string, bool> searchFilter = delegate (string game) { return game.Contains(" "); };
-            Func<string, string> itemToProcess = delegate (string s) { return s; };
+    // Вывести результаты.
+    foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
 
-            // Передать делегаты в методы класса Enumerable.
-            IEnumerable<string> subset = currentVideoGames.Where(searchFilter).OrderBy(itemToProcess).Select(itemToProcess);
-
-            // Вывести результаты.
-            foreach (string game in subset) Console.WriteLine($"Элемент: {game}");
-
-            Console.WriteLine();
-        }
-    }
+    Console.WriteLine();
 }
