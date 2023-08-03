@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{F80E770B-5C93-43DE-9646-35ABA90CC043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadStats", "ThreadStats\ThreadStats.csproj", "{BFF8E52A-E9E1-460E-9FEE-5400FF0A6633}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMultiThreadApp", "SimpleMultiThreadApp\SimpleMultiThreadApp.csproj", "{E87EA98D-A50B-42A2-BB36-D7FA70E868F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreads", "AddWithThreads\AddWithThreads.csproj", "{579F06A0-B12C-4684-B4AF-1D9E45411DE6}"
@@ -391,9 +389,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqUsingEnumerable", "Linq
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessManipulator", "ProcessManipulator\ProcessManipulator.csproj", "{24F0EB4F-D0F2-44D4-80CF-651E780A82A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultAppDomainApp", "DefaultAppDomainApp\DefaultAppDomainApp.csproj", "{E75AC4F8-F068-4067-B627-EFBC74C8B7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefaultAppDomainApp", "DefaultAppDomainApp\DefaultAppDomainApp.csproj", "{E75AC4F8-F068-4067-B627-EFBC74C8B7B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{ED139D96-5853-408B-AAE3-06380525A0D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{ED139D96-5853-408B-AAE3-06380525A0D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadStats", "ThreadStats\ThreadStats.csproj", "{659FBAFF-6AD7-4547-94EC-5ABCD654A212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -541,10 +541,6 @@ Global
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFF8E52A-E9E1-460E-9FEE-5400FF0A6633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFF8E52A-E9E1-460E-9FEE-5400FF0A6633}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFF8E52A-E9E1-460E-9FEE-5400FF0A6633}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFF8E52A-E9E1-460E-9FEE-5400FF0A6633}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E87EA98D-A50B-42A2-BB36-D7FA70E868F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E87EA98D-A50B-42A2-BB36-D7FA70E868F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E87EA98D-A50B-42A2-BB36-D7FA70E868F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1185,6 +1181,10 @@ Global
 		{ED139D96-5853-408B-AAE3-06380525A0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED139D96-5853-408B-AAE3-06380525A0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED139D96-5853-408B-AAE3-06380525A0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659FBAFF-6AD7-4547-94EC-5ABCD654A212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659FBAFF-6AD7-4547-94EC-5ABCD654A212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659FBAFF-6AD7-4547-94EC-5ABCD654A212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659FBAFF-6AD7-4547-94EC-5ABCD654A212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
