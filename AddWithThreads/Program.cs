@@ -1,40 +1,29 @@
-﻿using System;
-using System.Threading;
+﻿using AddWithThreads;
 
-namespace AddWithThreads
+Console.WriteLine("***** Сложение с помощью объектов Thread *****");
+Console.WriteLine($"Идентификатор потока в Main(): {Environment.CurrentManagedThreadId}");
+
+var waitHandle = new AutoResetEvent(false);
+
+// Создать объект AddParams для передачи вторичному потоку.
+var ap = new AddParams(10, 10);
+var t = new Thread(new ParameterizedThreadStart(Add));
+t.Start(ap);
+
+// Ожидать, пока не поступит уведомление!
+waitHandle.WaitOne();
+
+Console.WriteLine("Другой поток завершён!");
+Console.ReadLine();
+
+void Add(object? data)
 {
-    class Program
+    if (data is AddParams ap)
     {
-        private static AutoResetEvent waitHandle = new AutoResetEvent(false);
+        Console.WriteLine($"Идентификатор потока в Add(): {Environment.CurrentManagedThreadId}");
+        Console.WriteLine($"{ap.a} + {ap.b} равно {ap.a + ap.b}");
 
-        static void Main()
-        {
-            Console.WriteLine("***** Сложение с помощью объектов Thread *****");
-            Console.WriteLine($"Идентификатор потока в Main(): {Thread.CurrentThread.ManagedThreadId}");
-
-            // Создать объект AddParams для передачи вторичному потоку.
-            AddParams ap = new AddParams(10, 10);
-            Thread t = new Thread(new ParameterizedThreadStart(Add));
-            t.Start(ap);
-
-            // Ожидать, пока не поступит уведомление!
-            waitHandle.WaitOne();
-
-            Console.WriteLine("Другой поток завершён!");
-            Console.ReadLine();
-        }
-
-        static void Add(object data)
-        {
-            if (data is AddParams)
-            {
-                Console.WriteLine($"Идентификатор потока в Add(): {Thread.CurrentThread.ManagedThreadId}");
-                AddParams ap = (AddParams)data;
-                Console.WriteLine($"{ap.a} + {ap.b} равно {ap.a + ap.b}");
-
-                // Сообщить другому потоку о том, что работа завершена.
-                waitHandle.Set();
-            }
-        }
+        // Сообщить другому потоку о том, что работа завершена.
+        waitHandle.Set();
     }
 }
