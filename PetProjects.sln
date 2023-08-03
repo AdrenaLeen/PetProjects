@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{F80E770B-5C93-43DE-9646-35ABA90CC043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedPrinting", "MultiThreadedPrinting\MultiThreadedPrinting.csproj", "{F9364286-940E-4E91-A888-23CAD2E49702}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerApp.csproj", "{6702A9DA-405D-43B5-B76A-F186132DB9D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolApp", "ThreadPoolApp\ThreadPoolApp.csproj", "{CDD72700-410C-4C8D-B933-CF0497E6D8DF}"
@@ -393,7 +391,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadStats", "ThreadStats\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMultiThreadApp", "SimpleMultiThreadApp\SimpleMultiThreadApp.csproj", "{A51D700E-3AFF-4EF1-A6E2-EAD40EC99E0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreads", "AddWithThreads\AddWithThreads.csproj", "{A49A10C3-47B7-493F-8A66-FB4455187BC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddWithThreads", "AddWithThreads\AddWithThreads.csproj", "{A49A10C3-47B7-493F-8A66-FB4455187BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedPrinting", "MultiThreadedPrinting\MultiThreadedPrinting.csproj", "{E1260927-0F13-49EB-9D95-848B32FC26BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -541,10 +541,6 @@ Global
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9364286-940E-4E91-A888-23CAD2E49702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9364286-940E-4E91-A888-23CAD2E49702}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9364286-940E-4E91-A888-23CAD2E49702}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9364286-940E-4E91-A888-23CAD2E49702}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6702A9DA-405D-43B5-B76A-F186132DB9D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6702A9DA-405D-43B5-B76A-F186132DB9D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6702A9DA-405D-43B5-B76A-F186132DB9D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1185,6 +1181,10 @@ Global
 		{A49A10C3-47B7-493F-8A66-FB4455187BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A49A10C3-47B7-493F-8A66-FB4455187BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A49A10C3-47B7-493F-8A66-FB4455187BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1260927-0F13-49EB-9D95-848B32FC26BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1260927-0F13-49EB-9D95-848B32FC26BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1260927-0F13-49EB-9D95-848B32FC26BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1260927-0F13-49EB-9D95-848B32FC26BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

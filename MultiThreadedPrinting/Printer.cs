@@ -1,27 +1,32 @@
-﻿using System;
-using System.Runtime.Remoting.Contexts;
-using System.Threading;
-
-namespace MultiThreadedPrinting
+﻿namespace MultiThreadedPrinting
 {
-    // Все методы класса Printer теперь безопасны к потокам!
-    [Synchronization]
-    class Printer : ContextBoundObject
+    class Printer
     {
+        // Маркер блокировки.
+        private readonly object threadLock = new();
         public void PrintNumbers()
         {
-            // Вывести информацию о потоке.
-            Console.WriteLine($"-> {Thread.CurrentThread.Name} выполняет PrintNumbers()");
-
-            // Вывести числа.
-            Console.Write("Ваши числа: ");
-            for (int i = 0; i < 10; i++)
+            Monitor.Enter(threadLock);
+            try
             {
-                Random r = new Random();
-                Thread.Sleep(100 * r.Next(5));
-                Console.Write($"{i}, ");
+                // Вывести информацию о потоке.
+                Console.WriteLine($"-> {Thread.CurrentThread.Name} выполняет PrintNumbers()");
+
+                // Вывести числа.
+                Console.Write("Ваши числа: ");
+                for (int i = 0; i < 10; i++)
+                {
+                    var r = new Random();
+                    Thread.Sleep(100 * r.Next(5));
+                    Console.Write($"{i}, ");
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine();
+            finally
+            {
+                Monitor.Exit(threadLock);
+            }
+            
         }
     }
 }
