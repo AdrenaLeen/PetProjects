@@ -1,11 +1,8 @@
-﻿using System;
-using System.Threading;
-
-namespace SimpleMultiThreadApp
+﻿namespace SimpleMultiThreadApp
 {
     class Printer
     {
-        public void PrintNumbers()
+        public static void PrintNumbers()
         {
             // Вывести информацию о потоке.
             Console.WriteLine($"-> {Thread.CurrentThread.Name} выполняет PrintNumbers()");
