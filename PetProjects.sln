@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{F80E770B-5C93-43DE-9646-35ABA90CC043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParallelismWithForEach", "DataParallelismWithForEach\DataParallelismWithForEach.csproj", "{95DCFC81-26C3-40B0-80DC-3123782751D0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEBookReader", "MyEBookReader\MyEBookReader.csproj", "{3E199D60-F14F-43CE-894A-DEFB8046FFB4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLINQDataProcessingWithCancellation", "PLINQDataProcessingWithCancellation\PLINQDataProcessingWithCancellation.csproj", "{2EFA6DE9-F8F5-4BC4-AEE5-1897097C206B}"
@@ -395,6 +393,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolApp", "ThreadPoolApp\ThreadPoolApp.csproj", "{80E15C87-6E6E-4EE3-915F-75B456B1248D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParallelismWithForEach", "DataParallelismWithForEach\DataParallelismWithForEach.csproj", "{CD0E4EEC-2A45-4A1B-AF45-3BD0F32284DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -541,10 +541,6 @@ Global
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E199D60-F14F-43CE-894A-DEFB8046FFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E199D60-F14F-43CE-894A-DEFB8046FFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E199D60-F14F-43CE-894A-DEFB8046FFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1185,6 +1181,10 @@ Global
 		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0E4EEC-2A45-4A1B-AF45-3BD0F32284DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0E4EEC-2A45-4A1B-AF45-3BD0F32284DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0E4EEC-2A45-4A1B-AF45-3BD0F32284DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0E4EEC-2A45-4A1B-AF45-3BD0F32284DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
