@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{F80E770B-5C93-43DE-9646-35ABA90CC043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolApp", "ThreadPoolApp\ThreadPoolApp.csproj", "{CDD72700-410C-4C8D-B933-CF0497E6D8DF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParallelismWithForEach", "DataParallelismWithForEach\DataParallelismWithForEach.csproj", "{95DCFC81-26C3-40B0-80DC-3123782751D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEBookReader", "MyEBookReader\MyEBookReader.csproj", "{3E199D60-F14F-43CE-894A-DEFB8046FFB4}"
@@ -395,6 +393,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreadedPrinting", "Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerApp.csproj", "{3CC4F319-208F-4B58-80D2-750F96E67970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolApp", "ThreadPoolApp\ThreadPoolApp.csproj", "{80E15C87-6E6E-4EE3-915F-75B456B1248D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -541,10 +541,6 @@ Global
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD72700-410C-4C8D-B933-CF0497E6D8DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95DCFC81-26C3-40B0-80DC-3123782751D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1185,6 +1181,10 @@ Global
 		{3CC4F319-208F-4B58-80D2-750F96E67970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CC4F319-208F-4B58-80D2-750F96E67970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CC4F319-208F-4B58-80D2-750F96E67970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E15C87-6E6E-4EE3-915F-75B456B1248D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
