@@ -395,7 +395,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLINQDataProcessingWithCanc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithCSharpAsync", "FunWithCSharpAsync\FunWithCSharpAsync.csproj", "{97B3F169-8C7E-4525-A8EC-FA961F357789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureHandlerWithAsyncAwait", "PictureHandlerWithAsyncAwait\PictureHandlerWithAsyncAwait.csproj", "{80918CEA-431B-440F-9877-3D869E48051F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PictureHandlerWithAsyncAwait", "PictureHandlerWithAsyncAwait\PictureHandlerWithAsyncAwait.csproj", "{80918CEA-431B-440F-9877-3D869E48051F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithConfiguration", "FunWithConfiguration\FunWithConfiguration.csproj", "{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1191,6 +1193,10 @@ Global
 		{80918CEA-431B-440F-9877-3D869E48051F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80918CEA-431B-440F-9877-3D869E48051F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80918CEA-431B-440F-9877-3D869E48051F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
