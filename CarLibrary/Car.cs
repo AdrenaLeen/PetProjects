@@ -1,42 +1,24 @@
-﻿using System.Windows.Forms;
-
-namespace CarLibrary
+﻿namespace CarLibrary
 {
-    // Представляет состояние двигателя.
-    public enum EngineState
-    { engineAlive, engineDead }
-
-    // Тип музыкального устройства, установленного в автомобиле.
-    public enum MusicMedia
-    {
-        musicCd,
-        musicTape,
-        musicRadio,
-        musicMp3
-    }
-
     // Абстрактный базовый класс в иерархии.
     public abstract class Car
     {
-        public string PetName { get; set; }
+        public string PetName { get; set; } = string.Empty;
         public int CurrentSpeed { get; set; }
         public int MaxSpeed { get; set; }
-        protected EngineState egnState = EngineState.engineAlive;
-        public EngineState EngineState => egnState;
+
+        protected EngineStateEnum State = EngineStateEnum.EngineAlive;
+        public EngineStateEnum EngineState => State;
         public abstract void TurboBoost();
-        public Car() => MessageBox.Show("CarLibrary версия 2.0!");
-        public Car(string name, int maxSp, int currSp)
+        protected Car() => Console.WriteLine("CarLibrary версия 2.0!");
+        protected Car(string name, int maxSpeed, int currentSpeed)
         {
-            MessageBox.Show("CarLibrary версия 2.0!");
+            Console.WriteLine("CarLibrary версия 2.0!");
             PetName = name;
-            MaxSpeed = maxSp;
-            CurrentSpeed = currSp;
+            MaxSpeed = maxSpeed;
+            CurrentSpeed = currentSpeed;
         }
 
-        public void TurnOnRadio(bool musicOn, MusicMedia mm)
-        {
-            if (musicOn) MessageBox.Show(string.Format("Слушаем {0}", mm));
-            else MessageBox.Show("Время тишины...");
-        }
+        public static void TurnOnRadio(bool musicOn, MusicMediaEnum mm) => Console.WriteLine(musicOn ? $"Слушаем {mm}" : "Время тишины...");
     }
 }

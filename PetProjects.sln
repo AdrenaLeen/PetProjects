@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringInde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNamespaces", "CustomNamespaces\CustomNamespaces.csproj", "{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLibrary", "CarLibrary\CarLibrary.csproj", "{DC19F6CF-A5B7-4D62-9E90-ADB4C228812E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CShaprCarClient", "CShaprCarClient\CShaprCarClient.csproj", "{ED39BB5E-40F5-4670-9F26-E7F56DD223D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedCarLibClient", "SharedCarLibClient\SharedCarLibClient.csproj", "{CCB40151-6631-475B-9EF4-9106D92360A2}"
@@ -397,7 +395,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithCSharpAsync", "FunWi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PictureHandlerWithAsyncAwait", "PictureHandlerWithAsyncAwait\PictureHandlerWithAsyncAwait.csproj", "{80918CEA-431B-440F-9877-3D869E48051F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithConfiguration", "FunWithConfiguration\FunWithConfiguration.csproj", "{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithConfiguration", "FunWithConfiguration\FunWithConfiguration.csproj", "{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLibrary", "CarLibrary\CarLibrary.csproj", "{3F30284B-C84F-4B23-B6BB-F5118EDE8965}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -445,10 +445,6 @@ Global
 		{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA1B8FF-EB33-4C69-9A75-EBBA15CDEAB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC19F6CF-A5B7-4D62-9E90-ADB4C228812E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC19F6CF-A5B7-4D62-9E90-ADB4C228812E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC19F6CF-A5B7-4D62-9E90-ADB4C228812E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC19F6CF-A5B7-4D62-9E90-ADB4C228812E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ED39BB5E-40F5-4670-9F26-E7F56DD223D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED39BB5E-40F5-4670-9F26-E7F56DD223D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED39BB5E-40F5-4670-9F26-E7F56DD223D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1197,6 +1193,10 @@ Global
 		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B197187-F6E5-4F22-AD3F-4CD2FAFC7AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F30284B-C84F-4B23-B6BB-F5118EDE8965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F30284B-C84F-4B23-B6BB-F5118EDE8965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F30284B-C84F-4B23-B6BB-F5118EDE8965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F30284B-C84F-4B23-B6BB-F5118EDE8965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
