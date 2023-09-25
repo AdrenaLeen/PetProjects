@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarLibrary\CarLibrary.csproj" />
+    <PackageReference Include="CarLibrary" Version="1.0.0.4" />
   </ItemGroup>
 
 </Project>
