@@ -9,5 +9,9 @@
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
-
+  <ItemGroup>
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+		<_Parameter1>CSharpCarClient</_Parameter1>
+	</AssemblyAttribute>
+  </ItemGroup>
 </Project>

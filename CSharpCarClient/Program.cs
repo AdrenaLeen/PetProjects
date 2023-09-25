@@ -10,5 +10,7 @@ viper.TurboBoost();
 var mv = new MiniVan();
 mv.TurboBoost();
 
+var _ = new MyInternalClass();
+
 Console.WriteLine("Готово. Нажмите любую клавишу для завершения");
 Console.ReadLine();
