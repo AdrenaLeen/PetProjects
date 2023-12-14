@@ -1,27 +1,17 @@
 ﻿using AttributedCarLibrary;
-using System;
 
-namespace VehicleDescriptionAttributeReader
+Console.WriteLine("***** Значение VehicleDescriptionAttribute *****");
+ReflectOnAttributesWithEarlyBinding();
+Console.ReadLine();
+
+static void ReflectOnAttributesWithEarlyBinding()
 {
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("***** Значение VehicleDescriptionAttribute *****");
-            ReflectOnAttributesWithEarlyBinding();
-            Console.ReadLine();
-        }
+    // Получить объект Type, который представляет тип Winnebago.
+    Type t = typeof(Winnebago);
 
-        private static void ReflectOnAttributesWithEarlyBinding()
-        {
-            // Получить объект Type, который представляет тип Winnebago.
-            Type t = typeof(Winnebago);
+    // Получить все атрибуты Winnebago.
+    object[] customAtts = t.GetCustomAttributes(false);
 
-            // Получить все атрибуты Winnebago.
-            object[] customAtts = t.GetCustomAttributes(false);
-
-            // Вывести описание.
-            foreach (VehicleDescriptionAttribute v in customAtts) Console.WriteLine($"-> {v.Description}");
-        }
-    }
+    // Вывести описание.
+    foreach (VehicleDescriptionAttribute v in customAtts.Cast<VehicleDescriptionAttribute>()) Console.WriteLine($"-> {v.Description}");
 }
