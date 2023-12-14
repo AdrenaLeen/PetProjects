@@ -31,8 +31,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfigReaderApp", "AppCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedAsmReflector", "SharedAsmReflector\SharedAsmReflector.csproj", "{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingApp", "LateBindingApp\LateBindingApp.csproj", "{BBEC0E00-85CE-42A2-9BEC-2F584BFAA191}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyingAttributes", "ApplyingAttributes\ApplyingAttributes.csproj", "{5630E736-9571-46D9-B180-0CF661CBF0E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributedCarLibrary", "AttributedCarLibrary\AttributedCarLibrary.csproj", "{C44014D1-8E48-41B2-8C50-6BB48E06A46D}"
@@ -397,11 +395,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpCarClient", "CSharpCa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithProbingPaths", "FunWithProbingPaths\FunWithProbingPaths.csproj", "{72C8F47B-2B55-4E2E-AF15-A72100611DD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTypeViewer", "MyTypeViewer\MyTypeViewer.csproj", "{97B1305E-8001-44C9-AF82-F9A20D311A0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTypeViewer", "MyTypeViewer\MyTypeViewer.csproj", "{97B1305E-8001-44C9-AF82-F9A20D311A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalAssemblyReflector", "ExternalAssemblyReflector\ExternalAssemblyReflector.csproj", "{8B615FF8-85C4-4F66-A48F-421D055FA6C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExternalAssemblyReflector", "ExternalAssemblyReflector\ExternalAssemblyReflector.csproj", "{8B615FF8-85C4-4F66-A48F-421D055FA6C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkAssemblyViewer", "FrameworkAssemblyViewer\FrameworkAssemblyViewer.csproj", "{53123765-E67E-4137-AD61-D7877C79D793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkAssemblyViewer", "FrameworkAssemblyViewer\FrameworkAssemblyViewer.csproj", "{53123765-E67E-4137-AD61-D7877C79D793}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingApp", "LateBindingApp\LateBindingApp.csproj", "{7C92AA1E-41ED-413B-9381-02AE5783FD54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -465,10 +465,6 @@ Global
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BBEC0E00-85CE-42A2-9BEC-2F584BFAA191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBEC0E00-85CE-42A2-9BEC-2F584BFAA191}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBEC0E00-85CE-42A2-9BEC-2F584BFAA191}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBEC0E00-85CE-42A2-9BEC-2F584BFAA191}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{53123765-E67E-4137-AD61-D7877C79D793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53123765-E67E-4137-AD61-D7877C79D793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53123765-E67E-4137-AD61-D7877C79D793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C92AA1E-41ED-413B-9381-02AE5783FD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C92AA1E-41ED-413B-9381-02AE5783FD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C92AA1E-41ED-413B-9381-02AE5783FD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C92AA1E-41ED-413B-9381-02AE5783FD54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
