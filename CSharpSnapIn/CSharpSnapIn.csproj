@@ -45,11 +45,5 @@
     <Compile Include="CSharpModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CommonSnappableTypes\CommonSnappableTypes.csproj">
-      <Project>{8cea090f-9bfe-4a2d-a60a-68c8456237b0}</Project>
-      <Name>CommonSnappableTypes</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
