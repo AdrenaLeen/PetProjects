@@ -1,14 +1,10 @@
-﻿using System;
-
-// Обеспечить совместимость с CLS для всех открытых типов в этой сборке.
-[assembly: CLSCompliant(true)]
-namespace AttributedCarLibrary
+﻿namespace AttributedCarLibrary
 {
     // Специальный атрибут.
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
-    public class VehicleDescriptionAttribute : Attribute
+    public sealed class VehicleDescriptionAttribute : Attribute
     {
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         public VehicleDescriptionAttribute(string vehicalDescription) => Description = vehicalDescription;
 

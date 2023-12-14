@@ -1,6 +1,6 @@
 ﻿namespace AttributedCarLibrary
 {
-    [VehicleDescription("Очень длинное, медленное, но многофункциональное авто")]
+    [VehicleDescription("Очень длинный, медленный, но обладающий высокими техническими характеристиками автомобиль")]
     public class Winnebago
     {
         // Тип ulong не соответствует спецификации CLS.

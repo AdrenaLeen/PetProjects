@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace AttributedCarLibrary
+﻿namespace AttributedCarLibrary
 {
     [Serializable]
     [Obsolete("Используйте другое транспортное средство!")]
-    [VehicleDescription("Старая серая кобыла, она не та, чем была раньше...")]
+    [VehicleDescription("Старая серая лошадка, она уже не та...")]
     public class HorseAndBuggy
     {
     }
