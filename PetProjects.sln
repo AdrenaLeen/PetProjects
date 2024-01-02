@@ -33,8 +33,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedAsmReflector", "Share
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyingAttributes", "ApplyingAttributes\ApplyingAttributes.csproj", "{5630E736-9571-46D9-B180-0CF661CBF0E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportDataToOfficeApp", "ExportDataToOfficeApp\ExportDataToOfficeApp.csproj", "{236F617B-3B9A-4002-93A9-1074F6F605B7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAppDomains", "CustomAppDomains\CustomAppDomains.csproj", "{ADA7C550-B5BD-412D-BE1B-6F8CE92FDC37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectContextApp", "ObjectContextApp\ObjectContextApp.csproj", "{44B12AD5-81C4-40FB-A04D-BB7EF236E4BB}"
@@ -403,6 +401,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LateBindingWithDynamic", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{307D7561-D19C-4914-A16E-B38BB3764C38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportDataToOfficeApp", "ExportDataToOfficeApp\ExportDataToOfficeApp.csproj", "{887B7758-7A99-474C-B721-32724B1712B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -469,10 +469,6 @@ Global
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5630E736-9571-46D9-B180-0CF661CBF0E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{236F617B-3B9A-4002-93A9-1074F6F605B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{236F617B-3B9A-4002-93A9-1074F6F605B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{236F617B-3B9A-4002-93A9-1074F6F605B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{236F617B-3B9A-4002-93A9-1074F6F605B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADA7C550-B5BD-412D-BE1B-6F8CE92FDC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ADA7C550-B5BD-412D-BE1B-6F8CE92FDC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADA7C550-B5BD-412D-BE1B-6F8CE92FDC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{307D7561-D19C-4914-A16E-B38BB3764C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{307D7561-D19C-4914-A16E-B38BB3764C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{307D7561-D19C-4914-A16E-B38BB3764C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887B7758-7A99-474C-B721-32724B1712B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887B7758-7A99-474C-B721-32724B1712B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887B7758-7A99-474C-B721-32724B1712B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887B7758-7A99-474C-B721-32724B1712B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
