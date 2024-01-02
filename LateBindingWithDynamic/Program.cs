@@ -1,58 +1,47 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 
-namespace LateBindingWithDynamic
+AddWithReflection();
+AddWithDynamic();
+Console.ReadLine();
+
+static void AddWithReflection()
 {
-    class Program
+    var asm = Assembly.LoadFrom("MathLibrary");
+    try
     {
-        static void Main()
-        {
-            AddWithReflection();
-            AddWithDynamic();
-            Console.ReadLine();
-        }
+        // Получить метаданные для типа SimpleMath.
+        Type math = asm.GetType("MathLibrary.SimpleMath") ?? typeof(int);
 
-        private static void AddWithReflection()
-        {
-            Assembly asm = Assembly.Load("MathLibrary");
-            try
-            {
-                // Получить метаданные для типа SimpleMath.
-                Type math = asm.GetType("MathLibrary.SimpleMath");
+        // Создать объект SimpleMath на лету.
+        object obj = Activator.CreateInstance(math) ?? 0;
 
-                // Создать объект SimpleMath на лету.
-                object obj = Activator.CreateInstance(math);
+        // Получить информацию о методе Add().
+        MethodInfo? mi = math.GetMethod("Add");
 
-                // Получить информацию о методе Add().
-                MethodInfo mi = math.GetMethod("Add");
+        // Вызвать метод (с параметрами).
+        object[] args = [10, 70];
+        Console.WriteLine($"Результат: {mi?.Invoke(obj, args)}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+}
 
-                // Вызвать метод (с параметрами).
-                object[] args = { 10, 70 };
-                Console.WriteLine($"Результат: {mi.Invoke(obj, args)}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
+static void AddWithDynamic()
+{
+    var asm = Assembly.LoadFrom("MathLibrary");
+    try
+    {
+        // Получить метаданные для типа SimpleMath.
+        Type math = asm.GetType("MathLibrary.SimpleMath") ?? typeof(int);
 
-        private static void AddWithDynamic()
-        {
-            Assembly asm = Assembly.Load("MathLibrary");
-
-            try
-            {
-                // Получить метаданные для типа SimpleMath.
-                Type math = asm.GetType("MathLibrary.SimpleMath");
-
-                // Создать объект SimpleMath на лету.
-                dynamic obj = Activator.CreateInstance(math);
-                Console.WriteLine($"Результат: {obj.Add(10, 70)}");
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
+        // Создать объект SimpleMath на лету.
+        dynamic obj = Activator.CreateInstance(math) ?? 0;
+        Console.WriteLine($"Результат: {obj.Add(10, 70)}");
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        Console.WriteLine(ex.Message);
     }
 }
