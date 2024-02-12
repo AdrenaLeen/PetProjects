@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddWithThreadsAsync\AddWithThreadsAsync.csproj", "{B49F6451-1080-431D-B1DF-0904D1AF044F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFileIO", "SimpleFileIO\SimpleFileIO.csproj", "{4EB8A82A-96DE-47F0-92E2-F0FB986EF103}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStreamApp", "FileStreamApp\FileStreamApp.csproj", "{999F3047-A6D6-43AA-8B86-8E360DF38397}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamWriterReaderApp", "StreamWriterReaderApp\StreamWriterReaderApp.csproj", "{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}"
@@ -403,6 +401,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryApp", "DirectoryAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveInfoApp", "DriveInfoApp\DriveInfoApp.csproj", "{55A1BD7D-E44D-425A-9AF6-C65513F0E11E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFileIO", "SimpleFileIO\SimpleFileIO.csproj", "{9F85364A-C90A-469C-B4BF-5ECF788095BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -493,10 +493,6 @@ Global
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EB8A82A-96DE-47F0-92E2-F0FB986EF103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EB8A82A-96DE-47F0-92E2-F0FB986EF103}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EB8A82A-96DE-47F0-92E2-F0FB986EF103}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EB8A82A-96DE-47F0-92E2-F0FB986EF103}.Release|Any CPU.Build.0 = Release|Any CPU
 		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{55A1BD7D-E44D-425A-9AF6-C65513F0E11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55A1BD7D-E44D-425A-9AF6-C65513F0E11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55A1BD7D-E44D-425A-9AF6-C65513F0E11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
