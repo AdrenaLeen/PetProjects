@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddWithThreadsAsync\AddWithThreadsAsync.csproj", "{B49F6451-1080-431D-B1DF-0904D1AF044F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStreamApp", "FileStreamApp\FileStreamApp.csproj", "{999F3047-A6D6-43AA-8B86-8E360DF38397}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamWriterReaderApp", "StreamWriterReaderApp\StreamWriterReaderApp.csproj", "{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringReaderWriterApp", "StringReaderWriterApp\StringReaderWriterApp.csproj", "{3E66C360-6285-45C0-8F7A-D4B4687F4904}"
@@ -403,6 +401,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveInfoApp", "DriveInfoAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFileIO", "SimpleFileIO\SimpleFileIO.csproj", "{9F85364A-C90A-469C-B4BF-5ECF788095BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStreamApp", "FileStreamApp\FileStreamApp.csproj", "{F9024DD7-40CA-46D0-BC67-ACB40F514F64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -493,10 +493,6 @@ Global
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{999F3047-A6D6-43AA-8B86-8E360DF38397}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB8BABBD-2824-4ABB-8410-93DC3D240B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F85364A-C90A-469C-B4BF-5ECF788095BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9024DD7-40CA-46D0-BC67-ACB40F514F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9024DD7-40CA-46D0-BC67-ACB40F514F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9024DD7-40CA-46D0-BC67-ACB40F514F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9024DD7-40CA-46D0-BC67-ACB40F514F64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
