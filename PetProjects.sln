@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddWithThreadsAsync\AddWithThreadsAsync.csproj", "{B49F6451-1080-431D-B1DF-0904D1AF044F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryApp", "DirectoryApp\DirectoryApp.csproj", "{75DB6201-A2AA-437E-A7F6-94F5FD925FFC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveInfoApp", "DriveInfoApp\DriveInfoApp.csproj", "{4A02A65B-C80B-4A56-A46B-4C27D978326D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFileIO", "SimpleFileIO\SimpleFileIO.csproj", "{4EB8A82A-96DE-47F0-92E2-F0FB986EF103}"
@@ -399,9 +397,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicKeyword", "DynamicKe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LateBindingWithDynamic", "LateBindingWithDynamic\LateBindingWithDynamic.csproj", "{4918FFF5-5FE1-44F4-B071-4FFB9CD368C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{307D7561-D19C-4914-A16E-B38BB3764C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{307D7561-D19C-4914-A16E-B38BB3764C38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportDataToOfficeApp", "ExportDataToOfficeApp\ExportDataToOfficeApp.csproj", "{887B7758-7A99-474C-B721-32724B1712B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExportDataToOfficeApp", "ExportDataToOfficeApp\ExportDataToOfficeApp.csproj", "{887B7758-7A99-474C-B721-32724B1712B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryApp", "DirectoryApp\DirectoryApp.csproj", "{5A18BA2F-2A7E-4E26-959A-348D16BE7D52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -493,10 +493,6 @@ Global
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75DB6201-A2AA-437E-A7F6-94F5FD925FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75DB6201-A2AA-437E-A7F6-94F5FD925FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75DB6201-A2AA-437E-A7F6-94F5FD925FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75DB6201-A2AA-437E-A7F6-94F5FD925FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A02A65B-C80B-4A56-A46B-4C27D978326D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A02A65B-C80B-4A56-A46B-4C27D978326D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A02A65B-C80B-4A56-A46B-4C27D978326D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{887B7758-7A99-474C-B721-32724B1712B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{887B7758-7A99-474C-B721-32724B1712B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{887B7758-7A99-474C-B721-32724B1712B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A18BA2F-2A7E-4E26-959A-348D16BE7D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A18BA2F-2A7E-4E26-959A-348D16BE7D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A18BA2F-2A7E-4E26-959A-348D16BE7D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A18BA2F-2A7E-4E26-959A-348D16BE7D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
