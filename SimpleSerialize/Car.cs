@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace SimpleSerialize
+﻿namespace SimpleSerialize
 {
-    [Serializable]
     public class Car
     {
-        public Radio theRadio = new Radio();
+        public Radio theRadio = new();
         public bool isHatchBack;
+        public override string ToString() => $"IsHatchback:{isHatchBack} Radio:{theRadio}";
     }
 }
