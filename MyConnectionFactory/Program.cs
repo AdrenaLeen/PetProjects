@@ -1,66 +1,39 @@
-﻿using System;
-using System.Configuration;
+﻿using Microsoft.Data.SqlClient;
+using MyConnectionFactory;
 using System.Data;
 using System.Data.Odbc;
+#if PC
 using System.Data.OleDb;
-using System.Data.SqlClient;
+#endif
 
-namespace MyConnectionFactory
+Console.WriteLine("**** Очень простая фабрика подключений *****");
+
+Setup(DataProviderEnum.SqlServer);
+#if PC
+// Не поддерживается в macOS.
+Setup(DataProviderEnum.OleDb);
+#endif
+Setup(DataProviderEnum.Odbc);
+Setup(DataProviderEnum.None);
+
+Console.ReadLine();
+
+static void Setup(DataProviderEnum provider)
 {
-    // Список возможных поставщиков.
-    enum DataProvider { SqlServer, OleDb, Odbc, None }
-
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("**** Очень простая фабрика подключений *****");
-
-            // Прочитать ключ provider.
-            string dataProviderString = ConfigurationManager.AppSettings["provider"];
-
-            // Преобразовать строку в перечисление.
-            DataProvider dataProvider;
-            if (Enum.IsDefined(typeof(DataProvider), dataProviderString))
-            {
-                dataProvider = (DataProvider)Enum.Parse(typeof(DataProvider), dataProviderString);
-            }
-            else
-            {
-                Console.WriteLine("Поставщики отсутствуют!");
-                Console.ReadLine();
-                return;
-            }
-
-            // Получить конкретное подключение.
-            using (IDbConnection myConnection = GetConnection(dataProvider))
-            {
-                Console.WriteLine($"Ваше подключение: {myConnection?.GetType().Name ?? "неизвестный тип"}");
-            }
-            
-            // Открыть, использовать и закрыть подключение...
-            Console.ReadLine();
-        }
-
-        // Этот метод возвращает конкретный объект подключения на основе значения перечисления DataProvider.
-        static IDbConnection GetConnection(DataProvider dataProvider)
-        {
-            IDbConnection connection;
-            switch (dataProvider)
-            {
-                case DataProvider.SqlServer:
-                    connection = new SqlConnection();
-                    break;
-                case DataProvider.OleDb:
-                    connection = new OleDbConnection();
-                    break;
-                case DataProvider.Odbc:
-                    connection = new OdbcConnection();
-                    break;
-                default:
-                    return null;
-            }
-            return connection;
-        }
-    }
+    // Получить конкретное подключение.
+    IDbConnection? myConnection = GetConnection(provider);
+    Console.WriteLine($"Ваше соединение: {myConnection?.GetType().Name ?? "нераспознанный тип"}");
+    // Открыть, использовать и закрыть подключение...
 }
+
+// Этот метод возвращает конкретный объект подключения на основе значения перечисления DataProvider.
+static IDbConnection? GetConnection(DataProviderEnum dataProvider) => dataProvider switch
+{
+    DataProviderEnum.SqlServer => new SqlConnection(),
+#if PC
+    // Не поддерживается в macOS.
+    DataProviderEnum.OleDb => new OleDbConnection(),
+#endif
+    DataProviderEnum.Odbc => new OdbcConnection(),
+    _ => null,
+};

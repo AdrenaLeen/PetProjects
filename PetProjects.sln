@@ -47,8 +47,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{4C476765-C7AA-41EC-8F60-A56B43FB7853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConnectionFactory", "MyConnectionFactory\MyConnectionFactory.csproj", "{E7B7EA82-1BDD-411C-AE3D-CBE6307D6206}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviderFactory", "DataProviderFactory\DataProviderFactory.csproj", "{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDataReader", "AutoLotDataReader\AutoLotDataReader.csproj", "{1A42ECEB-94FD-4207-BB0A-B7ACFF2CED52}"
@@ -387,21 +385,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExportDataToOfficeApp", "Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryApp", "DirectoryApp\DirectoryApp.csproj", "{5A18BA2F-2A7E-4E26-959A-348D16BE7D52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveInfoApp", "DriveInfoApp\DriveInfoApp.csproj", "{55A1BD7D-E44D-425A-9AF6-C65513F0E11E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriveInfoApp", "DriveInfoApp\DriveInfoApp.csproj", "{55A1BD7D-E44D-425A-9AF6-C65513F0E11E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFileIO", "SimpleFileIO\SimpleFileIO.csproj", "{9F85364A-C90A-469C-B4BF-5ECF788095BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFileIO", "SimpleFileIO\SimpleFileIO.csproj", "{9F85364A-C90A-469C-B4BF-5ECF788095BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStreamApp", "FileStreamApp\FileStreamApp.csproj", "{F9024DD7-40CA-46D0-BC67-ACB40F514F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileStreamApp", "FileStreamApp\FileStreamApp.csproj", "{F9024DD7-40CA-46D0-BC67-ACB40F514F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamWriterReaderApp", "StreamWriterReaderApp\StreamWriterReaderApp.csproj", "{B9429380-26F7-4674-99CC-E9D45CCBF636}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamWriterReaderApp", "StreamWriterReaderApp\StreamWriterReaderApp.csproj", "{B9429380-26F7-4674-99CC-E9D45CCBF636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringReaderWriterApp", "StringReaderWriterApp\StringReaderWriterApp.csproj", "{0F4A18D8-BFC0-4A2B-8F31-84236D417FBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringReaderWriterApp", "StringReaderWriterApp\StringReaderWriterApp.csproj", "{0F4A18D8-BFC0-4A2B-8F31-84236D417FBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryWriterReader", "BinaryWriterReader\BinaryWriterReader.csproj", "{191B27BD-AE3C-4684-873A-6EF3CC80DF4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryWriterReader", "BinaryWriterReader\BinaryWriterReader.csproj", "{191B27BD-AE3C-4684-873A-6EF3CC80DF4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDirectoryWatcher", "MyDirectoryWatcher\MyDirectoryWatcher.csproj", "{25F61554-FA4F-409D-A32C-E59E3C058C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDirectoryWatcher", "MyDirectoryWatcher\MyDirectoryWatcher.csproj", "{25F61554-FA4F-409D-A32C-E59E3C058C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSerialize", "SimpleSerialize\SimpleSerialize.csproj", "{C7622F6A-E171-4F90-B1FD-3E9EEA05DF21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSerialize", "SimpleSerialize\SimpleSerialize.csproj", "{C7622F6A-E171-4F90-B1FD-3E9EEA05DF21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConnectionFactory", "MyConnectionFactory\MyConnectionFactory.csproj", "{64D0E1C8-4175-460D-BAD1-0E0E6126936C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -497,10 +497,6 @@ Global
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7B7EA82-1BDD-411C-AE3D-CBE6307D6206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7B7EA82-1BDD-411C-AE3D-CBE6307D6206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7B7EA82-1BDD-411C-AE3D-CBE6307D6206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7B7EA82-1BDD-411C-AE3D-CBE6307D6206}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{C7622F6A-E171-4F90-B1FD-3E9EEA05DF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7622F6A-E171-4F90-B1FD-3E9EEA05DF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7622F6A-E171-4F90-B1FD-3E9EEA05DF21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
