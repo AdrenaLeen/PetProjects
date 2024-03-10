@@ -47,8 +47,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{4C476765-C7AA-41EC-8F60-A56B43FB7853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviderFactory", "DataProviderFactory\DataProviderFactory.csproj", "{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDataReader", "AutoLotDataReader\AutoLotDataReader.csproj", "{1A42ECEB-94FD-4207-BB0A-B7ACFF2CED52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDAL", "AutoLotDAL\AutoLotDAL.csproj", "{9771A628-68FB-4677-90B1-C992155FE30F}"
@@ -401,7 +399,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDirectoryWatcher", "MyDir
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSerialize", "SimpleSerialize\SimpleSerialize.csproj", "{C7622F6A-E171-4F90-B1FD-3E9EEA05DF21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConnectionFactory", "MyConnectionFactory\MyConnectionFactory.csproj", "{64D0E1C8-4175-460D-BAD1-0E0E6126936C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyConnectionFactory", "MyConnectionFactory\MyConnectionFactory.csproj", "{64D0E1C8-4175-460D-BAD1-0E0E6126936C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviderFactory", "DataProviderFactory\DataProviderFactory.csproj", "{F507B941-F2D4-41DF-8672-0FC45DCD2AEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -497,10 +497,6 @@ Global
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E19E6EB3-AC10-4797-A5FE-E7D738C0C17D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A42ECEB-94FD-4207-BB0A-B7ACFF2CED52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A42ECEB-94FD-4207-BB0A-B7ACFF2CED52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A42ECEB-94FD-4207-BB0A-B7ACFF2CED52}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1205,10 @@ Global
 		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D0E1C8-4175-460D-BAD1-0E0E6126936C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F507B941-F2D4-41DF-8672-0FC45DCD2AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F507B941-F2D4-41DF-8672-0FC45DCD2AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F507B941-F2D4-41DF-8672-0FC45DCD2AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F507B941-F2D4-41DF-8672-0FC45DCD2AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
