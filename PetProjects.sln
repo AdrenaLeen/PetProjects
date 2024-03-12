@@ -47,8 +47,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{4C476765-C7AA-41EC-8F60-A56B43FB7853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDAL", "AutoLotDAL\AutoLotDAL.csproj", "{9771A628-68FB-4677-90B1-C992155FE30F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotCUIClient", "AutoLotCUIClient\AutoLotCUIClient.csproj", "{369701D3-AF0B-4AF7-9239-A9EAE288CA85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetTransaction", "AdoNetTransaction\AdoNetTransaction.csproj", "{94B400A0-36CF-4D02-81A3-A8979F306C32}"
@@ -116,8 +114,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfNotifications", "Notifications\WpfNotifications.csproj", "{7E29721E-D8D4-4834-972C-10CD1E1DB3ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotClient", "AutoLotClient\AutoLotClient.csproj", "{8FA39379-861B-4EB5-89DD-85D0516D4828}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLotDALCore", "AutoLotDALCore\AutoLotDALCore.csproj", "{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLotDALCoreTestDriver", "AutoLotDALCoreTestDriver\AutoLotDALCoreTestDriver.csproj", "{162A651B-F5DB-46DD-998C-F8A09495968B}"
 EndProject
@@ -401,7 +397,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyConnectionFactory", "MyCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataProviderFactory", "DataProviderFactory\DataProviderFactory.csproj", "{F507B941-F2D4-41DF-8672-0FC45DCD2AEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLot.DataReader", "AutoLot.DataReader\AutoLot.DataReader.csproj", "{F2836382-DC9F-4ECD-BC7D-6C081E618EFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLot.DataReader", "AutoLot.DataReader\AutoLot.DataReader.csproj", "{F2836382-DC9F-4ECD-BC7D-6C081E618EFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLot.DAL", "AutoLot.DAL\AutoLot.DAL.csproj", "{0CDECF51-B2B0-403F-9E79-6333636D2820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -497,10 +495,6 @@ Global
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9771A628-68FB-4677-90B1-C992155FE30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9771A628-68FB-4677-90B1-C992155FE30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9771A628-68FB-4677-90B1-C992155FE30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9771A628-68FB-4677-90B1-C992155FE30F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{369701D3-AF0B-4AF7-9239-A9EAE288CA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{369701D3-AF0B-4AF7-9239-A9EAE288CA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{369701D3-AF0B-4AF7-9239-A9EAE288CA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -637,10 +631,6 @@ Global
 		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Release|Any CPU.Build.0 = Release|Any CPU
-		{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{004CE87A-86D2-4965-AAB5-A7AD5E07D8C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1209,6 +1199,10 @@ Global
 		{F2836382-DC9F-4ECD-BC7D-6C081E618EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2836382-DC9F-4ECD-BC7D-6C081E618EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2836382-DC9F-4ECD-BC7D-6C081E618EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

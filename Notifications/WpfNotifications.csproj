@@ -110,12 +110,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoLotDAL\AutoLotDAL.csproj">
-      <Project>{9771a628-68fb-4677-90b1-c992155fe30f}</Project>
-      <Name>AutoLotDAL</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
