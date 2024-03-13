@@ -113,8 +113,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonTemplate", "ButtonTem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfNotifications", "Notifications\WpfNotifications.csproj", "{7E29721E-D8D4-4834-972C-10CD1E1DB3ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotClient", "AutoLotClient\AutoLotClient.csproj", "{8FA39379-861B-4EB5-89DD-85D0516D4828}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLotDALCoreTestDriver", "AutoLotDALCoreTestDriver\AutoLotDALCoreTestDriver.csproj", "{162A651B-F5DB-46DD-998C-F8A09495968B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{3AF95349-0657-43E3-9C2F-24D684A5BD8A}"
@@ -399,7 +397,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataProviderFactory", "Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLot.DataReader", "AutoLot.DataReader\AutoLot.DataReader.csproj", "{F2836382-DC9F-4ECD-BC7D-6C081E618EFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLot.DAL", "AutoLot.DAL\AutoLot.DAL.csproj", "{0CDECF51-B2B0-403F-9E79-6333636D2820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoLot.DAL", "AutoLot.DAL\AutoLot.DAL.csproj", "{0CDECF51-B2B0-403F-9E79-6333636D2820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLot.Client", "AutoLot.Client\AutoLot.Client.csproj", "{398D4843-6D58-4DA8-9AD1-AF8C5A335A73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -627,10 +627,6 @@ Global
 		{7E29721E-D8D4-4834-972C-10CD1E1DB3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E29721E-D8D4-4834-972C-10CD1E1DB3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E29721E-D8D4-4834-972C-10CD1E1DB3ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FA39379-861B-4EB5-89DD-85D0516D4828}.Release|Any CPU.Build.0 = Release|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162A651B-F5DB-46DD-998C-F8A09495968B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1203,6 +1199,10 @@ Global
 		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CDECF51-B2B0-403F-9E79-6333636D2820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398D4843-6D58-4DA8-9AD1-AF8C5A335A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398D4843-6D58-4DA8-9AD1-AF8C5A335A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398D4843-6D58-4DA8-9AD1-AF8C5A335A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398D4843-6D58-4DA8-9AD1-AF8C5A335A73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

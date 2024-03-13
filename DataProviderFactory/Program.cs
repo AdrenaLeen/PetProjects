@@ -37,7 +37,7 @@ using (DbConnection? connection = factory?.CreateConnection())
     }
     Console.WriteLine($"Ваш объект команды: {command.GetType().Name}");
     command.Connection = connection;
-    command.CommandText = "SELECT i.\"Id\", m.\"Name\" FROM \"Inventory\" i INNER JOIN \"Makes\" m ON m.\"Id\" = i.\"MakeId\"";
+    command.CommandText = @"SELECT i.""Id"", m.""Name"" FROM ""Inventory"" i INNER JOIN ""Makes"" m ON m.""Id"" = i.""MakeId""";
 
     // Вывести данные с помощью объекта чтения данных.
     using DbDataReader dataReader = command.ExecuteReader();

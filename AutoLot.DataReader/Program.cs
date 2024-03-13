@@ -20,8 +20,8 @@ using (var connection = new NpgsqlConnection())
     ShowConnectionStatus(connection);
 
     // Создать объект команды SQL.
-    string sql = "SELECT i.\"Id\", m.\"Name\" as \"Make\", i.\"Color\", i.\"PetName\" FROM \"Inventory\" i INNER JOIN \"Makes\" m on m.\"Id\" = i.\"MakeId\";";
-    sql += "SELECT * FROM \"Customers\";";
+    string sql = @"SELECT i.""Id"", m.""Name"" as ""Make"", i.""Color"", i.""PetName"" FROM ""Inventory"" i INNER JOIN ""Makes"" m on m.""Id"" = i.""MakeId"";";
+    sql += @"SELECT * FROM ""Customers"";";
     var myCommand = new NpgsqlCommand(sql, connection);
     using NpgsqlDataReader myDataReader = myCommand.ExecuteReader();
     do

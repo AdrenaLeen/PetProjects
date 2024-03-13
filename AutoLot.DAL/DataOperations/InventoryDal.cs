@@ -48,7 +48,7 @@ namespace AutoLot.DAL.DataOperations
             List<CarViewModel> inventory = [];
 
             // Подготовить объект команды.
-            string sql = "SELECT i.\"Id\", i.\"Color\", i.\"PetName\", m.\"Name\" as \"Make\" FROM \"Inventory\" i INNER JOIN \"Makes\" m on m.\"Id\" = i.\"MakeId\"";
+            string sql = @"SELECT i.""Id"", i.""Color"", i.""PetName"", m.""Name"" as ""Make"" FROM ""Inventory"" i INNER JOIN ""Makes"" m on m.""Id"" = i.""MakeId""";
             using var command = new NpgsqlCommand(sql, _sqlConnection) { CommandType = CommandType.Text };
             NpgsqlDataReader dataReader = command.ExecuteReader(CommandBehavior.CloseConnection);
             while (dataReader.Read())
@@ -71,7 +71,7 @@ namespace AutoLot.DAL.DataOperations
             CarViewModel? car = null;
             var param = new NpgsqlParameter
             {
-                ParameterName = "@\"carId\"",
+                ParameterName = "carId",
                 Value = id,
                 NpgsqlDbType = NpgsqlDbType.Integer,
                 Direction = ParameterDirection.Input
@@ -80,7 +80,7 @@ namespace AutoLot.DAL.DataOperations
                 @"SELECT i.""Id"", i.""Color"", i.""PetName"", m.""Name"" as ""Make""
                   FROM ""Inventory"" i
                   INNER JOIN ""Makes"" m on m.""Id"" = i.""MakeId""
-                  WHERE i.""Id"" = @""carId""";
+                  WHERE i.""Id"" = @carId";
             using var command = new NpgsqlCommand(sql, _sqlConnection)
             {
                 CommandType = CommandType.Text
@@ -124,7 +124,7 @@ namespace AutoLot.DAL.DataOperations
             OpenConnection();
 
             // Обратите внимание на "заполнители" в запросе SQL.
-            string sql = "INSERT INTO \"Inventory\" (MakeId, Color, PetName) VALUES (@MakeId, @Color, @PetName)";
+            string sql = @"INSERT INTO ""Inventory"" (""MakeId"", ""Color"", ""PetName"") VALUES (@MakeId, @Color, @PetName)";
 
             // Эта команда будет иметь внутренние параметры.
             using var command = new NpgsqlCommand(sql, _sqlConnection);
@@ -132,7 +132,7 @@ namespace AutoLot.DAL.DataOperations
             // Заполнить коллекцию параметров.
             var parameter = new NpgsqlParameter
             {
-                ParameterName = "@MakeId",
+                ParameterName = "MakeId",
                 Value = car.MakeId,
                 NpgsqlDbType = NpgsqlDbType.Integer,
                 Direction = ParameterDirection.Input
@@ -141,7 +141,7 @@ namespace AutoLot.DAL.DataOperations
 
             parameter = new NpgsqlParameter
             {
-                ParameterName = "@Color",
+                ParameterName = "Color",
                 Value = car.Color,
                 NpgsqlDbType = NpgsqlDbType.Varchar,
                 Size = 50,
@@ -151,7 +151,7 @@ namespace AutoLot.DAL.DataOperations
 
             parameter = new NpgsqlParameter
             {
-                ParameterName = "@PetName",
+                ParameterName = "PetName",
                 Value = car.PetName,
                 NpgsqlDbType = NpgsqlDbType.Varchar,
                 Size = 50,
@@ -170,12 +170,12 @@ namespace AutoLot.DAL.DataOperations
             // Получить идентификатор автомобиля, подлежащего удалению, и удалить запись о нем.
             var param = new NpgsqlParameter
             {
-                ParameterName = "@\"carId\"",
+                ParameterName = "carId",
                 Value = id,
                 NpgsqlDbType = NpgsqlDbType.Integer,
                 Direction = ParameterDirection.Input
             };
-            string sql = "DELETE FROM \"Inventory\" WHERE \"Id\" = @\"carId\"";
+            string sql = @"DELETE FROM ""Inventory"" WHERE ""Id"" = @carId";
             using (var command = new NpgsqlCommand(sql, _sqlConnection))
             {
                 command.Parameters.Add(param);
@@ -231,14 +231,14 @@ namespace AutoLot.DAL.DataOperations
             string? carPetName;
 
             // Установить имя хранимой процедуры.
-            using (var command = new NpgsqlCommand("GetPetName", _sqlConnection))
+            using (var command = new NpgsqlCommand(@"""GetPetName""", _sqlConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
                 // Входной параметр.
                 var param = new NpgsqlParameter
                 {
-                    ParameterName = "@carId",
+                    ParameterName = "carId",
                     NpgsqlDbType = NpgsqlDbType.Integer,
                     Value = carId,
                     Direction = ParameterDirection.Input
@@ -248,7 +248,7 @@ namespace AutoLot.DAL.DataOperations
                 // Выходной параметр.
                 param = new NpgsqlParameter
                 {
-                    ParameterName = "@petName",
+                    ParameterName = "petName",
                     NpgsqlDbType = NpgsqlDbType.Varchar,
                     Size = 50,
                     Direction = ParameterDirection.Output
@@ -259,7 +259,7 @@ namespace AutoLot.DAL.DataOperations
                 command.ExecuteNonQuery();
 
                 // Возвратить выходной параметр.
-                carPetName = (string?)command.Parameters["@petName"].Value;
+                carPetName = (string?)command.Parameters["petName"].Value;
                 CloseConnection();
             }
 
@@ -270,15 +270,13 @@ namespace AutoLot.DAL.DataOperations
         {
             OpenConnection();
 
-            // First, look up current name based on customer ID.
+            // Найти имя текущего клиента по идентификатору.
             string fName;
             string lName;
-            var cmdSelect =
-                new NpgsqlCommand("Select * from Customers where Id = @customerId",
-                    _sqlConnection);
+            var cmdSelect = new NpgsqlCommand(@"SELECT * FROM ""Customers"" WHERE ""Id"" = @customerId", _sqlConnection);
             var paramId = new NpgsqlParameter
             {
-                ParameterName = "@customerId",
+                ParameterName = "customerId",
                 NpgsqlDbType = NpgsqlDbType.Integer,
                 Value = customerId,
                 Direction = ParameterDirection.Input
@@ -302,71 +300,63 @@ namespace AutoLot.DAL.DataOperations
 
             cmdSelect.Parameters.Clear();
 
-            // Create command objects that represent each step of the operation.
-            var cmdUpdate =
-                new NpgsqlCommand("Update Customers set LastName = LastName + ' (CreditRisk) ' where Id = @customerId",
-                    _sqlConnection);
+            // Создать объекты команды, которые представляют каждый шаг операции.
+            var cmdUpdate = new NpgsqlCommand(@"UPDATE ""Customers"" SET ""LastName"" = ""LastName"" || ' (CreditRisk) ' WHERE ""Id"" = @customerId", _sqlConnection);
             cmdUpdate.Parameters.Add(paramId);
-            var cmdInsert =
-                new NpgsqlCommand(
-                    "Insert Into CreditRisks (CustomerId, FirstName, LastName) Values(@CustomerId,@FirstName, @LastName)",
-                    _sqlConnection);
-            var parameterId2 = new NpgsqlParameter
+            var cmdInsert = new NpgsqlCommand(@"INSERT INTO ""CreditRisks"" (""CustomerId"", ""FirstName"", ""LastName"") Values(@CustomerId,@FirstName, @LastName)", _sqlConnection);
+            var parameterId = new NpgsqlParameter
             {
-                ParameterName = "@CustomerId",
+                ParameterName = "CustomerId",
                 NpgsqlDbType = NpgsqlDbType.Integer,
                 Value = customerId,
                 Direction = ParameterDirection.Input
             };
             var parameterFirstName = new NpgsqlParameter
             {
-                ParameterName = "@FirstName",
+                ParameterName = "FirstName",
                 Value = fName,
                 NpgsqlDbType = NpgsqlDbType.Varchar,
                 Size = 50,
                 Direction = ParameterDirection.Input
             };
-
             var parameterLastName = new NpgsqlParameter
             {
-                ParameterName = "@LastName",
+                ParameterName = "LastName",
                 Value = lName,
                 NpgsqlDbType = NpgsqlDbType.Varchar,
                 Size = 50,
                 Direction = ParameterDirection.Input
             };
 
-            cmdInsert.Parameters.Add(parameterId2);
+            cmdInsert.Parameters.Add(parameterId);
             cmdInsert.Parameters.Add(parameterFirstName);
             cmdInsert.Parameters.Add(parameterLastName);
 
-            // We will get this from the connection object.
+            // Это будет получено из объекта подключения.
             NpgsqlTransaction? tx = null;
             try
             {
                 tx = _sqlConnection?.BeginTransaction();
 
-                // Enlist the commands into this transaction.
+                // Включить команды в транзакцию.
                 cmdInsert.Transaction = tx;
                 cmdUpdate.Transaction = tx;
 
-                // Execute the commands.
+                // Выполнить команды.
                 cmdInsert.ExecuteNonQuery();
                 cmdUpdate.ExecuteNonQuery();
 
-                // Simulate error.
-                if (throwEx)
-                {
-                    throw new Exception("Sorry!  Database error! Tx failed...");
-                }
+                // Эмулировать ошибку.
+                if (throwEx) throw new Exception("Возникла ошибка, связанная с базой данных! Отказ транзакции...");
 
-                // Commit it!
+                // Зафиксировать транзакцию!
                 tx?.Commit();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                // Any error will roll back transaction.  Using the new conditional access operator to check for null.
+
+                // Любая ошибка приведет к откату транзакции. Использовать условную операцию для проверки на предмет null.
                 tx?.Rollback();
             }
             finally
