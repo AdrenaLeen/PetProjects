@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelValidation", "ModelVal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users", "Users\Users.csproj", "{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConventionsAndConstraints", "ConventionsAndConstraints\ConventionsAndConstraints.csproj", "{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCSharpApp", "SimpleCSharpApp\SimpleCSharpApp.csproj", "{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicConsoleIO", "BasicConsoleIO\BasicConsoleIO.csproj", "{ACF0C1D7-6CF6-4F82-93A7-C6CB1CF6B03F}"
@@ -319,10 +317,6 @@ Global
 		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A37A4FF-DFDA-4564-8243-08BFD7A043D7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
