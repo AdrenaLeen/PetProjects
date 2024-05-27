@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedCarLibClient", "Share
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedAsmReflector", "SharedAsmReflector\SharedAsmReflector.csproj", "{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectContextApp", "ObjectContextApp\ObjectContextApp.csproj", "{44B12AD5-81C4-40FB-A04D-BB7EF236E4BB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsmBuilder", "MyAsmBuilder\MyAsmBuilder.csproj", "{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncDelegateReview\SyncDelegateReview.csproj", "{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}"
@@ -361,10 +359,6 @@ Global
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44B12AD5-81C4-40FB-A04D-BB7EF236E4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44B12AD5-81C4-40FB-A04D-BB7EF236E4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44B12AD5-81C4-40FB-A04D-BB7EF236E4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44B12AD5-81C4-40FB-A04D-BB7EF236E4BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
