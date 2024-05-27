@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWordPad", "MyWordPad\MyWo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRoutedEvents", "WpfRoutedEvents\WpfRoutedEvents.csproj", "{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDepPropApp", "CustomDepPropApp\CustomDepPropApp.csproj", "{09FC7245-70E8-4D67-93B7-AA2B7A7ADC66}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderingWithShapes", "RenderingWithShapes\RenderingWithShapes.csproj", "{3F02A66F-2BA9-4D98-B12B-A1E0335861FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithTransforms", "FunWithTransforms\FunWithTransforms.csproj", "{E9A809A5-4094-4715-9898-90E52CB8EDB9}"
@@ -531,10 +529,6 @@ Global
 		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBEFE90D-BF52-4C99-9AC6-359AB39C60C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09FC7245-70E8-4D67-93B7-AA2B7A7ADC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09FC7245-70E8-4D67-93B7-AA2B7A7ADC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09FC7245-70E8-4D67-93B7-AA2B7A7ADC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09FC7245-70E8-4D67-93B7-AA2B7A7ADC66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F02A66F-2BA9-4D98-B12B-A1E0335861FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F02A66F-2BA9-4D98-B12B-A1E0335861FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F02A66F-2BA9-4D98-B12B-A1E0335861FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
