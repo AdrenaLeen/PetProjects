@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "Vi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDataSet", "SimpleDataSet\SimpleDataSet.csproj", "{40D6FB08-5CCF-4595-A17F-C4502B382327}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDataBinding", "WindowsFormsDataBinding\WindowsFormsDataBinding.csproj", "{18096A88-0D3B-4B09-91D8-228020C7E9C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppAllCode", "WpfAppAllCode\WpfAppAllCode.csproj", "{54465553-78DF-4663-A94D-658EFE3444EB}"
@@ -311,10 +309,6 @@ Global
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18096A88-0D3B-4B09-91D8-228020C7E9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18096A88-0D3B-4B09-91D8-228020C7E9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18096A88-0D3B-4B09-91D8-228020C7E9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
