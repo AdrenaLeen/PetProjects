@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingViewComponents", "Usin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingViewComponents.Tests", "UsingViewComponents.Tests\UsingViewComponents.Tests.csproj", "{4B91D9F5-F34E-476A-AFD7-7571E8B1A5C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users", "Users\Users.csproj", "{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCSharpApp", "SimpleCSharpApp\SimpleCSharpApp.csproj", "{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicConsoleIO", "BasicConsoleIO\BasicConsoleIO.csproj", "{ACF0C1D7-6CF6-4F82-93A7-C6CB1CF6B03F}"
@@ -277,10 +275,6 @@ Global
 		{4B91D9F5-F34E-476A-AFD7-7571E8B1A5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B91D9F5-F34E-476A-AFD7-7571E8B1A5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B91D9F5-F34E-476A-AFD7-7571E8B1A5C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE130F77-9D1B-4CC2-8DCA-9435DFDB6E12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
