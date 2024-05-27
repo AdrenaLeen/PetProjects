@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "VisualTypeDesignerApp\VisualTypeDesignerApp.csproj", "{9A534D90-E54C-45FF-983F-633AC6DF7855}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDataBinding", "WindowsFormsDataBinding\WindowsFormsDataBinding.csproj", "{18096A88-0D3B-4B09-91D8-228020C7E9C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppAllCode", "WpfAppAllCode\WpfAppAllCode.csproj", "{54465553-78DF-4663-A94D-658EFE3444EB}"
@@ -297,10 +295,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18096A88-0D3B-4B09-91D8-228020C7E9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18096A88-0D3B-4B09-91D8-228020C7E9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18096A88-0D3B-4B09-91D8-228020C7E9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
