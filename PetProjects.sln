@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableExample", "IClone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{150D4228-3F3E-4B9B-AEC5-6F27178513DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDelegateMethodGroupConversion", "CarDelegateMethodGroupConversion\CarDelegateMethodGroupConversion.csproj", "{27D51101-CD2D-452D-8336-B43738F82F2C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarEventArgs", "CarEventArgs\CarEventArgs.csproj", "{B9938A57-0EF8-4186-85EF-2E23BD41598C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCarEventArgs", "GenericCarEventArgs\GenericCarEventArgs.csproj", "{6E72222F-F437-4EE2-A030-2C0C6FCBD9FE}"
@@ -371,10 +369,6 @@ Global
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D4228-3F3E-4B9B-AEC5-6F27178513DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27D51101-CD2D-452D-8336-B43738F82F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27D51101-CD2D-452D-8336-B43738F82F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27D51101-CD2D-452D-8336-B43738F82F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27D51101-CD2D-452D-8336-B43738F82F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B9938A57-0EF8-4186-85EF-2E23BD41598C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9938A57-0EF8-4186-85EF-2E23BD41598C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9938A57-0EF8-4186-85EF-2E23BD41598C}.Release|Any CPU.ActiveCfg = Release|Any CPU
