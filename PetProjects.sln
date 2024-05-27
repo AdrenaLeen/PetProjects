@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTypeDesignerApp", "VisualTypeDesignerApp\VisualTypeDesignerApp.csproj", "{9A534D90-E54C-45FF-983F-633AC6DF7855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleUtilityClass", "SimpleUtilityClass\SimpleUtilityClass.csproj", "{33A78D21-6B2B-40FD-93F8-36223EBAB386}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsmBuilder", "MyAsmBuilder\MyAsmBuilder.csproj", "{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}"
@@ -333,10 +331,6 @@ Global
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A534D90-E54C-45FF-983F-633AC6DF7855}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33A78D21-6B2B-40FD-93F8-36223EBAB386}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
