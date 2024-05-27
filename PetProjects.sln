@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDataBinding", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitabledDataSetApp", "MultitabledDataSetApp\MultitabledDataSetApp.csproj", "{ABDA47FE-224B-47B1-B4D1-EB923D7A74F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToXmlWinApp", "LinqToXmlWinApp\LinqToXmlWinApp.csproj", "{24EFD1D3-9584-4DDD-ACB9-1A2499C5A74C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppAllCode", "WpfAppAllCode\WpfAppAllCode.csproj", "{54465553-78DF-4663-A94D-658EFE3444EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXamlPad", "MyXamlPad\MyXamlPad.csproj", "{21542009-30D0-4A71-A1EF-49A12F64ABBB}"
@@ -339,10 +337,6 @@ Global
 		{ABDA47FE-224B-47B1-B4D1-EB923D7A74F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABDA47FE-224B-47B1-B4D1-EB923D7A74F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABDA47FE-224B-47B1-B4D1-EB923D7A74F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24EFD1D3-9584-4DDD-ACB9-1A2499C5A74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24EFD1D3-9584-4DDD-ACB9-1A2499C5A74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24EFD1D3-9584-4DDD-ACB9-1A2499C5A74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24EFD1D3-9584-4DDD-ACB9-1A2499C5A74C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54465553-78DF-4663-A94D-658EFE3444EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54465553-78DF-4663-A94D-658EFE3444EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54465553-78DF-4663-A94D-658EFE3444EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
