@@ -27,8 +27,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedCarLibClient", "Share
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBaseClient", "CodeBaseClient\CodeBaseClient.csproj", "{6190140F-A573-491E-88AA-62D694A6F634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfigReaderApp", "AppConfigReaderApp\AppConfigReaderApp.csproj", "{188BF5A7-3D4C-44C7-9B3C-660CE0B47431}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedAsmReflector", "SharedAsmReflector\SharedAsmReflector.csproj", "{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyingAttributes", "ApplyingAttributes\ApplyingAttributes.csproj", "{5630E736-9571-46D9-B180-0CF661CBF0E8}"
@@ -409,10 +407,6 @@ Global
 		{6190140F-A573-491E-88AA-62D694A6F634}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6190140F-A573-491E-88AA-62D694A6F634}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6190140F-A573-491E-88AA-62D694A6F634}.Release|Any CPU.Build.0 = Release|Any CPU
-		{188BF5A7-3D4C-44C7-9B3C-660CE0B47431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{188BF5A7-3D4C-44C7-9B3C-660CE0B47431}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{188BF5A7-3D4C-44C7-9B3C-660CE0B47431}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{188BF5A7-3D4C-44C7-9B3C-660CE0B47431}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ACD39B5-F118-4848-BFA9-09FFAAEF7090}.Release|Any CPU.ActiveCfg = Release|Any CPU
