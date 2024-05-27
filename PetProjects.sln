@@ -67,8 +67,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppAllCode", "WpfAppAllC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXamlPad", "MyXamlPad\MyXamlPad.csproj", "{21542009-30D0-4A71-A1EF-49A12F64ABBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryResourcesApp", "BinaryResourcesApp\BinaryResourcesApp.csproj", "{DE6A728B-844E-4E70-9076-7FD7545F1D5D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectResourcesApp", "ObjectResourcesApp\ObjectResourcesApp.csproj", "{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrushesLibrary", "MyBrushesLibrary\MyBrushesLibrary.csproj", "{3C1147E4-3AB1-4DAA-951E-80A980CA0AB0}"
@@ -503,10 +501,6 @@ Global
 		{21542009-30D0-4A71-A1EF-49A12F64ABBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21542009-30D0-4A71-A1EF-49A12F64ABBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21542009-30D0-4A71-A1EF-49A12F64ABBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE6A728B-844E-4E70-9076-7FD7545F1D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
