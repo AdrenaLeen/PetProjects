@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLambdaExpressions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringIndexer", "StringIndexer\StringIndexer.csproj", "{5EFCF38B-D199-4C9C-9245-051C01EC9A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedCarLibClient", "SharedCarLibClient\SharedCarLibClient.csproj", "{CCB40151-6631-475B-9EF4-9106D92360A2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsmBuilder", "MyAsmBuilder\MyAsmBuilder.csproj", "{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncDelegateReview\SyncDelegateReview.csproj", "{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}"
@@ -349,10 +347,6 @@ Global
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFCF38B-D199-4C9C-9245-051C01EC9A67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CCB40151-6631-475B-9EF4-9106D92360A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCB40151-6631-475B-9EF4-9106D92360A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCB40151-6631-475B-9EF4-9106D92360A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCB40151-6631-475B-9EF4-9106D92360A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739C712E-F784-4B71-BCCB-EFEF7D97F7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
