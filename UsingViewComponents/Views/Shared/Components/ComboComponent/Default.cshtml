@@ -1,9 +1,0 @@
-﻿@model IEnumerable<City>
-
-<table class="table table-condensed table-bordered text-white">
-    <tr>
-        <td>Наибольший город:</td>
-        <td>@Model.OrderByDescending(c => c.Population).First().Name</td>
-    </tr>
-</table>
-<a class="btn btn-sm btn-light" asp-controller="City" asp-action="Create">Создать город</a>

@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsStore", "SportsStore\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Views", "Views\Views.csproj", "{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingViewComponents", "UsingViewComponents\UsingViewComponents.csproj", "{FDA5AA77-F265-42CD-9A1D-B750E174D27D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCSharpApp", "SimpleCSharpApp\SimpleCSharpApp.csproj", "{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicConsoleIO", "BasicConsoleIO\BasicConsoleIO.csproj", "{ACF0C1D7-6CF6-4F82-93A7-C6CB1CF6B03F}"
@@ -265,10 +263,6 @@ Global
 		{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{693CF3DC-5DEB-46B1-B1D0-93172B2068C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDA5AA77-F265-42CD-9A1D-B750E174D27D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C2ED18-8FE8-4D76-811A-9E92B5B5E1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
