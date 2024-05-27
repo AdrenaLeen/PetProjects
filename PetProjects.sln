@@ -29,8 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddWithThreadsAsync\AddWithThreadsAsync.csproj", "{B49F6451-1080-431D-B1DF-0904D1AF044F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{4C476765-C7AA-41EC-8F60-A56B43FB7853}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDataSet", "SimpleDataSet\SimpleDataSet.csproj", "{40D6FB08-5CCF-4595-A17F-C4502B382327}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDataBinding", "WindowsFormsDataBinding\WindowsFormsDataBinding.csproj", "{18096A88-0D3B-4B09-91D8-228020C7E9C8}"
@@ -397,10 +395,6 @@ Global
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C476765-C7AA-41EC-8F60-A56B43FB7853}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D6FB08-5CCF-4595-A17F-C4502B382327}.Release|Any CPU.ActiveCfg = Release|Any CPU
