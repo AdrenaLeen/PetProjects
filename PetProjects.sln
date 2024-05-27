@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDataBinding", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppAllCode", "WpfAppAllCode\WpfAppAllCode.csproj", "{54465553-78DF-4663-A94D-658EFE3444EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{3AF95349-0657-43E3-9C2F-24D684A5BD8A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor", "Razor\Razor\Razor.csproj", "{9F3AC883-40F7-4DEA-AF5A-C16705764224}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithVisualStudio", "WorkingWithVisualStudio\WorkingWithVisualStudio.csproj", "{6A7C8986-D291-45E5-9438-7DF290F60F57}"
@@ -327,10 +325,6 @@ Global
 		{54465553-78DF-4663-A94D-658EFE3444EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54465553-78DF-4663-A94D-658EFE3444EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54465553-78DF-4663-A94D-658EFE3444EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AF95349-0657-43E3-9C2F-24D684A5BD8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F3AC883-40F7-4DEA-AF5A-C16705764224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F3AC883-40F7-4DEA-AF5A-C16705764224}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3AC883-40F7-4DEA-AF5A-C16705764224}.Release|Any CPU.ActiveCfg = Release|Any CPU
