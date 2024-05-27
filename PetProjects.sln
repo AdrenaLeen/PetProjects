@@ -37,8 +37,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsmBuilder", "MyAsmBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncDelegateReview\SyncDelegateReview.csproj", "{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{F80E770B-5C93-43DE-9646-35ABA90CC043}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreadsAsync", "AddWithThreadsAsync\AddWithThreadsAsync.csproj", "{B49F6451-1080-431D-B1DF-0904D1AF044F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{4C476765-C7AA-41EC-8F60-A56B43FB7853}"
@@ -425,10 +423,6 @@ Global
 		{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B38CED8-74D3-410F-BBDF-8E8A4222C9A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F80E770B-5C93-43DE-9646-35ABA90CC043}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49F6451-1080-431D-B1DF-0904D1AF044F}.Release|Any CPU.ActiveCfg = Release|Any CPU
