@@ -101,11 +101,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyBrushesLibrary\MyBrushesLibrary.csproj">
-      <Project>{3c1147e4-3ab1-4daa-951e-80a980ca0ab0}</Project>
-      <Name>MyBrushesLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

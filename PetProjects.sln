@@ -69,8 +69,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyXamlPad", "MyXamlPad\MyXa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectResourcesApp", "ObjectResourcesApp\ObjectResourcesApp.csproj", "{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrushesLibrary", "MyBrushesLibrary\MyBrushesLibrary.csproj", "{3C1147E4-3AB1-4DAA-951E-80A980CA0AB0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinningButtonAnimationApp", "SpinningButtonAnimationApp\SpinningButtonAnimationApp.csproj", "{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfStyles", "WpfStyles\WpfStyles.csproj", "{5A90CF30-5515-42BC-9A82-10B075ED35A1}"
@@ -503,10 +501,6 @@ Global
 		{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C513FEF-3C6D-4DA9-8597-752A21CE6B80}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C1147E4-3AB1-4DAA-951E-80A980CA0AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C1147E4-3AB1-4DAA-951E-80A980CA0AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C1147E4-3AB1-4DAA-951E-80A980CA0AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C1147E4-3AB1-4DAA-951E-80A980CA0AB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFC5DD7B-FBFF-4BE9-8EB4-CBE98649B1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
